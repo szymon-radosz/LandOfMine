@@ -1,0 +1,63 @@
+.game__container {
+    position: relative;
+    .map__floor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .map-square {
+        border: 1px solid #c7c7c7;
+        background-color: #b9ffb9;
+        transition: 0.3s;
+    }
+    .map-square:hover {
+        opacity: 0.6;
+    }
+
+    .bottom-panel-game__container {
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        left: 0;
+        background-color: #eae2a5;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        -webkit-box-shadow: 0px -2px 10px 0px #b3b3b3;
+        -moz-box-shadow: 0px -2px 10px 0px #b3b3b3;
+        box-shadow: 0px -2px 10px 0px #b3b3b3;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .zoom-btns__container {
+        position: fixed;
+        bottom: 125px;
+        right: 20px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.3s;
+
+        div {
+            padding: 15px;
+            cursor: pointer;
+            text-align: center;
+
+            p {
+                margin: 0;
+                font-size: 20px;
+                line-height: 12px;
+            }
+        }
+        div:hover {
+            background-color: rgb(236, 236, 236);
+        }
+    }
+}

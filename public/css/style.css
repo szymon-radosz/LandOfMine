@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800");
+
+* {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    color: #333333;
+}
+
+input:focus,
+button:focus,
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: none;
+    color: #768ede;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #424242;
+}
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/*-- 3. Button-Style --*/
+
+.bttn-white {
+    position: relative;
+    background: rgb(72, 44, 191);
+    background: -webkit-linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    background: -o-linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    background: linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    overflow: hidden;
+    z-index: 1;
+    margin-right: 10px;
+    border: none;
+}
+
+.bttn-white img {
+    height: 20px;
+    margin-right: 5px;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.bttn-white:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.bttn-white.active,
+.bttn-white:hover {
+    color: #ffffff;
+}
+
+.bttn-white.active:before,
+.bttn-white:hover:before {
+    opacity: 0;
+}
+
+.bttn-default,
+.bttn-white {
+    padding: 12px 30px;
+    background-color: #ffffff;
+    display: inline-block;
+    color: #768ede;
+    text-transform: uppercase;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+}
+
+.bttn-default .lnr,
+.bttn-white .lnr {
+    margin-right: 10px;
+}
+
+.bttn-default {
+    padding: 12px 40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    background: linear-gradient(
+        45deg,
+        rgba(72, 44, 191, 1) 0%,
+        rgba(106, 198, 240, 1) 100%
+    );
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.bttn-default:hover {
+    color: #ffffff;
+    -webkit-box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.sq {
+    border-radius: 3px !important;
+}
+
+/*-- 4. Helper-Classes --*/
+
+.section-padding-top {
+    padding-top: 120px;
+}
+
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.angle,
+.overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(33, 45, 189, 0.59) 0%,
+        #375aa9 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(
+        0deg,
+        rgba(33, 45, 189, 0.59) 0%,
+        #375aa9 100%
+    );
+    background: linear-gradient(0deg, rgba(33, 45, 189, 0.59) 0%, #375aa9 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    opacity: 0.8;
+    /* IE6-9 fallback on horizontal gradient */
+    z-index: -2;
+}
+
+.angle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(
+            left bottom,
+            #ffffff 50%,
+            transparent 50%
+        ) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) -webkit-gradient(
+            linear,
+            left bottom,
+            right top,
+            color-stop(50%, #ffffff),
+            color-stop(50%, transparent)
+        ) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) -o-linear-gradient(
+            left bottom,
+            #ffffff 50%,
+            transparent 50%
+        ) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0)
+        linear-gradient(to right top, #ffffff 50%, transparent 50%) repeat
+        scroll 0 0;
+    z-index: -1;
+}
+
+.dark-color {
+    color: #434345;
+}
+
+.blue-color {
+    color: #7d9ee2;
+}
+a:hover,
+a:focus {
+    color: #7d9ee2;
+}
+
+.white-color {
+    color: #ffffff !important;
+}
+
+.gray-bg {
+    background-color: #f5f6ff;
+}
+
+/*-- 5. MainMenu-Area --*/
+
+.mainmenu-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 20px 0 15px 0;
+    background: transparent;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.mainmenu-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #5e88fc;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.mainmenu-area.affix {
+    position: fixed;
+    top: 0;
+}
+
+.mainmenu-area.affix:before {
+    opacity: 1;
+}
+
+.mainmenu-area .right-button {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+
+.mainmenu-area .right-button a {
+    color: #ffffff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.mainmenu-area .right-button a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #7d9ee2;
+}
+
+.mainmenu-area ul.mainmenu {
+    text-align: center;
+    float: right;
+    display: block;
+}
+
+.mainmenu-area ul.mainmenu li {
+    float: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.mainmenu-area ul.nav.navbar-nav li a {
+    color: #ffffff;
+    padding: 10px 2px;
+    text-transform: capitalize;
+    background: transparent;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    margin: 0 15px;
+}
+
+.mainmenu-area ul.nav.navbar-nav li a:hover,
+.mainmenu-area ul.nav.navbar-nav li.active a {
+    border-bottom-color: #ffffff;
+}
+
+.mainmenu-area .navbar-brand {
+    height: auto;
+    padding: 0 15px;
+}
+
+.mainmenu-area .navbar-brand img {
+    height: 40px;
+}
+
+/*-- 6. Page-Title --*/
+
+.page-title .title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #7d9ee2;
+    font-weight: 600;
+}
+
+.text-center.page-title .title:before,
+.page-title .title:after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+/*-- 7. Home-Area --*/
+
+.home-area {
+    width: 100%;
+    background: url("images/header-bg.jpg") no-repeat scroll center bottom /
+        cover;
+    padding-top: 26vh;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.home-area .mobile-image {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: -158px;
+}
+
+/*-- 8. Progress-Area --*/
+
+.progress-area {
+    background-image: url("images/progress-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    margin-top: 90px;
+    margin-bottom: 220px;
+}
+
+.progress-area .mobile-image {
+    margin-top: -90px;
+    margin-bottom: -153px;
+}
+
+/*-- 10. Feature-Area --*/
+
+.feature-area {
+    color: #ffffff;
+    background-color: #7d9ee2;
+    background-image: url("images/feature-bg.png");
+    background-position: bottom -120px center;
+    background-repeat: no-repeat;
+    background-size: auto 94%;
+    margin-bottom: 142px;
+}
+
+.feature-area .page-title .title {
+    color: #ffffff;
+}
+
+.feature-area .mobile-image {
+    margin-bottom: -110px;
+}
+
+/*-- 11. Service-Box --*/
+
+.service-box {
+    position: relative;
+    padding-left: 100px;
+}
+
+.team-slide .owl-controls .owl-nav > div,
+.service-box .box-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 72px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        45deg,
+        rgb(255, 255, 255) 0%,
+        rgb(228, 206, 157) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(
+        45deg,
+        rgb(255, 255, 255) 0%,
+        rgb(228, 206, 157) 100%
+    );
+    background: linear-gradient(
+        45deg,
+        rgb(255, 255, 255) 0%,
+        rgb(228, 206, 157) 100%
+    );
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    overflow: hidden;
+    z-index: 1;
+    color: #5e88fc;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.team-slide .owl-controls .owl-nav > div:hover,
+.service-box:hover .box-icon {
+    color: #ffffff;
+}
+
+.team-slide .owl-controls .owl-nav > div:before,
+.service-box .box-icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.team-slide .owl-controls .owl-nav > div:hover:before,
+.service-box:hover .box-icon:before {
+    opacity: 0;
+}
+
+.service-box h4 {
+    margin-bottom: 10px;
+}
+
+/*-- 18. Footer-Area --*/
+
+.footer-box {
+    text-align: center;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    background-color: #f5f6ff;
+    border-top: 1px solid #7d9ee2;
+}
+
+.footer-bottom .footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.footer-bottom .footer-menu ul li {
+    display: inline-block;
+}
+
+.footer-bottom .footer-menu ul li a {
+    padding: 10px;
+    color: #8790af;
+}
+
+.footer-bottom .footer-menu ul li a:hover {
+    color: #7d9ee2;
+}
+
+/*-- 23. Form-Stype --*/
+
+.form-control {
+    border-radius: 2px;
+    padding: 15px 20px;
+    height: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-double .box {
+    width: calc(50% - 15px);
+    float: left;
+}
+
+.form-double .box.last {
+    float: right;
+}
+
+.aboutImg {
+    max-width: 70px;
+}
+.service-box h4 {
+    font-weight: 600;
+}
+.headerIconText {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+.headerIcon {
+    display: inline-block;
+    max-width: 130px;
+}
+.googlePlayHeader {
+    margin-right: 3px;
+}
+.appStoreHeader {
+    margin-left: 3px;
+}
+.box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-icon img {
+    width: 35px;
+}
+.footer-menu img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* terms */
+.termsHeader {
+    color: #7d9ee2;
+    font-weight: 600;
+}
+.termsContent {
+    font-size: 11px;
+    color: #e4e4e4;
+    line-height: 13px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* reset password */
+.resetBtn {
+    background-color: #7d9ee2;
+    color: #fff;
+    margin: 0 auto;
+    padding: 15px 50px;
+}
+.affix:before {
+    background: #5881d6;
+    opacity: 1 !important;
+}
+.headerIcon,
+ul.nav.navbar-nav.mainmenu > li {
+    opacity: 0.7;
+    margin: 5px 0px;
+}
+.headerIcon:hover,
+ul.nav.navbar-nav.mainmenu > .active {
+    opacity: 1 !important;
+}
+
+@media (min-width: 992px) {
+    #home_page {
+        margin: 0 !important;
+        min-height: 100vh;
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+    .footer-menu ul {
+        text-align: right !important;
+    }
+    .footer-bottom .col-md-5 {
+        text-align: left !important;
+    }
+    .mobile-image img {
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerRow {
+        text-align: center;
+    }
+    .headerIcon {
+        max-width: 100px;
+    }
+    .navbar-brand {
+        margin-top: 5px;
+    }
+    .mainmenu-area:before {
+        background: #5e88fc;
+        opacity: 1 !important;
+    }
+    h1 {
+        font-size: 30px !important;
+    }
+    .desc p {
+        line-height: 20px;
+    }
+    #home_page {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

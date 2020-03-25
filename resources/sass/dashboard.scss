@@ -1,0 +1,35 @@
+.dashboard__rect-container {
+    .dashboard-info-rect__container {
+        background-color: #fff;
+        border-radius: $borderRadius;
+        padding: 10px;
+        margin-bottom: 20px;
+        webkit-box-shadow: 0px 4px 22px -7px rgba(158, 158, 158, 1);
+        -moz-box-shadow: 0px 4px 22px -7px rgba(158, 158, 158, 1);
+        box-shadow: 0px 4px 22px -7px rgba(158, 158, 158, 1);
+        border: 1px solid #fdfdfd;
+
+        .dashboard-info-rect__header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+
+            img {
+                height: 30px;
+            }
+            p {
+                margin: 0;
+                padding-left: 10px;
+                font-size: 13px;
+                color: $gray;
+            }
+        }
+        .dashboard-info-rect__number {
+            margin: 0;
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+}

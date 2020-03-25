@@ -1,0 +1,23 @@
+.login-form__container {
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #f4f9f4;
+
+    .login-form {
+        max-width: 300px;
+        width: 90%;
+
+        img {
+            max-width: 75px;
+            margin-bottom: 30px;
+        }
+        button {
+            width: 100%;
+        }
+    }
+}

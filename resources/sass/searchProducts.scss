@@ -1,0 +1,356 @@
+.search-page__container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .product-details--container {
+        max-width: 950px;
+        margin: 0 auto;
+        width: 90%;
+
+        .ingredient-description__container {
+            .ingredient-description__description--wiki {
+                text-align: right;
+
+                a {
+                    color: #333;
+                    transition: 0.3s;
+                    font-weight: 600;
+                }
+                a:hover {
+                    opacity: 0.8;
+                }
+            }
+            .ingredient-description__description--text {
+                text-align: justify;
+                -moz-text-align-last: center;
+                text-align-last: center;
+            }
+        }
+        .product-details--details--text {
+            text-align: justify;
+            text-align-last: center;
+        }
+    }
+
+    .search-page__product-list--container {
+        max-width: 950px;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+.search-page__product-list--not-found {
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+
+.search-page__single-list-item--container {
+    background-color: #f4f9f4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    -webkit-box-shadow: 0px 3px 5px 0px rgb(224, 224, 224);
+    -moz-box-shadow: 0px 3px 5px 0px rgb(224, 224, 224);
+    box-shadow: 0px 3px 5px 0px rgb(224, 224, 224);
+
+    .search-page__single-list-item--name {
+        font-weight: 600;
+        color: #333;
+    }
+    .search-page__single-list-item--barcode {
+        color: #636363;
+
+        .search-page__single-list-item--red {
+            color: #da3f3f;
+        }
+        .search-page__single-list-item--yellow {
+            color: #b3b321;
+        }
+        .search-page__single-list-item--green {
+            color: #39af39;
+        }
+    }
+    .search-page__single-list-item--details {
+        color: #636363;
+        cursor: pointer;
+        transition: 0.3sr;
+    }
+    .search-page__single-list-item--details:hover {
+        opacity: 0.8;
+    }
+}
+
+.search-products__form--container {
+    input {
+        border: 2px solid #ddd;
+        border-radius: 3px;
+    }
+}
+
+.search-nav {
+    .pagination > li.active > a {
+        color: #fff;
+        background-color: #5c8d89 !important;
+        border-color: #5c8d89 !important;
+    }
+    .pagination > li > a,
+    .pagination > li > span {
+        color: #333;
+        border: 2px solid #ddd;
+    }
+    .pagination > li > a:hover {
+        background-color: #5c8d89 !important;
+        border-color: #5c8d89 !important;
+    }
+    .pagination > li {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-page__single-list-item--container {
+        padding: 10px 15px;
+        margin: 10px 0;
+
+        .search-page__single-list-item--name {
+            margin: 0;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .search-page__single-list-item--barcode {
+            margin: 0;
+            font-size: 12px;
+        }
+        .search-page__single-list-item--details {
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+
+    .product-details--container {
+        margin: 25px auto;
+
+        .ingredient-description__container {
+            margin: 0 30px 50px 30px;
+
+            .ingredient-description__description--wiki {
+                a {
+                    font-size: 14px;
+                }
+            }
+            .ingredient-description__description--text {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        .product-details--details--text {
+            margin: 25px 0;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    .search-nav {
+        margin-bottom: 17px;
+    }
+
+    .search-products__form--container {
+        text-align: center;
+        padding: 30px 0;
+
+        h1 {
+            font-size: 20px !important;
+        }
+
+        input {
+            width: 80%;
+            padding: 0 6px;
+            font-size: 14px;
+            text-align: center;
+            color: #333 !important;
+        }
+    }
+    .search-page__container .search-page__product-list--container {
+        min-height: 60vh;
+    }
+    .search-page__product-list--not-found {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .search-products__form--container {
+        text-align: center;
+        padding: 50px 0;
+
+        input {
+            width: 350px;
+            padding: 0 6px;
+            font-size: 14px;
+            text-align: center;
+            color: #333 !important;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .search-page__single-list-item--container {
+        padding: 10px 30px;
+        margin: 15px 0;
+
+        .search-page__single-list-item--name {
+            margin: 0;
+            font-size: 18px;
+        }
+        .search-page__single-list-item--barcode {
+            margin: 0;
+            font-size: 14px;
+        }
+        .search-page__single-list-item--details {
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+
+    .product-details--container {
+        margin: 25px auto;
+        min-height: 62vh;
+
+        .ingredient-description__container {
+            margin: 0 30px 50px 30px;
+
+            .ingredient-description__description--wiki {
+                a {
+                    font-size: 14px;
+                }
+            }
+            .ingredient-description__description--text {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        .product-details--details--text {
+            margin: 25px 0;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+
+    .search-nav {
+        margin-bottom: 25px;
+    }
+
+    .search-page__container .search-page__product-list--container {
+        min-height: 60vh;
+    }
+    .search-page__product-list--not-found {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .search-page__container {
+        .product-details--container {
+            min-height: 62vh;
+            margin: 30px auto;
+
+            .ingredient-description__container {
+                margin: 0 30px 50px 30px;
+
+                .ingredient-description__description--wiki {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+                .ingredient-description__description--text {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+            .product-details--details--text {
+                margin-bottom: 30px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .search-page__single-list-item--container {
+        padding: 15px 30px;
+        margin: 15px 0;
+
+        .search-page__single-list-item--name {
+            margin: 0;
+            font-size: 20px;
+        }
+        .search-page__single-list-item--barcode {
+            margin: 0;
+            font-size: 16px;
+        }
+        .search-page__single-list-item--details {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    .search-nav {
+        margin-bottom: 25px;
+    }
+
+    .search-page__container .search-page__product-list--container {
+        min-height: 60vh;
+    }
+    .search-page__product-list--not-found {
+        margin-top: 20px;
+    }
+}
+
+.fade {
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+.fade:not(.show) {
+    opacity: 1 !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

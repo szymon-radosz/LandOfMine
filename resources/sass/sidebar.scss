@@ -1,0 +1,99 @@
+.sidebar {
+    background: $green;
+    //border-right: 2px solid $borderGray;
+    //border-top: 2px solid $borderGray;
+
+    ul {
+        padding: 0;
+
+        .sidebar__item {
+            background: #fff;
+            .sidebar__item--wrapper {
+                background: $green;
+                position: relative;
+                padding: 8px 15px;
+                display: flex;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                }
+                .sidebar-icon {
+                    height: 23px;
+                    filter: brightness(0) invert(1);
+                }
+                .sidebar__item--text {
+                    padding-left: 10px;
+                    margin: 0;
+                    font-size: 12px;
+                    color: #fff;
+                    min-width: 118px;
+                }
+            }
+            .active-sidebar-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                background-color: $green;
+                height: 100%;
+            }
+        }
+        .sidebar__item--active {
+            .sidebar__item--wrapper {
+                background-color: #fff;
+                .sidebar__item--text {
+                    color: $gray;
+                }
+                .sidebar-icon {
+                    filter: none;
+                }
+            }
+        }
+    }
+    .list-active-Dashboard {
+        .sidebar__item--2 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+    .list-active-Users {
+        .sidebar__item--1 .sidebar__item--wrapper {
+            border-radius: 0 0 22px 0;
+        }
+        .sidebar__item--3 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+    .list-active-Forum {
+        .sidebar__item--2 .sidebar__item--wrapper {
+            border-radius: 0 0 22px 0;
+        }
+        .sidebar__item--4 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+    .list-active-Hobbies {
+        .sidebar__item--3 .sidebar__item--wrapper {
+            border-radius: 0 0 22px 0;
+        }
+        .sidebar__item--5 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+    .list-active-Translations {
+        .sidebar__item--4 .sidebar__item--wrapper {
+            border-radius: 0 0 22px 0;
+        }
+        .sidebar__item--6 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+    .list-active-Register {
+        .sidebar__item--5 .sidebar__item--wrapper {
+            border-radius: 0 0 22px 0;
+        }
+        .sidebar__item--7 .sidebar__item--wrapper {
+            border-radius: 0 22px 0 0;
+        }
+    }
+}

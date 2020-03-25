@@ -1,0 +1,177 @@
+body {
+    background-color: #fff !important;
+    font-family: "Montserrat", sans-serif;
+
+    ul {
+        list-style-type: none;
+    }
+    .custom-textarea {
+        min-height: 150px;
+    }
+
+    .navbar-brand {
+        img {
+            height: 25px;
+        }
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+        img {
+            height: 25px;
+        }
+    }
+    .sidebar__item--active {
+        img {
+            -webkit-filter: invert(100%) !important;
+        }
+    }
+    .pagination > li.active > a {
+        background-color: #5c8d89 !important;
+        border-color: #5c8d89 !important;
+    }
+    .pagination {
+        margin: 20px 0 0 0;
+    }
+    .blue-btn {
+        background-color: $green;
+        border-color: $green;
+        border-radius: $borderRadius;
+        color: #fff;
+        min-width: 90px;
+    }
+    .blue-btn:hover {
+        background-color: $lightGreen;
+        border-color: $lightGreen;
+        color: #fff;
+    }
+    .red-btn {
+        background-color: $red;
+        border-color: $red;
+        border-radius: $borderRadius;
+        color: #fff;
+    }
+    .red-btn:hover {
+        background-color: $darkRed;
+        border-color: $darkRed;
+        color: #fff;
+    }
+    .table {
+        background-color: #fff;
+        border-radius: $borderRadius;
+    }
+    .loader__container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+    }
+    .app__container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    .app__container > div {
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard__container {
+        flex: 1;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .dashboard__container--content {
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+    }
+    .header__container {
+        p {
+            font-weight: 600;
+            margin: 0;
+            padding-bottom: 20px;
+            color: $dark;
+            font-size: 22px;
+        }
+    }
+    .legend__container {
+        margin-top: 5px;
+
+        .legend {
+            display: flex;
+
+            .legend-color__container {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            .legend__text {
+                margin: 0;
+                font-size: 12px;
+            }
+        }
+    }
+    .alert {
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .pagination > li {
+        display: inline-block;
+        padding-left: 0;
+    }
+    .pagination > li {
+        list-style: none;
+        border: 0.8px solid;
+    }
+    .pagination > li > a,
+    .pagination > li > span {
+        position: relative;
+        float: left;
+        padding: 6px 12px;
+        line-height: 1.42857143;
+        text-decoration: none;
+        color: #2c689c;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-left: -1px;
+    }
+
+    .pagination > li.active > a {
+        color: #fff;
+        background-color: #47a75c;
+        border-color: #47a75c;
+    }
+
+    /* Style the active class (and buttons on mouse-over) */
+    .pagination > li > a:hover {
+        background-color: #47a75c;
+        color: white;
+    }
+    .pagination > li:first-child > a,
+    .pagination > li:first-child > span {
+        margin-left: 0;
+        padding: 0px;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        display: none !important;
+    }
+    .pagination > li:last-child > a,
+    .pagination > li:last-child > span {
+        border-bottom-right-radius: 4px;
+        margin-right: 0;
+        padding: 0px !important;
+        border-top-right-radius: 4px;
+        display: none !important;
+    }
+}

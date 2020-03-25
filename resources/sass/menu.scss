@@ -1,0 +1,105 @@
+@media screen and (max-width: 480px) {
+    .bm-menu-wrap {
+        width: 100% !important;
+    }
+    .bm-burger-button {
+        width: 27px !important;
+        height: 22px !important;
+        right: 0 !important;
+        top: 12px !important;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .bm-menu-wrap {
+        max-width: 290px;
+    }
+    .bm-burger-button {
+        width: 27px !important;
+        height: 22px !important;
+        right: 0 !important;
+        top: 12px !important;
+    }
+    .bm-burger-button button {
+        position: absolute !important;
+    }
+}
+
+// html,
+// body {
+//     margin: 0;
+// }
+
+// #App {
+//     font-family: sans-serif;
+//     height: 100vh;
+// }
+
+#page-wrap {
+    text-align: center;
+    overflow: auto;
+}
+
+.bm-item {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #d1d1d1;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.bm-item:hover {
+    opacity: 1;
+}
+
+.bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+}
+
+.bm-burger-bars {
+    background: #fff;
+    border-radius: 6px !important;
+    transition: 0.3s;
+}
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+.bm-cross {
+    background: #bdc3c7;
+}
+
+.bm-menu {
+    background: #333;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    opacity: 0.98;
+}
+.bm-menu-wrap {
+    top: 0;
+}
+
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+.bm-item-list {
+    color: #b8b7ad;
+}
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+.bm-overlay {
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.4) !important;
+}
