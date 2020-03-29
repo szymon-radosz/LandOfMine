@@ -18,7 +18,7 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.4.0",
         "@types/enzyme": "^3.10.3",
-        "@types/jest": "^24.0.23",
+        "@types/jest": "^24.9.1",
         "@types/jquery": "^3.3.31",
         "axios": "^0.19",
         "axios-mock-adapter": "^1.17.0",
@@ -48,13 +48,14 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@types/node": "^12.12.7",
-        "@types/react": "16.9.11",
-        "@types/react-dom": "^16.9.4",
+        "@types/node": "^12.12.31",
+        "@types/react": "^16.9.11",
+        "@types/react-dom": "^16.9.5",
         "babel-jest": "^24.9.0",
         "babel-preset-env": "^1.7.0",
         "enzyme": "^3.10.0",
         "geojson-world-map": "0.0.2",
+        "laravel-mix-react-typescript-extension": "^1.0.0",
         "leaflet": "^1.5.1",
         "leaflet-geosearch": "^2.7.0",
         "leaflet-search": "^2.9.8",
@@ -75,7 +76,7 @@
         "redux-persist": "^6.0.0",
         "redux-thunk": "^2.3.0",
         "styled-components": "^4.4.1",
-        "typescript": "^3.7.2",
+        "typescript": "^3.8.3",
         "underscore": "^1.9.1",
         "uuid": "^3.3.3"
     }

@@ -10,6 +10,14 @@ body ul {
   list-style-type: none;
 }
 
+body .bold {
+  font-weight: 600;
+}
+
+body .opacity {
+  opacity: 0.7;
+}
+
 body .custom-textarea {
   min-height: 150px;
 }
@@ -1332,14 +1340,273 @@ body .pagination > li:last-child > span {
   align-items: center;
 }
 
-.game__container .map-square {
-  border: 1px solid #c7c7c7;
+.game__container .game__map--container {
   background-color: #b9ffb9;
+}
+
+.game__container .game__map--container .map-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ececec;
   transition: 0.3s;
 }
 
-.game__container .map-square:hover {
-  opacity: 0.6;
+.game__container .game__map--container .map-square img {
+  width: 100%;
+  height: 100%;
+}
+
+.game__container .game__map--container .map-square .map-element__container {
+  position: relative;
+}
+
+.game__container .game__map--container .map-square .map-element__container .map-element__description--container {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  background-color: #fff;
+  max-width: 129px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 16px 0px #c9c9c9;
+  z-index: 1;
+}
+
+.game__container .game__map--container .map-square .map-element__container .map-element__description--container .map-element__description--header {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .map-element__description--container .map-element__description--content {
+  margin: 0;
+  font-size: 12px;
+}
+
+.game__container .game__map--container .map-square:hover {
+  background-color: #a3f0a3;
+}
+
+.game__container .game__map--container .road-horizontal {
+  width: 100%;
+  height: 25px;
+  background-color: #ccc;
+}
+
+.game__container .game__map--container .road-vertical {
+  width: 25px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.game__container .game__map--container .road-right-bottom {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  box-sizing: content-box;
+}
+
+.game__container .game__map--container .road-right-bottom:after,
+.game__container .game__map--container .road-right-bottom:before {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  height: 35%;
+  border: 25px solid #ccc;
+  border-radius: 50px 550px 0 0px;
+  transform: rotate(-90deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.game__container .game__map--container .road-right-top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  box-sizing: content-box;
+}
+
+.game__container .game__map--container .road-right-top:after,
+.game__container .game__map--container .road-right-top:before {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 35%;
+  border: 25px solid #ccc;
+  border-radius: 50px 550px 0 0px;
+  transform: rotate(180deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.game__container .game__map--container .road-left-top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  box-sizing: content-box;
+}
+
+.game__container .game__map--container .road-left-top:after,
+.game__container .game__map--container .road-left-top:before {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 35%;
+  border: 25px solid #ccc;
+  border-radius: 50px 550px 0 0px;
+  transform: rotate(-270deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.game__container .game__map--container .road-left-bottom {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  box-sizing: content-box;
+}
+
+.game__container .game__map--container .road-left-bottom:after,
+.game__container .game__map--container .road-left-bottom:before {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  height: 35%;
+  border: 25px solid #ccc;
+  border-radius: 50px 550px 0 0px;
+  transform: rotate(0deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.game__container .game__map--container .action-modal__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #012d4a;
+  padding: 11px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__close img {
+  width: 12px;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__close:hover {
+  background-color: #294e65;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__sidebar--container {
+  padding-right: 60px;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element img {
+  max-height: 40px;
+}
+
+.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element p {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.game__container .game__map--container .action-modal__container .options__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 300px;
+  overflow-y: scroll;
+  width: 35vw;
+  max-width: 350px;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element {
+  max-width: 150px;
+  text-align: center;
+  flex: 1 0 50%;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element img {
+  max-height: 110px;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--header {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--description {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--cost {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit {
+  border: 3px solid #012d4a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #012d4a;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit:hover {
+  background-color: #012d4a;
+}
+
+.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit:hover p {
+  color: #fff;
 }
 
 .game__container .bottom-panel-game__container {
@@ -1347,7 +1614,8 @@ body .pagination > li:last-child > span {
   bottom: 0;
   z-index: 10;
   left: 0;
-  background-color: #eae2a5;
+  background-color: #012d4a;
+  color: #fff;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1358,6 +1626,10 @@ body .pagination > li:last-child > span {
 
 .game__container .bottom-panel-game__container p {
   margin: 0;
+}
+
+.game__container .bottom-panel-game__container .bottom-panel-game--logo {
+  max-height: 58px;
 }
 
 .game__container .zoom-btns__container {
@@ -1385,6 +1657,10 @@ body .pagination > li:last-child > span {
 
 .game__container .zoom-btns__container div:hover {
   background-color: #ececec;
+}
+
+.hide {
+  display: none;
 }
 
 /*!

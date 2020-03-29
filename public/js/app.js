@@ -50418,6 +50418,50 @@ module.exports = "/images/about.jpg?efdde077d9ea239a12e4b1438b6f5cc8";
 
 /***/ }),
 
+/***/ "./resources/assets/images/allIcon.png":
+/*!*********************************************!*\
+  !*** ./resources/assets/images/allIcon.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/allIcon.png?cbff133b24a027fb3de15a9c31be0679";
+
+/***/ }),
+
+/***/ "./resources/assets/images/buildingsIcon.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/images/buildingsIcon.png ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/buildingsIcon.png?139dbe79af77a51aceb5bb37d4e42a1c";
+
+/***/ }),
+
+/***/ "./resources/assets/images/businessIcon.png":
+/*!**************************************************!*\
+  !*** ./resources/assets/images/businessIcon.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/businessIcon.png?41e648d2b998797fa65220ae75eedf3b";
+
+/***/ }),
+
+/***/ "./resources/assets/images/close.png":
+/*!*******************************************!*\
+  !*** ./resources/assets/images/close.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/close.png?655e76ad95bd2034951ee1db524e0353";
+
+/***/ }),
+
 /***/ "./resources/assets/images/dashboard.png":
 /*!***********************************************!*\
   !*** ./resources/assets/images/dashboard.png ***!
@@ -50426,6 +50470,39 @@ module.exports = "/images/about.jpg?efdde077d9ea239a12e4b1438b6f5cc8";
 /***/ (function(module, exports) {
 
 module.exports = "/images/dashboard.png?814a49e44a05f8d25c4b33bf1147c910";
+
+/***/ }),
+
+/***/ "./resources/assets/images/entertainmentIcon.png":
+/*!*******************************************************!*\
+  !*** ./resources/assets/images/entertainmentIcon.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/entertainmentIcon.png?0975143f0f7b60507cdf10524ea54739";
+
+/***/ }),
+
+/***/ "./resources/assets/images/factoriesIcon.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/images/factoriesIcon.png ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/factoriesIcon.png?c6a4d6cef1cd471079dc96b5616ad7d9";
+
+/***/ }),
+
+/***/ "./resources/assets/images/factory.png":
+/*!*********************************************!*\
+  !*** ./resources/assets/images/factory.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/factory.png?4f79cdf235dc6f5f68075f1864b17df9";
 
 /***/ }),
 
@@ -50451,6 +50528,28 @@ module.exports = "/images/grid.png?e66a74f47e18181fd125a3eb4e7943e2";
 
 /***/ }),
 
+/***/ "./resources/assets/images/hospital.png":
+/*!**********************************************!*\
+  !*** ./resources/assets/images/hospital.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/hospital.png?c62dbe36826b64a4afdb476810986736";
+
+/***/ }),
+
+/***/ "./resources/assets/images/house.png":
+/*!*******************************************!*\
+  !*** ./resources/assets/images/house.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/house.png?b5b3e1fe92f07f34cc81728fae4b7f70";
+
+/***/ }),
+
 /***/ "./resources/assets/images/logout.png":
 /*!********************************************!*\
   !*** ./resources/assets/images/logout.png ***!
@@ -50462,14 +50561,14 @@ module.exports = "/images/logout.png?aa5644f25d56d0a693b9257b99c39e35";
 
 /***/ }),
 
-/***/ "./resources/assets/images/ok-grey.png":
-/*!*********************************************!*\
-  !*** ./resources/assets/images/ok-grey.png ***!
-  \*********************************************/
+/***/ "./resources/assets/images/oilFactory.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/oilFactory.png ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/ok-grey.png?aece3755518e0dcdb7fd7aee073ae960";
+module.exports = "/images/oilFactory.png?752cabc6eff3b196f786752bb8f5cce2";
 
 /***/ }),
 
@@ -50484,14 +50583,47 @@ module.exports = "/images/ok.png?ef8d4b8648f1fe7572d883c9ae68e4b4";
 
 /***/ }),
 
-/***/ "./resources/assets/images/scan.png":
-/*!******************************************!*\
-  !*** ./resources/assets/images/scan.png ***!
-  \******************************************/
+/***/ "./resources/assets/images/stone.png":
+/*!*******************************************!*\
+  !*** ./resources/assets/images/stone.png ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/scan.png?690c2f6fe15cffa25993aeca33234941";
+module.exports = "/images/stone.png?a81cce4bd40078b6710e66bb30645a43";
+
+/***/ }),
+
+/***/ "./resources/assets/images/travelIcon.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/travelIcon.png ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/travelIcon.png?3b4761b392a329c9fc9d2c9fe43e5ba5";
+
+/***/ }),
+
+/***/ "./resources/assets/images/water.png":
+/*!*******************************************!*\
+  !*** ./resources/assets/images/water.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/water.png?2dace1fd8731933c7a9a16a09b81dece";
+
+/***/ }),
+
+/***/ "./resources/assets/images/waterHalf.png":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/waterHalf.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/waterHalf.png?7c32d37b5eb0114d2b5df59190b27199";
 
 /***/ }),
 
@@ -50744,8 +50876,6 @@ var Main = /*#__PURE__*/function (_Component) {
       activeMenuSection: "",
       APP_URL: "http://127.0.0.1:8000",
       API_URL: "http://127.0.0.1:8000/api/",
-      // APP_URL: "http://zdrowy-koszyk.live/",
-      // API_URL: "http://zdrowy-koszyk.live/api/",
       showLoader: false,
       alertMessage: "",
       alertStatus: "",
@@ -51173,17 +51303,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DashboardContainer_DashboardContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../DashboardContainer/DashboardContainer */ "./resources/js/components/utils/DashboardContainer/DashboardContainer.js");
 /* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../MainContext */ "./resources/js/components/MainContext.js");
 /* harmony import */ var _utils_Header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/Header */ "./resources/js/components/utils/Dashboard/utils/Header.js");
-/* harmony import */ var _utils_DashboardInfoRect__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utils/DashboardInfoRect */ "./resources/js/components/utils/Dashboard/utils/DashboardInfoRect.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _assets_images_scan_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../assets/images/scan.png */ "./resources/assets/images/scan.png");
-/* harmony import */ var _assets_images_scan_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_assets_images_scan_png__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _assets_images_ok_grey_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../assets/images/ok-grey.png */ "./resources/assets/images/ok-grey.png");
-/* harmony import */ var _assets_images_ok_grey_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_assets_images_ok_grey_png__WEBPACK_IMPORTED_MODULE_14__);
-
-
-
-
 
 
 
@@ -51230,42 +51349,6 @@ var Dashboard = /*#__PURE__*/function (_Component) {
 
 Dashboard.contextType = _MainContext__WEBPACK_IMPORTED_MODULE_9__["MainContext"];
 /* harmony default export */ __webpack_exports__["default"] = (Dashboard);
-
-/***/ }),
-
-/***/ "./resources/js/components/utils/Dashboard/utils/DashboardInfoRect.js":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/utils/Dashboard/utils/DashboardInfoRect.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var DashboardInfoRect = function DashboardInfoRect(_ref) {
-  var icon = _ref.icon,
-      headerText = _ref.headerText,
-      number = _ref.number;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-sm-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dashboard-info-rect__container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dashboard-info-rect__header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dashboard-info-rect__icon-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: icon
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, headerText)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "dashboard-info-rect__number"
-  }, number)));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (DashboardInfoRect);
 
 /***/ }),
 
@@ -51344,20 +51427,27 @@ var DashboardContainer = function DashboardContainer(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../../../assets/images/LOM-white.png */ "./resources/assets/images/LOM-white.png");
+/* harmony import */ var _assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 var BottomPanel = function BottomPanel() {
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "23 March, 2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, context && context.date && context.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Population: 10000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money: 10000000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "bottom-panel-game--logo",
+    src: _assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_2___default.a
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bottom-panel-game__action--btn"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Action"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Population: ".concat(context && context.population && context.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money: ".concat(context && context.money && context.money)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Materials: ".concat(context && context.materials && context.materials)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Society Hapiness: ".concat(context && context.societyHappiness && context.societyHappiness, " %"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BottomPanel);
@@ -51393,6 +51483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Map_Map__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Map/Map */ "./resources/js/components/utils/Game/Map/Map.js");
 /* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./GameContext */ "./resources/js/components/utils/Game/GameContext.js");
 /* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../MainContext */ "./resources/js/components/MainContext.js");
+/* harmony import */ var _mapConfig__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./mapConfig */ "./resources/js/components/utils/Game/mapConfig.js");
 
 
 
@@ -51405,6 +51496,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // zoomX: 20, zoomY: 11 - initialZoomPosition: 8
+// zoomX: 18, zoomY: 10 - initialZoomPosition: 7
+// zoomX: 16, zoomY: 9 - initialZoomPosition: 6
+// zoomX: 14, zoomY: 8 - initialZoomPosition: 5
+// zoomX: 12, zoomY: 7 - initialZoomPosition: 4
+// zoomX: 10, zoomY: 6 - initialZoomPosition: 3
+// zoomX: 8, zoomY: 5 - initialZoomPosition: 2
+// zoomX: 6, zoomY: 4 - initialZoomPosition: 1
+// zoomX: 4, zoomY: 2 - initialZoomPosition: 0
 
 var Game = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Game, _Component);
@@ -51450,9 +51550,22 @@ var Game = /*#__PURE__*/function (_Component) {
       }
     });
 
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "componentDidMount", function () {
+      _this.setState({
+        date: new Date("2000-01-01").toLocaleString()
+      });
+    });
+
     _this.state = {
-      zoomX: 10,
-      zoomY: 6
+      initialZoomPosition: 3,
+      zoomX: 20,
+      zoomY: 11,
+      date: "",
+      money: 1000000,
+      population: 3000,
+      materials: 1000,
+      societyHappiness: 70,
+      mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_12__["default"]
     };
     return _this;
   }
@@ -51462,14 +51575,28 @@ var Game = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$state = this.state,
           zoomX = _this$state.zoomX,
-          zoomY = _this$state.zoomY;
+          zoomY = _this$state.zoomY,
+          date = _this$state.date,
+          money = _this$state.money,
+          population = _this$state.population,
+          initialZoomPosition = _this$state.initialZoomPosition,
+          mapConfig = _this$state.mapConfig,
+          materials = _this$state.materials,
+          societyHappiness = _this$state.societyHappiness;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "game__container"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_10__["GameContext"].Provider, {
         value: {
           zoomX: zoomX,
           zoomY: zoomY,
-          handleZoomChange: this.handleZoomChange
+          handleZoomChange: this.handleZoomChange,
+          date: date,
+          money: money,
+          population: population,
+          materials: materials,
+          initialZoomPosition: initialZoomPosition,
+          mapConfig: mapConfig,
+          societyHappiness: societyHappiness
         }
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
     }
@@ -51499,8 +51626,382 @@ __webpack_require__.r(__webpack_exports__);
 var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
   zoomX: 10,
   zoomY: 6,
-  handleZoomChange: function handleZoomChange() {}
+  handleZoomChange: function handleZoomChange(operation) {},
+  date: "",
+  money: 0,
+  population: 0,
+  materials: 0,
+  initialZoomPosition: 3,
+  societyHappiness: 0,
+  mapConfig: []
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../../../../assets/images/businessIcon.png */ "./resources/assets/images/businessIcon.png");
+/* harmony import */ var _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../../../../../assets/images/buildingsIcon.png */ "./resources/assets/images/buildingsIcon.png");
+/* harmony import */ var _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/entertainmentIcon.png */ "./resources/assets/images/entertainmentIcon.png");
+/* harmony import */ var _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/travelIcon.png */ "./resources/assets/images/travelIcon.png");
+/* harmony import */ var _assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/factoriesIcon.png */ "./resources/assets/images/factoriesIcon.png");
+/* harmony import */ var _assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/allIcon.png */ "./resources/assets/images/allIcon.png");
+/* harmony import */ var _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js");
+/* harmony import */ var _Options_Options__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Options/Options */ "./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js");
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_assets_images_close_png__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/oilFactory.png */ "./resources/assets/images/oilFactory.png");
+/* harmony import */ var _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ActionModal = /*#__PURE__*/function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(ActionModal, _Component);
+
+  function ActionModal(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ActionModal);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ActionModal).call(this, props));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleSetActiveSidebarOption", function (name) {
+      _this.setState({
+        activeSidebarOption: name
+      });
+    });
+
+    _this.state = {
+      activeSidebarOption: "All",
+      sidebarOptions: [{
+        id: 0,
+        name: "All",
+        icon: _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14___default.a
+      }, {
+        id: 1,
+        name: "Factories",
+        icon: _assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_13___default.a
+      }, {
+        id: 2,
+        name: "Building",
+        icon: _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_10___default.a
+      }, {
+        id: 3,
+        name: "Business",
+        icon: _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_9___default.a
+      }, {
+        id: 4,
+        name: "Entertainment",
+        icon: _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_11___default.a
+      }, {
+        id: 5,
+        name: "Transport",
+        icon: _assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_12___default.a
+      }],
+      optionElements: [{
+        sidebarOption: "Factories",
+        name: "Oil factory",
+        icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
+        description: "Earn 500 money everyday.\n Need 1000 people to work in.",
+        cost: 200000
+      }, {
+        sidebarOption: "Factories",
+        name: "Oil factory1",
+        icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
+        description: "Earn 500 money everyday.\n Need 1000 people to work in.",
+        cost: 200000
+      }, {
+        sidebarOption: "Factories",
+        name: "Oil factory2",
+        icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
+        description: "Earn 500 money everyday.\n Need 1000 people to work in.",
+        cost: 200000
+      }]
+    };
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ActionModal, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$state = this.state,
+          sidebarOptions = _this$state.sidebarOptions,
+          activeSidebarOption = _this$state.activeSidebarOption,
+          optionElements = _this$state.optionElements;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "action-modal__container"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "action-modal__close",
+        onClick: function onClick() {
+          return _this2.props.handleSetActionModal();
+        },
+        title: "Close"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17___default.a,
+        alt: "Close"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        options: sidebarOptions,
+        handleSetActiveSidebarOption: this.handleSetActiveSidebarOption,
+        activeSidebarOption: activeSidebarOption
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Options_Options__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        optionElements: optionElements,
+        activeSidebarOption: activeSidebarOption
+      }));
+    }
+  }]);
+
+  return ActionModal;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+
+ActionModal.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_8__["GameContext"];
+/* harmony default export */ __webpack_exports__["default"] = (ActionModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _SingleOption_SingleOption__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SingleOption/SingleOption */ "./resources/js/components/utils/Game/Map/ActionModal/Options/SingleOption/SingleOption.js");
+
+
+
+var Options = function Options(_ref) {
+  var optionElements = _ref.optionElements,
+      activeSidebarOption = _ref.activeSidebarOption;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "options__container"
+  }, optionElements && optionElements.map(function (option, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SingleOption_SingleOption__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      option: option,
+      activeSidebarOption: activeSidebarOption,
+      key: "option-".concat(i)
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Options);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ActionModal/Options/SingleOption/SingleOption.js":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ActionModal/Options/SingleOption/SingleOption.js ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SingleOption = function SingleOption(_ref) {
+  var option = _ref.option,
+      activeSidebarOption = _ref.activeSidebarOption;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, activeSidebarOption === option.sidebarOption && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "options__element"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: option.icon
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--header"
+  }, option.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--description"
+  }, option.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--cost"
+  }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "options__element--submit"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))), activeSidebarOption === "All" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "options__element"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: option.icon
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--header"
+  }, option.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--description"
+  }, option.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--cost"
+  }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "options__element--submit"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SingleOption);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Sidebar = function Sidebar(_ref) {
+  var options = _ref.options,
+      handleSetActiveSidebarOption = _ref.handleSetActiveSidebarOption,
+      activeSidebarOption = _ref.activeSidebarOption;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "action-modal__sidebar--container"
+  }, options && options.map(function (option, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: option.name !== activeSidebarOption ? "sidebar__element opacity" : "sidebar__element",
+      onClick: function onClick() {
+        return handleSetActiveSidebarOption(option.name);
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: option.icon
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: activeSidebarOption === option.name && "bold"
+    }, option.name));
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var paths = {
+  stone: __webpack_require__(/*! ./../../../../../../assets/images/stone.png */ "./resources/assets/images/stone.png"),
+  water: __webpack_require__(/*! ./../../../../../../assets/images/water.png */ "./resources/assets/images/water.png"),
+  waterHalf: __webpack_require__(/*! ./../../../../../../assets/images/waterHalf.png */ "./resources/assets/images/waterHalf.png"),
+  factory: __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png"),
+  house: __webpack_require__(/*! ./../../../../../../assets/images/house.png */ "./resources/assets/images/house.png"),
+  hospital: __webpack_require__(/*! ./../../../../../../assets/images/hospital.png */ "./resources/assets/images/hospital.png")
+};
+
+var ElementImage = function ElementImage(_ref) {
+  var configElement = _ref.configElement,
+      index = _ref.index;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
+      _React$useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_React$useState, 2),
+      showDescription = _React$useState2[0],
+      setShowDescription = _React$useState2[1];
+
+  var handleShowDescription = function handleShowDescription() {
+    setShowDescription(!showDescription);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "map-element__container",
+    onClick: function onClick() {
+      return handleShowDescription();
+    }
+  }, configElement.desriptionHeader && configElement.descriptionContent && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "map-element__description--container ".concat(!showDescription && "hide")
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "map-element__description--header"
+  }, configElement.desriptionHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "map-element__description--content"
+  }, configElement.descriptionContent)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: paths[configElement.value]
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ElementImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var ElementImage = function ElementImage(_ref) {
+  var configElement = _ref.configElement;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: configElement.value === "road-horizontal" ? "road-horizontal" : configElement.value === "road-vertical" ? "road-vertical" : configElement.value === "road-right-bottom" ? "road-right-bottom" : configElement.value === "road-left-bottom" ? "road-left-bottom" : configElement.value === "road-right-top" ? "road-right-top" : configElement.value === "road-left-top" && "road-left-top"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ElementImage);
 
 /***/ }),
 
@@ -51515,34 +52016,122 @@ var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
+/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
+/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
 
 
 
 
 
-var Map = function Map() {
-  var gameContext = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_3__["GameContext"]);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "game__map--container"
-  }, gameContext.zoomY && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(gameContext.zoomY)).map(function (yElement, i) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "map__floor map__floor-".concat(i)
-    }, gameContext.zoomX && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(gameContext.zoomX)).map(function (element, j) {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "map-square map-square__".concat(i, "-").concat(j),
-        style: {
-          height: "calc(100vh/".concat(gameContext.zoomY),
-          width: "calc(100vw/".concat(gameContext.zoomX, ")")
-        }
+
+
+
+
+
+
+
+
+
+
+var Map = /*#__PURE__*/function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Map, _Component);
+
+  function Map(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Map);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Map).call(this, props));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this), "handleSetActionModal", function () {
+      _this.setState({
+        showActionModal: !_this.state.showActionModal
       });
-    }));
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_2__["default"], null));
-};
+    });
 
+    _this.state = {
+      showActionModal: false
+    };
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Map, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var showActionModal = this.state.showActionModal;
+      var _this$context = this.context,
+          zoomX = _this$context.zoomX,
+          zoomY = _this$context.zoomY,
+          mapConfig = _this$context.mapConfig;
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        className: "game__map--container"
+      }, zoomY && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomY)).map(function (yElement, y) {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          className: "map__floor map__floor-".concat(y),
+          key: "map__floor-".concat(y)
+        }, zoomX && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomX)).map(function (Xelement, x) {
+          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+            className: "map-square map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y),
+            style: {
+              height: "calc(100vh/".concat(zoomY),
+              width: "calc(100vw/".concat(zoomX, ")")
+            },
+            key: "map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y),
+            onClick: function onClick() {
+              return _this2.handleSetActionModal();
+            }
+          }, mapConfig && mapConfig.map(function (configElement, index) {
+            // console.log(
+            //     configElement.x,
+            //     x,
+            //     configElement.y,
+            //     y
+            // );
+            if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && configElement.haveImage) {
+              return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                configElement: configElement,
+                index: index,
+                key: "".concat(configElement.value, "-").concat(index)
+              });
+            } else if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && !configElement.haveImage) {
+              return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_12__["default"], {
+                configElement: configElement,
+                key: "".concat(configElement.value, "-").concat(index)
+              });
+            }
+          }));
+        }));
+      }), showActionModal && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        handleSetActionModal: this.handleSetActionModal
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+    }
+  }]);
+
+  return Map;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+Map.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_10__["GameContext"];
 /* harmony default export */ __webpack_exports__["default"] = (Map);
 
 /***/ }),
@@ -51580,6 +52169,564 @@ var ZoomBtns = function ZoomBtns() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ZoomBtns);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/mapConfig.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/utils/Game/mapConfig.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var initialMapConfig = [{
+  x: 2,
+  y: 0,
+  value: "road-right-bottom",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 0,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 0,
+  value: "road-left-bottom",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 1,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 2,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 3,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 4,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 5,
+  value: "road-right-top",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 5,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 5,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 5,
+  value: "road-left-bottom",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 6,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 7,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 1,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 2,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 3,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 4,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 5,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 6,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 7,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 8,
+  value: "road-right-top",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 8,
+  value: "road-horizontal",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 8,
+  value: "road-left-top",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 0,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 16,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 17,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 16,
+  y: 1,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 17,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 17,
+  y: 2,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 2,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 2,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 3,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 3,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 4,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 5,
+  y: 1,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 5,
+  y: 2,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 6,
+  y: 2,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 3,
+  y: 6,
+  value: "factory",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "Factory",
+  descriptionContent: "It gives you 1000 money every day",
+  haveImage: true
+}, {
+  x: 13,
+  y: 1,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 13,
+  y: 2,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 13,
+  y: 3,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 8,
+  y: 7,
+  value: "hospital",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Hospital",
+  descriptionContent: "Lorem ipsum",
+  haveImage: true
+}];
+/* harmony default export */ __webpack_exports__["default"] = (initialMapConfig);
 
 /***/ }),
 
