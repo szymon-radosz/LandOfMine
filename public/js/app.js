@@ -51994,14 +51994,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var ElementImage = function ElementImage(_ref) {
-  var configElement = _ref.configElement;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: configElement.value === "road-horizontal" ? "road-horizontal" : configElement.value === "road-vertical" ? "road-vertical" : configElement.value === "road-right-bottom" ? "road-right-bottom" : configElement.value === "road-left-bottom" ? "road-left-bottom" : configElement.value === "road-right-top" ? "road-right-top" : configElement.value === "road-left-top" && "road-left-top"
-  });
+var ElementWithoutImage = function ElementWithoutImage(_ref) {
+  var configElement = _ref.configElement,
+      handleSetActionModal = _ref.handleSetActionModal;
+
+  if (configElement.value === "road-horizontal" || configElement.value === "road-vertical" || configElement.value === "road-right-bottom" || configElement.value === "road-left-bottom" || configElement.value === "road-right-top" || configElement.value === "road-left-top") {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: configElement.value === "road-horizontal" ? "road-horizontal" : configElement.value === "road-vertical" ? "road-vertical" : configElement.value === "road-right-bottom" ? "road-right-bottom" : configElement.value === "road-left-bottom" ? "road-left-bottom" : configElement.value === "road-right-top" ? "road-right-top" : configElement.value === "road-left-top" && "road-left-top"
+    });
+  } else if (configElement.value === "map-empty") {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "map-empty",
+      onClick: function onClick() {
+        return handleSetActionModal();
+      }
+    });
+  }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ElementImage);
+/* harmony default export */ __webpack_exports__["default"] = (ElementWithoutImage);
 
 /***/ }),
 
@@ -52097,10 +52108,7 @@ var Map = /*#__PURE__*/function (_Component) {
               height: "calc(100vh/".concat(zoomY),
               width: "calc(100vw/".concat(zoomX, ")")
             },
-            key: "map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y),
-            onClick: function onClick() {
-              return _this2.handleSetActionModal();
-            }
+            key: "map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y)
           }, mapConfig && mapConfig.map(function (configElement, index) {
             // console.log(
             //     configElement.x,
@@ -52117,7 +52125,8 @@ var Map = /*#__PURE__*/function (_Component) {
             } else if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && !configElement.haveImage) {
               return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_12__["default"], {
                 configElement: configElement,
-                key: "".concat(configElement.value, "-").concat(index)
+                key: "".concat(configElement.value, "-").concat(index),
+                handleSetActionModal: _this2.handleSetActionModal
               });
             }
           }));
@@ -52181,7 +52190,24 @@ var ZoomBtns = function ZoomBtns() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var initialMapConfig = [{
+var initialMapConfig = [//==================== row - 1 ====================
+{
+  x: 0,
+  y: 0,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 0,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
   x: 2,
   y: 0,
   value: "road-right-bottom",
@@ -52278,9 +52304,323 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
+  x: 13,
+  y: 0,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 0,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 0,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 16,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 17,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 0,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, // ==================== row - 2 ====================
+{
+  x: 0,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 1,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 1,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 6,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
   x: 12,
   y: 1,
   value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 1,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 14,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 1,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 1,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 17,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 1,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, //==================== row - 3 ====================
+{
+  x: 0,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 2,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 2,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 6,
+  y: 2,
+  value: "stone",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Stone",
+  descriptionContent: "Added 100 of Materials every day",
+  haveImage: true
+}, {
+  x: 7,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 2,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -52294,6 +52634,161 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
+  x: 13,
+  y: 2,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 14,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 2,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 2,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 18,
+  y: 2,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 2,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, //==================== row - 4 ====================
+{
+  x: 0,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 3,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
   x: 12,
   y: 3,
   value: "road-vertical",
@@ -52302,9 +52797,317 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
+  x: 13,
+  y: 3,
+  value: "house",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "House",
+  descriptionContent: "Increase your overal population by 1000 people",
+  haveImage: true
+}, {
+  x: 14,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 3,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 3,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, {
+  x: 19,
+  y: 3,
+  value: "water",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, //==================== row - 5 ====================
+{
+  x: 0,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 4,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
   x: 12,
   y: 4,
   value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 4,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 4,
+  value: "waterHalf",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: true
+}, //==================== row - 6 ====================
+{
+  x: 0,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 5,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 5,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -52342,57 +53145,50 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
-  x: 15,
-  y: 6,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 15,
-  y: 7,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 2,
-  y: 1,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 2,
-  y: 2,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 2,
-  y: 3,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 2,
-  y: 4,
-  value: "road-vertical",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: false
-}, {
-  x: 2,
+  x: 16,
   y: 5,
-  value: "road-vertical",
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 5,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, //==================== row - 7 ====================
+{
+  x: 0,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 6,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -52406,9 +53202,319 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
+  x: 3,
+  y: 6,
+  value: "factory",
+  initialElement: true,
+  population: 0,
+  money: 1000,
+  desriptionHeader: "Factory",
+  descriptionContent: "It gives you 1000 money every day",
+  haveImage: true
+}, {
+  x: 4,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 6,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 6,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, //==================== row - 8 ====================
+{
+  x: 0,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
   x: 2,
   y: 7,
   value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 7,
+  value: "hospital",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  desriptionHeader: "Hospital",
+  descriptionContent: "Lorem ipsum",
+  haveImage: true
+}, {
+  x: 9,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 7,
+  value: "road-vertical",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 7,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, //==================== row - 9 ====================
+{
+  x: 0,
+  y: 8,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 8,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -52526,205 +53632,359 @@ var initialMapConfig = [{
   money: 0,
   haveImage: false
 }, {
-  x: 15,
-  y: 0,
-  value: "waterHalf",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
   x: 16,
-  y: 0,
-  value: "water",
+  y: 8,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 17,
-  y: 0,
-  value: "water",
+  y: 8,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 18,
-  y: 0,
-  value: "water",
+  y: 8,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 19,
-  y: 0,
-  value: "water",
+  y: 8,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
+}, //==================== row - 10 ====================
+{
+  x: 0,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
 }, {
-  x: 16,
-  y: 1,
-  value: "waterHalf",
+  x: 1,
+  y: 9,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
-  x: 17,
-  y: 1,
-  value: "water",
+  x: 2,
+  y: 9,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
-}, {
-  x: 18,
-  y: 1,
-  value: "water",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 19,
-  y: 1,
-  value: "water",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 17,
-  y: 2,
-  value: "waterHalf",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 18,
-  y: 2,
-  value: "water",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 19,
-  y: 2,
-  value: "water",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 18,
-  y: 3,
-  value: "waterHalf",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 19,
-  y: 3,
-  value: "water",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 19,
-  y: 4,
-  value: "waterHalf",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  haveImage: true
-}, {
-  x: 5,
-  y: 1,
-  value: "stone",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  desriptionHeader: "Stone",
-  descriptionContent: "Added 100 of Materials every day",
-  haveImage: true
-}, {
-  x: 5,
-  y: 2,
-  value: "stone",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  desriptionHeader: "Stone",
-  descriptionContent: "Added 100 of Materials every day",
-  haveImage: true
-}, {
-  x: 6,
-  y: 2,
-  value: "stone",
-  initialElement: true,
-  population: 0,
-  money: 0,
-  desriptionHeader: "Stone",
-  descriptionContent: "Added 100 of Materials every day",
-  haveImage: true
+  haveImage: false
 }, {
   x: 3,
-  y: 6,
-  value: "factory",
-  initialElement: true,
-  population: 0,
-  money: 1000,
-  desriptionHeader: "Factory",
-  descriptionContent: "It gives you 1000 money every day",
-  haveImage: true
-}, {
-  x: 13,
-  y: 1,
-  value: "house",
-  initialElement: true,
-  population: 0,
-  money: 1000,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
-  haveImage: true
-}, {
-  x: 13,
-  y: 2,
-  value: "house",
-  initialElement: true,
-  population: 0,
-  money: 1000,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
-  haveImage: true
-}, {
-  x: 13,
-  y: 3,
-  value: "house",
-  initialElement: true,
-  population: 0,
-  money: 1000,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
-  haveImage: true
-}, {
-  x: 8,
-  y: 7,
-  value: "hospital",
+  y: 9,
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
-  desriptionHeader: "Hospital",
-  descriptionContent: "Lorem ipsum",
-  haveImage: true
+  haveImage: false
+}, {
+  x: 4,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 9,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, //==================== row - 11 ====================
+{
+  x: 0,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 1,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 2,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 3,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 4,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 5,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 6,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 7,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 8,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 9,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 10,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 11,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 12,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 13,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 14,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 15,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 16,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 17,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 18,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
+}, {
+  x: 19,
+  y: 10,
+  value: "map-empty",
+  initialElement: true,
+  population: 0,
+  money: 0,
+  haveImage: false
 }];
 /* harmony default export */ __webpack_exports__["default"] = (initialMapConfig);
 

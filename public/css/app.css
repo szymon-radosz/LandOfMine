@@ -1352,6 +1352,11 @@ body .pagination > li:last-child > span {
   transition: 0.3s;
 }
 
+.game__container .game__map--container .map-square .map-empty {
+  width: 100%;
+  height: 100%;
+}
+
 .game__container .game__map--container .map-square img {
   width: 100%;
   height: 100%;

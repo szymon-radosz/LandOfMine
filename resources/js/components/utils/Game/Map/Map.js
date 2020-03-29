@@ -44,9 +44,6 @@ class Map extends Component {
                                                 key={`map-square__${20 -
                                                     zoomX +
                                                     x}-${11 - zoomY + y}`}
-                                                onClick={() =>
-                                                    this.handleSetActionModal()
-                                                }
                                             >
                                                 {mapConfig &&
                                                     mapConfig.map(
@@ -99,6 +96,10 @@ class Map extends Component {
                                                                             configElement
                                                                         }
                                                                         key={`${configElement.value}-${index}`}
+                                                                        handleSetActionModal={
+                                                                            this
+                                                                                .handleSetActionModal
+                                                                        }
                                                                     />
                                                                 );
                                                             }
