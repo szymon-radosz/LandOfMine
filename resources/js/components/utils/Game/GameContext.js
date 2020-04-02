@@ -9,5 +9,17 @@ export const GameContext = React.createContext({
     materials: 0,
     initialZoomPosition: 3,
     societyHappiness: 0,
-    mapConfig: []
+    mapConfig: [],
+    daysPassed: 0,
+    handleAddmapConfigItem: (
+        x,
+        y,
+        value,
+        population,
+        money,
+        desriptionHeader,
+        descriptionContent,
+        finishedBuildDays,
+        durationBuildDays
+    ) => {}
 });

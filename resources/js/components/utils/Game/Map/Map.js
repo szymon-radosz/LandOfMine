@@ -10,16 +10,22 @@ class Map extends Component {
         super(props);
 
         this.state = {
-            showActionModal: false
+            showActionModal: false,
+            activeXCord: 0,
+            activeYCord: 0
         };
     }
 
-    handleSetActionModal = () => {
-        this.setState({ showActionModal: !this.state.showActionModal });
+    handleSetActionModal = (x, y) => {
+        this.setState({
+            showActionModal: !this.state.showActionModal,
+            activeXCord: x,
+            activeYCord: y
+        });
     };
 
     render() {
-        const { showActionModal } = this.state;
+        const { showActionModal, activeXCord, activeYCord } = this.state;
         const { zoomX, zoomY, mapConfig } = this.context;
         return (
             <div className="game__map--container">
@@ -32,6 +38,7 @@ class Map extends Component {
                             >
                                 {zoomX &&
                                     [...Array(zoomX)].map((Xelement, x) => {
+                                        //console.log(["x,y", x, y]);
                                         return (
                                             <div
                                                 className={`map-square map-square__${20 -
@@ -68,17 +75,38 @@ class Map extends Component {
                                                                         y &&
                                                                 configElement.haveImage
                                                             ) {
-                                                                return (
-                                                                    <ElementImage
-                                                                        configElement={
-                                                                            configElement
-                                                                        }
-                                                                        index={
-                                                                            index
-                                                                        }
-                                                                        key={`${configElement.value}-${index}`}
-                                                                    />
-                                                                );
+                                                                if (
+                                                                    configElement.finishedBuildDays &&
+                                                                    configElement.durationBuildDays &&
+                                                                    configElement.finishedBuildDays !==
+                                                                        configElement.durationBuildDays
+                                                                ) {
+                                                                    return (
+                                                                        <div className="map-element__during-build--container">
+                                                                            <ElementImage
+                                                                                configElement={
+                                                                                    configElement
+                                                                                }
+                                                                                index={
+                                                                                    index
+                                                                                }
+                                                                                key={`${configElement.value}-${index}`}
+                                                                            />
+                                                                        </div>
+                                                                    );
+                                                                } else {
+                                                                    return (
+                                                                        <ElementImage
+                                                                            configElement={
+                                                                                configElement
+                                                                            }
+                                                                            index={
+                                                                                index
+                                                                            }
+                                                                            key={`${configElement.value}-${index}`}
+                                                                        />
+                                                                    );
+                                                                }
                                                             } else if (
                                                                 configElement.x ===
                                                                     20 -
@@ -100,6 +128,8 @@ class Map extends Component {
                                                                             this
                                                                                 .handleSetActionModal
                                                                         }
+                                                                        x={x}
+                                                                        y={y}
                                                                     />
                                                                 );
                                                             }
@@ -115,8 +145,17 @@ class Map extends Component {
                 {showActionModal && (
                     <ActionModal
                         handleSetActionModal={this.handleSetActionModal}
+                        x={activeXCord}
+                        y={activeYCord}
                     />
                 )}
+
+                <div
+                    className="map__finish-day"
+                    onClick={() => this.context.handleDayPassed()}
+                >
+                    <p>Go to next day</p>
+                </div>
 
                 <ZoomBtns />
             </div>

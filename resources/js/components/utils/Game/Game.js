@@ -4,6 +4,8 @@ import Map from "./Map/Map";
 import { GameContext } from "./GameContext";
 import { MainContext } from "./../../MainContext";
 import initialMapConfig from "./mapConfig";
+import moment from "moment";
+import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
 
 // zoomX: 20, zoomY: 11 - initialZoomPosition: 8
 // zoomX: 18, zoomY: 10 - initialZoomPosition: 7
@@ -29,9 +31,54 @@ class Game extends Component {
             population: 3000,
             materials: 1000,
             societyHappiness: 70,
-            mapConfig: initialMapConfig
+            mapConfig: [],
+            daysPassed: 0,
+            daylight: true
         };
     }
+
+    handleUpdateMapConfigItem = (
+        x,
+        y,
+        value,
+        population,
+        money,
+        desriptionHeader,
+        descriptionContent,
+        finishedBuildDays,
+        durationBuildDays
+    ) => {
+        console.log([
+            "handleUpdateMapConfigItem",
+            x,
+            y,
+            value,
+            population,
+            money,
+            desriptionHeader,
+            descriptionContent,
+            finishedBuildDays,
+            durationBuildDays
+        ]);
+
+        this.setState(prevState => ({
+            mapConfig: prevState.mapConfig.map(mapConfigObject =>
+                mapConfigObject.x == x && mapConfigObject.y == y
+                    ? Object.assign(mapConfigObject, {
+                          value: value,
+                          initialElement: false,
+                          population: population,
+                          money: money,
+                          desriptionHeader: desriptionHeader,
+                          descriptionContent: descriptionContent,
+                          haveImage: true,
+                          finishedBuildDays: finishedBuildDays,
+                          durationBuildDays: durationBuildDays
+                      })
+                    : mapConfigObject
+            )
+        }));
+    };
 
     handleZoomChange = operation => {
         const { zoomX } = this.state;
@@ -67,8 +114,63 @@ class Game extends Component {
         }
     };
 
+    handleIncrementFinishedBuildDays = () => {
+        this.setState(prevState => ({
+            mapConfig: prevState.mapConfig.map(mapConfigObject =>
+                mapConfigObject.finishedBuildDays &&
+                mapConfigObject.durationBuildDays &&
+                mapConfigObject.finishedBuildDays !==
+                    mapConfigObject.durationBuildDays
+                    ? Object.assign(mapConfigObject, {
+                          finishedBuildDays:
+                              mapConfigObject.finishedBuildDays + 1
+                      })
+                    : mapConfigObject
+            )
+        }));
+    };
+
+    handleMoneyEarning = () => {
+        let moneySum = 0;
+
+        this.state.mapConfig.map(async mapConfigObject => {
+            if (
+                mapConfigObject.money &&
+                mapConfigObject.finishedBuildDays ===
+                    mapConfigObject.durationBuildDays
+            ) {
+                console.log(["moneySum", moneySum, mapConfigObject]);
+                moneySum += mapConfigObject.money;
+            }
+        });
+
+        this.setState(prevState => ({
+            money: prevState.money + moneySum
+        }));
+    };
+
+    handleDayPassed = () => {
+        this.setState({ daylight: false });
+        console.log("handleDayPassed");
+        this.handleIncrementFinishedBuildDays();
+        this.handleMoneyEarning();
+        this.setState({
+            daysPassed: this.state.daysPassed + 1,
+            date: moment(this.state.date, "YYYY/MM/DD")
+                .add("days", 1)
+                .format("yyyy/MM/dd")
+        });
+
+        setTimeout(() => {
+            this.setState({ daylight: true });
+        }, 1000);
+    };
+
     componentDidMount = () => {
-        this.setState({ date: new Date("2000-01-01").toLocaleString() });
+        this.setState({
+            mapConfig: initialMapConfig,
+            date: new Date("2000-01-01").toLocaleString()
+        });
     };
 
     render() {
@@ -81,7 +183,9 @@ class Game extends Component {
             initialZoomPosition,
             mapConfig,
             materials,
-            societyHappiness
+            societyHappiness,
+            daysPassed,
+            daylight
         } = this.state;
         return (
             <div className="game__container">
@@ -96,9 +200,14 @@ class Game extends Component {
                         materials: materials,
                         initialZoomPosition: initialZoomPosition,
                         mapConfig: mapConfig,
-                        societyHappiness: societyHappiness
+                        societyHappiness: societyHappiness,
+                        daysPassed: daysPassed,
+                        handleDayPassed: this.handleDayPassed,
+                        handleUpdateMapConfigItem: this
+                            .handleUpdateMapConfigItem
                     }}
                 >
+                    {!daylight && <DaylightOverlay />}
                     <Map />
                     <BottomPanel />
                 </GameContext.Provider>

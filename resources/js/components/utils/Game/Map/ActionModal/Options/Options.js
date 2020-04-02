@@ -1,7 +1,7 @@
 import React from "react";
 import SingleOption from "./SingleOption/SingleOption";
 
-const Options = ({ optionElements, activeSidebarOption }) => {
+const Options = ({ optionElements, activeSidebarOption, handleUpdateItem }) => {
     return (
         <div className="options__container">
             {optionElements &&
@@ -11,6 +11,7 @@ const Options = ({ optionElements, activeSidebarOption }) => {
                             option={option}
                             activeSidebarOption={activeSidebarOption}
                             key={`option-${i}`}
+                            handleUpdateItem={handleUpdateItem}
                         />
                     );
                 })}

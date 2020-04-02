@@ -9,6 +9,10 @@ const BottomPanel = () => {
         <div className="bottom-panel-game__container">
             <div className="bottom-panel-game__element">
                 <p>{context && context.date && context.date}</p>
+                <p>
+                    {`Finished days:
+                    ${context && context.daysPassed && context.daysPassed}`}
+                </p>
             </div>
             <div className="bottom-panel-game__element">
                 <img className="bottom-panel-game--logo" src={logo} />

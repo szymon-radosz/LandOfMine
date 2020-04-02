@@ -59,6 +59,7 @@
         "leaflet": "^1.5.1",
         "leaflet-geosearch": "^2.7.0",
         "leaflet-search": "^2.9.8",
+        "moment": "^2.24.0",
         "pigeon-maps": "^0.14.0",
         "pigeon-marker": "^0.3.4",
         "react-burger-menu": "^2.6.13",

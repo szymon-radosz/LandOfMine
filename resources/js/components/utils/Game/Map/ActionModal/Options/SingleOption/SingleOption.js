@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleOption = ({ option, activeSidebarOption }) => {
+const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
     return (
         <>
             {activeSidebarOption === option.sidebarOption && (
@@ -13,7 +13,20 @@ const SingleOption = ({ option, activeSidebarOption }) => {
                     <p className="options__element--cost">
                         Cost: {option.cost}
                     </p>
-                    <div className="options__element--submit">
+                    <div
+                        className="options__element--submit"
+                        onClick={() => {
+                            handleUpdateItem(
+                                option.value,
+                                option.population,
+                                option.money,
+                                option.desriptionHeader,
+                                option.description,
+                                option.finishedBuildDays,
+                                option.durationBuildDays
+                            );
+                        }}
+                    >
                         <p>Buy now</p>
                     </div>
                 </div>
@@ -29,7 +42,20 @@ const SingleOption = ({ option, activeSidebarOption }) => {
                     <p className="options__element--cost">
                         Cost: {option.cost}
                     </p>
-                    <div className="options__element--submit">
+                    <div
+                        className="options__element--submit"
+                        onClick={() => {
+                            handleUpdateItem(
+                                option.value,
+                                option.population,
+                                option.money,
+                                option.desriptionHeader,
+                                option.description,
+                                option.finishedBuildDays,
+                                option.durationBuildDays
+                            );
+                        }}
+                    >
                         <p>Buy now</p>
                     </div>
                 </div>

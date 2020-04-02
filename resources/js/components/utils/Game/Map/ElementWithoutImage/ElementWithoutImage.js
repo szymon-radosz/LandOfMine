@@ -1,6 +1,6 @@
 import React from "react";
 
-const ElementWithoutImage = ({ configElement, handleSetActionModal }) => {
+const ElementWithoutImage = ({ configElement, handleSetActionModal, x, y }) => {
     if (
         configElement.value === "road-horizontal" ||
         configElement.value === "road-vertical" ||
@@ -31,7 +31,7 @@ const ElementWithoutImage = ({ configElement, handleSetActionModal }) => {
         return (
             <div
                 className="map-empty"
-                onClick={() => handleSetActionModal()}
+                onClick={() => handleSetActionModal(x, y)}
             ></div>
         );
     }

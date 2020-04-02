@@ -315,8 +315,8 @@ const initialMapConfig = [
         y: 1,
         value: "house",
         initialElement: true,
-        population: 0,
-        money: 1000,
+        population: 1000,
+        money: 0,
         desriptionHeader: "House",
         descriptionContent: "Increase your overal population by 1000 people",
         haveImage: true
@@ -502,8 +502,8 @@ const initialMapConfig = [
         y: 2,
         value: "house",
         initialElement: true,
-        population: 0,
-        money: 1000,
+        population: 1000,
+        money: 0,
         desriptionHeader: "House",
         descriptionContent: "Increase your overal population by 1000 people",
         haveImage: true
@@ -685,8 +685,8 @@ const initialMapConfig = [
         y: 3,
         value: "house",
         initialElement: true,
-        population: 0,
-        money: 1000,
+        population: 1000,
+        money: 0,
         desriptionHeader: "House",
         descriptionContent: "Increase your overal population by 1000 people",
         haveImage: true
@@ -1142,6 +1142,8 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 1000,
+        finishedBuildDays: 6,
+        durationBuildDays: 6,
         desriptionHeader: "Factory",
         descriptionContent: "It gives you 1000 money every day",
         haveImage: true
@@ -1372,7 +1374,9 @@ const initialMapConfig = [
         money: 0,
         desriptionHeader: "Hospital",
         descriptionContent: "Lorem ipsum",
-        haveImage: true
+        haveImage: true,
+        finishedBuildDays: 4,
+        durationBuildDays: 4
     },
     {
         x: 9,

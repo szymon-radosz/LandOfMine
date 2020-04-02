@@ -33,9 +33,34 @@ const ElementImage = ({ configElement, index }) => {
                         <p className="map-element__description--content">
                             {configElement.descriptionContent}
                         </p>
+                        {configElement.finishedBuildDays &&
+                            configElement.durationBuildDays &&
+                            configElement.finishedBuildDays !==
+                                configElement.durationBuildDays && (
+                                <p className="map-element__description--content">
+                                    {`Progress:
+                                    ${(configElement.finishedBuildDays /
+                                        configElement.durationBuildDays) *
+                                        100}
+                                    %`}
+                                </p>
+                            )}
                     </div>
                 )}
-            <img src={paths[configElement.value]} />
+            <img
+                src={paths[configElement.value]}
+                style={
+                    configElement.finishedBuildDays &&
+                    configElement.durationBuildDays &&
+                    configElement.finishedBuildDays !==
+                        configElement.durationBuildDays
+                        ? {
+                              WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ${configElement.finishedBuildDays /
+                                  configElement.durationBuildDays}))`
+                          }
+                        : {}
+                }
+            />
         </div>
     );
 };

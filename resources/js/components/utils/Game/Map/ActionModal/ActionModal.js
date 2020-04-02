@@ -21,55 +21,65 @@ class ActionModal extends Component {
                 {
                     id: 0,
                     name: "All",
-                    icon: allIcon
+                    icon: allIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 1,
                     name: "Factories",
-                    icon: factoriesIcon
+                    icon: factoriesIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 2,
                     name: "Building",
-                    icon: buildingsIcon
+                    icon: buildingsIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 3,
                     name: "Business",
-                    icon: businessIcon
+                    icon: businessIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 4,
                     name: "Entertainment",
-                    icon: entertainmentIcon
+                    icon: entertainmentIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 5,
                     name: "Transport",
-                    icon: travelIcon
+                    icon: travelIcon,
+                    altIcon: "Icon made by Freepik from www.flaticon.com"
                 }
             ],
             optionElements: [
                 {
                     sidebarOption: "Factories",
                     name: "Oil factory",
+                    value: "factory",
+                    population: 1000,
+                    money: 1000,
                     icon: oilFactory,
+                    desriptionHeader: "Factory",
+                    finishedBuildDays: 1,
+                    durationBuildDays: 6,
                     description:
                         "Earn 500 money everyday.\n Need 1000 people to work in.",
                     cost: 200000
                 },
                 {
                     sidebarOption: "Factories",
-                    name: "Oil factory1",
+                    name: "Oil factory",
+                    value: "factory",
+                    population: 1000,
+                    money: 1000,
                     icon: oilFactory,
-                    description:
-                        "Earn 500 money everyday.\n Need 1000 people to work in.",
-                    cost: 200000
-                },
-                {
-                    sidebarOption: "Factories",
-                    name: "Oil factory2",
-                    icon: oilFactory,
+                    desriptionHeader: "Factory",
+                    finishedBuildDays: 1,
+                    durationBuildDays: 6,
                     description:
                         "Earn 500 money everyday.\n Need 1000 people to work in.",
                     cost: 200000
@@ -80,6 +90,28 @@ class ActionModal extends Component {
 
     handleSetActiveSidebarOption = name => {
         this.setState({ activeSidebarOption: name });
+    };
+
+    handleUpdateItem = (
+        value,
+        population,
+        money,
+        desriptionHeader,
+        descriptionContent,
+        finishedBuildDays,
+        durationBuildDays
+    ) => {
+        this.context.handleUpdateMapConfigItem(
+            this.props.x,
+            this.props.y,
+            value,
+            population,
+            money,
+            desriptionHeader,
+            descriptionContent,
+            finishedBuildDays,
+            durationBuildDays
+        );
     };
 
     render() {
@@ -108,6 +140,7 @@ class ActionModal extends Component {
                 <Options
                     optionElements={optionElements}
                     activeSidebarOption={activeSidebarOption}
+                    handleUpdateItem={this.handleUpdateItem}
                 />
             </div>
         );
