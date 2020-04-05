@@ -60,29 +60,35 @@ class ActionModal extends Component {
                     sidebarOption: "Factories",
                     name: "Oil factory",
                     value: "factory",
-                    population: 1000,
-                    money: 1000,
+                    freeHumanResources: 1000,
+                    population: 0,
+                    money: 10000,
+                    materials: 200,
                     icon: oilFactory,
                     desriptionHeader: "Factory",
                     finishedBuildDays: 1,
                     durationBuildDays: 6,
-                    description:
-                        "Earn 500 money everyday.\n Need 1000 people to work in.",
-                    cost: 200000
+                    description: "+10000 money everyday",
+                    descriptionActionModal:
+                        "+10000 money everyday.\n -1000 Resources \n -200 Materials",
+                    cost: 2000000
                 },
                 {
                     sidebarOption: "Factories",
                     name: "Oil factory",
                     value: "factory",
-                    population: 1000,
-                    money: 1000,
+                    freeHumanResources: 1000,
+                    population: 0,
+                    money: 10000,
+                    materials: 200,
                     icon: oilFactory,
                     desriptionHeader: "Factory",
                     finishedBuildDays: 1,
                     durationBuildDays: 6,
-                    description:
-                        "Earn 500 money everyday.\n Need 1000 people to work in.",
-                    cost: 200000
+                    description: "+10000 money everyday",
+                    descriptionActionModal:
+                        "+10000 money everyday.\n -1000 Resources \n -200 Materials",
+                    cost: 2000000
                 }
             ]
         };
@@ -94,7 +100,9 @@ class ActionModal extends Component {
 
     handleUpdateItem = (
         value,
+        freeHumanResources,
         population,
+        materials,
         money,
         desriptionHeader,
         descriptionContent,
@@ -102,16 +110,18 @@ class ActionModal extends Component {
         durationBuildDays
     ) => {
         this.context.handleUpdateMapConfigItem(
-            this.props.x,
-            this.props.y,
             value,
             population,
+            freeHumanResources,
+            materials,
             money,
             desriptionHeader,
             descriptionContent,
             finishedBuildDays,
             durationBuildDays
         );
+
+        //this.context.handleSetActionModal();
     };
 
     render() {
@@ -125,7 +135,7 @@ class ActionModal extends Component {
             <div className="action-modal__container">
                 <div
                     className="action-modal__close"
-                    onClick={() => this.props.handleSetActionModal()}
+                    onClick={() => this.context.handleSetActionModal()}
                     title="Close"
                 >
                     <img src={close} alt="Close" />

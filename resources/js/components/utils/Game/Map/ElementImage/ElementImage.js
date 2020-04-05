@@ -1,4 +1,5 @@
 import React from "react";
+import { GameContext } from "./../../GameContext";
 
 const paths = {
     stone: require("./../../../../../../assets/images/stone.png"),
@@ -10,38 +11,80 @@ const paths = {
 };
 
 const ElementImage = ({ configElement, index }) => {
-    const [showDescription, setShowDescription] = React.useState(false);
+    const [elementPositionOnMap, setElementPositionOnMap] = React.useState("");
+    const context = React.useContext(GameContext);
 
-    const handleShowDescription = () => {
-        setShowDescription(!showDescription);
+    const getElementPositionOnMap = () => {
+        //element in top-left map area
+        if (
+            configElement.x < context.zoomX / 2 &&
+            configElement.y < context.zoomY / 2
+        ) {
+            setElementPositionOnMap("top-left");
+        }
+        //element in bottom-left map area
+        else if (
+            configElement.x < context.zoomX / 2 &&
+            configElement.y > context.zoomY / 2
+        ) {
+            setElementPositionOnMap("bottom-left");
+        }
+        //element in top-right map area
+        else if (
+            configElement.x > context.zoomX / 2 &&
+            configElement.y < context.zoomY / 2
+        ) {
+            setElementPositionOnMap("top-right");
+        }
+        //element in bottom-right map area
+        else if (
+            configElement.x > context.zoomX / 2 &&
+            configElement.y > context.zoomY / 2
+        ) {
+            setElementPositionOnMap("bottom-right");
+        }
     };
+
+    React.useEffect(() => {
+        getElementPositionOnMap();
+    }, []);
 
     return (
         <div
             className="map-element__container"
-            onClick={() => handleShowDescription()}
+            onClick={e => {
+                context.handleSetElementDescription(
+                    configElement.x,
+                    configElement.y
+                );
+            }}
         >
             {configElement.desriptionHeader &&
-                configElement.descriptionContent && (
+                configElement.descriptionContent &&
+                context.activeXCord === configElement.x &&
+                context.activeYCord === configElement.y &&
+                context.showDescription && (
                     <div
-                        className={`map-element__description--container ${!showDescription &&
+                        className={`map-element__description--container description-${elementPositionOnMap} ${!context.showDescription &&
                             "hide"}`}
                     >
                         <p className="map-element__description--header">
                             {configElement.desriptionHeader}
                         </p>
-                        <p className="map-element__description--content">
+                        <p className="map-element__description--content pre-line">
                             {configElement.descriptionContent}
                         </p>
                         {configElement.finishedBuildDays &&
                             configElement.durationBuildDays &&
                             configElement.finishedBuildDays !==
                                 configElement.durationBuildDays && (
-                                <p className="map-element__description--content">
+                                <p className="map-element__description--content map-element__description--progress">
                                     {`Progress:
-                                    ${(configElement.finishedBuildDays /
-                                        configElement.durationBuildDays) *
-                                        100}
+                                    ${Math.floor(
+                                        (configElement.finishedBuildDays /
+                                            configElement.durationBuildDays) *
+                                            100
+                                    )}
                                     %`}
                                 </p>
                             )}

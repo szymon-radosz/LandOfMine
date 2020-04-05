@@ -6,6 +6,7 @@ export const GameContext = React.createContext({
     date: "",
     money: 0,
     population: 0,
+    freeHumanResources: 0,
     materials: 0,
     initialZoomPosition: 3,
     societyHappiness: 0,

@@ -7,8 +7,8 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                 <div className="options__element">
                     <img src={option.icon} />
                     <p className="options__element--header">{option.name}</p>
-                    <p className="options__element--description">
-                        {option.description}
+                    <p className="options__element--description pre-line">
+                        {option.descriptionActionModal}
                     </p>
                     <p className="options__element--cost">
                         Cost: {option.cost}
@@ -18,7 +18,9 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                         onClick={() => {
                             handleUpdateItem(
                                 option.value,
+                                option.freeHumanResources,
                                 option.population,
+                                option.materials,
                                 option.money,
                                 option.desriptionHeader,
                                 option.description,
@@ -36,8 +38,8 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                 <div className="options__element">
                     <img src={option.icon} />
                     <p className="options__element--header">{option.name}</p>
-                    <p className="options__element--description">
-                        {option.description}
+                    <p className="options__element--description pre-line">
+                        {option.descriptionActionModal}
                     </p>
                     <p className="options__element--cost">
                         Cost: {option.cost}
@@ -47,7 +49,9 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                         onClick={() => {
                             handleUpdateItem(
                                 option.value,
+                                option.freeHumanResources,
                                 option.population,
+                                option.materials,
                                 option.money,
                                 option.desriptionHeader,
                                 option.description,

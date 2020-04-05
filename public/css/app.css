@@ -146,9 +146,13 @@ body .legend__container .legend .legend__text {
 
 body .alert {
   position: fixed;
-  top: 70px;
+  top: 10px;
   right: 10px;
   z-index: 10;
+}
+
+body .pre-line {
+  white-space: pre-line;
 }
 
 body .pagination > li {
@@ -1392,12 +1396,31 @@ body .pagination > li:last-child > span {
   position: relative;
 }
 
-.game__container .game__map--container .map-square .map-element__container .map-element__description--container {
-  position: absolute;
+.game__container .game__map--container .map-square .map-element__container .description-top-right {
+  top: 0;
+  right: 90px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .description-bottom-right {
+  bottom: 0;
+  right: 90px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .description-top-left {
   top: 0;
   right: -150px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .description-bottom-left {
+  bottom: 0;
+  right: -150px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .map-element__description--container {
+  position: absolute;
   background-color: #fff;
-  max-width: 129px;
+  width: 30%;
+  min-width: 129px;
   padding: 15px;
   text-align: center;
   box-shadow: 0px 0px 16px 0px #c9c9c9;
@@ -1414,6 +1437,11 @@ body .pagination > li:last-child > span {
 .game__container .game__map--container .map-square .map-element__container .map-element__description--container .map-element__description--content {
   margin: 0;
   font-size: 12px;
+}
+
+.game__container .game__map--container .map-square .map-element__container .map-element__description--container .map-element__description--progress {
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 .game__container .game__map--container .map-square:hover {
@@ -1685,7 +1713,7 @@ body .pagination > li:last-child > span {
 
 .game__container .zoom-btns__container {
   position: fixed;
-  bottom: 125px;
+  bottom: 150px;
   right: 20px;
   background-color: #fff;
   display: flex;

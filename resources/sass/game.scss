@@ -54,12 +54,30 @@
             .map-element__container {
                 position: relative;
 
-                .map-element__description--container {
-                    position: absolute;
+                .description-top-right {
+                    top: 0;
+                    right: 90px;
+                }
+                .description-bottom-right {
+                    bottom: 0;
+                    right: 90px;
+                }
+
+                .description-top-left {
                     top: 0;
                     right: -150px;
+                }
+                .description-bottom-left {
+                    bottom: 0;
+                    right: -150px;
+                }
+
+                .map-element__description--container {
+                    position: absolute;
+
                     background-color: #fff;
-                    max-width: 129px;
+                    width: 30%;
+                    min-width: 129px;
                     padding: 15px;
                     text-align: center;
                     -webkit-box-shadow: 0px 0px 16px 0px rgba(201, 201, 201, 1);
@@ -76,6 +94,10 @@
                     .map-element__description--content {
                         margin: 0;
                         font-size: 12px;
+                    }
+                    .map-element__description--progress {
+                        margin-top: 10px;
+                        font-weight: 600;
                     }
                 }
             }
@@ -335,7 +357,7 @@
 
     .zoom-btns__container {
         position: fixed;
-        bottom: 125px;
+        bottom: 150px;
         right: 20px;
         background-color: #fff;
         display: flex;

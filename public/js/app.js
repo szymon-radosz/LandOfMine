@@ -69089,14 +69089,14 @@ var BottomPanel = function BottomPanel() {
     className: "bottom-panel-game__container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, context && context.date && context.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Finished days:\n                    ".concat(context && context.daysPassed && context.daysPassed))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date: ".concat(context && context.date && context.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Finished days:\n                    ".concat(context && context.daysPassed && context.daysPassed)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Society Hapiness: ".concat(context && context.societyHappiness && context.societyHappiness, " %"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "bottom-panel-game--logo",
     src: _assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_2___default.a
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Population: ".concat(context && context.population && context.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money: ".concat(context && context.money && context.money)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Materials: ".concat(context && context.materials && context.materials)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Society Hapiness: ".concat(context && context.societyHappiness && context.societyHappiness, " %"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Overal Population: ".concat(context && context.population && context.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Free Human Resources: ".concat(context && context.freeHumanResources && context.freeHumanResources)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money: ".concat(context && context.money && context.money)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Materials: ".concat(context && context.materials && context.materials))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BottomPanel);
@@ -69204,26 +69204,67 @@ var Game = /*#__PURE__*/function (_Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Game).call(this, props)); //initially we create reactange of recteangles 10x6
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (x, y, value, population, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
-      console.log(["handleUpdateMapConfigItem", x, y, value, population, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays]);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
+      console.log(["handleUpdateMapConfigItem", _this.state.activeXCord, _this.state.activeYCord, value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays]);
 
-      _this.setState(function (prevState) {
-        return {
-          mapConfig: prevState.mapConfig.map(function (mapConfigObject) {
-            return mapConfigObject.x == x && mapConfigObject.y == y ? Object.assign(mapConfigObject, {
-              value: value,
-              initialElement: false,
-              population: population,
-              money: money,
-              desriptionHeader: desriptionHeader,
-              descriptionContent: descriptionContent,
-              haveImage: true,
-              finishedBuildDays: finishedBuildDays,
-              durationBuildDays: durationBuildDays
-            }) : mapConfigObject;
-          })
-        };
-      });
+      var allowed = _this.checkAllowBuild(money, freeHumanResources, materials);
+
+      if (allowed) {
+        _this.handleSetActionModal();
+
+        _this.setState(function (prevState) {
+          return {
+            mapConfig: prevState.mapConfig.map(function (mapConfigObject) {
+              return mapConfigObject.x == _this.state.activeXCord && mapConfigObject.y == _this.state.activeYCord ? Object.assign(mapConfigObject, {
+                value: value,
+                initialElement: false,
+                population: population,
+                money: money,
+                desriptionHeader: desriptionHeader,
+                descriptionContent: descriptionContent,
+                haveImage: true,
+                finishedBuildDays: finishedBuildDays,
+                durationBuildDays: durationBuildDays
+              }) : mapConfigObject;
+            })
+          };
+        });
+
+        _this.setState({
+          freeHumanResources: _this.state.freeHumanResources - freeHumanResources,
+          money: _this.state.money - money,
+          materials: _this.state.materials - materials
+        });
+      }
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "checkAllowBuild", function (moneyPrompt, freeHumanResourcesPrompt, materialsPrompt) {
+      var _this$state = _this.state,
+          money = _this$state.money,
+          freeHumanResources = _this$state.freeHumanResources,
+          materials = _this$state.materials;
+
+      if (moneyPrompt > money) {
+        console.log("No money to build");
+
+        _this.context.handleShowAlert("No money to build", "danger");
+
+        return false;
+      } else if (freeHumanResourcesPrompt > freeHumanResources) {
+        console.log("No freeHumanResources to build");
+
+        _this.context.handleShowAlert("No freeHumanResources to build", "danger");
+
+        return false;
+      } else if (materialsPrompt > materials) {
+        console.log("No materials to build");
+
+        _this.context.handleShowAlert("No materials to build");
+
+        return false;
+      }
+
+      return true;
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleZoomChange", function (operation) {
@@ -69272,8 +69313,9 @@ var Game = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleMoneyEarning", function () {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleAssetsEarning", function () {
       var moneySum = 0;
+      var materialsSum = 0;
 
       _this.state.mapConfig.map( /*#__PURE__*/function () {
         var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(mapConfigObject) {
@@ -69281,12 +69323,15 @@ var Game = /*#__PURE__*/function (_Component) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
+                  if (mapConfigObject.materials && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
+                    materialsSum += mapConfigObject.materials;
+                  }
+
                   if (mapConfigObject.money && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
-                    console.log(["moneySum", moneySum, mapConfigObject]);
                     moneySum += mapConfigObject.money;
                   }
 
-                case 1:
+                case 2:
                 case "end":
                   return _context.stop();
               }
@@ -69301,7 +69346,8 @@ var Game = /*#__PURE__*/function (_Component) {
 
       _this.setState(function (prevState) {
         return {
-          money: prevState.money + moneySum
+          money: prevState.money + moneySum,
+          materials: prevState.materials + materialsSum
         };
       });
     });
@@ -69315,11 +69361,11 @@ var Game = /*#__PURE__*/function (_Component) {
 
       _this.handleIncrementFinishedBuildDays();
 
-      _this.handleMoneyEarning();
+      _this.handleAssetsEarning();
 
       _this.setState({
         daysPassed: _this.state.daysPassed + 1,
-        date: moment__WEBPACK_IMPORTED_MODULE_15___default()(_this.state.date, "YYYY/MM/DD").add("days", 1).format("yyyy/MM/dd")
+        date: moment__WEBPACK_IMPORTED_MODULE_15___default()(_this.state.date, "DD.MM.YYYY").add("days", 1).format("DD.MM.YYYY")
       });
 
       setTimeout(function () {
@@ -69329,10 +69375,46 @@ var Game = /*#__PURE__*/function (_Component) {
       }, 1000);
     });
 
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleSetActionModal", function () {
+      var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+      _this.setState({
+        showActionModal: !_this.state.showActionModal,
+        activeXCord: x,
+        activeYCord: y
+      });
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleSetElementDescription", function () {
+      var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var _this$state2 = _this.state,
+          activeXCord = _this$state2.activeXCord,
+          activeYCord = _this$state2.activeYCord,
+          showDescription = _this$state2.showDescription; //user clicked in active object Description, then hide that description
+
+      if (x === activeXCord && y === activeYCord && showDescription) {
+        _this.setState({
+          showDescription: false,
+          activeXCord: x,
+          activeYCord: y
+        });
+      } else {
+        _this.setState({
+          showDescription: true,
+          activeXCord: x,
+          activeYCord: y
+        });
+      }
+    });
+
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", function () {
+      console.log(["date", moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()]);
+
       _this.setState({
         mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"],
-        date: new Date("2000-01-01").toLocaleString()
+        date: moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()
       });
     });
 
@@ -69343,11 +69425,16 @@ var Game = /*#__PURE__*/function (_Component) {
       date: "",
       money: 1000000,
       population: 3000,
+      freeHumanResources: 2000,
       materials: 1000,
       societyHappiness: 70,
       mapConfig: [],
       daysPassed: 0,
-      daylight: true
+      daylight: true,
+      showActionModal: false,
+      activeXCord: 0,
+      activeYCord: 0,
+      showDescription: false
     };
     return _this;
   }
@@ -69355,18 +69442,23 @@ var Game = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Game, [{
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-          zoomX = _this$state.zoomX,
-          zoomY = _this$state.zoomY,
-          date = _this$state.date,
-          money = _this$state.money,
-          population = _this$state.population,
-          initialZoomPosition = _this$state.initialZoomPosition,
-          mapConfig = _this$state.mapConfig,
-          materials = _this$state.materials,
-          societyHappiness = _this$state.societyHappiness,
-          daysPassed = _this$state.daysPassed,
-          daylight = _this$state.daylight;
+      var _this$state3 = this.state,
+          zoomX = _this$state3.zoomX,
+          zoomY = _this$state3.zoomY,
+          date = _this$state3.date,
+          money = _this$state3.money,
+          population = _this$state3.population,
+          freeHumanResources = _this$state3.freeHumanResources,
+          initialZoomPosition = _this$state3.initialZoomPosition,
+          mapConfig = _this$state3.mapConfig,
+          materials = _this$state3.materials,
+          societyHappiness = _this$state3.societyHappiness,
+          daysPassed = _this$state3.daysPassed,
+          daylight = _this$state3.daylight,
+          showActionModal = _this$state3.showActionModal,
+          activeXCord = _this$state3.activeXCord,
+          activeYCord = _this$state3.activeYCord,
+          showDescription = _this$state3.showDescription;
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "game__container"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_12__["GameContext"].Provider, {
@@ -69377,13 +69469,20 @@ var Game = /*#__PURE__*/function (_Component) {
           date: date,
           money: money,
           population: population,
+          freeHumanResources: freeHumanResources,
           materials: materials,
           initialZoomPosition: initialZoomPosition,
           mapConfig: mapConfig,
           societyHappiness: societyHappiness,
           daysPassed: daysPassed,
           handleDayPassed: this.handleDayPassed,
-          handleUpdateMapConfigItem: this.handleUpdateMapConfigItem
+          handleUpdateMapConfigItem: this.handleUpdateMapConfigItem,
+          handleSetActionModal: this.handleSetActionModal,
+          showActionModal: showActionModal,
+          activeXCord: activeXCord,
+          activeYCord: activeYCord,
+          handleSetElementDescription: this.handleSetElementDescription,
+          showDescription: showDescription
         }
       }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
     }
@@ -69417,6 +69516,7 @@ var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
   date: "",
   money: 0,
   population: 0,
+  freeHumanResources: 0,
   materials: 0,
   initialZoomPosition: 3,
   societyHappiness: 0,
@@ -69507,8 +69607,9 @@ var ActionModal = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleUpdateItem", function (value, population, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
-      _this.context.handleUpdateMapConfigItem(_this.props.x, _this.props.y, value, population, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleUpdateItem", function (value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
+      _this.context.handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays); //this.context.handleSetActionModal();
+
     });
 
     _this.state = {
@@ -69548,26 +69649,32 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         sidebarOption: "Factories",
         name: "Oil factory",
         value: "factory",
-        population: 1000,
-        money: 1000,
+        freeHumanResources: 1000,
+        population: 0,
+        money: 10000,
+        materials: 200,
         icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
         desriptionHeader: "Factory",
         finishedBuildDays: 1,
         durationBuildDays: 6,
-        description: "Earn 500 money everyday.\n Need 1000 people to work in.",
-        cost: 200000
+        description: "+10000 money everyday",
+        descriptionActionModal: "+10000 money everyday.\n -1000 Resources \n -200 Materials",
+        cost: 2000000
       }, {
         sidebarOption: "Factories",
         name: "Oil factory",
         value: "factory",
-        population: 1000,
-        money: 1000,
+        freeHumanResources: 1000,
+        population: 0,
+        money: 10000,
+        materials: 200,
         icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
         desriptionHeader: "Factory",
         finishedBuildDays: 1,
         durationBuildDays: 6,
-        description: "Earn 500 money everyday.\n Need 1000 people to work in.",
-        cost: 200000
+        description: "+10000 money everyday",
+        descriptionActionModal: "+10000 money everyday.\n -1000 Resources \n -200 Materials",
+        cost: 2000000
       }]
     };
     return _this;
@@ -69587,7 +69694,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "action-modal__close",
         onClick: function onClick() {
-          return _this2.props.handleSetActionModal();
+          return _this2.context.handleSetActionModal();
         },
         title: "Close"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
@@ -69672,13 +69779,13 @@ var SingleOption = function SingleOption(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "options__element--header"
   }, option.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "options__element--description"
-  }, option.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--description pre-line"
+  }, option.descriptionActionModal), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "options__element--cost"
   }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element--submit",
     onClick: function onClick() {
-      handleUpdateItem(option.value, option.population, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
+      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))), activeSidebarOption === "All" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element"
@@ -69687,13 +69794,13 @@ var SingleOption = function SingleOption(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "options__element--header"
   }, option.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "options__element--description"
-  }, option.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "options__element--description pre-line"
+  }, option.descriptionActionModal), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "options__element--cost"
   }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element--submit",
     onClick: function onClick() {
-      handleUpdateItem(option.value, option.population, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
+      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))));
 };
@@ -69754,6 +69861,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+
 
 
 var paths = {
@@ -69769,29 +69878,46 @@ var ElementImage = function ElementImage(_ref) {
   var configElement = _ref.configElement,
       index = _ref.index;
 
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(""),
       _React$useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_React$useState, 2),
-      showDescription = _React$useState2[0],
-      setShowDescription = _React$useState2[1];
+      elementPositionOnMap = _React$useState2[0],
+      setElementPositionOnMap = _React$useState2[1];
 
-  var handleShowDescription = function handleShowDescription() {
-    setShowDescription(!showDescription);
+  var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_2__["GameContext"]);
+
+  var getElementPositionOnMap = function getElementPositionOnMap() {
+    //element in top-left map area
+    if (configElement.x < context.zoomX / 2 && configElement.y < context.zoomY / 2) {
+      setElementPositionOnMap("top-left");
+    } //element in bottom-left map area
+    else if (configElement.x < context.zoomX / 2 && configElement.y > context.zoomY / 2) {
+        setElementPositionOnMap("bottom-left");
+      } //element in top-right map area
+      else if (configElement.x > context.zoomX / 2 && configElement.y < context.zoomY / 2) {
+          setElementPositionOnMap("top-right");
+        } //element in bottom-right map area
+        else if (configElement.x > context.zoomX / 2 && configElement.y > context.zoomY / 2) {
+            setElementPositionOnMap("bottom-right");
+          }
   };
 
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    getElementPositionOnMap();
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "map-element__container",
-    onClick: function onClick() {
-      return handleShowDescription();
+    onClick: function onClick(e) {
+      context.handleSetElementDescription(configElement.x, configElement.y);
     }
-  }, configElement.desriptionHeader && configElement.descriptionContent && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "map-element__description--container ".concat(!showDescription && "hide")
+  }, configElement.desriptionHeader && configElement.descriptionContent && context.activeXCord === configElement.x && context.activeYCord === configElement.y && context.showDescription && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "map-element__description--container description-".concat(elementPositionOnMap, " ").concat(!context.showDescription && "hide")
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "map-element__description--header"
   }, configElement.desriptionHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "map-element__description--content"
+    className: "map-element__description--content pre-line"
   }, configElement.descriptionContent), configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "map-element__description--content"
-  }, "Progress:\n                                    ".concat(configElement.finishedBuildDays / configElement.durationBuildDays * 100, "\n                                    %"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    className: "map-element__description--content map-element__description--progress"
+  }, "Progress:\n                                    ".concat(Math.floor(configElement.finishedBuildDays / configElement.durationBuildDays * 100), "\n                                    %"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: paths[configElement.value],
     style: configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays ? {
       WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ".concat(configElement.finishedBuildDays / configElement.durationBuildDays, "))")
@@ -69814,6 +69940,8 @@ var ElementImage = function ElementImage(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+
 
 
 var ElementWithoutImage = function ElementWithoutImage(_ref) {
@@ -69821,6 +69949,7 @@ var ElementWithoutImage = function ElementWithoutImage(_ref) {
       handleSetActionModal = _ref.handleSetActionModal,
       x = _ref.x,
       y = _ref.y;
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
 
   if (configElement.value === "road-horizontal" || configElement.value === "road-vertical" || configElement.value === "road-right-bottom" || configElement.value === "road-left-bottom" || configElement.value === "road-right-top" || configElement.value === "road-left-top") {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -69830,7 +69959,7 @@ var ElementWithoutImage = function ElementWithoutImage(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "map-empty",
       onClick: function onClick() {
-        return handleSetActionModal(x, y);
+        return context.handleSetActionModal(x, y);
       }
     });
   }
@@ -69859,21 +69988,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
-/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
-/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
-
-
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
+/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
+/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
 
 
 
@@ -69888,7 +70011,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Map = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Map, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Map, _Component);
 
   function Map(props) {
     var _this;
@@ -69896,20 +70019,7 @@ var Map = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Map);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Map).call(this, props));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this), "handleSetActionModal", function (x, y) {
-      _this.setState({
-        showActionModal: !_this.state.showActionModal,
-        activeXCord: x,
-        activeYCord: y
-      });
-    });
-
-    _this.state = {
-      showActionModal: false,
-      activeXCord: 0,
-      activeYCord: 0
-    };
+    _this.state = {};
     return _this;
   }
 
@@ -69918,23 +70028,20 @@ var Map = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$state = this.state,
-          showActionModal = _this$state.showActionModal,
-          activeXCord = _this$state.activeXCord,
-          activeYCord = _this$state.activeYCord;
+      // const { showActionModal, activeXCord, activeYCord } = this.state;
       var _this$context = this.context,
           zoomX = _this$context.zoomX,
           zoomY = _this$context.zoomY,
           mapConfig = _this$context.mapConfig;
-      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "game__map--container"
       }, zoomY && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomY)).map(function (yElement, y) {
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "map__floor map__floor-".concat(y),
           key: "map__floor-".concat(y)
         }, zoomX && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomX)).map(function (Xelement, x) {
           //console.log(["x,y", x, y]);
-          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
             className: "map-square map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y),
             style: {
               height: "calc(100vh/".concat(zoomY),
@@ -69950,48 +70057,50 @@ var Map = /*#__PURE__*/function (_Component) {
             // );
             if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && configElement.haveImage) {
               if (configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays) {
-                return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+                return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
                   className: "map-element__during-build--container"
-                }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__["default"], {
                   configElement: configElement,
                   index: index,
                   key: "".concat(configElement.value, "-").concat(index)
                 }));
               } else {
-                return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__["default"], {
                   configElement: configElement,
                   index: index,
                   key: "".concat(configElement.value, "-").concat(index)
                 });
               }
             } else if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && !configElement.haveImage) {
-              return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_10__["default"], {
                 configElement: configElement,
-                key: "".concat(configElement.value, "-").concat(index),
-                handleSetActionModal: _this2.handleSetActionModal,
+                key: "".concat(configElement.value, "-").concat(index) // handleSetActionModal={
+                //     this
+                //         .handleSetActionModal
+                // }
+                ,
                 x: x,
                 y: y
               });
             }
           }));
         }));
-      }), showActionModal && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        handleSetActionModal: this.handleSetActionModal,
-        x: activeXCord,
-        y: activeYCord
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      }), this.context && this.context.showActionModal && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_11__["default"] // handleSetActionModal={this.handleSetActionModal}
+      // x={activeXCord}
+      // y={activeYCord}
+      , null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "map__finish-day",
         onClick: function onClick() {
           return _this2.context.handleDayPassed();
         }
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_7__["default"], null));
     }
   }]);
 
   return Map;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
-Map.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_10__["GameContext"];
+Map.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_8__["GameContext"];
 /* harmony default export */ __webpack_exports__["default"] = (Map);
 
 /***/ }),
@@ -70257,7 +70366,10 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "stone",
   initialElement: true,
   population: 0,
+  finishedBuildDays: 2,
+  durationBuildDays: 2,
   money: 0,
+  materials: 100,
   desriptionHeader: "Stone",
   descriptionContent: "Added 100 of Materials every day",
   haveImage: true
@@ -70323,6 +70435,9 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "house",
   initialElement: true,
   population: 1000,
+  materials: 0,
+  finishedBuildDays: 3,
+  durationBuildDays: 3,
   money: 0,
   desriptionHeader: "House",
   descriptionContent: "Increase your overal population by 1000 people",
@@ -70422,6 +70537,9 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "stone",
   initialElement: true,
   population: 0,
+  materials: 100,
+  finishedBuildDays: 1,
+  durationBuildDays: 1,
   money: 0,
   desriptionHeader: "Stone",
   descriptionContent: "Added 100 of Materials every day",
@@ -70431,7 +70549,10 @@ var initialMapConfig = [//==================== row - 1 ====================
   y: 2,
   value: "stone",
   initialElement: true,
+  finishedBuildDays: 1,
+  durationBuildDays: 1,
   population: 0,
+  materials: 100,
   money: 0,
   desriptionHeader: "Stone",
   descriptionContent: "Added 100 of Materials every day",
@@ -70490,6 +70611,9 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "house",
   initialElement: true,
   population: 1000,
+  materials: 0,
+  finishedBuildDays: 3,
+  durationBuildDays: 3,
   money: 0,
   desriptionHeader: "House",
   descriptionContent: "Increase your overal population by 1000 people",
@@ -70653,6 +70777,9 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "house",
   initialElement: true,
   population: 1000,
+  materials: 0,
+  finishedBuildDays: 3,
+  durationBuildDays: 3,
   money: 0,
   desriptionHeader: "House",
   descriptionContent: "Increase your overal population by 1000 people",
@@ -71059,10 +71186,11 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 1000,
+  materials: 0,
   finishedBuildDays: 6,
   durationBuildDays: 6,
   desriptionHeader: "Factory",
-  descriptionContent: "It gives you 1000 money every day",
+  descriptionContent: "+10000 money everyday",
   haveImage: true
 }, {
   x: 4,

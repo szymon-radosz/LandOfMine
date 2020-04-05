@@ -9,23 +9,11 @@ class Map extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            showActionModal: false,
-            activeXCord: 0,
-            activeYCord: 0
-        };
+        this.state = {};
     }
 
-    handleSetActionModal = (x, y) => {
-        this.setState({
-            showActionModal: !this.state.showActionModal,
-            activeXCord: x,
-            activeYCord: y
-        });
-    };
-
     render() {
-        const { showActionModal, activeXCord, activeYCord } = this.state;
+        // const { showActionModal, activeXCord, activeYCord } = this.state;
         const { zoomX, zoomY, mapConfig } = this.context;
         return (
             <div className="game__map--container">
@@ -124,10 +112,10 @@ class Map extends Component {
                                                                             configElement
                                                                         }
                                                                         key={`${configElement.value}-${index}`}
-                                                                        handleSetActionModal={
-                                                                            this
-                                                                                .handleSetActionModal
-                                                                        }
+                                                                        // handleSetActionModal={
+                                                                        //     this
+                                                                        //         .handleSetActionModal
+                                                                        // }
                                                                         x={x}
                                                                         y={y}
                                                                     />
@@ -142,11 +130,11 @@ class Map extends Component {
                         );
                     })}
 
-                {showActionModal && (
+                {this.context && this.context.showActionModal && (
                     <ActionModal
-                        handleSetActionModal={this.handleSetActionModal}
-                        x={activeXCord}
-                        y={activeYCord}
+                    // handleSetActionModal={this.handleSetActionModal}
+                    // x={activeXCord}
+                    // y={activeYCord}
                     />
                 )}
 

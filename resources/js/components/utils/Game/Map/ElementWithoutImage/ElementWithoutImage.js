@@ -1,6 +1,9 @@
 import React from "react";
+import { GameContext } from "./../../GameContext";
 
 const ElementWithoutImage = ({ configElement, handleSetActionModal, x, y }) => {
+    const context = React.useContext(GameContext);
+
     if (
         configElement.value === "road-horizontal" ||
         configElement.value === "road-vertical" ||
@@ -31,7 +34,7 @@ const ElementWithoutImage = ({ configElement, handleSetActionModal, x, y }) => {
         return (
             <div
                 className="map-empty"
-                onClick={() => handleSetActionModal(x, y)}
+                onClick={() => context.handleSetActionModal(x, y)}
             ></div>
         );
     }

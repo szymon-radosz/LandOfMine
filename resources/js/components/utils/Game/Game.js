@@ -29,19 +29,24 @@ class Game extends Component {
             date: "",
             money: 1000000,
             population: 3000,
+            freeHumanResources: 2000,
             materials: 1000,
             societyHappiness: 70,
             mapConfig: [],
             daysPassed: 0,
-            daylight: true
+            daylight: true,
+            showActionModal: false,
+            activeXCord: 0,
+            activeYCord: 0,
+            showDescription: false
         };
     }
 
     handleUpdateMapConfigItem = (
-        x,
-        y,
         value,
         population,
+        freeHumanResources,
+        materials,
         money,
         desriptionHeader,
         descriptionContent,
@@ -50,10 +55,12 @@ class Game extends Component {
     ) => {
         console.log([
             "handleUpdateMapConfigItem",
-            x,
-            y,
+            this.state.activeXCord,
+            this.state.activeYCord,
             value,
+            freeHumanResources,
             population,
+            materials,
             money,
             desriptionHeader,
             descriptionContent,
@@ -61,23 +68,68 @@ class Game extends Component {
             durationBuildDays
         ]);
 
-        this.setState(prevState => ({
-            mapConfig: prevState.mapConfig.map(mapConfigObject =>
-                mapConfigObject.x == x && mapConfigObject.y == y
-                    ? Object.assign(mapConfigObject, {
-                          value: value,
-                          initialElement: false,
-                          population: population,
-                          money: money,
-                          desriptionHeader: desriptionHeader,
-                          descriptionContent: descriptionContent,
-                          haveImage: true,
-                          finishedBuildDays: finishedBuildDays,
-                          durationBuildDays: durationBuildDays
-                      })
-                    : mapConfigObject
-            )
-        }));
+        let allowed = this.checkAllowBuild(
+            money,
+            freeHumanResources,
+            materials
+        );
+
+        if (allowed) {
+            this.handleSetActionModal();
+
+            this.setState(prevState => ({
+                mapConfig: prevState.mapConfig.map(mapConfigObject =>
+                    mapConfigObject.x == this.state.activeXCord &&
+                    mapConfigObject.y == this.state.activeYCord
+                        ? Object.assign(mapConfigObject, {
+                              value: value,
+                              initialElement: false,
+                              population: population,
+                              money: money,
+                              desriptionHeader: desriptionHeader,
+                              descriptionContent: descriptionContent,
+                              haveImage: true,
+                              finishedBuildDays: finishedBuildDays,
+                              durationBuildDays: durationBuildDays
+                          })
+                        : mapConfigObject
+                )
+            }));
+
+            this.setState({
+                freeHumanResources:
+                    this.state.freeHumanResources - freeHumanResources,
+                money: this.state.money - money,
+                materials: this.state.materials - materials
+            });
+        }
+    };
+
+    checkAllowBuild = (
+        moneyPrompt,
+        freeHumanResourcesPrompt,
+        materialsPrompt
+    ) => {
+        const { money, freeHumanResources, materials } = this.state;
+
+        if (moneyPrompt > money) {
+            console.log("No money to build");
+            this.context.handleShowAlert("No money to build", "danger");
+            return false;
+        } else if (freeHumanResourcesPrompt > freeHumanResources) {
+            console.log("No freeHumanResources to build");
+            this.context.handleShowAlert(
+                "No freeHumanResources to build",
+                "danger"
+            );
+            return false;
+        } else if (materialsPrompt > materials) {
+            console.log("No materials to build");
+            this.context.handleShowAlert("No materials to build");
+            return false;
+        }
+
+        return true;
     };
 
     handleZoomChange = operation => {
@@ -130,22 +182,31 @@ class Game extends Component {
         }));
     };
 
-    handleMoneyEarning = () => {
+    handleAssetsEarning = () => {
         let moneySum = 0;
+        let materialsSum = 0;
 
         this.state.mapConfig.map(async mapConfigObject => {
+            if (
+                mapConfigObject.materials &&
+                mapConfigObject.finishedBuildDays ===
+                    mapConfigObject.durationBuildDays
+            ) {
+                materialsSum += mapConfigObject.materials;
+            }
+
             if (
                 mapConfigObject.money &&
                 mapConfigObject.finishedBuildDays ===
                     mapConfigObject.durationBuildDays
             ) {
-                console.log(["moneySum", moneySum, mapConfigObject]);
                 moneySum += mapConfigObject.money;
             }
         });
 
         this.setState(prevState => ({
-            money: prevState.money + moneySum
+            money: prevState.money + moneySum,
+            materials: prevState.materials + materialsSum
         }));
     };
 
@@ -153,12 +214,12 @@ class Game extends Component {
         this.setState({ daylight: false });
         console.log("handleDayPassed");
         this.handleIncrementFinishedBuildDays();
-        this.handleMoneyEarning();
+        this.handleAssetsEarning();
         this.setState({
             daysPassed: this.state.daysPassed + 1,
-            date: moment(this.state.date, "YYYY/MM/DD")
+            date: moment(this.state.date, "DD.MM.YYYY")
                 .add("days", 1)
-                .format("yyyy/MM/dd")
+                .format("DD.MM.YYYY")
         });
 
         setTimeout(() => {
@@ -166,10 +227,45 @@ class Game extends Component {
         }, 1000);
     };
 
+    handleSetActionModal = (x = 0, y = 0) => {
+        this.setState({
+            showActionModal: !this.state.showActionModal,
+            activeXCord: x,
+            activeYCord: y
+        });
+    };
+
+    handleSetElementDescription = (x = 0, y = 0) => {
+        const { activeXCord, activeYCord, showDescription } = this.state;
+
+        //user clicked in active object Description, then hide that description
+        if (x === activeXCord && y === activeYCord && showDescription) {
+            this.setState({
+                showDescription: false,
+                activeXCord: x,
+                activeYCord: y
+            });
+        } else {
+            this.setState({
+                showDescription: true,
+                activeXCord: x,
+                activeYCord: y
+            });
+        }
+    };
+
     componentDidMount = () => {
+        console.log([
+            "date",
+            moment("2000-01-01")
+                .format("DD.MM.YYYY")
+                .toString()
+        ]);
         this.setState({
             mapConfig: initialMapConfig,
-            date: new Date("2000-01-01").toLocaleString()
+            date: moment("2000-01-01")
+                .format("DD.MM.YYYY")
+                .toString()
         });
     };
 
@@ -180,12 +276,17 @@ class Game extends Component {
             date,
             money,
             population,
+            freeHumanResources,
             initialZoomPosition,
             mapConfig,
             materials,
             societyHappiness,
             daysPassed,
-            daylight
+            daylight,
+            showActionModal,
+            activeXCord,
+            activeYCord,
+            showDescription
         } = this.state;
         return (
             <div className="game__container">
@@ -197,6 +298,7 @@ class Game extends Component {
                         date: date,
                         money: money,
                         population: population,
+                        freeHumanResources: freeHumanResources,
                         materials: materials,
                         initialZoomPosition: initialZoomPosition,
                         mapConfig: mapConfig,
@@ -204,7 +306,14 @@ class Game extends Component {
                         daysPassed: daysPassed,
                         handleDayPassed: this.handleDayPassed,
                         handleUpdateMapConfigItem: this
-                            .handleUpdateMapConfigItem
+                            .handleUpdateMapConfigItem,
+                        handleSetActionModal: this.handleSetActionModal,
+                        showActionModal: showActionModal,
+                        activeXCord: activeXCord,
+                        activeYCord: activeYCord,
+                        handleSetElementDescription: this
+                            .handleSetElementDescription,
+                        showDescription: showDescription
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
