@@ -25,7 +25,8 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                                 option.desriptionHeader,
                                 option.description,
                                 option.finishedBuildDays,
-                                option.durationBuildDays
+                                option.durationBuildDays,
+                                option.notAddedHumanResources
                             );
                         }}
                     >
@@ -56,7 +57,8 @@ const SingleOption = ({ option, activeSidebarOption, handleUpdateItem }) => {
                                 option.desriptionHeader,
                                 option.description,
                                 option.finishedBuildDays,
-                                option.durationBuildDays
+                                option.durationBuildDays,
+                                option.notAddedHumanResources
                             );
                         }}
                     >

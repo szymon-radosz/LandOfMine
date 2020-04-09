@@ -4708,6 +4708,55 @@ function createMemoryHistory(props) {
 
 /***/ }),
 
+/***/ "./node_modules/is-plain-object/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/is-plain-object/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+
+
+var isObject = __webpack_require__(/*! isobject */ "./node_modules/isobject/index.js");
+
+function isObjectObject(o) {
+  return isObject(o) === true
+    && Object.prototype.toString.call(o) === '[object Object]';
+}
+
+module.exports = function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObjectObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (typeof ctor !== 'function') return false;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObjectObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty('isPrototypeOf') === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/is-what/dist/index.esm.js":
 /*!************************************************!*\
   !*** ./node_modules/is-what/dist/index.esm.js ***!
@@ -4984,6 +5033,30 @@ function isType(payload, type) {
 }
 
 
+
+
+/***/ }),
+
+/***/ "./node_modules/isobject/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/isobject/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * isobject <https://github.com/jonschlinkert/isobject>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+
+
+module.exports = function isObject(val) {
+  return val != null && typeof val === 'object' && Array.isArray(val) === false;
+};
 
 
 /***/ }),
@@ -23082,6 +23155,81 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
+/***/ "./node_modules/object.omit/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/object.omit/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * object.omit <https://github.com/jonschlinkert/object.omit>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+
+
+var isObject = __webpack_require__(/*! is-extendable */ "./node_modules/object.omit/node_modules/is-extendable/index.js");
+
+module.exports = function omit(obj, props, fn) {
+  if (!isObject(obj)) return {};
+
+  if (typeof props === 'function') {
+    fn = props;
+    props = [];
+  }
+
+  if (typeof props === 'string') {
+    props = [props];
+  }
+
+  var isFunction = typeof fn === 'function';
+  var keys = Object.keys(obj);
+  var res = {};
+
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var val = obj[key];
+
+    if (!props || (props.indexOf(key) === -1 && (!isFunction || fn(val, key, obj)))) {
+      res[key] = val;
+    }
+  }
+  return res;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/object.omit/node_modules/is-extendable/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/object.omit/node_modules/is-extendable/index.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * is-extendable <https://github.com/jonschlinkert/is-extendable>
+ *
+ * Copyright (c) 2015-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+
+
+var isPlainObject = __webpack_require__(/*! is-plain-object */ "./node_modules/is-plain-object/index.js");
+
+module.exports = function isExtendable(val) {
+  return isPlainObject(val) || typeof val === 'function' || Array.isArray(val);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/path-to-regexp/index.js":
 /*!**********************************************!*\
   !*** ./node_modules/path-to-regexp/index.js ***!
@@ -25990,6 +26138,1306 @@ exports['default'] = function () {
 };
 
 module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/ReactCursorPosition.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/ReactCursorPosition.js ***!
+  \***************************************************************************/
+/*! exports provided: INTERACTIONS, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var object_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! object.omit */ "./node_modules/object.omit/index.js");
+/* harmony import */ var object_omit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(object_omit__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_ElementRelativeCursorPosition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/ElementRelativeCursorPosition */ "./node_modules/react-cursor-position/dist/es/lib/ElementRelativeCursorPosition.js");
+/* harmony import */ var _utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/addEventListener */ "./node_modules/react-cursor-position/dist/es/utils/addEventListener.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./constants */ "./node_modules/react-cursor-position/dist/es/constants.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "INTERACTIONS", function() { return _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"]; });
+
+/* harmony import */ var _utils_noop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/noop */ "./node_modules/react-cursor-position/dist/es/utils/noop.js");
+/* harmony import */ var _lib_PressActivation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/PressActivation */ "./node_modules/react-cursor-position/dist/es/lib/PressActivation.js");
+/* harmony import */ var _lib_TouchActivation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/TouchActivation */ "./node_modules/react-cursor-position/dist/es/lib/TouchActivation.js");
+/* harmony import */ var _lib_TapActivation__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/TapActivation */ "./node_modules/react-cursor-position/dist/es/lib/TapActivation.js");
+/* harmony import */ var _lib_HoverActivation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/HoverActivation */ "./node_modules/react-cursor-position/dist/es/lib/HoverActivation.js");
+/* harmony import */ var _lib_ClickActivation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lib/ClickActivation */ "./node_modules/react-cursor-position/dist/es/lib/ClickActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _class = function (_React$Component) {
+    _inherits(_class, _React$Component);
+
+    function _class(props) {
+        _classCallCheck(this, _class);
+
+        var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
+
+        _initialiseProps.call(_this);
+
+        _this.state = {
+            detectedEnvironment: {
+                isMouseDetected: false,
+                isTouchDetected: false
+            },
+            elementDimensions: {
+                width: 0,
+                height: 0
+            },
+            isActive: false,
+            isPositionOutside: true,
+            position: {
+                x: 0,
+                y: 0
+            }
+        };
+
+        _this.shouldGuardAgainstMouseEmulationByDevices = false;
+        _this.eventListeners = [];
+        _this.timers = [];
+        _this.elementOffset = {
+            x: 0,
+            y: 0
+        };
+
+        _this.onTouchStart = _this.onTouchStart.bind(_this);
+        _this.onTouchMove = _this.onTouchMove.bind(_this);
+        _this.onTouchEnd = _this.onTouchEnd.bind(_this);
+        _this.onTouchCancel = _this.onTouchCancel.bind(_this);
+        _this.onMouseEnter = _this.onMouseEnter.bind(_this);
+        _this.onMouseMove = _this.onMouseMove.bind(_this);
+        _this.onMouseLeave = _this.onMouseLeave.bind(_this);
+        _this.onClick = _this.onClick.bind(_this);
+        _this.onIsActiveChanged = _this.onIsActiveChanged.bind(_this);
+
+        _this.setTouchActivationStrategy(props.activationInteractionTouch);
+        _this.setMouseActivationStrategy(props.activationInteractionMouse);
+        return _this;
+    }
+
+    _createClass(_class, [{
+        key: 'onIsActiveChanged',
+        value: function onIsActiveChanged(_ref) {
+            var isActive = _ref.isActive;
+
+            if (isActive) {
+                this.activate();
+            } else {
+                this.deactivate();
+            }
+        }
+    }, {
+        key: 'onTouchStart',
+        value: function onTouchStart(e) {
+            this.init();
+            this.onTouchDetected();
+            this.setShouldGuardAgainstMouseEmulationByDevices();
+
+            var position = this.core.getCursorPosition(this.getTouchEvent(e));
+            this.setPositionState(position);
+
+            this.touchActivation.touchStarted({ e: e, position: position });
+        }
+    }, {
+        key: 'onTouchMove',
+        value: function onTouchMove(e) {
+            if (!this.isCoreReady) {
+                return;
+            }
+
+            var position = this.core.getCursorPosition(this.getTouchEvent(e));
+            this.touchActivation.touchMoved({ e: e, position: position });
+
+            if (!this.state.isActive) {
+                return;
+            }
+
+            this.setPositionState(position);
+            e.preventDefault();
+
+            if (this.props.shouldStopTouchMovePropagation) {
+                e.stopPropagation();
+            }
+        }
+    }, {
+        key: 'onTouchEnd',
+        value: function onTouchEnd() {
+            this.touchActivation.touchEnded();
+            this.unsetShouldGuardAgainstMouseEmulationByDevices();
+        }
+    }, {
+        key: 'onTouchCancel',
+        value: function onTouchCancel() {
+            this.touchActivation.touchCanceled();
+
+            this.unsetShouldGuardAgainstMouseEmulationByDevices();
+        }
+    }, {
+        key: 'onMouseEnter',
+        value: function onMouseEnter(e) {
+            if (this.shouldGuardAgainstMouseEmulationByDevices) {
+                return;
+            }
+
+            this.init();
+            this.onMouseDetected();
+            this.setPositionState(this.core.getCursorPosition(e));
+            this.mouseActivation.mouseEntered();
+        }
+    }, {
+        key: 'onMouseMove',
+        value: function onMouseMove(e) {
+            if (!this.isCoreReady) {
+                return;
+            }
+
+            var position = this.core.getCursorPosition(e);
+            this.setPositionState(position);
+            this.mouseActivation.mouseMoved(position);
+        }
+    }, {
+        key: 'onMouseLeave',
+        value: function onMouseLeave() {
+            this.mouseActivation.mouseLeft();
+            this.setState({ isPositionOutside: true });
+        }
+    }, {
+        key: 'onClick',
+        value: function onClick(e) {
+            this.setPositionState(this.core.getCursorPosition(e));
+            this.mouseActivation.mouseClicked();
+            this.onMouseDetected();
+        }
+    }, {
+        key: 'onTouchDetected',
+        value: function onTouchDetected() {
+            var environment = {
+                isTouchDetected: true,
+                isMouseDetected: false
+            };
+
+            this.setState({ detectedEnvironment: environment });
+            this.props.onDetectedEnvironmentChanged(environment);
+        }
+    }, {
+        key: 'onMouseDetected',
+        value: function onMouseDetected() {
+            var environment = {
+                isTouchDetected: false,
+                isMouseDetected: true
+            };
+
+            this.setState({ detectedEnvironment: environment });
+            this.props.onDetectedEnvironmentChanged(environment);
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (this.props.isEnabled) {
+                this.enable();
+            }
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(_ref2) {
+            var willBeEnabled = _ref2.isEnabled;
+            var isEnabled = this.props.isEnabled;
+
+            var isEnabledWillChange = isEnabled !== willBeEnabled;
+
+            if (!isEnabledWillChange) {
+                return;
+            }
+
+            if (willBeEnabled) {
+                this.enable();
+            } else {
+                this.disable();
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.disable();
+        }
+    }, {
+        key: 'enable',
+        value: function enable() {
+            this.addEventListeners();
+        }
+    }, {
+        key: 'disable',
+        value: function disable() {
+            this.removeEventListeners();
+        }
+    }, {
+        key: 'init',
+        value: function init() {
+            this.core = new _lib_ElementRelativeCursorPosition__WEBPACK_IMPORTED_MODULE_4__["default"](this.el);
+
+            this.setElementDimensionsState(this.getElementDimensions(this.el));
+        }
+    }, {
+        key: 'setTouchActivationStrategy',
+        value: function setTouchActivationStrategy(interaction) {
+            var _props = this.props,
+                pressDurationInMs = _props.pressDurationInMs,
+                pressMoveThreshold = _props.pressMoveThreshold,
+                tapDurationInMs = _props.tapDurationInMs,
+                tapMoveThreshold = _props.tapMoveThreshold;
+            var TOUCH = _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].TOUCH,
+                TAP = _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].TAP,
+                PRESS = _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].PRESS;
+
+
+            switch (interaction) {
+                case PRESS:
+                    this.touchActivation = new _lib_PressActivation__WEBPACK_IMPORTED_MODULE_8__["default"]({
+                        onIsActiveChanged: this.onIsActiveChanged,
+                        pressDurationInMs: pressDurationInMs,
+                        pressMoveThreshold: pressMoveThreshold
+                    });
+                    break;
+                case TAP:
+                    this.touchActivation = new _lib_TapActivation__WEBPACK_IMPORTED_MODULE_10__["default"]({
+                        onIsActiveChanged: this.onIsActiveChanged,
+                        tapDurationInMs: tapDurationInMs,
+                        tapMoveThreshold: tapMoveThreshold
+                    });
+                    break;
+                case TOUCH:
+                    this.touchActivation = new _lib_TouchActivation__WEBPACK_IMPORTED_MODULE_9__["default"]({
+                        onIsActiveChanged: this.onIsActiveChanged
+                    });
+                    break;
+                default:
+                    throw new Error('Must implement a touch activation strategy');
+            }
+        }
+    }, {
+        key: 'setMouseActivationStrategy',
+        value: function setMouseActivationStrategy(interaction) {
+            var _props2 = this.props,
+                hoverDelayInMs = _props2.hoverDelayInMs,
+                hoverOffDelayInMs = _props2.hoverOffDelayInMs;
+            var HOVER = _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].HOVER,
+                CLICK = _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].CLICK;
+
+
+            switch (interaction) {
+                case HOVER:
+                    this.mouseActivation = new _lib_HoverActivation__WEBPACK_IMPORTED_MODULE_11__["default"]({
+                        onIsActiveChanged: this.onIsActiveChanged,
+                        hoverDelayInMs: hoverDelayInMs,
+                        hoverOffDelayInMs: hoverOffDelayInMs
+                    });
+                    break;
+                case CLICK:
+                    this.mouseActivation = new _lib_ClickActivation__WEBPACK_IMPORTED_MODULE_12__["default"]({
+                        onIsActiveChanged: this.onIsActiveChanged
+                    });
+                    break;
+                default:
+                    throw new Error('Must implement a mouse activation strategy');
+            }
+        }
+    }, {
+        key: 'reset',
+        value: function reset() {
+            var _core = this.core;
+            _core = _core === undefined ? {} : _core;
+            var lastMouseEvent = _core.lastEvent;
+
+
+            this.init();
+
+            if (!lastMouseEvent) {
+                return;
+            }
+
+            this.setPositionState(this.core.getCursorPosition(lastMouseEvent));
+        }
+    }, {
+        key: 'activate',
+        value: function activate() {
+            this.setState({ isActive: true });
+            this.props.onActivationChanged({ isActive: true });
+        }
+    }, {
+        key: 'deactivate',
+        value: function deactivate() {
+            var _this2 = this;
+
+            this.setState({ isActive: false }, function () {
+                var _state = _this2.state,
+                    isPositionOutside = _state.isPositionOutside,
+                    position = _state.position;
+
+
+                _this2.props.onPositionChanged({
+                    isPositionOutside: isPositionOutside,
+                    position: position
+                });
+
+                _this2.props.onActivationChanged({ isActive: false });
+            });
+        }
+    }, {
+        key: 'setPositionState',
+        value: function setPositionState(position) {
+            var isPositionOutside = this.getIsPositionOutside(position);
+
+            this.setState({
+                isPositionOutside: isPositionOutside,
+                position: position
+            }, this.onPositionChanged);
+        }
+    }, {
+        key: 'setElementDimensionsState',
+        value: function setElementDimensionsState(dimensions) {
+            this.setState({
+                elementDimensions: dimensions
+            });
+        }
+    }, {
+        key: 'setShouldGuardAgainstMouseEmulationByDevices',
+        value: function setShouldGuardAgainstMouseEmulationByDevices() {
+            this.shouldGuardAgainstMouseEmulationByDevices = true;
+        }
+    }, {
+        key: 'unsetShouldGuardAgainstMouseEmulationByDevices',
+        value: function unsetShouldGuardAgainstMouseEmulationByDevices() {
+            var _this3 = this;
+
+            this.timers.push({
+                name: _constants__WEBPACK_IMPORTED_MODULE_6__["MOUSE_EMULATION_GUARD_TIMER_NAME"],
+                id: setTimeout(function () {
+                    _this3.shouldGuardAgainstMouseEmulationByDevices = false;
+                }, 0)
+            });
+        }
+    }, {
+        key: 'getElementDimensions',
+        value: function getElementDimensions(el) {
+            var _el$getBoundingClient = el.getBoundingClientRect(),
+                width = _el$getBoundingClient.width,
+                height = _el$getBoundingClient.height;
+
+            return {
+                width: width,
+                height: height
+            };
+        }
+    }, {
+        key: 'getIsPositionOutside',
+        value: function getIsPositionOutside(position) {
+            var x = position.x,
+                y = position.y;
+            var _state$elementDimensi = this.state.elementDimensions,
+                width = _state$elementDimensi.width,
+                height = _state$elementDimensi.height;
+
+
+            var isPositionOutside = x < 0 || y < 0 || x > width || y > height;
+
+            return isPositionOutside;
+        }
+    }, {
+        key: 'getTouchEvent',
+        value: function getTouchEvent(e) {
+            return e.touches[0];
+        }
+    }, {
+        key: 'getIsReactComponent',
+        value: function getIsReactComponent(reactElement) {
+            return typeof reactElement.type === 'function';
+        }
+    }, {
+        key: 'shouldDecorateChild',
+        value: function shouldDecorateChild(child) {
+            return !!child && this.getIsReactComponent(child) && this.props.shouldDecorateChildren;
+        }
+    }, {
+        key: 'decorateChild',
+        value: function decorateChild(child, props) {
+            return Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, props);
+        }
+    }, {
+        key: 'decorateChildren',
+        value: function decorateChildren(children, props) {
+            var _this4 = this;
+
+            return react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (child) {
+                return _this4.shouldDecorateChild(child) ? _this4.decorateChild(child, props) : child;
+            });
+        }
+    }, {
+        key: 'addEventListeners',
+        value: function addEventListeners() {
+            this.eventListeners.push(Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'touchstart', this.onTouchStart, { passive: false }), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'touchmove', this.onTouchMove, { passive: false }), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'touchend', this.onTouchEnd), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'touchcancel', this.onTouchCancel), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'mouseenter', this.onMouseEnter), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'mousemove', this.onMouseMove), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'mouseleave', this.onMouseLeave), Object(_utils_addEventListener__WEBPACK_IMPORTED_MODULE_5__["default"])(this.el, 'click', this.onClick));
+        }
+    }, {
+        key: 'removeEventListeners',
+        value: function removeEventListeners() {
+            while (this.eventListeners.length) {
+                this.eventListeners.pop().removeEventListener();
+            }
+        }
+    }, {
+        key: 'getPassThroughProps',
+        value: function getPassThroughProps() {
+            var ownPropNames = Object.keys(this.constructor.propTypes);
+            return object_omit__WEBPACK_IMPORTED_MODULE_3___default()(this.props, ownPropNames);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this5 = this;
+
+            var _props3 = this.props,
+                children = _props3.children,
+                className = _props3.className,
+                mapChildProps = _props3.mapChildProps,
+                style = _props3.style;
+
+            var props = object_assign__WEBPACK_IMPORTED_MODULE_2___default()({}, mapChildProps(this.state), this.getPassThroughProps());
+
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+                'div',
+                {
+                    className: className,
+                    ref: function ref(el) {
+                        return _this5.el = el;
+                    },
+                    style: object_assign__WEBPACK_IMPORTED_MODULE_2___default()({}, style, {
+                        WebkitUserSelect: 'none'
+                    })
+                },
+                this.decorateChildren(children, props)
+            );
+        }
+    }, {
+        key: 'isCoreReady',
+        get: function get() {
+            return !!this.core;
+        }
+    }]);
+
+    return _class;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+_class.displayName = 'ReactCursorPosition';
+_class.propTypes = {
+    activationInteractionMouse: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf([_constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].CLICK, _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].HOVER]),
+    activationInteractionTouch: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf([_constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].PRESS, _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].TAP, _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].TOUCH]),
+    children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any,
+    className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    hoverDelayInMs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    hoverOffDelayInMs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    isEnabled: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+    mapChildProps: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+    onActivationChanged: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+    onDetectedEnvironmentChanged: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+    onPositionChanged: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+    pressDurationInMs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    pressMoveThreshold: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    shouldDecorateChildren: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+    shouldStopTouchMovePropagation: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+    style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+    tapDurationInMs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    tapMoveThreshold: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
+};
+_class.defaultProps = {
+    activationInteractionMouse: _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].HOVER,
+    activationInteractionTouch: _constants__WEBPACK_IMPORTED_MODULE_6__["INTERACTIONS"].PRESS,
+    hoverDelayInMs: 0,
+    hoverOffDelayInMs: 0,
+    isEnabled: true,
+    mapChildProps: function mapChildProps(props) {
+        return props;
+    },
+    onActivationChanged: _utils_noop__WEBPACK_IMPORTED_MODULE_7__["default"],
+    onDetectedEnvironmentChanged: _utils_noop__WEBPACK_IMPORTED_MODULE_7__["default"],
+    onPositionChanged: _utils_noop__WEBPACK_IMPORTED_MODULE_7__["default"],
+    pressDurationInMs: 500,
+    pressMoveThreshold: 5,
+    shouldDecorateChildren: true,
+    shouldStopTouchMovePropagation: false,
+    tapDurationInMs: 180,
+    tapMoveThreshold: 5
+};
+
+var _initialiseProps = function _initialiseProps() {
+    var _this6 = this;
+
+    this.onPositionChanged = function () {
+        var onPositionChanged = _this6.props.onPositionChanged;
+
+        onPositionChanged(_this6.state);
+    };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (_class);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/constants.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/constants.js ***!
+  \*****************************************************************/
+/*! exports provided: PRESS_EVENT_TIMER_NAME, TAP_GESTURE_TIMER_NAME, MOUSE_EMULATION_GUARD_TIMER_NAME, SET_ACTIVATION_TIMER_NAME, UNSET_ACTIVATION_TIMER_NAME, INTERACTIONS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PRESS_EVENT_TIMER_NAME", function() { return PRESS_EVENT_TIMER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TAP_GESTURE_TIMER_NAME", function() { return TAP_GESTURE_TIMER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MOUSE_EMULATION_GUARD_TIMER_NAME", function() { return MOUSE_EMULATION_GUARD_TIMER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_ACTIVATION_TIMER_NAME", function() { return SET_ACTIVATION_TIMER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNSET_ACTIVATION_TIMER_NAME", function() { return UNSET_ACTIVATION_TIMER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INTERACTIONS", function() { return INTERACTIONS; });
+var PRESS_EVENT_TIMER_NAME = 'pressEvent';
+var TAP_GESTURE_TIMER_NAME = 'tap';
+var MOUSE_EMULATION_GUARD_TIMER_NAME = 'mouseEmulation';
+var SET_ACTIVATION_TIMER_NAME = 'setHovering';
+var UNSET_ACTIVATION_TIMER_NAME = 'unsetHovering';
+var INTERACTIONS = {
+    TOUCH: 'touch',
+    TAP: 'tap',
+    DOUBLE_TAP: 'double_tap',
+    PRESS: 'press',
+    CLICK: 'click',
+    HOVER: 'hover'
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/Activation.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/Activation.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Activation = function () {
+    function Activation() {
+        var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+            onIsActiveChanged = _ref.onIsActiveChanged;
+
+        _classCallCheck(this, Activation);
+
+        if (typeof onIsActiveChanged !== 'function') {
+            throw new Error('onIsActiveChanged should be a function');
+        }
+
+        this.onIsActiveChanged = onIsActiveChanged;
+        this.isActive = false;
+        this.timers = [];
+    }
+
+    _createClass(Activation, [{
+        key: 'activate',
+        value: function activate() {
+            this.isActive = true;
+            this.onIsActiveChanged({ isActive: true });
+        }
+    }, {
+        key: 'deactivate',
+        value: function deactivate() {
+            this.isActive = false;
+            this.onIsActiveChanged({ isActive: false });
+            this.clearTimers();
+        }
+    }, {
+        key: 'toggleActivation',
+        value: function toggleActivation() {
+            if (this.isActive) {
+                this.deactivate();
+            } else {
+                this.activate();
+            }
+        }
+    }, {
+        key: 'clearTimers',
+        value: function clearTimers() {
+            var timers = this.timers;
+            while (timers.length) {
+                var timer = timers.pop();
+                clearTimeout(timer.id);
+            }
+        }
+    }, {
+        key: 'clearTimer',
+        value: function clearTimer(timerName) {
+            this.timers.forEach(function (timer) {
+                if (timer.name === timerName) {
+                    clearTimeout(timer.id);
+                }
+            });
+        }
+    }]);
+
+    return Activation;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Activation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/ClickActivation.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/ClickActivation.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MouseEnvironmentActivation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MouseEnvironmentActivation */ "./node_modules/react-cursor-position/dist/es/lib/MouseEnvironmentActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var ClickActivation = function (_MouseEnvironmentActi) {
+    _inherits(ClickActivation, _MouseEnvironmentActi);
+
+    function ClickActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged;
+
+        _classCallCheck(this, ClickActivation);
+
+        return _possibleConstructorReturn(this, (ClickActivation.__proto__ || Object.getPrototypeOf(ClickActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+    }
+
+    _createClass(ClickActivation, [{
+        key: 'mouseClicked',
+        value: function mouseClicked() {
+            this.toggleActivation();
+        }
+    }]);
+
+    return ClickActivation;
+}(_MouseEnvironmentActivation__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ClickActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/ElementRelativeCursorPosition.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/ElementRelativeCursorPosition.js ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ElementRelativeCursorPosition = function () {
+    function ElementRelativeCursorPosition(el) {
+        _classCallCheck(this, ElementRelativeCursorPosition);
+
+        this.el = el;
+    }
+
+    _createClass(ElementRelativeCursorPosition, [{
+        key: "getDocumentRelativeElementOffset",
+        value: function getDocumentRelativeElementOffset(el) {
+            var rootEl = this.getRootOfEl(el);
+
+            var _rootEl$getBoundingCl = rootEl.getBoundingClientRect(),
+                docLeft = _rootEl$getBoundingCl.left,
+                docTop = _rootEl$getBoundingCl.top;
+
+            var _el$getBoundingClient = el.getBoundingClientRect(),
+                elLeft = _el$getBoundingClient.left,
+                elTop = _el$getBoundingClient.top;
+
+            return {
+                x: Math.abs(docLeft) + elLeft,
+                y: Math.abs(docTop) + elTop
+            };
+        }
+    }, {
+        key: "getRootOfEl",
+        value: function getRootOfEl(el) {
+            if (el.parentElement) {
+                return this.getRootOfEl(el.parentElement);
+            }
+            return el;
+        }
+    }, {
+        key: "getComputedElementRelativeCursorPosition",
+        value: function getComputedElementRelativeCursorPosition(event, documentRelativeElementOffset) {
+            this.lastEvent = event;
+            var position = this.getDocumentRelativeCursorPosition(event);
+            var cursorX = position.x,
+                cursorY = position.y;
+            var offsetX = documentRelativeElementOffset.x,
+                offsetY = documentRelativeElementOffset.y;
+
+
+            return {
+                x: Math.round(cursorX - offsetX),
+                y: Math.round(cursorY - offsetY)
+            };
+        }
+    }, {
+        key: "getDocumentRelativeCursorPosition",
+        value: function getDocumentRelativeCursorPosition(event) {
+            return {
+                x: event.pageX,
+                y: event.pageY
+            };
+        }
+    }, {
+        key: "getCursorPosition",
+        value: function getCursorPosition(event) {
+            return this.getComputedElementRelativeCursorPosition(event, this.documentRelativeElementOffset);
+        }
+    }, {
+        key: "documentRelativeElementOffset",
+        get: function get() {
+            if (!this.elementOffset) {
+                this.elementOffset = this.getDocumentRelativeElementOffset(this.el);
+            }
+
+            return this.elementOffset;
+        }
+    }]);
+
+    return ElementRelativeCursorPosition;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ElementRelativeCursorPosition);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/HoverActivation.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/HoverActivation.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./node_modules/react-cursor-position/dist/es/constants.js");
+/* harmony import */ var _MouseEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MouseEnvironmentActivation */ "./node_modules/react-cursor-position/dist/es/lib/MouseEnvironmentActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var HoverActivation = function (_MouseEnvironmentActi) {
+    _inherits(HoverActivation, _MouseEnvironmentActi);
+
+    function HoverActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged,
+            hoverDelayInMs = _ref.hoverDelayInMs,
+            hoverOffDelayInMs = _ref.hoverOffDelayInMs;
+
+        _classCallCheck(this, HoverActivation);
+
+        var _this = _possibleConstructorReturn(this, (HoverActivation.__proto__ || Object.getPrototypeOf(HoverActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+
+        _this.hoverDelayInMs = hoverDelayInMs;
+        _this.hoverOffDelayInMs = hoverOffDelayInMs;
+        return _this;
+    }
+
+    _createClass(HoverActivation, [{
+        key: 'mouseEntered',
+        value: function mouseEntered() {
+            this.clearTimers();
+            this.schedulActivation(this.hoverDelayInMs);
+        }
+    }, {
+        key: 'mouseLeft',
+        value: function mouseLeft() {
+            this.clearTimers();
+            this.scheduleDeactivation(this.hoverOffDelayInMs);
+        }
+    }, {
+        key: 'schedulActivation',
+        value: function schedulActivation(schedule) {
+            var _this2 = this;
+
+            var scheduleId = setTimeout(function () {
+                _this2.activate();
+            }, schedule);
+
+            this.timers.push({
+                id: scheduleId,
+                name: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_ACTIVATION_TIMER_NAME"]
+            });
+        }
+    }, {
+        key: 'scheduleDeactivation',
+        value: function scheduleDeactivation(schedule) {
+            var _this3 = this;
+
+            var scheduleId = setTimeout(function () {
+                _this3.deactivate();
+            }, schedule);
+
+            this.timers.push({
+                id: scheduleId,
+                name: _constants__WEBPACK_IMPORTED_MODULE_0__["UNSET_ACTIVATION_TIMER_NAME"]
+            });
+        }
+    }]);
+
+    return HoverActivation;
+}(_MouseEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (HoverActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/MouseEnvironmentActivation.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/MouseEnvironmentActivation.js ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Activation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Activation */ "./node_modules/react-cursor-position/dist/es/lib/Activation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var MouseActivation = function (_Activation) {
+    _inherits(MouseActivation, _Activation);
+
+    function MouseActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged;
+
+        _classCallCheck(this, MouseActivation);
+
+        return _possibleConstructorReturn(this, (MouseActivation.__proto__ || Object.getPrototypeOf(MouseActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+    }
+
+    _createClass(MouseActivation, [{
+        key: 'mouseEntered',
+        value: function mouseEntered() {}
+    }, {
+        key: 'mouseMoved',
+        value: function mouseMoved() {}
+    }, {
+        key: 'mouseLeft',
+        value: function mouseLeft() {}
+    }, {
+        key: 'mouseClicked',
+        value: function mouseClicked() {}
+    }]);
+
+    return MouseActivation;
+}(_Activation__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (MouseActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/PressActivation.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/PressActivation.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./node_modules/react-cursor-position/dist/es/constants.js");
+/* harmony import */ var _TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TouchEnvironmentActivation */ "./node_modules/react-cursor-position/dist/es/lib/TouchEnvironmentActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var PressActivation = function (_TouchEnvironmentActi) {
+    _inherits(PressActivation, _TouchEnvironmentActi);
+
+    function PressActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged,
+            pressDurationInMs = _ref.pressDurationInMs,
+            pressMoveThreshold = _ref.pressMoveThreshold;
+
+        _classCallCheck(this, PressActivation);
+
+        var _this = _possibleConstructorReturn(this, (PressActivation.__proto__ || Object.getPrototypeOf(PressActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+
+        _this.pressDurationInMs = pressDurationInMs;
+        _this.pressMoveThreshold = pressMoveThreshold;
+        return _this;
+    }
+
+    _createClass(PressActivation, [{
+        key: 'touchStarted',
+        value: function touchStarted(_ref2) {
+            var position = _ref2.position;
+
+            this.initPressEventCriteria(position);
+            this.setPressEventTimer();
+        }
+    }, {
+        key: 'touchMoved',
+        value: function touchMoved(_ref3) {
+            var position = _ref3.position;
+
+            if (this.isActive) {
+                return;
+            }
+
+            this.setPressEventCriteria(position);
+        }
+    }, {
+        key: 'setPressEventTimer',
+        value: function setPressEventTimer() {
+            var _this2 = this;
+
+            this.timers.push({
+                name: _constants__WEBPACK_IMPORTED_MODULE_0__["PRESS_EVENT_TIMER_NAME"],
+                id: setTimeout(function () {
+                    if (Math.abs(_this2.currentElTop - _this2.initialElTop) < _this2.pressMoveThreshold) {
+                        _this2.activate();
+                    }
+                }, this.pressDurationInMs)
+            });
+        }
+    }, {
+        key: 'setPressEventCriteria',
+        value: function setPressEventCriteria(position) {
+            this.currentElTop = position.y;
+        }
+    }, {
+        key: 'initPressEventCriteria',
+        value: function initPressEventCriteria(position) {
+            var top = position.y;
+            this.initialElTop = top;
+            this.currentElTop = top;
+        }
+    }]);
+
+    return PressActivation;
+}(_TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (PressActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/TapActivation.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/TapActivation.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./node_modules/react-cursor-position/dist/es/constants.js");
+/* harmony import */ var _TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TouchEnvironmentActivation */ "./node_modules/react-cursor-position/dist/es/lib/TouchEnvironmentActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var TapActivation = function (_TouchEnvironmentActi) {
+    _inherits(TapActivation, _TouchEnvironmentActi);
+
+    function TapActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged,
+            tapDurationInMs = _ref.tapDurationInMs,
+            tapMoveThreshold = _ref.tapMoveThreshold;
+
+        _classCallCheck(this, TapActivation);
+
+        var _this = _possibleConstructorReturn(this, (TapActivation.__proto__ || Object.getPrototypeOf(TapActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+
+        _this.hasTapGestureEnded = false;
+        _this.tapDurationInMs = tapDurationInMs;
+        _this.tapMoveThreshold = tapMoveThreshold;
+        return _this;
+    }
+
+    _createClass(TapActivation, [{
+        key: 'touchStarted',
+        value: function touchStarted(_ref2) {
+            var position = _ref2.position;
+
+            this.hasTapGestureEnded = false;
+            this.initMoveThreshold(position);
+            this.setTapEventTimer();
+        }
+    }, {
+        key: 'touchMoved',
+        value: function touchMoved(_ref3) {
+            var position = _ref3.position;
+
+            if (this.isActive) {
+                return;
+            }
+
+            this.setMoveThresholdCriteria(position);
+        }
+    }, {
+        key: 'touchEnded',
+        value: function touchEnded() {
+            this.hasTapGestureEnded = true;
+        }
+    }, {
+        key: 'setTapEventTimer',
+        value: function setTapEventTimer() {
+            var _this2 = this;
+
+            this.timers.push({
+                name: _constants__WEBPACK_IMPORTED_MODULE_0__["TAP_GESTURE_TIMER_NAME"],
+                id: setTimeout(function () {
+                    if (_this2.isTapGestureActive) {
+                        _this2.toggleActivation();
+                    }
+                }, this.tapDurationInMs)
+            });
+        }
+    }, {
+        key: 'setMoveThresholdCriteria',
+        value: function setMoveThresholdCriteria(position) {
+            this.currentElTop = position.y;
+        }
+    }, {
+        key: 'initMoveThreshold',
+        value: function initMoveThreshold(position) {
+            var top = position.y;
+            this.initialElTop = top;
+            this.currentElTop = top;
+        }
+    }, {
+        key: 'hasPassedMoveThreshold',
+        get: function get() {
+            return Math.abs(this.currentElTop - this.initialElTop) > this.tapMoveThreshold;
+        }
+    }, {
+        key: 'isTapGestureActive',
+        get: function get() {
+            return !this.hasPassedMoveThreshold && this.hasTapGestureEnded;
+        }
+    }]);
+
+    return TapActivation;
+}(_TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TapActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/TouchActivation.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/TouchActivation.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TouchEnvironmentActivation */ "./node_modules/react-cursor-position/dist/es/lib/TouchEnvironmentActivation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var TouchActivation = function (_TouchEnvironmentActi) {
+    _inherits(TouchActivation, _TouchEnvironmentActi);
+
+    function TouchActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged;
+
+        _classCallCheck(this, TouchActivation);
+
+        return _possibleConstructorReturn(this, (TouchActivation.__proto__ || Object.getPrototypeOf(TouchActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+    }
+
+    _createClass(TouchActivation, [{
+        key: 'touchStarted',
+        value: function touchStarted(_ref2) {
+            var e = _ref2.e;
+
+            e.preventDefault();
+            this.activate();
+        }
+    }]);
+
+    return TouchActivation;
+}(_TouchEnvironmentActivation__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TouchActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/lib/TouchEnvironmentActivation.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/lib/TouchEnvironmentActivation.js ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Activation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Activation */ "./node_modules/react-cursor-position/dist/es/lib/Activation.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var TouchEnvironmentActivation = function (_Activation) {
+    _inherits(TouchEnvironmentActivation, _Activation);
+
+    function TouchEnvironmentActivation(_ref) {
+        var onIsActiveChanged = _ref.onIsActiveChanged;
+
+        _classCallCheck(this, TouchEnvironmentActivation);
+
+        var _this = _possibleConstructorReturn(this, (TouchEnvironmentActivation.__proto__ || Object.getPrototypeOf(TouchEnvironmentActivation)).call(this, { onIsActiveChanged: onIsActiveChanged }));
+
+        _this.initialElTop = 0;
+        _this.currentElTop = 0;
+        return _this;
+    }
+
+    _createClass(TouchEnvironmentActivation, [{
+        key: 'touchStarted',
+        value: function touchStarted() {}
+    }, {
+        key: 'touchMoved',
+        value: function touchMoved() {}
+    }, {
+        key: 'touchEnded',
+        value: function touchEnded() {
+            this.deactivate();
+        }
+    }, {
+        key: 'touchCanceled',
+        value: function touchCanceled() {
+            this.deactivate();
+        }
+    }]);
+
+    return TouchEnvironmentActivation;
+}(_Activation__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TouchEnvironmentActivation);
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/utils/addEventListener.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/utils/addEventListener.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addEventListener; });
+function addEventListener(node, eventName, handler, options) {
+    node.addEventListener(eventName, handler, options);
+    return {
+        removeEventListener: function removeEventListener() {
+            node.removeEventListener(eventName, handler, options);
+        }
+    };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-cursor-position/dist/es/utils/noop.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/react-cursor-position/dist/es/utils/noop.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {});
 
 /***/ }),
 
@@ -69168,6 +70616,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./DaylightOverlay/DaylightOverlay */ "./resources/js/components/utils/Game/DaylightOverlay/DaylightOverlay.js");
+/* harmony import */ var react_cursor_position__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-cursor-position */ "./node_modules/react-cursor-position/dist/es/ReactCursorPosition.js");
+
 
 
 
@@ -69204,8 +70654,8 @@ var Game = /*#__PURE__*/function (_Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Game).call(this, props)); //initially we create reactange of recteangles 10x6
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
-      console.log(["handleUpdateMapConfigItem", _this.state.activeXCord, _this.state.activeYCord, value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays]);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
+      console.log(["handleUpdateMapConfigItem", _this.state.activeXCord, _this.state.activeYCord, value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources]);
 
       var allowed = _this.checkAllowBuild(money, freeHumanResources, materials);
 
@@ -69224,7 +70674,8 @@ var Game = /*#__PURE__*/function (_Component) {
                 descriptionContent: descriptionContent,
                 haveImage: true,
                 finishedBuildDays: finishedBuildDays,
-                durationBuildDays: durationBuildDays
+                durationBuildDays: durationBuildDays,
+                notAddedHumanResources: notAddedHumanResources
               }) : mapConfigObject;
             })
           };
@@ -69269,33 +70720,34 @@ var Game = /*#__PURE__*/function (_Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleZoomChange", function (operation) {
       var zoomX = _this.state.zoomX;
+      console.log(["zoomX", zoomX]);
 
-      if (zoomX < 4 || zoomX > 20) {
+      if (zoomX < 14 || zoomX > 20) {
         _this.context.handleShowAlert("Maximum length extended", "danger");
       } else if (zoomX === 20) {
         if (operation !== "increment") {
           _this.setState({
             zoomX: _this.state.zoomX - 2,
-            zoomY: _this.state.zoomY - 1
+            zoomY: _this.state.zoomY - 2
           });
         }
-      } else if (zoomX === 4) {
+      } else if (zoomX === 14) {
         if (operation === "increment") {
           _this.setState({
             zoomX: _this.state.zoomX + 2,
-            zoomY: _this.state.zoomY + 1
+            zoomY: _this.state.zoomY + 2
           });
         }
       } else {
         if (operation === "increment") {
           _this.setState({
             zoomX: _this.state.zoomX + 2,
-            zoomY: _this.state.zoomY + 1
+            zoomY: _this.state.zoomY + 2
           });
         } else {
           _this.setState({
             zoomX: _this.state.zoomX - 2,
-            zoomY: _this.state.zoomY - 1
+            zoomY: _this.state.zoomY - 2
           });
         }
       }
@@ -69316,8 +70768,10 @@ var Game = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleAssetsEarning", function () {
       var moneySum = 0;
       var materialsSum = 0;
-
-      _this.state.mapConfig.map( /*#__PURE__*/function () {
+      var freeHumanResoucesSum = 0;
+      var populationSum = 0;
+      var mapConfigCopy = _this.state.mapConfig;
+      mapConfigCopy.map( /*#__PURE__*/function () {
         var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(mapConfigObject) {
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
             while (1) {
@@ -69331,7 +70785,14 @@ var Game = /*#__PURE__*/function (_Component) {
                     moneySum += mapConfigObject.money;
                   }
 
-                case 2:
+                  if (mapConfigObject.notAddedHumanResources && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
+                    console.log(["mapObj", mapConfigObject]);
+                    mapConfigObject.notAddedHumanResources = false;
+                    freeHumanResoucesSum += mapConfigObject.population;
+                    populationSum += mapConfigObject.population;
+                  }
+
+                case 3:
                 case "end":
                   return _context.stop();
               }
@@ -69347,7 +70808,10 @@ var Game = /*#__PURE__*/function (_Component) {
       _this.setState(function (prevState) {
         return {
           money: prevState.money + moneySum,
-          materials: prevState.materials + materialsSum
+          materials: prevState.materials + materialsSum,
+          mapConfig: mapConfigCopy,
+          population: prevState.population + populationSum,
+          freeHumanResources: prevState.freeHumanResources + freeHumanResoucesSum
         };
       });
     });
@@ -69409,8 +70873,18 @@ var Game = /*#__PURE__*/function (_Component) {
       }
     });
 
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleMapDirection", function (e) {
+      console.log(["e", e]);
+    });
+
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", function () {
-      console.log(["date", moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()]);
+      // window.addEventListener("dragenter", this.getMouseDirection);
+      _this.mapRef.current.addEventListener("dragenter", _this.handleMapDirection);
+
+      _this.mapRef.current.addEventListener("dragleave", _this.handleMapDirection); // div.addEventListener('dragleave', this.handleDragOut)
+      // div.addEventListener('dragover', this.handleDrag)
+      // div.addEventListener('drop', this.handleDrop)
+
 
       _this.setState({
         mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"],
@@ -69421,7 +70895,7 @@ var Game = /*#__PURE__*/function (_Component) {
     _this.state = {
       initialZoomPosition: 3,
       zoomX: 20,
-      zoomY: 11,
+      zoomY: 10,
       date: "",
       money: 1000000,
       population: 3000,
@@ -69436,6 +70910,7 @@ var Game = /*#__PURE__*/function (_Component) {
       activeYCord: 0,
       showDescription: false
     };
+    _this.mapRef = react__WEBPACK_IMPORTED_MODULE_9___default.a.createRef();
     return _this;
   }
 
@@ -69460,7 +70935,8 @@ var Game = /*#__PURE__*/function (_Component) {
           activeYCord = _this$state3.activeYCord,
           showDescription = _this$state3.showDescription;
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        className: "game__container"
+        className: "game__container",
+        ref: this.mapRef
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_12__["GameContext"].Provider, {
         value: {
           zoomX: zoomX,
@@ -69484,7 +70960,9 @@ var Game = /*#__PURE__*/function (_Component) {
           handleSetElementDescription: this.handleSetElementDescription,
           showDescription: showDescription
         }
-      }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
+      }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_cursor_position__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        activationInteractionMouse: react_cursor_position__WEBPACK_IMPORTED_MODULE_17__["INTERACTIONS"].CLICK
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
     }
   }]);
 
@@ -69571,6 +71049,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_assets_images_close_png__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/oilFactory.png */ "./resources/assets/images/oilFactory.png");
 /* harmony import */ var _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _assets_images_house_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/house.png */ "./resources/assets/images/house.png");
+/* harmony import */ var _assets_images_house_png__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_assets_images_house_png__WEBPACK_IMPORTED_MODULE_19__);
+
 
 
 
@@ -69607,8 +71088,8 @@ var ActionModal = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleUpdateItem", function (value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays) {
-      _this.context.handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays); //this.context.handleSetActionModal();
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleUpdateItem", function (value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
+      _this.context.handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources); //this.context.handleSetActionModal();
 
     });
 
@@ -69658,23 +71139,25 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         finishedBuildDays: 1,
         durationBuildDays: 6,
         description: "+10000 money everyday",
-        descriptionActionModal: "+10000 money everyday.\n -1000 Resources \n -200 Materials",
-        cost: 2000000
+        descriptionActionModal: "+10000 money everyday\n -1000 human resources \n -200 materials",
+        cost: 2000000,
+        notAddedHumanResources: false
       }, {
-        sidebarOption: "Factories",
-        name: "Oil factory",
-        value: "factory",
-        freeHumanResources: 1000,
-        population: 0,
+        sidebarOption: "Building",
+        name: "Residential Building",
+        value: "house",
+        freeHumanResources: 0,
+        population: 1000,
         money: 10000,
         materials: 200,
-        icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18___default.a,
-        desriptionHeader: "Factory",
+        icon: _assets_images_house_png__WEBPACK_IMPORTED_MODULE_19___default.a,
+        desriptionHeader: "Residential Building",
         finishedBuildDays: 1,
-        durationBuildDays: 6,
-        description: "+10000 money everyday",
-        descriptionActionModal: "+10000 money everyday.\n -1000 Resources \n -200 Materials",
-        cost: 2000000
+        durationBuildDays: 4,
+        description: "+1000 Free Human Resources",
+        descriptionActionModal: "+1000 Free Human Resources\n -200 materials",
+        cost: 200000,
+        notAddedHumanResources: true
       }]
     };
     return _this;
@@ -69785,7 +71268,7 @@ var SingleOption = function SingleOption(_ref) {
   }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element--submit",
     onClick: function onClick() {
-      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
+      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays, option.notAddedHumanResources);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))), activeSidebarOption === "All" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element"
@@ -69800,7 +71283,7 @@ var SingleOption = function SingleOption(_ref) {
   }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element--submit",
     onClick: function onClick() {
-      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays);
+      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays, option.notAddedHumanResources);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))));
 };
@@ -69946,7 +71429,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var ElementWithoutImage = function ElementWithoutImage(_ref) {
   var configElement = _ref.configElement,
-      handleSetActionModal = _ref.handleSetActionModal,
       x = _ref.x,
       y = _ref.y;
   var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
@@ -69980,23 +71462,13 @@ var ElementWithoutImage = function ElementWithoutImage(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
-/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
-/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
+/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
+/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
 
 
 
@@ -70005,102 +71477,84 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var Map = function Map(_ref) {
+  var isActive = _ref.isActive,
+      position = _ref.position;
+  var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_3__["GameContext"]);
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    console.log(["isActive", isActive, position]);
+  }, [isActive]); // const { showActionModal, activeXCord, activeYCord } = this.state;
 
-
-
-
-
-var Map = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Map, _Component);
-
-  function Map(props) {
-    var _this;
-
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Map);
-
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Map).call(this, props));
-    _this.state = {};
-    return _this;
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Map, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      // const { showActionModal, activeXCord, activeYCord } = this.state;
-      var _this$context = this.context,
-          zoomX = _this$context.zoomX,
-          zoomY = _this$context.zoomY,
-          mapConfig = _this$context.mapConfig;
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "game__map--container"
-      }, zoomY && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomY)).map(function (yElement, y) {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-          className: "map__floor map__floor-".concat(y),
-          key: "map__floor-".concat(y)
-        }, zoomX && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomX)).map(function (Xelement, x) {
-          //console.log(["x,y", x, y]);
-          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-            className: "map-square map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y),
-            style: {
-              height: "calc(100vh/".concat(zoomY),
-              width: "calc(100vw/".concat(zoomX, ")")
-            },
-            key: "map-square__".concat(20 - zoomX + x, "-").concat(11 - zoomY + y)
-          }, mapConfig && mapConfig.map(function (configElement, index) {
-            // console.log(
-            //     configElement.x,
-            //     x,
-            //     configElement.y,
-            //     y
-            // );
-            if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && configElement.haveImage) {
-              if (configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays) {
-                return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-                  className: "map-element__during-build--container"
-                }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                  configElement: configElement,
-                  index: index,
-                  key: "".concat(configElement.value, "-").concat(index)
-                }));
-              } else {
-                return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                  configElement: configElement,
-                  index: index,
-                  key: "".concat(configElement.value, "-").concat(index)
-                });
-              }
-            } else if (configElement.x === 20 - zoomX + x && configElement.y === 11 - zoomY + y && !configElement.haveImage) {
-              return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                configElement: configElement,
-                key: "".concat(configElement.value, "-").concat(index) // handleSetActionModal={
-                //     this
-                //         .handleSetActionModal
-                // }
-                ,
-                x: x,
-                y: y
-              });
-            }
-          }));
-        }));
-      }), this.context && this.context.showActionModal && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_11__["default"] // handleSetActionModal={this.handleSetActionModal}
-      // x={activeXCord}
-      // y={activeYCord}
-      , null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "map__finish-day",
-        onClick: function onClick() {
-          return _this2.context.handleDayPassed();
+  var zoomX = context.zoomX,
+      zoomY = context.zoomY,
+      mapConfig = context.mapConfig;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "game__map--container"
+  }, zoomY && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomY)).map(function (yElement, y) {
+    //console.log(["=======", y]);
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "map__floor map__floor-".concat(y),
+      key: "map__floor-".concat(y)
+    }, zoomX && _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(zoomX)).map(function (Xelement, x) {
+      // console.log([
+      //     "x,y",
+      //     zoomX,
+      //     zoomY,
+      //     x,
+      //     y
+      // ]);
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "map-square map-square__".concat((20 - zoomX) / 2 + x, "-").concat((10 - zoomY) / 2 + y),
+        style: {
+          height: "calc(100vh/".concat(zoomY),
+          width: "calc(100vw/".concat(zoomX, ")")
+        },
+        key: "map-square__".concat((20 - zoomX) / 2 + x, "-").concat((10 - zoomY) / 2 + y)
+      }, mapConfig && mapConfig.map(function (configElement, index) {
+        // console.log(
+        //     configElement.x,
+        //     x,
+        //     configElement.y,
+        //     y
+        // );
+        if (configElement.x === (20 - zoomX) / 2 + x && configElement.y === (10 - zoomY) / 2 + y && configElement.haveImage) {
+          if (configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays) {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+              className: "map-element__during-build--container"
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              configElement: configElement,
+              index: index,
+              key: "".concat(configElement.value, "-").concat(index)
+            }));
+          } else {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              configElement: configElement,
+              index: index,
+              key: "".concat(configElement.value, "-").concat(index)
+            });
+          }
+        } else if (configElement.x === (20 - zoomX) / 2 + x && configElement.y === (10 - zoomY) / 2 + y && !configElement.haveImage) {
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            configElement: configElement,
+            key: "".concat(configElement.value, "-").concat(index) // handleSetActionModal={
+            //     this
+            //         .handleSetActionModal
+            // }
+            ,
+            x: (20 - zoomX) / 2 + x,
+            y: (10 - zoomY) / 2 + y
+          });
         }
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_7__["default"], null));
+      }));
+    }));
+  }), context.showActionModal && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "map__finish-day",
+    onClick: function onClick() {
+      return context.handleDayPassed();
     }
-  }]);
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
 
-  return Map;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
-
-Map.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_8__["GameContext"];
 /* harmony default export */ __webpack_exports__["default"] = (Map);
 
 /***/ }),
@@ -70125,12 +71579,12 @@ var ZoomBtns = function ZoomBtns() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "zoom-btns__container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "zoom-btns__container--top",
+    className: gameContext.zoomX === 14 ? "zoom-btns__container--top zoom-btns__container--disable" : "zoom-btns__container--top zoom-btns__container--enable",
     onClick: function onClick() {
       return gameContext.handleZoomChange("decrement");
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "+")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "zoom-btns__container--bottom",
+    className: gameContext.zoomX === 20 ? "zoom-btns__container--bottom zoom-btns__container--disable" : "zoom-btns__container--bottom zoom-btns__container--enable",
     onClick: function onClick() {
       return gameContext.handleZoomChange("increment");
     }
@@ -70439,8 +71893,8 @@ var initialMapConfig = [//==================== row - 1 ====================
   finishedBuildDays: 3,
   durationBuildDays: 3,
   money: 0,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
+  desriptionHeader: "Residential Building",
+  descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
   x: 14,
@@ -70615,8 +72069,8 @@ var initialMapConfig = [//==================== row - 1 ====================
   finishedBuildDays: 3,
   durationBuildDays: 3,
   money: 0,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
+  desriptionHeader: "Residential Building",
+  descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
   x: 14,
@@ -70781,8 +72235,8 @@ var initialMapConfig = [//==================== row - 1 ====================
   finishedBuildDays: 3,
   durationBuildDays: 3,
   money: 0,
-  desriptionHeader: "House",
-  descriptionContent: "Increase your overal population by 1000 people",
+  desriptionHeader: "Residential Building",
+  descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
   x: 14,

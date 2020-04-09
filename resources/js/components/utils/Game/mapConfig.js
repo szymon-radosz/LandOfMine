@@ -323,8 +323,8 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "House",
-        descriptionContent: "Increase your overal population by 1000 people",
+        desriptionHeader: "Residential Building",
+        descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
     {
@@ -519,8 +519,8 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "House",
-        descriptionContent: "Increase your overal population by 1000 people",
+        desriptionHeader: "Residential Building",
+        descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
     {
@@ -705,8 +705,8 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "House",
-        descriptionContent: "Increase your overal population by 1000 people",
+        desriptionHeader: "Residential Building",
+        descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
     {

@@ -1,7 +1,7 @@
 import React from "react";
 import { GameContext } from "./../../GameContext";
 
-const ElementWithoutImage = ({ configElement, handleSetActionModal, x, y }) => {
+const ElementWithoutImage = ({ configElement, x, y }) => {
     const context = React.useContext(GameContext);
 
     if (

@@ -7,13 +7,21 @@ const ZoomBtns = () => {
     return (
         <div className="zoom-btns__container">
             <div
-                className="zoom-btns__container--top"
+                className={
+                    gameContext.zoomX === 14
+                        ? "zoom-btns__container--top zoom-btns__container--disable"
+                        : "zoom-btns__container--top zoom-btns__container--enable"
+                }
                 onClick={() => gameContext.handleZoomChange("decrement")}
             >
                 <p>+</p>
             </div>
             <div
-                className="zoom-btns__container--bottom"
+                className={
+                    gameContext.zoomX === 20
+                        ? "zoom-btns__container--bottom zoom-btns__container--disable"
+                        : "zoom-btns__container--bottom zoom-btns__container--enable"
+                }
                 onClick={() => gameContext.handleZoomChange("increment")}
             >
                 <p>-</p>

@@ -10,6 +10,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Options from "./Options/Options";
 import close from "./../../../../../../assets/images/close.png";
 import oilFactory from "./../../../../../../assets/images/oilFactory.png";
+import house from "./../../../../../../assets/images/house.png";
 
 class ActionModal extends Component {
     constructor(props) {
@@ -70,25 +71,27 @@ class ActionModal extends Component {
                     durationBuildDays: 6,
                     description: "+10000 money everyday",
                     descriptionActionModal:
-                        "+10000 money everyday.\n -1000 Resources \n -200 Materials",
-                    cost: 2000000
+                        "+10000 money everyday\n -1000 human resources \n -200 materials",
+                    cost: 2000000,
+                    notAddedHumanResources: false
                 },
                 {
-                    sidebarOption: "Factories",
-                    name: "Oil factory",
-                    value: "factory",
-                    freeHumanResources: 1000,
-                    population: 0,
+                    sidebarOption: "Building",
+                    name: "Residential Building",
+                    value: "house",
+                    freeHumanResources: 0,
+                    population: 1000,
                     money: 10000,
                     materials: 200,
-                    icon: oilFactory,
-                    desriptionHeader: "Factory",
+                    icon: house,
+                    desriptionHeader: "Residential Building",
                     finishedBuildDays: 1,
-                    durationBuildDays: 6,
-                    description: "+10000 money everyday",
+                    durationBuildDays: 4,
+                    description: "+1000 Free Human Resources",
                     descriptionActionModal:
-                        "+10000 money everyday.\n -1000 Resources \n -200 Materials",
-                    cost: 2000000
+                        "+1000 Free Human Resources\n -200 materials",
+                    cost: 200000,
+                    notAddedHumanResources: true
                 }
             ]
         };
@@ -107,7 +110,8 @@ class ActionModal extends Component {
         desriptionHeader,
         descriptionContent,
         finishedBuildDays,
-        durationBuildDays
+        durationBuildDays,
+        notAddedHumanResources
     ) => {
         this.context.handleUpdateMapConfigItem(
             value,
@@ -118,7 +122,8 @@ class ActionModal extends Component {
             desriptionHeader,
             descriptionContent,
             finishedBuildDays,
-            durationBuildDays
+            durationBuildDays,
+            notAddedHumanResources
         );
 
         //this.context.handleSetActionModal();

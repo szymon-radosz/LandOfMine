@@ -6,6 +6,7 @@ import { MainContext } from "./../../MainContext";
 import initialMapConfig from "./mapConfig";
 import moment from "moment";
 import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
+import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 
 // zoomX: 20, zoomY: 11 - initialZoomPosition: 8
 // zoomX: 18, zoomY: 10 - initialZoomPosition: 7
@@ -25,7 +26,7 @@ class Game extends Component {
         this.state = {
             initialZoomPosition: 3,
             zoomX: 20,
-            zoomY: 11,
+            zoomY: 10,
             date: "",
             money: 1000000,
             population: 3000,
@@ -40,6 +41,8 @@ class Game extends Component {
             activeYCord: 0,
             showDescription: false
         };
+
+        this.mapRef = React.createRef();
     }
 
     handleUpdateMapConfigItem = (
@@ -51,7 +54,8 @@ class Game extends Component {
         desriptionHeader,
         descriptionContent,
         finishedBuildDays,
-        durationBuildDays
+        durationBuildDays,
+        notAddedHumanResources
     ) => {
         console.log([
             "handleUpdateMapConfigItem",
@@ -65,7 +69,8 @@ class Game extends Component {
             desriptionHeader,
             descriptionContent,
             finishedBuildDays,
-            durationBuildDays
+            durationBuildDays,
+            notAddedHumanResources
         ]);
 
         let allowed = this.checkAllowBuild(
@@ -90,7 +95,8 @@ class Game extends Component {
                               descriptionContent: descriptionContent,
                               haveImage: true,
                               finishedBuildDays: finishedBuildDays,
-                              durationBuildDays: durationBuildDays
+                              durationBuildDays: durationBuildDays,
+                              notAddedHumanResources: notAddedHumanResources
                           })
                         : mapConfigObject
                 )
@@ -135,32 +141,34 @@ class Game extends Component {
     handleZoomChange = operation => {
         const { zoomX } = this.state;
 
-        if (zoomX < 4 || zoomX > 20) {
+        console.log(["zoomX", zoomX]);
+
+        if (zoomX < 14 || zoomX > 20) {
             this.context.handleShowAlert("Maximum length extended", "danger");
         } else if (zoomX === 20) {
             if (operation !== "increment") {
                 this.setState({
                     zoomX: this.state.zoomX - 2,
-                    zoomY: this.state.zoomY - 1
+                    zoomY: this.state.zoomY - 2
                 });
             }
-        } else if (zoomX === 4) {
+        } else if (zoomX === 14) {
             if (operation === "increment") {
                 this.setState({
                     zoomX: this.state.zoomX + 2,
-                    zoomY: this.state.zoomY + 1
+                    zoomY: this.state.zoomY + 2
                 });
             }
         } else {
             if (operation === "increment") {
                 this.setState({
                     zoomX: this.state.zoomX + 2,
-                    zoomY: this.state.zoomY + 1
+                    zoomY: this.state.zoomY + 2
                 });
             } else {
                 this.setState({
                     zoomX: this.state.zoomX - 2,
-                    zoomY: this.state.zoomY - 1
+                    zoomY: this.state.zoomY - 2
                 });
             }
         }
@@ -185,8 +193,12 @@ class Game extends Component {
     handleAssetsEarning = () => {
         let moneySum = 0;
         let materialsSum = 0;
+        let freeHumanResoucesSum = 0;
+        let populationSum = 0;
 
-        this.state.mapConfig.map(async mapConfigObject => {
+        let mapConfigCopy = this.state.mapConfig;
+
+        mapConfigCopy.map(async mapConfigObject => {
             if (
                 mapConfigObject.materials &&
                 mapConfigObject.finishedBuildDays ===
@@ -202,11 +214,26 @@ class Game extends Component {
             ) {
                 moneySum += mapConfigObject.money;
             }
+
+            if (
+                mapConfigObject.notAddedHumanResources &&
+                mapConfigObject.finishedBuildDays ===
+                    mapConfigObject.durationBuildDays
+            ) {
+                console.log(["mapObj", mapConfigObject]);
+                mapConfigObject.notAddedHumanResources = false;
+                freeHumanResoucesSum += mapConfigObject.population;
+                populationSum += mapConfigObject.population;
+            }
         });
 
         this.setState(prevState => ({
             money: prevState.money + moneySum,
-            materials: prevState.materials + materialsSum
+            materials: prevState.materials + materialsSum,
+            mapConfig: mapConfigCopy,
+            population: prevState.population + populationSum,
+            freeHumanResources:
+                prevState.freeHumanResources + freeHumanResoucesSum
         }));
     };
 
@@ -254,13 +281,27 @@ class Game extends Component {
         }
     };
 
+    handleMapDirection = e => {
+        console.log(["e", e]);
+    };
+
     componentDidMount = () => {
-        console.log([
-            "date",
-            moment("2000-01-01")
-                .format("DD.MM.YYYY")
-                .toString()
-        ]);
+        // window.addEventListener("dragenter", this.getMouseDirection);
+
+        this.mapRef.current.addEventListener(
+            "dragenter",
+            this.handleMapDirection
+        );
+
+        this.mapRef.current.addEventListener(
+            "dragleave",
+            this.handleMapDirection
+        );
+
+        // div.addEventListener('dragleave', this.handleDragOut)
+        // div.addEventListener('dragover', this.handleDrag)
+        // div.addEventListener('drop', this.handleDrop)
+
         this.setState({
             mapConfig: initialMapConfig,
             date: moment("2000-01-01")
@@ -289,7 +330,7 @@ class Game extends Component {
             showDescription
         } = this.state;
         return (
-            <div className="game__container">
+            <div className="game__container" ref={this.mapRef}>
                 <GameContext.Provider
                     value={{
                         zoomX: zoomX,
@@ -317,7 +358,11 @@ class Game extends Component {
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
-                    <Map />
+                    <ReactCursorPosition
+                        activationInteractionMouse={INTERACTIONS.CLICK}
+                    >
+                        <Map />
+                    </ReactCursorPosition>
                     <BottomPanel />
                 </GameContext.Provider>
             </div>

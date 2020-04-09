@@ -63,6 +63,7 @@
         "pigeon-maps": "^0.14.0",
         "pigeon-marker": "^0.3.4",
         "react-burger-menu": "^2.6.13",
+        "react-cursor-position": "^3.0.3",
         "react-google-maps": "^9.4.5",
         "react-helmet": "^5.2.1",
         "react-leaflet": "^2.5.0",
