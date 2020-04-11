@@ -291,7 +291,7 @@ body .pagination > li:last-child > span {
 .search-page__single-list-item--container .search-page__single-list-item--details {
   color: #636363;
   cursor: pointer;
-  transition: 0.3sr;
+  transition: 0.3s;
 }
 
 .search-page__single-list-item--container .search-page__single-list-item--details:hover {
@@ -1705,6 +1705,7 @@ body .pagination > li:last-child > span {
 
 .game__container .bottom-panel-game__container p {
   margin: 0;
+  font-size: 12px;
 }
 
 .game__container .bottom-panel-game__container .bottom-panel-game--logo {

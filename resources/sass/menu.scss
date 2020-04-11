@@ -47,7 +47,7 @@
     margin-bottom: 10px;
     color: #d1d1d1;
     opacity: 0.6;
-    transition: 0.3s;
+    transition: $transition;
 }
 
 .bm-item:hover {
@@ -65,7 +65,7 @@
 .bm-burger-bars {
     background: #fff;
     border-radius: 6px !important;
-    transition: 0.3s;
+    transition: $transition;
 }
 
 .bm-cross-button {

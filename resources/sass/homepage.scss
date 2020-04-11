@@ -46,7 +46,7 @@
                 border: 6px solid #fff;
                 padding: 0 30px;
                 margin-top: 30px;
-                transition: 0.3s;
+                transition: $transition;
                 cursor: pointer;
                 p {
                     margin-bottom: 8px;
@@ -95,7 +95,7 @@
                 font-weight: 600;
                 cursor: pointer;
                 opacity: 0.8;
-                transition: 0.3s;
+                transition: $transition;
             }
             p:hover {
                 opacity: 1;
@@ -154,11 +154,11 @@
         border: 6px solid #fff;
         padding: 0 30px;
         margin-top: 15px;
-        transition: 0.3s;
+        transition: $transition;
         cursor: pointer;
         color: #fff;
         font-family: "Notable", sans-serif;
-        transition: 0.3s;
+        transition: $transition;
         max-width: 300px;
         margin: 15px auto 0 auto;
 
@@ -192,7 +192,7 @@
             color: #fff;
             font-weight: 600;
             text-decoration: underline;
-            transition: 0.3s;
+            transition: $transition;
         }
         a:hover {
             color: rgb(228, 228, 228);
@@ -230,7 +230,7 @@
     p {
         transform: rotate(270deg);
         cursor: pointer;
-        transition: 0.3s;
+        transition: $transition;
     }
     p:hover {
         opacity: 0.7;
@@ -241,9 +241,6 @@
     .homepage__footer--wrapper p {
         font-size: 11px;
     }
-    // .page__main-section--container {
-    //     margin-top: 70px;
-    // }
     .newsletter__wrapper {
         width: 80%;
     }
@@ -400,9 +397,6 @@
 }
 
 @media screen and (min-width: 981px) {
-    // .page__main-section--container {
-    //     margin-top: 70px;
-    // }
     .page__about-section--container {
         .page__about-section--wrapper {
             display: flex;

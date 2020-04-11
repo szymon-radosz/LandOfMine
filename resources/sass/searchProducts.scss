@@ -15,7 +15,7 @@
 
                 a {
                     color: #333;
-                    transition: 0.3s;
+                    transition: $transition;
                     font-weight: 600;
                 }
                 a:hover {
@@ -77,7 +77,7 @@
     .search-page__single-list-item--details {
         color: #636363;
         cursor: pointer;
-        transition: 0.3sr;
+        transition: $transition;
     }
     .search-page__single-list-item--details:hover {
         opacity: 0.8;
@@ -94,8 +94,8 @@
 .search-nav {
     .pagination > li.active > a {
         color: #fff;
-        background-color: #5c8d89 !important;
-        border-color: #5c8d89 !important;
+        background-color: $green !important;
+        border-color: $green !important;
     }
     .pagination > li > a,
     .pagination > li > span {
@@ -103,8 +103,8 @@
         border: 2px solid #ddd;
     }
     .pagination > li > a:hover {
-        background-color: #5c8d89 !important;
-        border-color: #5c8d89 !important;
+        background-color: $green !important;
+        border-color: $green !important;
     }
     .pagination > li {
         border: none;

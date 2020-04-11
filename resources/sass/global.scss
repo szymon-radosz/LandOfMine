@@ -32,8 +32,8 @@ body {
         }
     }
     .pagination > li.active > a {
-        background-color: #5c8d89 !important;
-        border-color: #5c8d89 !important;
+        background-color: $green !important;
+        border-color: $green !important;
     }
     .pagination {
         margin: 20px 0 0 0;
