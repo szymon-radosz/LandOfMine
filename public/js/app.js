@@ -69228,7 +69228,12 @@ var BottomPanel = function () {
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Free Human Resources: " + (context &&
                 context.freeHumanResources &&
                 context.freeHumanResources)),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money: " + (context && context.money && context.money)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null,
+                "Money:",
+                " ",
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { "data-cy": "money-value" }, "" + (context &&
+                    context.money &&
+                    context.money))),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Materials: " + (context &&
                 context.materials &&
                 context.materials)))));
@@ -70104,7 +70109,7 @@ var Map = function () {
                     })));
             }),
         context.showActionModal && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_5__["default"], null),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "map__finish-day", onClick: function () { return context.handleDayPassed(); } },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "map__finish-day", "data-cy": "finish-day__btn", onClick: function () { return context.handleDayPassed(); } },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Go to next day")),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
@@ -71188,7 +71193,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   value: "factory",
   initialElement: true,
   population: 0,
-  money: 1000,
+  money: 10000,
   materials: 0,
   finishedBuildDays: 6,
   durationBuildDays: 6,

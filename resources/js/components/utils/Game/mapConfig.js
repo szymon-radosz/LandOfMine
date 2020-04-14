@@ -1159,7 +1159,7 @@ const initialMapConfig = [
         value: "factory",
         initialElement: true,
         population: 0,
-        money: 1000,
+        money: 10000,
         materials: 0,
         finishedBuildDays: 6,
         durationBuildDays: 6,

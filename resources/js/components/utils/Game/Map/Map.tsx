@@ -134,6 +134,7 @@ const Map = () => {
 
             <div
                 className="map__finish-day"
+                data-cy="finish-day__btn"
                 onClick={() => context.handleDayPassed()}
             >
                 <p>Go to next day</p>

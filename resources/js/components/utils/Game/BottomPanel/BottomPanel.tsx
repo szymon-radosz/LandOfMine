@@ -33,7 +33,12 @@ const BottomPanel = () => {
                         context.freeHumanResources &&
                         context.freeHumanResources}`}
                 </p>
-                <p>{`Money: ${context && context.money && context.money}`}</p>
+                <p>
+                    Money:{" "}
+                    <span data-cy="money-value">{`${context &&
+                        context.money &&
+                        context.money}`}</span>
+                </p>
                 <p>{`Materials: ${context &&
                     context.materials &&
                     context.materials}`}</p>

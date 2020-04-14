@@ -10,7 +10,8 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage --colors"
+        "test:coverage": "jest --coverage --colors",
+        "cypress": "cypress open"
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.7.0",
@@ -28,6 +29,7 @@
         "babel-preset-react": "^6.24.1",
         "bootstrap": "^4.3.1",
         "cross-env": "^6.0",
+        "cypress": "^4.3.0",
         "enzyme-adapter-react-16": "^1.15.2",
         "enzyme-to-json": "^3.4.3",
         "file-loader": "^6.0.0",
