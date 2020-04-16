@@ -4,9 +4,12 @@ import { GameContext } from "./../GameContext";
 import ElementImage from "./ElementImage/ElementImage";
 import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
+import ThreeDView from "./../3DView/3DView";
 
 const Map = () => {
     const context = React.useContext(GameContext);
+
+    const [showThreeDView, setShowThreeDView] = React.useState(false);
 
     // const { showActionModal, activeXCord, activeYCord } = this.state;
     const { zoomX, zoomY, mapConfig } = context;
@@ -139,6 +142,15 @@ const Map = () => {
             >
                 <p>Go to next day</p>
             </div>
+
+            <div
+                className="map__finish-day"
+                onClick={() => setShowThreeDView(true)}
+            >
+                <p>Show 3D View</p>
+            </div>
+
+            {showThreeDView && <ThreeDView />}
 
             <ZoomBtns />
         </div>

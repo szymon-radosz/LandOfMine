@@ -9,6 +9,27 @@ mix.js("resources/js/app.js", "public/js")
                     test: /\.tsx?$/,
                     loader: "ts-loader",
                     exclude: /node_modules/
+                },
+                {
+                    test: /\.obj$/,
+                    loader: "webpack-obj-loader"
+                },
+                {
+                    test: /\.(gltf)$/,
+                    use: [
+                        {
+                            loader: "gltf-webpack-loader"
+                        }
+                    ]
+                },
+                {
+                    test: /\.(bin)$/,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {}
+                        }
+                    ]
                 }
             ]
         },

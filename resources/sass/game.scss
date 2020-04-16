@@ -385,6 +385,14 @@
     .zoom-btns__container--disable {
         opacity: 0.5;
     }
+
+    .three-d__container {
+        position: absolute;
+        z-index: 15;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .hide {

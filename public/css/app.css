@@ -1744,6 +1744,14 @@ body .pagination > li:last-child > span {
   opacity: 0.5;
 }
 
+.game__container .three-d__container {
+  position: absolute;
+  z-index: 15;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 .hide {
   display: none;
 }
