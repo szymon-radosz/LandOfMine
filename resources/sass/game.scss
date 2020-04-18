@@ -51,6 +51,10 @@
                 height: 100%;
             }
 
+            .road-backlight {
+                background-color: rgb(167, 167, 250);
+            }
+
             .map-element__container {
                 position: relative;
 
@@ -358,7 +362,7 @@
 
     .zoom-btns__container {
         position: fixed;
-        bottom: 150px;
+        bottom: 205px;
         right: 20px;
         background-color: #fff;
         display: flex;
@@ -384,6 +388,26 @@
     }
     .zoom-btns__container--disable {
         opacity: 0.5;
+    }
+
+    .map-raad-person__container {
+        position: fixed;
+        bottom: 150px;
+        right: 20px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        width: 41px;
+        height: 41px;
+
+        img {
+            height: 25px;
+        }
+    }
+    .map-raad-person__container:hover {
+        background-color: rgb(236, 236, 236);
     }
 
     .three-d__container {

@@ -35,6 +35,7 @@ interface GameState {
     activeYCord: number;
     showDescription: boolean;
     isDragging: boolean;
+    showMapRoadBackLight: string;
 }
 
 export { GameProps, GameState };

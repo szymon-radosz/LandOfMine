@@ -35,9 +35,14 @@ class Game extends Component<GameProps, GameState> {
             activeXCord: 0,
             activeYCord: 0,
             showDescription: false,
-            isDragging: false
+            isDragging: false,
+            showMapRoadBackLight: "hide"
         };
     }
+
+    handleMapRoadBackLight = status => {
+        this.setState({ showMapRoadBackLight: status });
+    };
 
     handleUpdateMapConfigItem = (
         value,
@@ -278,8 +283,10 @@ class Game extends Component<GameProps, GameState> {
             activeXCord,
             activeYCord,
             showDescription,
-            isDragging
+            isDragging,
+            showMapRoadBackLight
         } = this.state;
+
         return (
             <div className="game__container">
                 <GameContext.Provider
@@ -304,7 +311,9 @@ class Game extends Component<GameProps, GameState> {
                         activeYCord: activeYCord,
                         handleSetElementDescription: this
                             .handleSetElementDescription,
-                        showDescription: showDescription
+                        showDescription: showDescription,
+                        showMapRoadBackLight: showMapRoadBackLight,
+                        handleMapRoadBackLight: this.handleMapRoadBackLight
                     }}
                 >
                     {!daylight && <DaylightOverlay />}

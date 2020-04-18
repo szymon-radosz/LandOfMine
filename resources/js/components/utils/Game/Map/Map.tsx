@@ -5,13 +5,12 @@ import ElementImage from "./ElementImage/ElementImage";
 import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
 import ThreeDView from "./../3DView/3DView";
+import MapRoadPerson from "./MapRoadPerson/MapRoadPerson";
 
 const Map = () => {
     const context = React.useContext(GameContext);
-
     const [showThreeDView, setShowThreeDView] = React.useState(false);
 
-    // const { showActionModal, activeXCord, activeYCord } = this.state;
     const { zoomX, zoomY, mapConfig } = context;
     return (
         <div className="game__map--container">
@@ -49,12 +48,6 @@ const Map = () => {
                                             {mapConfig &&
                                                 mapConfig.map(
                                                     (configElement, index) => {
-                                                        // console.log(
-                                                        //     configElement.x,
-                                                        //     x,
-                                                        //     configElement.y,
-                                                        //     y
-                                                        // );
                                                         if (
                                                             configElement.x ===
                                                                 (20 - zoomX) /
@@ -153,6 +146,8 @@ const Map = () => {
             {showThreeDView && <ThreeDView />}
 
             <ZoomBtns />
+
+            <MapRoadPerson />
         </div>
     );
 };

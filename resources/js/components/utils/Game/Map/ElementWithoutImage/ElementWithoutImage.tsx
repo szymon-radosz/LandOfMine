@@ -29,6 +29,17 @@ const ElementWithoutImage = ({
     y
 }: ElementWithoutImageProps) => {
     const context = React.useContext(GameContext);
+    const [addBacklightClass, setAddBacklightClass] = React.useState(false);
+
+    React.useEffect(() => {
+        if (context.showMapRoadBackLight) {
+            if (context.showMapRoadBackLight === "show") {
+                setAddBacklightClass(true);
+            } else {
+                setAddBacklightClass(false);
+            }
+        }
+    }, [context.showMapRoadBackLight]);
 
     if (
         configElement.value === "road-horizontal" ||
@@ -42,17 +53,29 @@ const ElementWithoutImage = ({
             <div
                 className={
                     configElement.value === "road-horizontal"
-                        ? "road-horizontal"
+                        ? `road-horizontal ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                         : configElement.value === "road-vertical"
-                        ? "road-vertical"
+                        ? `road-vertical ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                         : configElement.value === "road-right-bottom"
-                        ? "road-right-bottom"
+                        ? `road-right-bottom ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                         : configElement.value === "road-left-bottom"
-                        ? "road-left-bottom"
+                        ? `road-left-bottom ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                         : configElement.value === "road-right-top"
-                        ? "road-right-top"
+                        ? `road-right-top ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                         : configElement.value === "road-left-top" &&
-                          "road-left-top"
+                          `road-left-top ${
+                              addBacklightClass ? "road-backlight" : ""
+                          }`
                 }
             ></div>
         );

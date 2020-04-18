@@ -1206,11 +1206,15 @@ const initialMapConfig = [
     {
         x: 8,
         y: 6,
-        value: "map-empty",
+        value: "hospital",
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: false
+        desriptionHeader: "Hospital",
+        descriptionContent: "Lorem ipsum",
+        haveImage: true,
+        finishedBuildDays: 4,
+        durationBuildDays: 4
     },
     {
         x: 9,
@@ -1333,7 +1337,7 @@ const initialMapConfig = [
     {
         x: 2,
         y: 7,
-        value: "road-vertical",
+        value: "road-right-top",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1342,7 +1346,7 @@ const initialMapConfig = [
     {
         x: 3,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1351,7 +1355,7 @@ const initialMapConfig = [
     {
         x: 4,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1360,7 +1364,7 @@ const initialMapConfig = [
     {
         x: 5,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1369,7 +1373,7 @@ const initialMapConfig = [
     {
         x: 6,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1378,7 +1382,7 @@ const initialMapConfig = [
     {
         x: 7,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1387,20 +1391,16 @@ const initialMapConfig = [
     {
         x: 8,
         y: 7,
-        value: "hospital",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
-        desriptionHeader: "Hospital",
-        descriptionContent: "Lorem ipsum",
-        haveImage: true,
-        finishedBuildDays: 4,
-        durationBuildDays: 4
+        haveImage: false
     },
     {
         x: 9,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1409,7 +1409,7 @@ const initialMapConfig = [
     {
         x: 10,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1418,7 +1418,7 @@ const initialMapConfig = [
     {
         x: 11,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1427,7 +1427,7 @@ const initialMapConfig = [
     {
         x: 12,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1436,7 +1436,7 @@ const initialMapConfig = [
     {
         x: 13,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1445,7 +1445,7 @@ const initialMapConfig = [
     {
         x: 14,
         y: 7,
-        value: "map-empty",
+        value: "road-horizontal",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1454,7 +1454,7 @@ const initialMapConfig = [
     {
         x: 15,
         y: 7,
-        value: "road-vertical",
+        value: "road-left-top",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1518,7 +1518,7 @@ const initialMapConfig = [
     {
         x: 2,
         y: 8,
-        value: "road-right-top",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1527,7 +1527,7 @@ const initialMapConfig = [
     {
         x: 3,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1536,7 +1536,7 @@ const initialMapConfig = [
     {
         x: 4,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1545,7 +1545,7 @@ const initialMapConfig = [
     {
         x: 5,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1554,7 +1554,7 @@ const initialMapConfig = [
     {
         x: 6,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1563,7 +1563,7 @@ const initialMapConfig = [
     {
         x: 7,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1572,7 +1572,7 @@ const initialMapConfig = [
     {
         x: 8,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1581,7 +1581,7 @@ const initialMapConfig = [
     {
         x: 9,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1590,7 +1590,7 @@ const initialMapConfig = [
     {
         x: 10,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1599,7 +1599,7 @@ const initialMapConfig = [
     {
         x: 11,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1608,7 +1608,7 @@ const initialMapConfig = [
     {
         x: 12,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1617,7 +1617,7 @@ const initialMapConfig = [
     {
         x: 13,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1626,7 +1626,7 @@ const initialMapConfig = [
     {
         x: 14,
         y: 8,
-        value: "road-horizontal",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -1635,7 +1635,7 @@ const initialMapConfig = [
     {
         x: 15,
         y: 8,
-        value: "road-left-top",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,

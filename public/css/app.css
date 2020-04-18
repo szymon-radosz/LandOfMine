@@ -1392,6 +1392,10 @@ body .pagination > li:last-child > span {
   height: 100%;
 }
 
+.game__container .game__map--container .map-square .road-backlight {
+  background-color: #a7a7fa;
+}
+
 .game__container .game__map--container .map-square .map-element__container {
   position: relative;
 }
@@ -1714,7 +1718,7 @@ body .pagination > li:last-child > span {
 
 .game__container .zoom-btns__container {
   position: fixed;
-  bottom: 150px;
+  bottom: 205px;
   right: 20px;
   background-color: #fff;
   display: flex;
@@ -1742,6 +1746,27 @@ body .pagination > li:last-child > span {
 
 .game__container .zoom-btns__container--disable {
   opacity: 0.5;
+}
+
+.game__container .map-raad-person__container {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  width: 41px;
+  height: 41px;
+}
+
+.game__container .map-raad-person__container img {
+  height: 25px;
+}
+
+.game__container .map-raad-person__container:hover {
+  background-color: #ececec;
 }
 
 .game__container .three-d__container {

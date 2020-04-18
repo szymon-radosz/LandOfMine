@@ -120886,6 +120886,556 @@ MapControls.prototype.constructor = MapControls;
 
 /***/ }),
 
+/***/ "./node_modules/three/examples/jsm/loaders/MTLLoader.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/three/examples/jsm/loaders/MTLLoader.js ***!
+  \**************************************************************/
+/*! exports provided: MTLLoader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MTLLoader", function() { return MTLLoader; });
+/* harmony import */ var _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../build/three.module.js */ "./node_modules/three/build/three.module.js");
+/**
+ * Loads a Wavefront .mtl file specifying materials
+ *
+ * @author angelxuanchang
+ */
+
+
+
+var MTLLoader = function ( manager ) {
+
+	_build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Loader"].call( this, manager );
+
+};
+
+MTLLoader.prototype = Object.assign( Object.create( _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Loader"].prototype ), {
+
+	constructor: MTLLoader,
+
+	/**
+	 * Loads and parses a MTL asset from a URL.
+	 *
+	 * @param {String} url - URL to the MTL file.
+	 * @param {Function} [onLoad] - Callback invoked with the loaded object.
+	 * @param {Function} [onProgress] - Callback for download progress.
+	 * @param {Function} [onError] - Callback for download errors.
+	 *
+	 * @see setPath setResourcePath
+	 *
+	 * @note In order for relative texture references to resolve correctly
+	 * you must call setResourcePath() explicitly prior to load.
+	 */
+	load: function ( url, onLoad, onProgress, onError ) {
+
+		var scope = this;
+
+		var path = ( this.path === '' ) ? _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["LoaderUtils"].extractUrlBase( url ) : this.path;
+
+		var loader = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["FileLoader"]( this.manager );
+		loader.setPath( this.path );
+		loader.load( url, function ( text ) {
+
+			onLoad( scope.parse( text, path ) );
+
+		}, onProgress, onError );
+
+	},
+
+	setMaterialOptions: function ( value ) {
+
+		this.materialOptions = value;
+		return this;
+
+	},
+
+	/**
+	 * Parses a MTL file.
+	 *
+	 * @param {String} text - Content of MTL file
+	 * @return {MTLLoader.MaterialCreator}
+	 *
+	 * @see setPath setResourcePath
+	 *
+	 * @note In order for relative texture references to resolve correctly
+	 * you must call setResourcePath() explicitly prior to parse.
+	 */
+	parse: function ( text, path ) {
+
+		var lines = text.split( '\n' );
+		var info = {};
+		var delimiter_pattern = /\s+/;
+		var materialsInfo = {};
+
+		for ( var i = 0; i < lines.length; i ++ ) {
+
+			var line = lines[ i ];
+			line = line.trim();
+
+			if ( line.length === 0 || line.charAt( 0 ) === '#' ) {
+
+				// Blank line or comment ignore
+				continue;
+
+			}
+
+			var pos = line.indexOf( ' ' );
+
+			var key = ( pos >= 0 ) ? line.substring( 0, pos ) : line;
+			key = key.toLowerCase();
+
+			var value = ( pos >= 0 ) ? line.substring( pos + 1 ) : '';
+			value = value.trim();
+
+			if ( key === 'newmtl' ) {
+
+				// New material
+
+				info = { name: value };
+				materialsInfo[ value ] = info;
+
+			} else {
+
+				if ( key === 'ka' || key === 'kd' || key === 'ks' || key === 'ke' ) {
+
+					var ss = value.split( delimiter_pattern, 3 );
+					info[ key ] = [ parseFloat( ss[ 0 ] ), parseFloat( ss[ 1 ] ), parseFloat( ss[ 2 ] ) ];
+
+				} else {
+
+					info[ key ] = value;
+
+				}
+
+			}
+
+		}
+
+		var materialCreator = new MTLLoader.MaterialCreator( this.resourcePath || path, this.materialOptions );
+		materialCreator.setCrossOrigin( this.crossOrigin );
+		materialCreator.setManager( this.manager );
+		materialCreator.setMaterials( materialsInfo );
+		return materialCreator;
+
+	}
+
+} );
+
+/**
+ * Create a new MTLLoader.MaterialCreator
+ * @param baseUrl - Url relative to which textures are loaded
+ * @param options - Set of options on how to construct the materials
+ *                  side: Which side to apply the material
+ *                        FrontSide (default), THREE.BackSide, THREE.DoubleSide
+ *                  wrap: What type of wrapping to apply for textures
+ *                        RepeatWrapping (default), THREE.ClampToEdgeWrapping, THREE.MirroredRepeatWrapping
+ *                  normalizeRGB: RGBs need to be normalized to 0-1 from 0-255
+ *                                Default: false, assumed to be already normalized
+ *                  ignoreZeroRGBs: Ignore values of RGBs (Ka,Kd,Ks) that are all 0's
+ *                                  Default: false
+ * @constructor
+ */
+
+MTLLoader.MaterialCreator = function ( baseUrl, options ) {
+
+	this.baseUrl = baseUrl || '';
+	this.options = options;
+	this.materialsInfo = {};
+	this.materials = {};
+	this.materialsArray = [];
+	this.nameLookup = {};
+
+	this.side = ( this.options && this.options.side ) ? this.options.side : _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["FrontSide"];
+	this.wrap = ( this.options && this.options.wrap ) ? this.options.wrap : _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["RepeatWrapping"];
+
+};
+
+MTLLoader.MaterialCreator.prototype = {
+
+	constructor: MTLLoader.MaterialCreator,
+
+	crossOrigin: 'anonymous',
+
+	setCrossOrigin: function ( value ) {
+
+		this.crossOrigin = value;
+		return this;
+
+	},
+
+	setManager: function ( value ) {
+
+		this.manager = value;
+
+	},
+
+	setMaterials: function ( materialsInfo ) {
+
+		this.materialsInfo = this.convert( materialsInfo );
+		this.materials = {};
+		this.materialsArray = [];
+		this.nameLookup = {};
+
+	},
+
+	convert: function ( materialsInfo ) {
+
+		if ( ! this.options ) return materialsInfo;
+
+		var converted = {};
+
+		for ( var mn in materialsInfo ) {
+
+			// Convert materials info into normalized form based on options
+
+			var mat = materialsInfo[ mn ];
+
+			var covmat = {};
+
+			converted[ mn ] = covmat;
+
+			for ( var prop in mat ) {
+
+				var save = true;
+				var value = mat[ prop ];
+				var lprop = prop.toLowerCase();
+
+				switch ( lprop ) {
+
+					case 'kd':
+					case 'ka':
+					case 'ks':
+
+						// Diffuse color (color under white light) using RGB values
+
+						if ( this.options && this.options.normalizeRGB ) {
+
+							value = [ value[ 0 ] / 255, value[ 1 ] / 255, value[ 2 ] / 255 ];
+
+						}
+
+						if ( this.options && this.options.ignoreZeroRGBs ) {
+
+							if ( value[ 0 ] === 0 && value[ 1 ] === 0 && value[ 2 ] === 0 ) {
+
+								// ignore
+
+								save = false;
+
+							}
+
+						}
+
+						break;
+
+					default:
+
+						break;
+
+				}
+
+				if ( save ) {
+
+					covmat[ lprop ] = value;
+
+				}
+
+			}
+
+		}
+
+		return converted;
+
+	},
+
+	preload: function () {
+
+		for ( var mn in this.materialsInfo ) {
+
+			this.create( mn );
+
+		}
+
+	},
+
+	getIndex: function ( materialName ) {
+
+		return this.nameLookup[ materialName ];
+
+	},
+
+	getAsArray: function () {
+
+		var index = 0;
+
+		for ( var mn in this.materialsInfo ) {
+
+			this.materialsArray[ index ] = this.create( mn );
+			this.nameLookup[ mn ] = index;
+			index ++;
+
+		}
+
+		return this.materialsArray;
+
+	},
+
+	create: function ( materialName ) {
+
+		if ( this.materials[ materialName ] === undefined ) {
+
+			this.createMaterial_( materialName );
+
+		}
+
+		return this.materials[ materialName ];
+
+	},
+
+	createMaterial_: function ( materialName ) {
+
+		// Create material
+
+		var scope = this;
+		var mat = this.materialsInfo[ materialName ];
+		var params = {
+
+			name: materialName,
+			side: this.side
+
+		};
+
+		function resolveURL( baseUrl, url ) {
+
+			if ( typeof url !== 'string' || url === '' )
+				return '';
+
+			// Absolute URL
+			if ( /^https?:\/\//i.test( url ) ) return url;
+
+			return baseUrl + url;
+
+		}
+
+		function setMapForType( mapType, value ) {
+
+			if ( params[ mapType ] ) return; // Keep the first encountered texture
+
+			var texParams = scope.getTextureParams( value, params );
+			var map = scope.loadTexture( resolveURL( scope.baseUrl, texParams.url ) );
+
+			map.repeat.copy( texParams.scale );
+			map.offset.copy( texParams.offset );
+
+			map.wrapS = scope.wrap;
+			map.wrapT = scope.wrap;
+
+			params[ mapType ] = map;
+
+		}
+
+		for ( var prop in mat ) {
+
+			var value = mat[ prop ];
+			var n;
+
+			if ( value === '' ) continue;
+
+			switch ( prop.toLowerCase() ) {
+
+				// Ns is material specular exponent
+
+				case 'kd':
+
+					// Diffuse color (color under white light) using RGB values
+
+					params.color = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Color"]().fromArray( value );
+
+					break;
+
+				case 'ks':
+
+					// Specular color (color when light is reflected from shiny surface) using RGB values
+					params.specular = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Color"]().fromArray( value );
+
+					break;
+
+				case 'ke':
+
+					// Emissive using RGB values
+					params.emissive = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Color"]().fromArray( value );
+
+					break;
+
+				case 'map_kd':
+
+					// Diffuse texture map
+
+					setMapForType( "map", value );
+
+					break;
+
+				case 'map_ks':
+
+					// Specular map
+
+					setMapForType( "specularMap", value );
+
+					break;
+
+				case 'map_ke':
+
+					// Emissive map
+
+					setMapForType( "emissiveMap", value );
+
+					break;
+
+				case 'norm':
+
+					setMapForType( "normalMap", value );
+
+					break;
+
+				case 'map_bump':
+				case 'bump':
+
+					// Bump texture map
+
+					setMapForType( "bumpMap", value );
+
+					break;
+
+				case 'map_d':
+
+					// Alpha map
+
+					setMapForType( "alphaMap", value );
+					params.transparent = true;
+
+					break;
+
+				case 'ns':
+
+					// The specular exponent (defines the focus of the specular highlight)
+					// A high exponent results in a tight, concentrated highlight. Ns values normally range from 0 to 1000.
+
+					params.shininess = parseFloat( value );
+
+					break;
+
+				case 'd':
+					n = parseFloat( value );
+
+					if ( n < 1 ) {
+
+						params.opacity = n;
+						params.transparent = true;
+
+					}
+
+					break;
+
+				case 'tr':
+					n = parseFloat( value );
+
+					if ( this.options && this.options.invertTrProperty ) n = 1 - n;
+
+					if ( n > 0 ) {
+
+						params.opacity = 1 - n;
+						params.transparent = true;
+
+					}
+
+					break;
+
+				default:
+					break;
+
+			}
+
+		}
+
+		this.materials[ materialName ] = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["MeshPhongMaterial"]( params );
+		return this.materials[ materialName ];
+
+	},
+
+	getTextureParams: function ( value, matParams ) {
+
+		var texParams = {
+
+			scale: new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Vector2"]( 1, 1 ),
+			offset: new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["Vector2"]( 0, 0 )
+
+		 };
+
+		var items = value.split( /\s+/ );
+		var pos;
+
+		pos = items.indexOf( '-bm' );
+
+		if ( pos >= 0 ) {
+
+			matParams.bumpScale = parseFloat( items[ pos + 1 ] );
+			items.splice( pos, 2 );
+
+		}
+
+		pos = items.indexOf( '-s' );
+
+		if ( pos >= 0 ) {
+
+			texParams.scale.set( parseFloat( items[ pos + 1 ] ), parseFloat( items[ pos + 2 ] ) );
+			items.splice( pos, 4 ); // we expect 3 parameters here!
+
+		}
+
+		pos = items.indexOf( '-o' );
+
+		if ( pos >= 0 ) {
+
+			texParams.offset.set( parseFloat( items[ pos + 1 ] ), parseFloat( items[ pos + 2 ] ) );
+			items.splice( pos, 4 ); // we expect 3 parameters here!
+
+		}
+
+		texParams.url = items.join( ' ' ).trim();
+		return texParams;
+
+	},
+
+	loadTexture: function ( url, mapping, onLoad, onProgress, onError ) {
+
+		var texture;
+		var manager = ( this.manager !== undefined ) ? this.manager : _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["DefaultLoadingManager"];
+		var loader = manager.getHandler( url );
+
+		if ( loader === null ) {
+
+			loader = new _build_three_module_js__WEBPACK_IMPORTED_MODULE_0__["TextureLoader"]( manager );
+
+		}
+
+		if ( loader.setCrossOrigin ) loader.setCrossOrigin( this.crossOrigin );
+		texture = loader.load( url, onLoad, onProgress, onError );
+
+		if ( mapping !== undefined ) texture.mapping = mapping;
+
+		return texture;
+
+	}
+
+};
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/three/examples/jsm/loaders/OBJLoader.js":
 /*!**************************************************************!*\
   !*** ./node_modules/three/examples/jsm/loaders/OBJLoader.js ***!
@@ -122015,6 +122565,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/assets/images/greetingMan.png":
+/*!*************************************************!*\
+  !*** ./resources/assets/images/greetingMan.png ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/greetingMan.png?91dd06fee3e1fd91476aec832471318b");
+
+/***/ }),
+
 /***/ "./resources/assets/images/grid.png":
 /*!******************************************!*\
   !*** ./resources/assets/images/grid.png ***!
@@ -122103,6 +122666,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("/images/travelIcon.png?c009ea201d68256d07322e882f38e261");
+
+/***/ }),
+
+/***/ "./resources/assets/images/walkingMan.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/walkingMan.png ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/walkingMan.png?99804100e56fd579a44614febab45c6a");
 
 /***/ }),
 
@@ -122783,7 +123359,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 /* harmony import */ var three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! three/examples/jsm/loaders/OBJLoader */ "./node_modules/three/examples/jsm/loaders/OBJLoader.js");
-/* harmony import */ var three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/controls/OrbitControls */ "./node_modules/three/examples/jsm/controls/OrbitControls.js");
+/* harmony import */ var three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/MTLLoader */ "./node_modules/three/examples/jsm/loaders/MTLLoader.js");
+/* harmony import */ var three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! three/examples/jsm/controls/OrbitControls */ "./node_modules/three/examples/jsm/controls/OrbitControls.js");
+
 
 
 
@@ -122811,42 +123389,54 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadObj", function (position, scene) {
       return new Promise( /*#__PURE__*/function () {
         var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(resolve, reject) {
-          var objLoader, modelUrl;
+          var mtlLoader, materialUrl;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
                   try {
-                    objLoader = new three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__["OBJLoader"]();
-
-                    if (position === "top-left") {
-                      modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                    } else if (position === "top-right") {
-                      modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                    } else if (position === "bottom-right") {
-                      modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                    } else if (position === "bottom-left") {
-                      modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                    }
-
-                    objLoader.load(modelUrl, function (obj) {
-                      obj.scale.set(0.006, 0.006, 0.006);
-                      scene.add(obj);
+                    mtlLoader = new three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__["MTLLoader"]();
+                    materialUrl = "http://127.0.0.1:8000/objects/Scene_City.mtl";
+                    mtlLoader.load(materialUrl, function (materials) {
+                      materials.preload();
+                      var objLoader = new three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__["OBJLoader"]();
+                      objLoader.setMaterials(materials);
+                      var modelUrl;
 
                       if (position === "top-left") {
-                        obj.position.set(-3, 0.2, -3.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                       } else if (position === "top-right") {
-                        obj.position.set(3, 0.2, -3.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                       } else if (position === "bottom-right") {
-                        obj.position.set(3, 0.2, 1.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                       } else if (position === "bottom-left") {
-                        obj.position.set(-3, 0.2, 1.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                      } else {
+                        modelUrl = "http://127.0.0.1:8000/objects/Scene_City.obj";
                       }
 
-                      obj.rotateX(0.05);
-                      resolve("loaded");
+                      objLoader.load(modelUrl, function (obj) {
+                        obj.scale.set(0.006, 0.006, 0.006);
+                        scene.add(obj);
+
+                        if (position === "top-left") {
+                          obj.position.set(-3, 0.2, -3.5);
+                        } else if (position === "top-right") {
+                          obj.position.set(3, 0.2, -3.5);
+                        } else if (position === "bottom-right") {
+                          obj.position.set(3, 0.2, 1.5);
+                        } else if (position === "bottom-left") {
+                          obj.position.set(-3, 0.2, 1.5);
+                        } else {
+                          obj.position.set(-3, 0.2, 3);
+                        }
+
+                        obj.rotateX(0.05);
+                        resolve("loaded");
+                      });
                     });
                   } catch (err) {
+                    console.log(err);
                     reject("not loaded");
                   }
 
@@ -122874,8 +123464,8 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
               height = _this.mount.clientHeight;
               scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
               camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](75, width / height, 0.1, 1000);
-              camera.position.z = 7;
-              camera.position.y = 1;
+              camera.position.z = 10;
+              camera.position.y = 5;
               renderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
                 antialias: true
               }); //create green land
@@ -122899,32 +123489,24 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
               _this.scene = scene;
               _this.camera = camera;
               _this.renderer = renderer;
-              _this.land = land;
+              _this.land = land; // await this.loadObj("top-left", scene);
+              // await this.loadObj("top-right", scene);
+              // await this.loadObj("bottom-right", scene);
+              // await this.loadObj("bottom-left", scene);
+
               _context2.next = 24;
-              return _this.loadObj("top-left", scene);
+              return _this.loadObj("bottom-lesdsdft", scene);
 
             case 24:
-              _context2.next = 26;
-              return _this.loadObj("top-right", scene);
-
-            case 26:
-              _context2.next = 28;
-              return _this.loadObj("bottom-right", scene);
-
-            case 28:
-              _context2.next = 30;
-              return _this.loadObj("bottom-left", scene);
-
-            case 30:
               renderer.setClearColor("#e8f4ff");
               renderer.setSize(width, height); //light
 
               light = new three__WEBPACK_IMPORTED_MODULE_10__["DirectionalLight"](0xffffff, 0.5);
-              light.position.setScalar(10);
+              light.position.setScalar(30);
               scene.add(light);
               scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 0.5)); //cursor control
 
-              _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_12__["OrbitControls"](_this.camera, _this.mount);
+              _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["OrbitControls"](_this.camera, _this.mount);
 
               _this.controls.target.set(0, 0, 0); // view direction perpendicular to XY-plane
 
@@ -122937,7 +123519,7 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
 
               _this.start();
 
-            case 42:
+            case 36:
             case "end":
               return _context2.stop();
           }
@@ -123151,6 +123733,9 @@ var Game = (function (_super) {
     __extends(Game, _super);
     function Game(props) {
         var _this = _super.call(this, props) || this;
+        _this.handleMapRoadBackLight = function (status) {
+            _this.setState({ showMapRoadBackLight: status });
+        };
         _this.handleUpdateMapConfigItem = function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
             var allowed = _this.checkAllowBuild(money, freeHumanResources, materials);
             if (allowed) {
@@ -123349,12 +123934,13 @@ var Game = (function (_super) {
             activeXCord: 0,
             activeYCord: 0,
             showDescription: false,
-            isDragging: false
+            isDragging: false,
+            showMapRoadBackLight: "hide"
         };
         return _this;
     }
     Game.prototype.render = function () {
-        var _a = this.state, zoomX = _a.zoomX, zoomY = _a.zoomY, date = _a.date, money = _a.money, population = _a.population, freeHumanResources = _a.freeHumanResources, mapConfig = _a.mapConfig, materials = _a.materials, societyHappiness = _a.societyHappiness, daysPassed = _a.daysPassed, daylight = _a.daylight, showActionModal = _a.showActionModal, activeXCord = _a.activeXCord, activeYCord = _a.activeYCord, showDescription = _a.showDescription, isDragging = _a.isDragging;
+        var _a = this.state, zoomX = _a.zoomX, zoomY = _a.zoomY, date = _a.date, money = _a.money, population = _a.population, freeHumanResources = _a.freeHumanResources, mapConfig = _a.mapConfig, materials = _a.materials, societyHappiness = _a.societyHappiness, daysPassed = _a.daysPassed, daylight = _a.daylight, showActionModal = _a.showActionModal, activeXCord = _a.activeXCord, activeYCord = _a.activeYCord, showDescription = _a.showDescription, isDragging = _a.isDragging, showMapRoadBackLight = _a.showMapRoadBackLight;
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "game__container" },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_3__["GameContext"].Provider, { value: {
                     zoomX: zoomX,
@@ -123377,7 +123963,9 @@ var Game = (function (_super) {
                     activeYCord: activeYCord,
                     handleSetElementDescription: this
                         .handleSetElementDescription,
-                    showDescription: showDescription
+                    showDescription: showDescription,
+                    showMapRoadBackLight: showMapRoadBackLight,
+                    handleMapRoadBackLight: this.handleMapRoadBackLight
                 } },
                 !daylight && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_7__["default"], null),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_cursor_position__WEBPACK_IMPORTED_MODULE_8__["default"], { activationInteractionMouse: react_cursor_position__WEBPACK_IMPORTED_MODULE_8__["INTERACTIONS"].CLICK },
@@ -123424,7 +124012,9 @@ var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
     activeXCord: 0,
     activeYCord: 0,
     handleSetElementDescription: function (x, y) { },
-    showDescription: false
+    showDescription: false,
+    showMapRoadBackLight: "hide",
+    handleMapRoadBackLight: function (status) { }
 });
 
 
@@ -123796,6 +124386,17 @@ __webpack_require__.r(__webpack_exports__);
 var ElementWithoutImage = function (_a) {
     var configElement = _a.configElement, x = _a.x, y = _a.y;
     var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
+    var _b = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false), addBacklightClass = _b[0], setAddBacklightClass = _b[1];
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(function () {
+        if (context.showMapRoadBackLight) {
+            if (context.showMapRoadBackLight === "show") {
+                setAddBacklightClass(true);
+            }
+            else {
+                setAddBacklightClass(false);
+            }
+        }
+    }, [context.showMapRoadBackLight]);
     if (configElement.value === "road-horizontal" ||
         configElement.value === "road-vertical" ||
         configElement.value === "road-right-bottom" ||
@@ -123803,17 +124404,17 @@ var ElementWithoutImage = function (_a) {
         configElement.value === "road-right-top" ||
         configElement.value === "road-left-top") {
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: configElement.value === "road-horizontal"
-                ? "road-horizontal"
+                ? "road-horizontal " + (addBacklightClass ? "road-backlight" : "")
                 : configElement.value === "road-vertical"
-                    ? "road-vertical"
+                    ? "road-vertical " + (addBacklightClass ? "road-backlight" : "")
                     : configElement.value === "road-right-bottom"
-                        ? "road-right-bottom"
+                        ? "road-right-bottom " + (addBacklightClass ? "road-backlight" : "")
                         : configElement.value === "road-left-bottom"
-                            ? "road-left-bottom"
+                            ? "road-left-bottom " + (addBacklightClass ? "road-backlight" : "")
                             : configElement.value === "road-right-top"
-                                ? "road-right-top"
+                                ? "road-right-top " + (addBacklightClass ? "road-backlight" : "")
                                 : configElement.value === "road-left-top" &&
-                                    "road-left-top" }));
+                                    "road-left-top " + (addBacklightClass ? "road-backlight" : "") }));
     }
     else if (configElement.value === "map-empty") {
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "map-empty", onClick: function () { return context.handleSetActionModal(x, y); } }));
@@ -123841,6 +124442,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.tsx");
 /* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.tsx");
 /* harmony import */ var _3DView_3DView__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../3DView/3DView */ "./resources/js/components/utils/Game/3DView/3DView.js");
+/* harmony import */ var _MapRoadPerson_MapRoadPerson__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./MapRoadPerson/MapRoadPerson */ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.tsx");
 var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -123848,6 +124450,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
+
 
 
 
@@ -123920,9 +124523,45 @@ var Map = function () {
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "map__finish-day", onClick: function () { return setShowThreeDView(true); } },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Show 3D View")),
         showThreeDView && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_3DView_3DView__WEBPACK_IMPORTED_MODULE_6__["default"], null),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_1__["default"], null),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapRoadPerson_MapRoadPerson__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Map);
+
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.tsx":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.tsx ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.tsx");
+/* harmony import */ var _assets_images_greetingMan_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../../../../assets/images/greetingMan.png */ "./resources/assets/images/greetingMan.png");
+/* harmony import */ var _assets_images_walkingMan_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../../../../assets/images/walkingMan.png */ "./resources/assets/images/walkingMan.png");
+
+
+
+
+var ZoomBtns = function () {
+    var gameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
+    var _a = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(true), showGreetingMan = _a[0], setShowGreetingMan = _a[1];
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "map-raad-person__container", onMouseOver: function () {
+            setShowGreetingMan(false);
+            gameContext.handleMapRoadBackLight("show");
+        }, onMouseOut: function () {
+            setShowGreetingMan(true);
+            gameContext.handleMapRoadBackLight("hide");
+        } },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { src: showGreetingMan ? _assets_images_greetingMan_png__WEBPACK_IMPORTED_MODULE_2__["default"] : _assets_images_walkingMan_png__WEBPACK_IMPORTED_MODULE_3__["default"] })));
+};
+/* harmony default export */ __webpack_exports__["default"] = (ZoomBtns);
 
 
 /***/ }),
@@ -125044,11 +125683,15 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 8,
   y: 6,
-  value: "map-empty",
+  value: "hospital",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: false
+  desriptionHeader: "Hospital",
+  descriptionContent: "Lorem ipsum",
+  haveImage: true,
+  finishedBuildDays: 4,
+  durationBuildDays: 4
 }, {
   x: 9,
   y: 6,
@@ -125157,7 +125800,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 2,
   y: 7,
-  value: "road-vertical",
+  value: "road-right-top",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125165,7 +125808,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 3,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125173,7 +125816,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 4,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125181,7 +125824,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 5,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125189,7 +125832,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 6,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125197,7 +125840,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 7,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125205,19 +125848,15 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 8,
   y: 7,
-  value: "hospital",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
-  desriptionHeader: "Hospital",
-  descriptionContent: "Lorem ipsum",
-  haveImage: true,
-  finishedBuildDays: 4,
-  durationBuildDays: 4
+  haveImage: false
 }, {
   x: 9,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125225,7 +125864,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 10,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125233,7 +125872,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 11,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125241,7 +125880,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 12,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125249,7 +125888,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 13,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125257,7 +125896,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 14,
   y: 7,
-  value: "map-empty",
+  value: "road-horizontal",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125265,7 +125904,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 15,
   y: 7,
-  value: "road-vertical",
+  value: "road-left-top",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125322,7 +125961,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 2,
   y: 8,
-  value: "road-right-top",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125330,7 +125969,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 3,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125338,7 +125977,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 4,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125346,7 +125985,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 5,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125354,7 +125993,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 6,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125362,7 +126001,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 7,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125370,7 +126009,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 8,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125378,7 +126017,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 9,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125386,7 +126025,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 10,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125394,7 +126033,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 11,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125402,7 +126041,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 12,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125410,7 +126049,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 13,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125418,7 +126057,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 14,
   y: 8,
-  value: "road-horizontal",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,
@@ -125426,7 +126065,7 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 15,
   y: 8,
-  value: "road-left-top",
+  value: "map-empty",
   initialElement: true,
   population: 0,
   money: 0,

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 class ThreeDView extends Component {
@@ -11,36 +12,52 @@ class ThreeDView extends Component {
     loadObj = (position, scene) => {
         return new Promise(async (resolve, reject) => {
             try {
-                const objLoader = new OBJLoader();
-                let modelUrl;
-                if (position === "top-left") {
-                    modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                } else if (position === "top-right") {
-                    modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                } else if (position === "bottom-right") {
-                    modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                } else if (position === "bottom-left") {
-                    modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                }
+                const mtlLoader = new MTLLoader();
+                let materialUrl =
+                    "http://127.0.0.1:8000/objects/Scene_City.mtl";
 
-                objLoader.load(modelUrl, obj => {
-                    obj.scale.set(0.006, 0.006, 0.006);
-                    scene.add(obj);
+                mtlLoader.load(materialUrl, materials => {
+                    materials.preload();
+
+                    const objLoader = new OBJLoader();
+                    objLoader.setMaterials(materials);
+                    let modelUrl;
 
                     if (position === "top-left") {
-                        obj.position.set(-3, 0.2, -3.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                     } else if (position === "top-right") {
-                        obj.position.set(3, 0.2, -3.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                     } else if (position === "bottom-right") {
-                        obj.position.set(3, 0.2, 1.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
                     } else if (position === "bottom-left") {
-                        obj.position.set(-3, 0.2, 1.5);
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                    } else {
+                        modelUrl =
+                            "http://127.0.0.1:8000/objects/Scene_City.obj";
                     }
 
-                    obj.rotateX(0.05);
-                    resolve("loaded");
+                    objLoader.load(modelUrl, obj => {
+                        obj.scale.set(0.006, 0.006, 0.006);
+                        scene.add(obj);
+
+                        if (position === "top-left") {
+                            obj.position.set(-3, 0.2, -3.5);
+                        } else if (position === "top-right") {
+                            obj.position.set(3, 0.2, -3.5);
+                        } else if (position === "bottom-right") {
+                            obj.position.set(3, 0.2, 1.5);
+                        } else if (position === "bottom-left") {
+                            obj.position.set(-3, 0.2, 1.5);
+                        } else {
+                            obj.position.set(-3, 0.2, 3);
+                        }
+
+                        obj.rotateX(0.05);
+                        resolve("loaded");
+                    });
                 });
             } catch (err) {
+                console.log(err);
                 reject("not loaded");
             }
         });
@@ -57,8 +74,8 @@ class ThreeDView extends Component {
             0.1,
             1000
         );
-        camera.position.z = 7;
-        camera.position.y = 1;
+        camera.position.z = 10;
+        camera.position.y = 5;
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
 
@@ -83,17 +100,18 @@ class ThreeDView extends Component {
         this.renderer = renderer;
         this.land = land;
 
-        await this.loadObj("top-left", scene);
-        await this.loadObj("top-right", scene);
-        await this.loadObj("bottom-right", scene);
-        await this.loadObj("bottom-left", scene);
+        // await this.loadObj("top-left", scene);
+        // await this.loadObj("top-right", scene);
+        // await this.loadObj("bottom-right", scene);
+        // await this.loadObj("bottom-left", scene);
+        await this.loadObj("bottom-lesdsdft", scene);
 
         renderer.setClearColor("#e8f4ff");
         renderer.setSize(width, height);
 
         //light
         var light = new THREE.DirectionalLight(0xffffff, 0.5);
-        light.position.setScalar(10);
+        light.position.setScalar(30);
         scene.add(light);
         scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 
