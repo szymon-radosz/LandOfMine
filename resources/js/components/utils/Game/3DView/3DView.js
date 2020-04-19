@@ -14,8 +14,7 @@ class ThreeDView extends Component {
             try {
                 const mtlLoader = new MTLLoader();
                 let materialUrl =
-                    "http://127.0.0.1:8000/objects/Scene_City.mtl";
-
+                    "http://land-of-mine.com/objects/Scene_City.mtl";
                 mtlLoader.load(materialUrl, materials => {
                     materials.preload();
 
