@@ -10,11 +10,11 @@ const Head = ({ title }) => {
             <meta name="author" content="Szymon Radosz" />
             <meta
                 name="description"
-                content="Zdrowy Koszyk - darmowy skaner składu produktów"
+                content="Land Of Mine - Build Your Own City"
             />
             <meta
                 name="keywords"
-                content="skaner produktów, zdrowie, dieta, odżywianie, zakupy"
+                content="game, citites, gaming, web browser game"
             />
             <meta http-equiv="x-ua-compatible" content="ie=edge" />
             <meta

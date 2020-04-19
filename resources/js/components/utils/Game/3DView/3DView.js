@@ -24,13 +24,14 @@ class ThreeDView extends Component {
                     let modelUrl;
 
                     if (position === "top-left") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        //modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "top-right") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "bottom-right") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "bottom-left") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else {
                         modelUrl =
                             "http://127.0.0.1:8000/objects/Scene_City.obj";
@@ -74,8 +75,8 @@ class ThreeDView extends Component {
             0.1,
             1000
         );
-        camera.position.z = 10;
-        camera.position.y = 5;
+        camera.position.z = 5;
+        //camera.position.y = 5;
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
 
@@ -100,18 +101,18 @@ class ThreeDView extends Component {
         this.renderer = renderer;
         this.land = land;
 
-        // await this.loadObj("top-left", scene);
-        // await this.loadObj("top-right", scene);
-        // await this.loadObj("bottom-right", scene);
-        // await this.loadObj("bottom-left", scene);
-        await this.loadObj("bottom-lesdsdft", scene);
+        await this.loadObj("top-left", scene);
+        await this.loadObj("top-right", scene);
+        await this.loadObj("bottom-right", scene);
+        await this.loadObj("bottom-left", scene);
+        // await this.loadObj("bottom-lesdsdft", scene);
 
         renderer.setClearColor("#e8f4ff");
         renderer.setSize(width, height);
 
         //light
         var light = new THREE.DirectionalLight(0xffffff, 0.5);
-        light.position.setScalar(30);
+        light.position.setScalar(5);
         scene.add(light);
         scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 
@@ -158,9 +159,15 @@ class ThreeDView extends Component {
                 ref={mount => {
                     this.mount = mount;
                 }}
-            />
+            >
+                <div
+                    className="map__left-top--btn"
+                    onClick={() => this.props.handleShowThreeDView(false)}
+                >
+                    <p>Go back to the map</p>
+                </div>
+            </div>
         );
     }
 }
-
 export default ThreeDView;

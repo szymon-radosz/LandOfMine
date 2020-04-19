@@ -3,10 +3,6 @@ import { GameContext } from "./../../GameContext";
 //@ts-ignore
 import stone from "./../../../../../../assets/images/stone.png";
 //@ts-ignore
-import water from "./../../../../../../assets/images/water.png";
-//@ts-ignore
-import waterHalf from "./../../../../../../assets/images/waterHalf.png";
-//@ts-ignore
 import factory from "./../../../../../../assets/images/factory.png";
 //@ts-ignore
 import house from "./../../../../../../assets/images/house.png";
@@ -117,10 +113,6 @@ const ElementImage = ({ configElement }: ElementImageProps) => {
                 src={
                     configElement.value === "stone"
                         ? stone
-                        : configElement.value === "water"
-                        ? water
-                        : configElement.value === "waterHalf"
-                        ? waterHalf
                         : configElement.value === "factory"
                         ? factory
                         : configElement.value === "house"

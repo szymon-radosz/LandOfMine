@@ -1,47 +1,57 @@
 import React from "react";
 import { GameContext } from "./../GameContext";
+import { MainContext } from "./../../../MainContext";
 
 //@ts-ignore
 import logo from "./../../../../../assets/images/LOM-white.png";
 
 const BottomPanel = () => {
-    const context = React.useContext(GameContext);
+    const gameContext = React.useContext(GameContext);
+    const context = React.useContext(MainContext);
 
     return (
         <div className="bottom-panel-game__container">
             <div className="bottom-panel-game__element">
-                <p>{`Date: ${context && context.date && context.date}`}</p>
+                <p>{`Date: ${gameContext &&
+                    gameContext.date &&
+                    gameContext.date}`}</p>
                 <p>
                     {`Finished days:
-                    ${context && context.daysPassed && context.daysPassed}`}
+                    ${gameContext &&
+                        gameContext.daysPassed &&
+                        gameContext.daysPassed}`}
                 </p>
-                <p>{`Society Hapiness: ${context &&
-                    context.societyHappiness &&
-                    context.societyHappiness} %`}</p>
+                <p>{`Society Hapiness: ${gameContext &&
+                    gameContext.societyHappiness &&
+                    gameContext.societyHappiness} %`}</p>
             </div>
             <div className="bottom-panel-game__element">
-                <img className="bottom-panel-game--logo" src={logo} />
+                <img
+                    className="bottom-panel-game--logo"
+                    src={logo}
+                    onClick={() => context.handleChangePath("")}
+                />
             </div>
             <div className="bottom-panel-game__element">
                 <p>
-                    {`Overal Population: ${context &&
-                        context.population &&
-                        context.population}`}
+                    {`Overal Population: ${gameContext &&
+                        gameContext.population &&
+                        gameContext.population}`}
                 </p>
                 <p>
-                    {`Free Human Resources: ${context &&
-                        context.freeHumanResources &&
-                        context.freeHumanResources}`}
+                    {`Free Human Resources: ${gameContext &&
+                        gameContext.freeHumanResources &&
+                        gameContext.freeHumanResources}`}
                 </p>
                 <p>
                     Money:{" "}
-                    <span data-cy="money-value">{`${context &&
-                        context.money &&
-                        context.money}`}</span>
+                    <span data-cy="money-value">{`${gameContext &&
+                        gameContext.money &&
+                        gameContext.money}`}</span>
                 </p>
-                <p>{`Materials: ${context &&
-                    context.materials &&
-                    context.materials}`}</p>
+                <p>{`Materials: ${gameContext &&
+                    gameContext.materials &&
+                    gameContext.materials}`}</p>
             </div>
         </div>
     );

@@ -21,7 +21,7 @@ const Menu = () => {
                 </div>
                 <MenuBurger right>
                     <p onClick={() => context.handleChangePath("")}>START</p>
-                    <p onClick={() => context.handleChangePath("trial")}>
+                    <p onClick={() => context.handleChangePath("game")}>
                         FREE TRIAL
                     </p>
                 </MenuBurger>

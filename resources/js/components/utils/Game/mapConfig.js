@@ -147,7 +147,7 @@ const initialMapConfig = [
     {
         x: 15,
         y: 0,
-        value: "waterHalf",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -156,7 +156,7 @@ const initialMapConfig = [
     {
         x: 16,
         y: 0,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -165,7 +165,7 @@ const initialMapConfig = [
     {
         x: 17,
         y: 0,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -174,7 +174,7 @@ const initialMapConfig = [
     {
         x: 18,
         y: 0,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -183,7 +183,7 @@ const initialMapConfig = [
     {
         x: 19,
         y: 0,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -323,7 +323,7 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "Residential Building",
+        desriptionHeader: "Apartment",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -348,7 +348,7 @@ const initialMapConfig = [
     {
         x: 16,
         y: 1,
-        value: "waterHalf",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -357,7 +357,7 @@ const initialMapConfig = [
     {
         x: 17,
         y: 1,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -366,7 +366,7 @@ const initialMapConfig = [
     {
         x: 18,
         y: 1,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -375,7 +375,7 @@ const initialMapConfig = [
     {
         x: 19,
         y: 1,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -519,7 +519,7 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "Residential Building",
+        desriptionHeader: "Apartment",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -553,7 +553,7 @@ const initialMapConfig = [
     {
         x: 17,
         y: 2,
-        value: "waterHalf",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -562,7 +562,7 @@ const initialMapConfig = [
     {
         x: 18,
         y: 2,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -571,7 +571,7 @@ const initialMapConfig = [
     {
         x: 19,
         y: 2,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -705,7 +705,7 @@ const initialMapConfig = [
         finishedBuildDays: 3,
         durationBuildDays: 3,
         money: 0,
-        desriptionHeader: "Residential Building",
+        desriptionHeader: "Apartment",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -748,7 +748,7 @@ const initialMapConfig = [
     {
         x: 18,
         y: 3,
-        value: "waterHalf",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -757,7 +757,7 @@ const initialMapConfig = [
     {
         x: 19,
         y: 3,
-        value: "water",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,
@@ -938,7 +938,7 @@ const initialMapConfig = [
     {
         x: 19,
         y: 4,
-        value: "waterHalf",
+        value: "map-empty",
         initialElement: true,
         population: 0,
         money: 0,

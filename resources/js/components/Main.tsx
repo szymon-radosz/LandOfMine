@@ -30,13 +30,15 @@ class Main extends Component<MainProps, MainState> {
             userLoggedIn: false,
             showSidebarText: false,
             activeMenuSection: "",
-            APP_URL: "http://127.0.0.1:8000",
-            API_URL: "http://127.0.0.1:8000/api/",
+            // APP_URL: "http://127.0.0.1:8000",
+            // API_URL: "http://127.0.0.1:8000/api/",
+            APP_URL: "http://land-of-mine.com/",
+            API_URL: "http://land-of-mine.com/api/",
             showLoader: false,
             alertMessage: "",
             alertStatus: "",
             token: "",
-            allowedPaths: ["trial"],
+            allowedPaths: ["game"],
             allowRedirect: false,
             redirectedPath: "",
             languages: ["RU", "GE", "EN"],
@@ -62,7 +64,7 @@ class Main extends Component<MainProps, MainState> {
                 Component: RegisterAdmin
             },
             {
-                path: "/trial",
+                path: "/game",
                 name: "Game",
                 Component: Game
             },

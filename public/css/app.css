@@ -690,6 +690,18 @@ body .pagination > li:last-child > span {
   color: #5a5a5a;
 }
 
+.page__about-section--container .page__about-section--wrapper .page__about-section--right a {
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.page__about-section--container .page__about-section--wrapper .page__about-section--right a:hover,
+.page__about-section--container .page__about-section--wrapper .page__about-section--right a:visited,
+.page__about-section--container .page__about-section--wrapper .page__about-section--right a:focus {
+  opacity: 0.7;
+  color: #5a5a5a;
+}
+
 .newsletter__container {
   text-align: center;
   min-height: 60vh;
@@ -1452,34 +1464,35 @@ body .pagination > li:last-child > span {
   background-color: #a3f0a3;
 }
 
-.game__container .game__map--container .map__finish-day {
+.game__container .game__map--container .map__left-top--btn {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 100;
   background-color: #012d4a;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.game__container .game__map--container .map__finish-day p {
+.game__container .game__map--container .map__left-top--btn p {
   margin: 0;
   padding: 12px;
   font-weight: 600;
 }
 
-.game__container .game__map--container .map__finish-day:hover {
+.game__container .game__map--container .map__left-top--btn:hover {
   background-color: #294e65;
 }
 
 .game__container .game__map--container .road-horizontal {
   width: 100%;
-  height: 25px;
+  height: 100%;
   background-color: #ccc;
 }
 
 .game__container .game__map--container .road-vertical {
-  width: 25px;
+  width: 100%;
   height: 100%;
   background-color: #ccc;
 }
@@ -1490,22 +1503,7 @@ body .pagination > li:last-child > span {
   height: 100%;
   right: 0;
   box-sizing: content-box;
-}
-
-.game__container .game__map--container .road-right-bottom:after,
-.game__container .game__map--container .road-right-bottom:before {
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 35%;
-  height: 35%;
-  border: 25px solid #ccc;
-  border-radius: 50px 550px 0 0px;
-  transform: rotate(-90deg);
-  border-left: 0;
-  border-bottom: 0;
+  background-color: #ccc;
 }
 
 .game__container .game__map--container .road-right-top {
@@ -1514,22 +1512,7 @@ body .pagination > li:last-child > span {
   height: 100%;
   right: 0;
   box-sizing: content-box;
-}
-
-.game__container .game__map--container .road-right-top:after,
-.game__container .game__map--container .road-right-top:before {
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35%;
-  height: 35%;
-  border: 25px solid #ccc;
-  border-radius: 50px 550px 0 0px;
-  transform: rotate(180deg);
-  border-left: 0;
-  border-bottom: 0;
+  background-color: #ccc;
 }
 
 .game__container .game__map--container .road-left-top {
@@ -1538,22 +1521,7 @@ body .pagination > li:last-child > span {
   height: 100%;
   right: 0;
   box-sizing: content-box;
-}
-
-.game__container .game__map--container .road-left-top:after,
-.game__container .game__map--container .road-left-top:before {
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35%;
-  height: 35%;
-  border: 25px solid #ccc;
-  border-radius: 50px 550px 0 0px;
-  transform: rotate(-270deg);
-  border-left: 0;
-  border-bottom: 0;
+  background-color: #ccc;
 }
 
 .game__container .game__map--container .road-left-bottom {
@@ -1562,22 +1530,7 @@ body .pagination > li:last-child > span {
   height: 100%;
   right: 0;
   box-sizing: content-box;
-}
-
-.game__container .game__map--container .road-left-bottom:after,
-.game__container .game__map--container .road-left-bottom:before {
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 35%;
-  height: 35%;
-  border: 25px solid #ccc;
-  border-radius: 50px 550px 0 0px;
-  transform: rotate(0deg);
-  border-left: 0;
-  border-bottom: 0;
+  background-color: #ccc;
 }
 
 .game__container .game__map--container .action-modal__container {
@@ -1714,6 +1667,12 @@ body .pagination > li:last-child > span {
 
 .game__container .bottom-panel-game__container .bottom-panel-game--logo {
   max-height: 58px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game__container .bottom-panel-game__container .bottom-panel-game--logo:hover {
+  opacity: 0.7;
 }
 
 .game__container .zoom-btns__container {

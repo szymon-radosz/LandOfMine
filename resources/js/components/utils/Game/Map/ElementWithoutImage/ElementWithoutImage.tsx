@@ -53,27 +53,39 @@ const ElementWithoutImage = ({
             <div
                 className={
                     configElement.value === "road-horizontal"
-                        ? `road-horizontal ${
+                        ? `road road-${configElement.x}-${
+                              configElement.y
+                          } road-horizontal ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                         : configElement.value === "road-vertical"
-                        ? `road-vertical ${
+                        ? `road road-${configElement.x}-${
+                              configElement.y
+                          } road-vertical ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                         : configElement.value === "road-right-bottom"
-                        ? `road-right-bottom ${
+                        ? `road road-${configElement.x}-${
+                              configElement.y
+                          } road-right-bottom ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                         : configElement.value === "road-left-bottom"
-                        ? `road-left-bottom ${
+                        ? `road road-${configElement.x}-${
+                              configElement.y
+                          } road-left-bottom ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                         : configElement.value === "road-right-top"
-                        ? `road-right-top ${
+                        ? `road road-${configElement.x}-${
+                              configElement.y
+                          } road-right-top ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                         : configElement.value === "road-left-top" &&
-                          `road-left-top ${
+                          `road road-${configElement.x}-${
+                              configElement.y
+                          } road-left-top ${
                               addBacklightClass ? "road-backlight" : ""
                           }`
                 }

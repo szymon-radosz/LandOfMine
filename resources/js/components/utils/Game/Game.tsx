@@ -20,8 +20,8 @@ class Game extends Component<GameProps, GameState> {
 
         //initially we create reactange of recteangles 10x6
         this.state = {
-            zoomX: 20,
-            zoomY: 10,
+            zoomX: 16,
+            zoomY: 6,
             date: "",
             money: 1000000,
             population: 3000,

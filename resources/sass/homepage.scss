@@ -117,6 +117,16 @@
             p {
                 color: #5a5a5a;
             }
+            a {
+                font-weight: 800;
+                transition: $transition;
+            }
+            a:hover,
+            a:visited,
+            a:focus {
+                opacity: 0.7;
+                color: #5a5a5a;
+            }
         }
     }
 }
