@@ -33,8 +33,10 @@ class ThreeDView extends Component {
                     } else if (position === "bottom-left") {
                         modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else {
+                        // modelUrl =
+                        //     "http://127.0.0.1:8000/objects/Scene_City.obj";
                         modelUrl =
-                            "http://127.0.0.1:8000/objects/Scene_City.obj";
+                            "http://land-of-mine.com/objects/Scene_City.obj";
                     }
 
                     objLoader.load(modelUrl, obj => {
