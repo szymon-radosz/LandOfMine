@@ -1,6 +1,4 @@
 import React from "react";
-
-//@ts-ignore
 import daylight from "./../../../../../assets/images/daylight.gif";
 
 const DaylightOverlay = () => {

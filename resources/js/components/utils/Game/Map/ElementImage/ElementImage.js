@@ -1,35 +1,11 @@
 import React from "react";
 import { GameContext } from "./../../GameContext";
-//@ts-ignore
 import stone from "./../../../../../../assets/images/stone.png";
-//@ts-ignore
 import factory from "./../../../../../../assets/images/factory.png";
-//@ts-ignore
 import house from "./../../../../../../assets/images/house.png";
-//@ts-ignore
 import hospital from "./../../../../../../assets/images/hospital.png";
 
-type configElementType = {
-    x: number;
-    y: number;
-    value: string;
-    initialElement: boolean;
-    population: number;
-    money: number;
-    haveImage: boolean;
-    finishedBuildDays?: number;
-    durationBuildDays?: number;
-    materials?: number;
-    desriptionHeader?: string;
-    descriptionContent?: string;
-    notAddedHumanResources?: boolean;
-};
-
-type ElementImageProps = {
-    configElement: configElementType;
-};
-
-const ElementImage = ({ configElement }: ElementImageProps) => {
+const ElementImage = ({ configElement }) => {
     const [elementPositionOnMap, setElementPositionOnMap] = React.useState("");
     const context = React.useContext(GameContext);
 
@@ -96,13 +72,13 @@ const ElementImage = ({ configElement }: ElementImageProps) => {
                         {configElement.finishedBuildDays &&
                             configElement.durationBuildDays &&
                             configElement.finishedBuildDays !==
-                                configElement.durationBuildDays && (
+                            configElement.durationBuildDays && (
                                 <p className="map-element__description--content map-element__description--progress">
                                     {`Progress:
                                     ${Math.floor(
                                         (configElement.finishedBuildDays /
                                             configElement.durationBuildDays) *
-                                            100
+                                        100
                                     )}
                                     %`}
                                 </p>
@@ -114,20 +90,20 @@ const ElementImage = ({ configElement }: ElementImageProps) => {
                     configElement.value === "stone"
                         ? stone
                         : configElement.value === "factory"
-                        ? factory
-                        : configElement.value === "house"
-                        ? house
-                        : configElement.value === "hospital" && hospital
+                            ? factory
+                            : configElement.value === "house"
+                                ? house
+                                : configElement.value === "hospital" && hospital
                 }
                 style={
                     configElement.finishedBuildDays &&
-                    configElement.durationBuildDays &&
-                    configElement.finishedBuildDays !==
+                        configElement.durationBuildDays &&
+                        configElement.finishedBuildDays !==
                         configElement.durationBuildDays
                         ? {
-                              WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ${configElement.finishedBuildDays /
-                                  configElement.durationBuildDays}))`
-                          }
+                            WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ${configElement.finishedBuildDays /
+                                configElement.durationBuildDays}))`
+                        }
                         : {}
                 }
             />

@@ -6,7 +6,7 @@ import { MainContext } from "./../../MainContext";
 const Login = () => {
     const context = useContext(MainContext);
 
-    const handleLoginSubmit = (e: any, email: string, password: string) => {
+    const handleLoginSubmit = (e, email, password) => {
         e.preventDefault();
 
         if (email && !password) {

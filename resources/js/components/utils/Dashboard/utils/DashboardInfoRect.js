@@ -1,16 +1,10 @@
 import React from "react";
 
-type DashboardInfoRectProps = {
-    icon: any;
-    headerText: string;
-    number: string;
-};
-
 const DashboardInfoRect = ({
     icon,
     headerText,
     number
-}: DashboardInfoRectProps) => {
+}) => {
     return (
         <div className="col-sm-4">
             <div className="dashboard-info-rect__container">

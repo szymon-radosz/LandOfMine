@@ -2,7 +2,7 @@ import React from "react";
 export const GameContext = React.createContext({
     zoomX: 14,
     zoomY: 6,
-    handleZoomChange: operation => {},
+    handleZoomChange: operation => { },
     date: "",
     money: 0,
     population: 0,
@@ -11,7 +11,7 @@ export const GameContext = React.createContext({
     societyHappiness: 0,
     mapConfig: [],
     daysPassed: 0,
-    handleDayPassed: () => {},
+    handleDayPassed: () => { },
     handleUpdateMapConfigItem: (
         value,
         population,
@@ -23,13 +23,13 @@ export const GameContext = React.createContext({
         finishedBuildDays,
         durationBuildDays,
         notAddedHumanResources
-    ) => {},
-    handleSetActionModal: (x, y) => {},
+    ) => { },
+    handleSetActionModal: (x, y) => { },
     showActionModal: false,
     activeXCord: 0,
     activeYCord: 0,
-    handleSetElementDescription: (x, y) => {},
+    handleSetElementDescription: (x, y) => { },
     showDescription: false,
     showMapRoadBackLight: "hide",
-    handleMapRoadBackLight: (status: string) => {}
+    handleMapRoadBackLight: (status) => { }
 });

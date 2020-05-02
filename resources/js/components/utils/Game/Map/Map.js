@@ -6,10 +6,9 @@ import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
 import ThreeDView from "./../3DView/3DView";
 import MapRoadPerson from "./MapRoadPerson/MapRoadPerson";
-import { MapProps, MapState } from "./Map.interface";
 
-class Map extends Component<MapProps, MapState> {
-    constructor(props: MapProps) {
+class Map extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -19,11 +18,11 @@ class Map extends Component<MapProps, MapState> {
         };
     }
 
-    handleShowThreeDView = (status: boolean) => {
+    handleShowThreeDView = (status) => {
         this.setState({ showThreeDView: status });
     };
 
-    handleSetMapActiveCoords = (cord: string, value: number) => {
+    handleSetMapActiveCoords = (cord, value) => {
         if (cord === "x") {
             this.setState({ activeXMapRoadPreview: value });
         }
@@ -80,22 +79,22 @@ class Map extends Component<MapProps, MapState> {
                                                         ) => {
                                                             if (
                                                                 configElement.x ===
-                                                                    (20 -
-                                                                        zoomX) /
-                                                                        2 +
-                                                                        x &&
+                                                                (20 -
+                                                                    zoomX) /
+                                                                2 +
+                                                                x &&
                                                                 configElement.y ===
-                                                                    (10 -
-                                                                        zoomY) /
-                                                                        2 +
-                                                                        y &&
+                                                                (10 -
+                                                                    zoomY) /
+                                                                2 +
+                                                                y &&
                                                                 configElement.haveImage
                                                             ) {
                                                                 if (
                                                                     configElement.finishedBuildDays &&
                                                                     configElement.durationBuildDays &&
                                                                     configElement.finishedBuildDays !==
-                                                                        configElement.durationBuildDays
+                                                                    configElement.durationBuildDays
                                                                 ) {
                                                                     return (
                                                                         <div className="map-element__during-build--container">
@@ -119,15 +118,15 @@ class Map extends Component<MapProps, MapState> {
                                                                 }
                                                             } else if (
                                                                 configElement.x ===
-                                                                    (20 -
-                                                                        zoomX) /
-                                                                        2 +
-                                                                        x &&
+                                                                (20 -
+                                                                    zoomX) /
+                                                                2 +
+                                                                x &&
                                                                 configElement.y ===
-                                                                    (10 -
-                                                                        zoomY) /
-                                                                        2 +
-                                                                        y &&
+                                                                (10 -
+                                                                    zoomY) /
+                                                                2 +
+                                                                y &&
                                                                 !configElement.haveImage
                                                             ) {
                                                                 return (
@@ -139,13 +138,13 @@ class Map extends Component<MapProps, MapState> {
                                                                         x={
                                                                             (20 -
                                                                                 zoomX) /
-                                                                                2 +
+                                                                            2 +
                                                                             x
                                                                         }
                                                                         y={
                                                                             (10 -
                                                                                 zoomY) /
-                                                                                2 +
+                                                                            2 +
                                                                             y
                                                                         }
                                                                     />

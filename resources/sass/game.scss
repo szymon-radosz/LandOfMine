@@ -130,15 +130,19 @@
         .map__left-top--btn:hover {
             background-color: #294e65;
         }
+        .road{
+            background-size: 100% 100%;
+        }
         .road-horizontal {
             width: 100%;
             height: 100%;
-            background-color: #ccc;
+            background-image: url('/images/road-horizontal.png?v=1')
         }
         .road-vertical {
             width: 100%;
             height: 100%;
-            background-color: #ccc;
+            //background-color: #ccc;
+            background-image: url('/images/road-vertically.png?v=1')
         }
         .road-right-bottom {
             position: relative;
@@ -146,7 +150,7 @@
             height: 100%;
             right: 0;
             box-sizing: content-box;
-            background-color: #ccc;
+            background-image: url('/images/road-right-bottom.png?v=1')
         }
         // .road-right-bottom:after,
         // .road-right-bottom:before {
@@ -169,7 +173,7 @@
             height: 100%;
             right: 0;
             box-sizing: content-box;
-            background-color: #ccc;
+            background-image: url('/images/road-right-top.png?v=1')
         }
         // .road-right-top:after,
         // .road-right-top:before {
@@ -192,7 +196,7 @@
             height: 100%;
             right: 0;
             box-sizing: content-box;
-            background-color: #ccc;
+            background-image: url('/images/road-left-top.png?v=1')
         }
         // .road-left-top:after,
         // .road-left-top:before {
@@ -215,7 +219,7 @@
             height: 100%;
             right: 0;
             box-sizing: content-box;
-            background-color: #ccc;
+            background-image: url('/images/road-left-bottom.png?v=1')
         }
         // .road-left-bottom:after,
         // .road-left-bottom:before {

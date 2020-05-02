@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { MainContext } from "./../../MainContext";
-
-//@ts-ignore
 import gridIcon from "./../../../../assets/images/grid.png";
-//@ts-ignore
 import logoutIcon from "./../../../../assets/images/logout.png";
 
 const TopBar = () => {

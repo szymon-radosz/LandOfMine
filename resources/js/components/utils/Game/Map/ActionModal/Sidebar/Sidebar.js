@@ -1,23 +1,10 @@
 import React from "react";
-import SideOptions from "../../../../../global/SideOptions";
-
-type sidebarOptionType = {
-    name: string;
-    icon: any;
-    altIcon: string;
-};
-
-type SidebarProps = {
-    options: sidebarOptionType[];
-    handleSetActiveSidebarOption: any;
-    activeSidebarOption: string;
-};
 
 const Sidebar = ({
     options,
     handleSetActiveSidebarOption,
     activeSidebarOption
-}: SidebarProps) => {
+}) => {
     return (
         <div className="action-modal__sidebar--container">
             {options &&

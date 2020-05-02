@@ -5,8 +5,6 @@ import { MainContext } from "./../../MainContext";
 import Menu from "./../../global/Menu";
 import SideOptions from "./../../global/SideOptions";
 import Newsletter from "./../../global/Newsletter";
-
-//@ts-ignore
 import aboutImg from "./../../../../assets/images/about.jpg";
 
 const Home = () => {

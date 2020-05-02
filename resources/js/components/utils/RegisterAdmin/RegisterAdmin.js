@@ -7,9 +7,9 @@ const RegisterAdmin = () => {
     const context = useContext(MainContext);
 
     const handleRegisterSubmit = (
-        name: string,
-        email: string,
-        password: string
+        name,
+        email,
+        password
     ) => {
         if (name && email && password) {
             context.handleShowLoader(true);

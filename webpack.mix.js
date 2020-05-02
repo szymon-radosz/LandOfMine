@@ -6,11 +6,6 @@ mix.js("resources/js/app.js", "public/js")
         module: {
             rules: [
                 {
-                    test: /\.tsx?$/,
-                    loader: "ts-loader",
-                    exclude: /node_modules/
-                },
-                {
                     test: /\.obj$/,
                     loader: "webpack-obj-loader"
                 },
@@ -34,7 +29,7 @@ mix.js("resources/js/app.js", "public/js")
             ]
         },
         resolve: {
-            extensions: ["*", ".js", ".jsx", ".vue", ".ts", ".tsx"]
+            extensions: ["*", ".js", ".jsx", ".vue"]
         }
     })
     .setResourceRoot("/");

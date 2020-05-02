@@ -1,8 +1,6 @@
 import React from "react";
 import { GameContext } from "./../GameContext";
 import { MainContext } from "./../../../MainContext";
-
-//@ts-ignore
 import logo from "./../../../../../assets/images/LOM-white.png";
 
 const BottomPanel = () => {

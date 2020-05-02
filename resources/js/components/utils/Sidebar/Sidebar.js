@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { MainContext } from "./../../MainContext";
-
-//@ts-ignore
 import dashboardIcon from "./../../../../assets/images/dashboard.png";
 
 const Sidebar = () => {

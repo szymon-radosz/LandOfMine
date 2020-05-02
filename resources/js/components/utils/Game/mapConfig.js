@@ -109,15 +109,6 @@ const initialMapConfig = [
         haveImage: false
     },
     {
-        x: 11,
-        y: 0,
-        value: "road-horizontal",
-        initialElement: true,
-        population: 0,
-        money: 0,
-        haveImage: false
-    },
-    {
         x: 12,
         y: 0,
         value: "road-left-bottom",

@@ -1,11 +1,6 @@
 import React from "react";
 
-type AlertProps = {
-    message: string;
-    status: string;
-};
-
-const Alert = ({ message, status }: AlertProps) => {
+const Alert = ({ message, status }) => {
     return (
         <div className={`alert alert-${status} alert-dismissible`} role="alert">
             <strong>{message}</strong>

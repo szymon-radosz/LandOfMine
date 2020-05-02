@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import {
     BrowserRouter as Router,
-    //@ts-ignore
     Switch,
-    //@ts-ignore
     Route,
-    //@ts-ignore
     Redirect
 } from "react-router-dom";
 import { AppComponent } from "../utils/styledComponents/AppComponent";
@@ -17,13 +14,9 @@ import Alert from "./utils/Alert/Alert";
 import RegisterAdmin from "./utils/RegisterAdmin/RegisterAdmin";
 import Home from "./utils/Home/Home";
 import Game from "./utils/Game/Game";
-import { MainProps, MainState } from "./Main.interface";
 
-class Main extends Component<MainProps, MainState> {
-    history: any;
-    routes: any;
-
-    constructor(props: MainProps) {
+class Main extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -76,11 +69,11 @@ class Main extends Component<MainProps, MainState> {
         ];
     }
 
-    handleLanguageChange = (language: string) => {
+    handleLanguageChange = (language) => {
         this.setState({ activeLanguage: language });
     };
 
-    checkAllowedPath = (path: string) => {
+    checkAllowedPath = (path) => {
         const allowedPaths = this.state.allowedPaths;
 
         if (allowedPaths.includes(path.split("/")[1])) {
@@ -91,11 +84,11 @@ class Main extends Component<MainProps, MainState> {
         }
     };
 
-    setToken = (token: string) => {
+    setToken = (token) => {
         this.setState({ token });
     };
 
-    setUserLoggedIn = (status: boolean) => {
+    setUserLoggedIn = (status) => {
         this.setState({ userLoggedIn: status });
     };
 
@@ -104,7 +97,7 @@ class Main extends Component<MainProps, MainState> {
         this.setState({ userLoggedIn: false });
     };
 
-    handleShowAlert = (message: string, status: string) => {
+    handleShowAlert = (message, status) => {
         this.setState({ alertMessage: message, alertStatus: status });
 
         setTimeout(() => {
@@ -112,7 +105,7 @@ class Main extends Component<MainProps, MainState> {
         }, 4000);
     };
 
-    handleShowLoader = (status: boolean) => {
+    handleShowLoader = (status) => {
         this.setState({ showLoader: status });
     };
 
@@ -120,11 +113,11 @@ class Main extends Component<MainProps, MainState> {
         this.setState({ showSidebarText: !this.state.showSidebarText });
     };
 
-    handlAactiveMenuSection = (text: string) => {
+    handlAactiveMenuSection = (text) => {
         this.setState({ activeMenuSection: text });
     };
 
-    handleChangePath = (path: string) => {
+    handleChangePath = (path) => {
         //console.log(["chandleChangePath", path]);
         const { allowedPaths, userLoggedIn } = this.state;
 
@@ -139,7 +132,7 @@ class Main extends Component<MainProps, MainState> {
         }
     };
 
-    checkTokenExpiration = (status: number) => {
+    checkTokenExpiration = (status) => {
         if (status === 401) {
             this.handleShowAlert("Token invalid", "danger");
             this.handleLogout();
@@ -214,8 +207,8 @@ class Main extends Component<MainProps, MainState> {
                             {userLoggedIn && token ? (
                                 <Redirect to="dashboard" />
                             ) : (
-                                this.checkAllowedPath(lastUrlSegment)
-                            )}
+                                    this.checkAllowedPath(lastUrlSegment)
+                                )}
 
                             {allowRedirect && redirectedPath && (
                                 <Redirect to={redirectedPath} />

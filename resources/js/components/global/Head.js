@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 
 const Head = ({ title }) => {
     return (
-        //@ts-ignore
         <Helmet>
             <meta charSet="utf-8" />
             <meta name="author" content="Szymon Radosz" />

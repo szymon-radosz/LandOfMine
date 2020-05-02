@@ -1,15 +1,6 @@
 import React from "react";
 
-interface legendType {
-    text: string;
-    color: string;
-}
-
-type TableLegendProps = {
-    legends: legendType[];
-};
-
-const TableLegend = ({ legends }: TableLegendProps) => {
+const TableLegend = ({ legends }) => {
     return (
         <div className="legend__container">
             {legends &&

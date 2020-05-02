@@ -1,17 +1,11 @@
 import React from "react";
 import SingleOption from "./SingleOption/SingleOption";
 
-type OptionsProps = {
-    optionElements: any;
-    activeSidebarOption: string;
-    handleUpdateItem: any;
-};
-
 const Options = ({
     optionElements,
     activeSidebarOption,
     handleUpdateItem
-}: OptionsProps) => {
+}) => {
     return (
         <div className="options__container">
             {optionElements &&

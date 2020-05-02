@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import DashboardContainer from "./../DashboardContainer/DashboardContainer";
 import { MainContext } from "./../../MainContext";
 import Header from "./utils/Header";
-import { DashboardProps, DashboardState } from "./Dashboard.interface";
 
-class Dashboard extends Component<DashboardProps, DashboardState> {
-    constructor(props: DashboardProps) {
+class Dashboard extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {

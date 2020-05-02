@@ -2,29 +2,19 @@ import React, { Component } from "react";
 import { GameContext } from "./../../GameContext";
 import Sidebar from "./Sidebar/Sidebar";
 import Options from "./Options/Options";
-import { ActionModalProps, ActionModalState } from "./ActionModal.interface";
 
-//@ts-ignore
 import businessIcon from "./../../../../../../assets/images/businessIcon.png";
-//@ts-ignore
 import buildingsIcon from "./../../../../../../assets/images/buildingsIcon.png";
-//@ts-ignore
 import entertainmentIcon from "./../../../../../../assets/images/entertainmentIcon.png";
-//@ts-ignore
 import travelIcon from "./../../../../../../assets/images/travelIcon.png";
-//@ts-ignore
 import factoriesIcon from "./../../../../../../assets/images/factoriesIcon.png";
-//@ts-ignore
 import allIcon from "./../../../../../../assets/images/allIcon.png";
-//@ts-ignore
 import close from "./../../../../../../assets/images/close.png";
-//@ts-ignore
 import oilFactory from "./../../../../../../assets/images/oilFactory.png";
-//@ts-ignore
 import house from "./../../../../../../assets/images/house.png";
 
-class ActionModal extends Component<ActionModalProps, ActionModalState> {
-    constructor(props: ActionModalProps) {
+class ActionModal extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -108,21 +98,21 @@ class ActionModal extends Component<ActionModalProps, ActionModalState> {
         };
     }
 
-    handleSetActiveSidebarOption = (name: string) => {
+    handleSetActiveSidebarOption = (name) => {
         this.setState({ activeSidebarOption: name });
     };
 
     handleUpdateItem = (
-        value: string,
-        freeHumanResources: number,
-        population: number,
-        materials: number,
-        money: number,
-        desriptionHeader: string,
-        descriptionContent: string,
-        finishedBuildDays: number,
-        durationBuildDays: number,
-        notAddedHumanResources: boolean
+        value,
+        freeHumanResources,
+        population,
+        materials,
+        money,
+        desriptionHeader,
+        descriptionContent,
+        finishedBuildDays,
+        durationBuildDays,
+        notAddedHumanResources
     ) => {
         this.context.handleUpdateMapConfigItem(
             value,

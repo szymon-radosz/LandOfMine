@@ -7,15 +7,14 @@ import initialMapConfig from "./mapConfig";
 import moment from "moment";
 import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
-import { GameProps, GameState } from "./Game.interface";
 
 // zoomX: 20, zoomY: 10 - start position
 // zoomX: 18, zoomY: 8
 // zoomX: 16, zoomY: 6
 // zoomX: 14, zoomY: 4
 
-class Game extends Component<GameProps, GameState> {
-    constructor(props: GameProps) {
+class Game extends Component {
+    constructor(props) {
         super(props);
 
         //initially we create reactange of recteangles 10x6
@@ -68,19 +67,19 @@ class Game extends Component<GameProps, GameState> {
             this.setState(prevState => ({
                 mapConfig: prevState.mapConfig.map(mapConfigObject =>
                     mapConfigObject.x == this.state.activeXCord &&
-                    mapConfigObject.y == this.state.activeYCord
+                        mapConfigObject.y == this.state.activeYCord
                         ? Object.assign(mapConfigObject, {
-                              value: value,
-                              initialElement: false,
-                              population: population,
-                              money: money,
-                              desriptionHeader: desriptionHeader,
-                              descriptionContent: descriptionContent,
-                              haveImage: true,
-                              finishedBuildDays: finishedBuildDays,
-                              durationBuildDays: durationBuildDays,
-                              notAddedHumanResources: notAddedHumanResources
-                          })
+                            value: value,
+                            initialElement: false,
+                            population: population,
+                            money: money,
+                            desriptionHeader: desriptionHeader,
+                            descriptionContent: descriptionContent,
+                            haveImage: true,
+                            finishedBuildDays: finishedBuildDays,
+                            durationBuildDays: durationBuildDays,
+                            notAddedHumanResources: notAddedHumanResources
+                        })
                         : mapConfigObject
                 )
             }));
@@ -156,13 +155,13 @@ class Game extends Component<GameProps, GameState> {
         this.setState(prevState => ({
             mapConfig: prevState.mapConfig.map(mapConfigObject =>
                 mapConfigObject.finishedBuildDays &&
-                mapConfigObject.durationBuildDays &&
-                mapConfigObject.finishedBuildDays !==
+                    mapConfigObject.durationBuildDays &&
+                    mapConfigObject.finishedBuildDays !==
                     mapConfigObject.durationBuildDays
                     ? Object.assign(mapConfigObject, {
-                          finishedBuildDays:
-                              mapConfigObject.finishedBuildDays + 1
-                      })
+                        finishedBuildDays:
+                            mapConfigObject.finishedBuildDays + 1
+                    })
                     : mapConfigObject
             )
         }));
@@ -180,7 +179,7 @@ class Game extends Component<GameProps, GameState> {
             if (
                 mapConfigObject.materials &&
                 mapConfigObject.finishedBuildDays ===
-                    mapConfigObject.durationBuildDays
+                mapConfigObject.durationBuildDays
             ) {
                 materialsSum += mapConfigObject.materials;
             }
@@ -188,7 +187,7 @@ class Game extends Component<GameProps, GameState> {
             if (
                 mapConfigObject.money &&
                 mapConfigObject.finishedBuildDays ===
-                    mapConfigObject.durationBuildDays
+                mapConfigObject.durationBuildDays
             ) {
                 moneySum += mapConfigObject.money;
             }
@@ -196,7 +195,7 @@ class Game extends Component<GameProps, GameState> {
             if (
                 mapConfigObject.notAddedHumanResources &&
                 mapConfigObject.finishedBuildDays ===
-                    mapConfigObject.durationBuildDays
+                mapConfigObject.durationBuildDays
             ) {
                 mapConfigObject.notAddedHumanResources = false;
                 freeHumanResoucesSum += mapConfigObject.population;

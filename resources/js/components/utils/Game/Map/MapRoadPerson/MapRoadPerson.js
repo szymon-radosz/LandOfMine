@@ -1,8 +1,6 @@
 import React from "react";
 import { GameContext } from "./../../GameContext";
-//@ts-ignore
 import greetingMan from "./../../../../../../assets/images/greetingMan.png";
-//@ts-ignore
 import walkingMan from "./../../../../../../assets/images/walkingMan.png";
 
 const MapRoadPerson = ({ handleShowThreeDView, handleSetMapActiveCoords }) => {

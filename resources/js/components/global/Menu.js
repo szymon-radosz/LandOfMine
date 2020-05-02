@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { MainContext } from "./../MainContext";
-//@ts-ignore
 import { slide as MenuBurger } from "react-burger-menu";
-//@ts-ignore
 import logo from "./../../../assets/images/LOM-white.png";
 
 const Menu = () => {

@@ -1,47 +1,10 @@
 import React from "react";
 
-type optionType = {
-    name: string;
-    icon: any;
-    altIcon: string;
-    sidebarOption: string;
-    descriptionActionModal: string;
-    cost: number;
-    value: string;
-    freeHumanResources: number;
-    population: number;
-    materials: number;
-    money: number;
-    desriptionHeader: string;
-    descriptionContent: string;
-    finishedBuildDays: number;
-    durationBuildDays: number;
-    notAddedHumanResources: boolean;
-    description: string;
-};
-
-type SingleOptionProps = {
-    option: optionType;
-    activeSidebarOption: string;
-    handleUpdateItem: (
-        value: string,
-        freeHumanResources: number,
-        population: number,
-        materials: number,
-        money: number,
-        desriptionHeader: string,
-        descriptionContent: string,
-        finishedBuildDays: number,
-        durationBuildDays: number,
-        notAddedHumanResources: boolean
-    ) => {};
-};
-
 const SingleOption = ({
     option,
     activeSidebarOption,
     handleUpdateItem
-}: SingleOptionProps) => {
+}) => {
     return (
         <>
             {activeSidebarOption === option.sidebarOption && (
