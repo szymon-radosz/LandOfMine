@@ -122599,16 +122599,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/about.jpg":
-/*!*******************************************!*\
-  !*** ./resources/assets/images/about.jpg ***!
-  \*******************************************/
+/***/ "./resources/assets/images/about.jpg?v=1":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/about.jpg?v=1 ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/about.jpg?ceff59f500ac965de59e206f7e736d12");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/about.jpg?4cae46a9e17c569dd2e9e152c6184246");
 
 /***/ }),
 
@@ -122622,6 +122622,58 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("/images/allIcon.png?e310c9a75daf44017fed2a5844d612b1");
+
+/***/ }),
+
+/***/ "./resources/assets/images/auto-service.png":
+/*!**************************************************!*\
+  !*** ./resources/assets/images/auto-service.png ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/auto-service.png?c5fbe999b2165b5be814b70923a08076");
+
+/***/ }),
+
+/***/ "./resources/assets/images/bakery.png":
+/*!********************************************!*\
+  !*** ./resources/assets/images/bakery.png ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/bakery.png?4c4aa04c99586f2ccd0e190ee458f6e8");
+
+/***/ }),
+
+/***/ "./resources/assets/images/bar.png":
+/*!*****************************************!*\
+  !*** ./resources/assets/images/bar.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/bar.png?65f386c737c0416c891c969f81b364ad");
+
+/***/ }),
+
+/***/ "./resources/assets/images/book-shop.png":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/book-shop.png ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/book-shop.png?7c087e25eed6125e902fa4f7c02bc58f");
 
 /***/ }),
 
@@ -122664,6 +122716,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/assets/images/clothing-shop.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/images/clothing-shop.png ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/clothing-shop.png?6b8b96a9595c70aae7c74b0e1791ce13");
+
+/***/ }),
+
+/***/ "./resources/assets/images/coffee-shop.png":
+/*!*************************************************!*\
+  !*** ./resources/assets/images/coffee-shop.png ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/coffee-shop.png?9adaa24b7e76832cc1b94853f1baa023");
+
+/***/ }),
+
 /***/ "./resources/assets/images/dashboard.png":
 /*!***********************************************!*\
   !*** ./resources/assets/images/dashboard.png ***!
@@ -122690,6 +122768,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/assets/images/drug-store.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/drug-store.png ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/drug-store.png?db9f12b61de893a2047efa83cecfa2ba");
+
+/***/ }),
+
 /***/ "./resources/assets/images/entertainmentIcon.png":
 /*!*******************************************************!*\
   !*** ./resources/assets/images/entertainmentIcon.png ***!
@@ -122703,19 +122794,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/factoriesIcon.png":
-/*!***************************************************!*\
-  !*** ./resources/assets/images/factoriesIcon.png ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/factoriesIcon.png?9c59628fc5fa58f16887448fcf44c3bb");
-
-/***/ }),
-
 /***/ "./resources/assets/images/factory.png":
 /*!*********************************************!*\
   !*** ./resources/assets/images/factory.png ***!
@@ -122725,7 +122803,72 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/factory.png?a548835e7fb7126eaec5b65504bf4b1f");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/factory.png?59d60bca00700627c2cb733107366c40");
+
+/***/ }),
+
+/***/ "./resources/assets/images/fast-food.png":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/fast-food.png ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/fast-food.png?f90311d69ed301f31454b36c3c818c8e");
+
+/***/ }),
+
+/***/ "./resources/assets/images/fried-chicken.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/images/fried-chicken.png ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/fried-chicken.png?2c711cf8a87408df7909dbc92ac37c83");
+
+/***/ }),
+
+/***/ "./resources/assets/images/fruit-shop.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/fruit-shop.png ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/fruit-shop.png?bbe4a458b8eb8d41ded00f0183f0ed7d");
+
+/***/ }),
+
+/***/ "./resources/assets/images/gas-station.png":
+/*!*************************************************!*\
+  !*** ./resources/assets/images/gas-station.png ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/gas-station.png?82ae8c875cf5cea37676f29973f90c52");
+
+/***/ }),
+
+/***/ "./resources/assets/images/gift-shop.png":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/gift-shop.png ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/gift-shop.png?1b59d5db3c9a2442a2c2fa9224a4c0ef");
 
 /***/ }),
 
@@ -122755,29 +122898,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/hospital.png":
-/*!**********************************************!*\
-  !*** ./resources/assets/images/hospital.png ***!
-  \**********************************************/
+/***/ "./resources/assets/images/house-blue.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/house-blue.png ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/hospital.png?9a426268ecf5fc6faeb109aec879c68d");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/house-blue.png?d64d22ae218bd30c4a2b374bbb21e23d");
 
 /***/ }),
 
-/***/ "./resources/assets/images/house.png":
-/*!*******************************************!*\
-  !*** ./resources/assets/images/house.png ***!
-  \*******************************************/
+/***/ "./resources/assets/images/house-green.png":
+/*!*************************************************!*\
+  !*** ./resources/assets/images/house-green.png ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/house.png?2fb4b296bb6d4de9969c3166aa6cde42");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/house-green.png?478f9d0cf415e27b64fcc6a803a6f0f2");
+
+/***/ }),
+
+/***/ "./resources/assets/images/house-red.png":
+/*!***********************************************!*\
+  !*** ./resources/assets/images/house-red.png ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/house-red.png?78cc45a31cf39cc1903d1ed4a51c4278");
 
 /***/ }),
 
@@ -122794,16 +122950,68 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/oilFactory.png":
+/***/ "./resources/assets/images/music-shop.png":
 /*!************************************************!*\
-  !*** ./resources/assets/images/oilFactory.png ***!
+  !*** ./resources/assets/images/music-shop.png ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/oilFactory.png?cd612b2b1d4c3a8e04cf5c8ae9e0cbbd");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/music-shop.png?b10104fb728bdebee41d9f61b5d51ff5");
+
+/***/ }),
+
+/***/ "./resources/assets/images/residence-green.png":
+/*!*****************************************************!*\
+  !*** ./resources/assets/images/residence-green.png ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/residence-green.png?8d29bda875b50629741acf5f79afbfbd");
+
+/***/ }),
+
+/***/ "./resources/assets/images/residence-red.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/images/residence-red.png ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/residence-red.png?95d4e8a1f99332a8ab8bc6d9a01c4ca1");
+
+/***/ }),
+
+/***/ "./resources/assets/images/residence-yellow.png":
+/*!******************************************************!*\
+  !*** ./resources/assets/images/residence-yellow.png ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/residence-yellow.png?7a0013c607a3550231bf71e179a38782");
+
+/***/ }),
+
+/***/ "./resources/assets/images/restaurant.png":
+/*!************************************************!*\
+  !*** ./resources/assets/images/restaurant.png ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/restaurant.png?15046534c448501958188bcea12a1957");
 
 /***/ }),
 
@@ -122816,7 +123024,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-horizontal.png?2d90415d6b9aa3cf3233486efca2a470");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-horizontal.png?07362e8a8aa2e72a9e75b640e581ab5d");
 
 /***/ }),
 
@@ -122829,7 +123037,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-bottom.png?495b11dee4f45e435f2457d44f90a0ba");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-bottom.png?6fe81f3189c0722687d83991c28d074a");
 
 /***/ }),
 
@@ -122842,7 +123050,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-top.png?2bbe1ba22b457f9b8565c9eda9fe19f8");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-top.png?11f072626ee76c003dd0f7b98215b3ee");
 
 /***/ }),
 
@@ -122855,7 +123063,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-bottom.png?5b95038e466240740db6ca3bf8eba8ce");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-bottom.png?c868e2279724c204aa5c16bb0ff03eac");
 
 /***/ }),
 
@@ -122868,7 +123076,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-top.png?1fa2485ee11e7401c6be4633576b0582");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-top.png?9a6e8c96c2bea58d8d62303d4be0d2ee");
 
 /***/ }),
 
@@ -122881,33 +123089,85 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-vertically.png?1486dd6bbf2d19a3f106ca32141d905e");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/road-vertically.png?ac63bd3b348213059579e286d8f9b021");
 
 /***/ }),
 
-/***/ "./resources/assets/images/stone.png":
-/*!*******************************************!*\
-  !*** ./resources/assets/images/stone.png ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/stone.png?d8ed4eadddfaf240e7197a10626d0ba3");
-
-/***/ }),
-
-/***/ "./resources/assets/images/travelIcon.png":
+/***/ "./resources/assets/images/shoes-shop.png":
 /*!************************************************!*\
-  !*** ./resources/assets/images/travelIcon.png ***!
+  !*** ./resources/assets/images/shoes-shop.png ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/travelIcon.png?c009ea201d68256d07322e882f38e261");
+/* harmony default export */ __webpack_exports__["default"] = ("/images/shoes-shop.png?aa562a86abd8602edd07c449320e0896");
+
+/***/ }),
+
+/***/ "./resources/assets/images/sky-building-green.png":
+/*!********************************************************!*\
+  !*** ./resources/assets/images/sky-building-green.png ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/sky-building-green.png?8d739f8e91319b612c318789bd259f96");
+
+/***/ }),
+
+/***/ "./resources/assets/images/sky-building-red.png":
+/*!******************************************************!*\
+  !*** ./resources/assets/images/sky-building-red.png ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/sky-building-red.png?306308aec879fa462861896e1ffeb6b6");
+
+/***/ }),
+
+/***/ "./resources/assets/images/sky-building-yellow.png":
+/*!*********************************************************!*\
+  !*** ./resources/assets/images/sky-building-yellow.png ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/sky-building-yellow.png?2e8a883676f1ad08dd3aed5674ff49ae");
+
+/***/ }),
+
+/***/ "./resources/assets/images/stadium.png":
+/*!*********************************************!*\
+  !*** ./resources/assets/images/stadium.png ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/stadium.png?5f130edec0051178f08ba80515d6187f");
+
+/***/ }),
+
+/***/ "./resources/assets/images/supermarket.png":
+/*!*************************************************!*\
+  !*** ./resources/assets/images/supermarket.png ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/images/supermarket.png?86bd033f98348ad571a26f80bd435f8c");
 
 /***/ }),
 
@@ -123782,7 +124042,9 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
                 case 0:
                   try {
                     mtlLoader = new three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__["MTLLoader"]();
-                    materialUrl = "http://land-of-mine.com/objects/Scene_City.mtl";
+                    materialUrl = "http://127.0.0.1:8000/objects/Scene_City.mtl"; // let materialUrl =
+                    //     "http://land-of-mine.com/objects/Scene_City.mtl";
+
                     mtlLoader.load(materialUrl, function (materials) {
                       materials.preload();
                       var objLoader = new three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__["OBJLoader"]();
@@ -123790,18 +124052,16 @@ var ThreeDView = /*#__PURE__*/function (_Component) {
                       var modelUrl;
 
                       if (position === "top-left") {
-                        //modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                       } else if (position === "top-right") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                       } else if (position === "bottom-right") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                       } else if (position === "bottom-left") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                       } else {
-                        // modelUrl =
-                        //     "http://127.0.0.1:8000/objects/Scene_City.obj";
-                        modelUrl = "http://land-of-mine.com/objects/Scene_City.obj";
+                        modelUrl = "http://127.0.0.1:8000/objects/Scene_City.obj"; // modelUrl =
+                        //     "http://land-of-mine.com/objects/Scene_City.obj";
                       }
 
                       objLoader.load(modelUrl, function (obj) {
@@ -124497,12 +124757,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/businessIcon.png */ "./resources/assets/images/businessIcon.png");
 /* harmony import */ var _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/buildingsIcon.png */ "./resources/assets/images/buildingsIcon.png");
 /* harmony import */ var _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/entertainmentIcon.png */ "./resources/assets/images/entertainmentIcon.png");
-/* harmony import */ var _assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/travelIcon.png */ "./resources/assets/images/travelIcon.png");
-/* harmony import */ var _assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/factoriesIcon.png */ "./resources/assets/images/factoriesIcon.png");
-/* harmony import */ var _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/allIcon.png */ "./resources/assets/images/allIcon.png");
-/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
-/* harmony import */ var _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/oilFactory.png */ "./resources/assets/images/oilFactory.png");
-/* harmony import */ var _assets_images_house_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/house.png */ "./resources/assets/images/house.png");
+/* harmony import */ var _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/allIcon.png */ "./resources/assets/images/allIcon.png");
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
+/* harmony import */ var _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/house-blue.png */ "./resources/assets/images/house-blue.png");
+/* harmony import */ var _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/house-green.png */ "./resources/assets/images/house-green.png");
+/* harmony import */ var _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/house-red.png */ "./resources/assets/images/house-red.png");
+/* harmony import */ var _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-green.png */ "./resources/assets/images/residence-green.png");
+/* harmony import */ var _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-red.png */ "./resources/assets/images/residence-red.png");
+/* harmony import */ var _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-yellow.png */ "./resources/assets/images/residence-yellow.png");
+/* harmony import */ var _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-green.png */ "./resources/assets/images/sky-building-green.png");
+/* harmony import */ var _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-red.png */ "./resources/assets/images/sky-building-red.png");
+/* harmony import */ var _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-yellow.png */ "./resources/assets/images/sky-building-yellow.png");
+/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
+/* harmony import */ var _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../../../../../../assets/images/auto-service.png */ "./resources/assets/images/auto-service.png");
+/* harmony import */ var _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../../../../../../assets/images/bakery.png */ "./resources/assets/images/bakery.png");
+/* harmony import */ var _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../../../../../../assets/images/book-shop.png */ "./resources/assets/images/book-shop.png");
+/* harmony import */ var _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../../../../../../assets/images/clothing-shop.png */ "./resources/assets/images/clothing-shop.png");
+/* harmony import */ var _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../../../../../../assets/images/drug-store.png */ "./resources/assets/images/drug-store.png");
+/* harmony import */ var _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../../../../../../assets/images/fruit-shop.png */ "./resources/assets/images/fruit-shop.png");
+/* harmony import */ var _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../../../../../../assets/images/gas-station.png */ "./resources/assets/images/gas-station.png");
+/* harmony import */ var _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../../../../../../assets/images/gift-shop.png */ "./resources/assets/images/gift-shop.png");
+/* harmony import */ var _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../../../../../../assets/images/music-shop.png */ "./resources/assets/images/music-shop.png");
+/* harmony import */ var _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../../../../../../assets/images/shoes-shop.png */ "./resources/assets/images/shoes-shop.png");
+/* harmony import */ var _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../../../../../../assets/images/supermarket.png */ "./resources/assets/images/supermarket.png");
+/* harmony import */ var _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../../../../../../assets/images/coffee-shop.png */ "./resources/assets/images/coffee-shop.png");
+/* harmony import */ var _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../../../../../../assets/images/bar.png */ "./resources/assets/images/bar.png");
+/* harmony import */ var _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../../../../../../assets/images/fast-food.png */ "./resources/assets/images/fast-food.png");
+/* harmony import */ var _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../../../../../../assets/images/fried-chicken.png */ "./resources/assets/images/fried-chicken.png");
+/* harmony import */ var _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../../../../../../assets/images/restaurant.png */ "./resources/assets/images/restaurant.png");
+/* harmony import */ var _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../../../../../../assets/images/stadium.png */ "./resources/assets/images/stadium.png");
 
 
 
@@ -124516,6 +124799,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/* buildings */
+
+
+
+
+
+
+
+
+
+
+/* businesses */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* entertainment */
 
 
 
@@ -124549,66 +124861,489 @@ var ActionModal = /*#__PURE__*/function (_Component) {
       sidebarOptions: [{
         id: 0,
         name: "All",
-        icon: _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_16__["default"],
+        icon: _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
         id: 1,
-        name: "Factories",
-        icon: _assets_images_factoriesIcon_png__WEBPACK_IMPORTED_MODULE_15__["default"],
-        altIcon: "Icon made by Freepik from www.flaticon.com"
-      }, {
-        id: 2,
-        name: "Building",
+        name: "Buildings",
         icon: _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
-        id: 3,
-        name: "Business",
+        id: 2,
+        name: "Businesses",
         icon: _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
-        id: 4,
+        id: 3,
         name: "Entertainment",
         icon: _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
-      }, {
-        id: 5,
-        name: "Transport",
-        icon: _assets_images_travelIcon_png__WEBPACK_IMPORTED_MODULE_14__["default"],
-        altIcon: "Icon made by Freepik from www.flaticon.com"
       }],
-      optionElements: [{
-        sidebarOption: "Factories",
-        name: "Oil factory",
+      optionElements: [
+      /* buildings */
+      {
+        sidebarOption: "Buildings",
+        name: "House - Blue",
+        value: "house-blue",
+        freeHumanResources: 0,
+        population: 10,
+        money: 0,
+        materials: 100,
+        icon: _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_16__["default"],
+        desriptionHeader: "House - Blue",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+10 Free Human Resources",
+        descriptionActionModal: "+10 Free Human Resources\n -100 materials",
+        cost: 500000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "House - Green",
+        value: "house-green",
+        freeHumanResources: 0,
+        population: 10,
+        money: 0,
+        materials: 100,
+        icon: _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+        desriptionHeader: "House - Green",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+10 Free Human Resources",
+        descriptionActionModal: "+10 Free Human Resources\n -100 materials",
+        cost: 500000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "House - Red",
+        value: "house-red",
+        freeHumanResources: 0,
+        population: 10,
+        money: 0,
+        materials: 100,
+        icon: _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_18__["default"],
+        desriptionHeader: "House - Red",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+10 Free Human Resources",
+        descriptionActionModal: "+10 Free Human Resources\n -100 materials",
+        cost: 500000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Residence - Green",
+        value: "residence-green",
+        freeHumanResources: 0,
+        population: 100,
+        money: 0,
+        materials: 200,
+        icon: _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_19__["default"],
+        desriptionHeader: "Residence - Green",
+        finishedBuildDays: 1,
+        durationBuildDays: 5,
+        description: "+100 Free Human Resources",
+        descriptionActionModal: "+100 Free Human Resources\n -200 materials",
+        cost: 5000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Residence - Red",
+        value: "residence-red",
+        freeHumanResources: 0,
+        population: 100,
+        money: 0,
+        materials: 200,
+        icon: _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_20__["default"],
+        desriptionHeader: "Residence - Red",
+        finishedBuildDays: 1,
+        durationBuildDays: 5,
+        description: "+100 Free Human Resources",
+        descriptionActionModal: "+100 Free Human Resources\n -200 materials",
+        cost: 5000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Residence - Yellow",
+        value: "residence-yellow",
+        freeHumanResources: 0,
+        population: 100,
+        money: 0,
+        materials: 200,
+        icon: _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_21__["default"],
+        desriptionHeader: "Residence - Yellow",
+        finishedBuildDays: 1,
+        durationBuildDays: 5,
+        description: "+100 Free Human Resources",
+        descriptionActionModal: "+100 Free Human Resources\n -200 materials",
+        cost: 5000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Sky Building - Green",
+        value: "sky-building-green",
+        freeHumanResources: 0,
+        population: 1000,
+        money: 0,
+        materials: 300,
+        icon: _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_22__["default"],
+        desriptionHeader: "Sky Building - Green",
+        finishedBuildDays: 1,
+        durationBuildDays: 7,
+        description: "+1000 Free Human Resources",
+        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
+        cost: 50000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Sky Building - Red",
+        value: "sky-building-red",
+        freeHumanResources: 0,
+        population: 1000,
+        money: 0,
+        materials: 300,
+        icon: _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_23__["default"],
+        desriptionHeader: "Sky Building - Red",
+        finishedBuildDays: 1,
+        durationBuildDays: 7,
+        description: "+1000 Free Human Resources",
+        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
+        cost: 50000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      }, {
+        sidebarOption: "Buildings",
+        name: "Sky Building - Yellow",
+        value: "sky-building-yellow",
+        freeHumanResources: 0,
+        population: 1000,
+        money: 0,
+        materials: 300,
+        icon: _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_24__["default"],
+        desriptionHeader: "Sky Building - Yellow",
+        finishedBuildDays: 1,
+        durationBuildDays: 7,
+        description: "+1000 Free Human Resources",
+        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
+        cost: 50000000,
+        notAddedHumanResources: true,
+        haveImage: true
+      },
+      /* businesses */
+      {
+        sidebarOption: "Businesses",
+        name: "Factory",
         value: "factory",
         freeHumanResources: 1000,
         population: 0,
         money: 10000,
-        materials: 200,
-        icon: _assets_images_oilFactory_png__WEBPACK_IMPORTED_MODULE_18__["default"],
+        materials: 300,
+        icon: _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_25__["default"],
         desriptionHeader: "Factory",
         finishedBuildDays: 1,
-        durationBuildDays: 6,
-        description: "+10000 money everyday",
-        descriptionActionModal: "+10000 money everyday\n -1000 human resources \n -200 materials",
-        cost: 2000000,
-        notAddedHumanResources: false
+        durationBuildDays: 7,
+        description: "+50000 money everyday",
+        descriptionActionModal: "+50000 money everyday\n -1000 human resources \n -200 materials",
+        cost: 30000000,
+        notAddedHumanResources: false,
+        haveImage: true
       }, {
-        sidebarOption: "Building",
-        name: "Apartment",
-        value: "house",
-        freeHumanResources: 0,
-        population: 1000,
-        money: 10000,
-        materials: 200,
-        icon: _assets_images_house_png__WEBPACK_IMPORTED_MODULE_19__["default"],
-        desriptionHeader: "Apartment",
+        sidebarOption: "Businesses",
+        name: "Auto Service",
+        value: "auto-service",
+        freeHumanResources: 100,
+        population: 0,
+        money: 5000,
+        materials: 50,
+        icon: _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_26__["default"],
+        desriptionHeader: "Auto Service",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+5000 money everyday",
+        descriptionActionModal: "+5000 money everyday\n -100 human resources \n -50 materials",
+        cost: 200000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Bakery",
+        value: "bakery",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_27__["default"],
+        desriptionHeader: "Bakery",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Book Shop",
+        value: "book-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_28__["default"],
+        desriptionHeader: "Book Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Clothing Shop",
+        value: "clothing-shop",
+        freeHumanResources: 80,
+        population: 0,
+        money: 5000,
+        materials: 40,
+        icon: _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_29__["default"],
+        desriptionHeader: "Clothing Shop",
         finishedBuildDays: 1,
         durationBuildDays: 4,
-        description: "+1000 Free Human Resources",
-        descriptionActionModal: "+1000 Free Human Resources\n -200 materials",
+        description: "+5000 money everyday",
+        descriptionActionModal: "+5000 money everyday\n -80 human resources \n -40 materials",
+        cost: 150000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Drug Store",
+        value: "drug-store",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_30__["default"],
+        desriptionHeader: "Drug Store",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Fruit Shop",
+        value: "fruit-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_31__["default"],
+        desriptionHeader: "Fruit Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Gas Station",
+        value: "gas-station",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_32__["default"],
+        desriptionHeader: "Gas Station",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Gift Shop",
+        value: "gift-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_33__["default"],
+        desriptionHeader: "Gift Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Music Shop",
+        value: "music-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_34__["default"],
+        desriptionHeader: "Music Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Shoes Shop",
+        value: "shoes-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_35__["default"],
+        desriptionHeader: "Shoes Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Businesses",
+        name: "Supermarket",
+        value: "supermarket",
+        freeHumanResources: 100,
+        population: 0,
+        money: 5000,
+        materials: 50,
+        icon: _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_36__["default"],
+        desriptionHeader: "Supermarket",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+5000 money everyday",
+        descriptionActionModal: "+5000 money everyday\n -100 human resources \n -50 materials",
         cost: 200000,
-        notAddedHumanResources: true
+        notAddedHumanResources: false,
+        haveImage: true
+      },
+      /* entertainment */
+      {
+        sidebarOption: "Entertainment",
+        name: "Coffee Shop",
+        value: "coffee-shop",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_37__["default"],
+        desriptionHeader: "Coffee Shop",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Entertainment",
+        name: "Bar",
+        value: "bar",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_38__["default"],
+        desriptionHeader: "Bar",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Entertainment",
+        name: "Fast Food",
+        value: "fast-food",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_39__["default"],
+        desriptionHeader: "Fast Food",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Entertainment",
+        name: "Fried Chicken",
+        value: "fried-chicken",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_40__["default"],
+        desriptionHeader: "Fried Chicken",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Entertainment",
+        name: "Restaurant",
+        value: "restaurant",
+        freeHumanResources: 50,
+        population: 0,
+        money: 3000,
+        materials: 30,
+        icon: _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_41__["default"],
+        desriptionHeader: "Restaurant",
+        finishedBuildDays: 1,
+        durationBuildDays: 3,
+        description: "+3000 money everyday",
+        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
+        cost: 100000,
+        notAddedHumanResources: false,
+        haveImage: true
+      }, {
+        sidebarOption: "Entertainment",
+        name: "Stadium",
+        value: "stadium",
+        freeHumanResources: 1000,
+        population: 0,
+        money: 10000,
+        materials: 300,
+        icon: _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_42__["default"],
+        desriptionHeader: "Stadium",
+        finishedBuildDays: 1,
+        durationBuildDays: 7,
+        description: "+10000 money everyday",
+        descriptionActionModal: "+50000 money everyday\n -1000 human resources \n -200 materials",
+        cost: 30000000,
+        notAddedHumanResources: false,
+        haveImage: true
       }]
     };
     return _this;
@@ -124632,7 +125367,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         },
         title: "Close"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         alt: "Close"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__["default"], {
         options: sidebarOptions,
@@ -124797,14 +125532,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _assets_images_stone_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../../../../assets/images/stone.png */ "./resources/assets/images/stone.png");
-/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
-/* harmony import */ var _assets_images_house_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../../../../assets/images/house.png */ "./resources/assets/images/house.png");
-/* harmony import */ var _assets_images_hospital_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../../../../assets/images/hospital.png */ "./resources/assets/images/hospital.png");
-
-
-
-
 
 
 
@@ -124835,6 +125562,8 @@ var ElementImage = function ElementImage(_ref) {
           }
   };
 
+  var getImage = function getImage() {};
+
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
     getElementPositionOnMap();
   }, []);
@@ -124844,15 +125573,15 @@ var ElementImage = function ElementImage(_ref) {
       context.handleSetElementDescription(configElement.x, configElement.y);
     }
   }, configElement.desriptionHeader && configElement.descriptionContent && context.activeXCord === configElement.x && context.activeYCord === configElement.y && context.showDescription && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "map-element__description--container description-".concat(elementPositionOnMap, " ").concat(!context.showDescription && "hide")
+    className: "map-element__description--container description-".concat(elementPositionOnMap && elementPositionOnMap, " ").concat(!context.showDescription && "hide")
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "map-element__description--header"
   }, configElement.desriptionHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "map-element__description--content pre-line"
   }, configElement.descriptionContent), configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "map-element__description--content map-element__description--progress"
-  }, "Progress:\n                                    ".concat(Math.floor(configElement.finishedBuildDays / configElement.durationBuildDays * 100), "\n                                    %"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: configElement.value === "stone" ? _assets_images_stone_png__WEBPACK_IMPORTED_MODULE_3__["default"] : configElement.value === "factory" ? _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_4__["default"] : configElement.value === "house" ? _assets_images_house_png__WEBPACK_IMPORTED_MODULE_5__["default"] : configElement.value === "hospital" && _assets_images_hospital_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+  }, "Progress:\n                                    ".concat(Math.floor(configElement.finishedBuildDays / configElement.durationBuildDays * 100), "\n                                    %"))), configElement.haveImage && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "./images/".concat(configElement.value, ".png"),
     style: configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays ? {
       WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ".concat(configElement.finishedBuildDays / configElement.durationBuildDays, "))")
     } : {}
@@ -125343,7 +126072,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 16,
   y: 0,
@@ -125351,7 +126080,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 17,
   y: 0,
@@ -125359,7 +126088,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 18,
   y: 0,
@@ -125367,7 +126096,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 19,
   y: 0,
@@ -125375,7 +126104,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, // ==================== row - 2 ====================
 {
   x: 0,
@@ -125489,14 +126218,14 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 13,
   y: 1,
-  value: "house",
+  value: "sky-building-green",
   initialElement: true,
   population: 1000,
   materials: 0,
-  finishedBuildDays: 3,
-  durationBuildDays: 3,
+  finishedBuildDays: 7,
+  durationBuildDays: 7,
   money: 0,
-  desriptionHeader: "Apartment",
+  desriptionHeader: "Sky Building Green",
   descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
@@ -125522,7 +126251,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 17,
   y: 1,
@@ -125530,7 +126259,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 18,
   y: 1,
@@ -125538,7 +126267,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 19,
   y: 1,
@@ -125546,7 +126275,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, //==================== row - 3 ====================
 {
   x: 0,
@@ -125665,14 +126394,14 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 13,
   y: 2,
-  value: "house",
+  value: "sky-building-red",
   initialElement: true,
   population: 1000,
   materials: 0,
-  finishedBuildDays: 3,
-  durationBuildDays: 3,
+  finishedBuildDays: 7,
+  durationBuildDays: 7,
   money: 0,
-  desriptionHeader: "Apartment",
+  desriptionHeader: "Sky Building Red",
   descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
@@ -125706,7 +126435,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 18,
   y: 2,
@@ -125714,7 +126443,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 19,
   y: 2,
@@ -125722,7 +126451,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, //==================== row - 4 ====================
 {
   x: 0,
@@ -125831,14 +126560,14 @@ var initialMapConfig = [//==================== row - 1 ====================
 }, {
   x: 13,
   y: 3,
-  value: "house",
+  value: "sky-building-yellow",
   initialElement: true,
   population: 1000,
   materials: 0,
-  finishedBuildDays: 3,
-  durationBuildDays: 3,
+  finishedBuildDays: 7,
+  durationBuildDays: 7,
   money: 0,
-  desriptionHeader: "Apartment",
+  desriptionHeader: "Sky Building Yellow",
   descriptionContent: "+1000 Free Human Resources",
   haveImage: true
 }, {
@@ -125880,7 +126609,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, {
   x: 19,
   y: 3,
@@ -125888,7 +126617,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, //==================== row - 5 ====================
 {
   x: 0,
@@ -126049,7 +126778,7 @@ var initialMapConfig = [//==================== row - 1 ====================
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: true
+  haveImage: false
 }, //==================== row - 6 ====================
 {
   x: 0,
@@ -127049,7 +127778,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _global_Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../global/Menu */ "./resources/js/components/global/Menu.js");
 /* harmony import */ var _global_SideOptions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../global/SideOptions */ "./resources/js/components/global/SideOptions.js");
 /* harmony import */ var _global_Newsletter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../global/Newsletter */ "./resources/js/components/global/Newsletter.js");
-/* harmony import */ var _assets_images_about_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../../assets/images/about.jpg */ "./resources/assets/images/about.jpg");
+/* harmony import */ var _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../../assets/images/about.jpg?v=1 */ "./resources/assets/images/about.jpg?v=1");
 
 
 
@@ -127095,7 +127824,7 @@ var Home = function Home() {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--left"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: _assets_images_about_jpg__WEBPACK_IMPORTED_MODULE_8__["default"]
+    src: _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_8__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--right"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, "About The Game"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Land of mine is free city simulator working in your browser to make that accessible from various devices anytime when you're plugged in."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Build the city, manage and take decision to make every day improvements. Build new necessary building when you have appropierate amount of materials and money. After going to the next day you will get new resources which your city produces."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Land of mine is still trial project developed by", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {

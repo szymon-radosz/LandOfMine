@@ -1,9 +1,5 @@
 import React from "react";
 import { GameContext } from "./../../GameContext";
-import stone from "./../../../../../../assets/images/stone.png";
-import factory from "./../../../../../../assets/images/factory.png";
-import house from "./../../../../../../assets/images/house.png";
-import hospital from "./../../../../../../assets/images/hospital.png";
 
 const ElementImage = ({ configElement }) => {
     const [elementPositionOnMap, setElementPositionOnMap] = React.useState("");
@@ -40,6 +36,10 @@ const ElementImage = ({ configElement }) => {
         }
     };
 
+    const getImage = () => {
+
+    }
+
     React.useEffect(() => {
         getElementPositionOnMap();
     }, []);
@@ -60,7 +60,7 @@ const ElementImage = ({ configElement }) => {
                 context.activeYCord === configElement.y &&
                 context.showDescription && (
                     <div
-                        className={`map-element__description--container description-${elementPositionOnMap} ${!context.showDescription &&
+                        className={`map-element__description--container description-${elementPositionOnMap && elementPositionOnMap} ${!context.showDescription &&
                             "hide"}`}
                     >
                         <p className="map-element__description--header">
@@ -85,28 +85,22 @@ const ElementImage = ({ configElement }) => {
                             )}
                     </div>
                 )}
-            <img
-                src={
-                    configElement.value === "stone"
-                        ? stone
-                        : configElement.value === "factory"
-                            ? factory
-                            : configElement.value === "house"
-                                ? house
-                                : configElement.value === "hospital" && hospital
-                }
-                style={
-                    configElement.finishedBuildDays &&
-                        configElement.durationBuildDays &&
-                        configElement.finishedBuildDays !==
-                        configElement.durationBuildDays
-                        ? {
-                            WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ${configElement.finishedBuildDays /
-                                configElement.durationBuildDays}))`
-                        }
-                        : {}
-                }
-            />
+            {configElement.haveImage &&
+                <img
+                    src={`./images/${configElement.value}.png`}
+                    style={
+                        configElement.finishedBuildDays &&
+                            configElement.durationBuildDays &&
+                            configElement.finishedBuildDays !==
+                            configElement.durationBuildDays
+                            ? {
+                                WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ${configElement.finishedBuildDays /
+                                    configElement.durationBuildDays}))`
+                            }
+                            : {}
+                    }
+                />
+            }
         </div>
     );
 };

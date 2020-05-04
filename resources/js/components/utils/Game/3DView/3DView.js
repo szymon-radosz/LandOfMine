@@ -14,7 +14,9 @@ class ThreeDView extends Component {
             try {
                 const mtlLoader = new MTLLoader();
                 let materialUrl =
-                    "http://land-of-mine.com/objects/Scene_City.mtl";
+                    "http://127.0.0.1:8000/objects/Scene_City.mtl";
+                // let materialUrl =
+                //     "http://land-of-mine.com/objects/Scene_City.mtl";
                 mtlLoader.load(materialUrl, materials => {
                     materials.preload();
 
@@ -23,19 +25,22 @@ class ThreeDView extends Component {
                     let modelUrl;
 
                     if (position === "top-left") {
-                        //modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "top-right") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "bottom-right") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else if (position === "bottom-left") {
-                        modelUrl = "http://land-of-mine.com/modeltwo.obj";
+                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj";
+                        //modelUrl = "http://land-of-mine.com/modeltwo.obj";
                     } else {
-                        // modelUrl =
-                        //     "http://127.0.0.1:8000/objects/Scene_City.obj";
                         modelUrl =
-                            "http://land-of-mine.com/objects/Scene_City.obj";
+                            "http://127.0.0.1:8000/objects/Scene_City.obj";
+                        // modelUrl =
+                        //     "http://land-of-mine.com/objects/Scene_City.obj";
                     }
 
                     objLoader.load(modelUrl, obj => {

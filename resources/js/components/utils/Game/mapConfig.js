@@ -142,7 +142,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 16,
@@ -151,7 +151,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 17,
@@ -160,7 +160,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 18,
@@ -169,7 +169,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 19,
@@ -178,7 +178,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     // ==================== row - 2 ====================
 
@@ -307,14 +307,14 @@ const initialMapConfig = [
     {
         x: 13,
         y: 1,
-        value: "house",
+        value: "sky-building-green",
         initialElement: true,
         population: 1000,
         materials: 0,
-        finishedBuildDays: 3,
-        durationBuildDays: 3,
+        finishedBuildDays: 7,
+        durationBuildDays: 7,
         money: 0,
-        desriptionHeader: "Apartment",
+        desriptionHeader: "Sky Building Green",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -343,7 +343,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 17,
@@ -352,7 +352,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 18,
@@ -361,7 +361,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 19,
@@ -370,7 +370,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     //==================== row - 3 ====================
     {
@@ -503,14 +503,14 @@ const initialMapConfig = [
     {
         x: 13,
         y: 2,
-        value: "house",
+        value: "sky-building-red",
         initialElement: true,
         population: 1000,
         materials: 0,
-        finishedBuildDays: 3,
-        durationBuildDays: 3,
+        finishedBuildDays: 7,
+        durationBuildDays: 7,
         money: 0,
-        desriptionHeader: "Apartment",
+        desriptionHeader: "Sky Building Red",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -548,7 +548,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 18,
@@ -557,7 +557,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 19,
@@ -566,7 +566,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     //==================== row - 4 ====================
     {
@@ -689,14 +689,14 @@ const initialMapConfig = [
     {
         x: 13,
         y: 3,
-        value: "house",
+        value: "sky-building-yellow",
         initialElement: true,
         population: 1000,
         materials: 0,
-        finishedBuildDays: 3,
-        durationBuildDays: 3,
+        finishedBuildDays: 7,
+        durationBuildDays: 7,
         money: 0,
-        desriptionHeader: "Apartment",
+        desriptionHeader: "Sky Building Yellow",
         descriptionContent: "+1000 Free Human Resources",
         haveImage: true
     },
@@ -743,7 +743,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     {
         x: 19,
@@ -752,7 +752,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     //==================== row - 5 ====================
     {
@@ -933,7 +933,7 @@ const initialMapConfig = [
         initialElement: true,
         population: 0,
         money: 0,
-        haveImage: true
+        haveImage: false
     },
     //==================== row - 6 ====================
     {

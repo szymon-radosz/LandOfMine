@@ -5,7 +5,7 @@ import { MainContext } from "./../../MainContext";
 import Menu from "./../../global/Menu";
 import SideOptions from "./../../global/SideOptions";
 import Newsletter from "./../../global/Newsletter";
-import aboutImg from "./../../../../assets/images/about.jpg";
+import aboutImg from "./../../../../assets/images/about.jpg?v=1";
 
 const Home = () => {
     const context = useContext(MainContext);
