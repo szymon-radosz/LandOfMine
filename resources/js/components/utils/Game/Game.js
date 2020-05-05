@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import BottomPanel from "./BottomPanel/BottomPanel";
-import Map from "./Map/Map";
+// import Map from "./Map/Map";
+import Map from "./Map/Map"
 import { GameContext } from "./GameContext";
 import { MainContext } from "./../../MainContext";
 import initialMapConfig from "./mapConfig";
 import moment from "moment";
 import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
-import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
+// import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 
 // zoomX: 20, zoomY: 10 - start position
 // zoomX: 18, zoomY: 8
@@ -33,6 +34,7 @@ class Game extends Component {
             showActionModal: false,
             activeXCord: 0,
             activeYCord: 0,
+            activeZCord: 0,
             showDescription: false,
             isDragging: false,
             showMapRoadBackLight: "hide"
@@ -67,8 +69,8 @@ class Game extends Component {
             this.setState(prevState => ({
                 mapConfig: prevState.mapConfig.map(mapConfigObject =>
                     mapConfigObject.x == this.state.activeXCord &&
-                        mapConfigObject.y == this.state.activeYCord
-                        ? Object.assign(mapConfigObject, {
+                        mapConfigObject.y == this.state.activeYCord &&
+                        mapConfigObject.z == this.state.activeZCord ? Object.assign(mapConfigObject, {
                             value: value,
                             initialElement: false,
                             population: population,
@@ -229,34 +231,38 @@ class Game extends Component {
         }, 1000);
     };
 
-    handleSetActionModal = (x = 0, y = 0) => {
+    handleSetActionModal = (x = 0, y = 0, z = 0) => {
         this.setState({
             showActionModal: !this.state.showActionModal,
             activeXCord: x,
-            activeYCord: y
+            activeYCord: y,
+            activeZCord: z
         });
     };
 
-    handleSetElementDescription = (x = 0, y = 0) => {
-        const { activeXCord, activeYCord, showDescription } = this.state;
+    handleSetElementDescription = (x = 0, y = 0, z = 0) => {
+        const { activeXCord, activeYCord, activeZCord, showDescription } = this.state;
 
         //user clicked in active object Description, then hide that description
-        if (x === activeXCord && y === activeYCord && showDescription) {
+        if (x === activeXCord && y === activeYCord && z === activeZCord && showDescription) {
             this.setState({
                 showDescription: false,
                 activeXCord: x,
-                activeYCord: y
+                activeYCord: y,
+                activeZCord: z
             });
         } else {
             this.setState({
                 showDescription: true,
                 activeXCord: x,
-                activeYCord: y
+                activeYCord: y,
+                activeZCord: z
             });
         }
     };
 
     componentDidMount = () => {
+        console.log(["initialMapConfig", initialMapConfig])
         this.setState({
             mapConfig: initialMapConfig,
             date: moment("2000-01-01")
@@ -281,6 +287,7 @@ class Game extends Component {
             showActionModal,
             activeXCord,
             activeYCord,
+            activeZCord,
             showDescription,
             isDragging,
             showMapRoadBackLight
@@ -308,6 +315,7 @@ class Game extends Component {
                         showActionModal: showActionModal,
                         activeXCord: activeXCord,
                         activeYCord: activeYCord,
+                        activeZCord: activeZCord,
                         handleSetElementDescription: this
                             .handleSetElementDescription,
                         showDescription: showDescription,
@@ -316,11 +324,11 @@ class Game extends Component {
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
-                    <ReactCursorPosition
+                    {/* <ReactCursorPosition
                         activationInteractionMouse={INTERACTIONS.CLICK}
-                    >
-                        <Map />
-                    </ReactCursorPosition>
+                    > */}
+                    <Map />
+                    {/* </ReactCursorPosition> */}
                     <BottomPanel />
                 </GameContext.Provider>
             </div>

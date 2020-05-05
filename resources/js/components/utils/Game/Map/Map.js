@@ -5,6 +5,7 @@ import ElementImage from "./ElementImage/ElementImage";
 import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
 import ThreeDView from "./../3DView/3DView";
+import MapThreeD from "./Map3D/MapThreeD"
 import MapRoadPerson from "./MapRoadPerson/MapRoadPerson";
 
 class Map extends Component {
@@ -12,7 +13,7 @@ class Map extends Component {
         super(props);
 
         this.state = {
-            showThreeDView: false,
+            showThreeDView: true,
             activeXMapRoadPreview: -1,
             activeYMapRoadPreview: -1
         };
@@ -30,7 +31,7 @@ class Map extends Component {
     };
 
     render() {
-        const { zoomX, zoomY, mapConfig, showActionModal } = this.context;
+        //const { zoomX, zoomY, mapConfig, showActionModal } = this.context;
         const {
             showThreeDView,
             activeXMapRoadPreview,
@@ -39,7 +40,7 @@ class Map extends Component {
 
         return (
             <div className="game__map--container">
-                {zoomY &&
+                {/* {zoomY &&
                     [...Array(zoomY)].map((yElement, y) => {
                         //console.log(["=======", y]);
                         return (
@@ -157,9 +158,9 @@ class Map extends Component {
                                     })}
                             </div>
                         );
-                    })}
+                    })} */}
 
-                {showActionModal && <ActionModal />}
+                {/* {showActionModal && <ActionModal />} */}
 
                 {!showThreeDView && (
                     <div
@@ -171,18 +172,20 @@ class Map extends Component {
                     </div>
                 )}
 
-                {showThreeDView && (
+                {/* {showThreeDView && (
                     <ThreeDView
                         handleShowThreeDView={this.handleShowThreeDView}
                     />
-                )}
+                )} */}
 
-                <ZoomBtns />
+                {/* <ZoomBtns /> */}
 
-                <MapRoadPerson
+                <MapThreeD />
+
+                {/* <MapRoadPerson
                     handleShowThreeDView={this.handleShowThreeDView}
                     handleSetMapActiveCoords={this.handleSetMapActiveCoords}
-                />
+                /> */}
             </div>
         );
     }

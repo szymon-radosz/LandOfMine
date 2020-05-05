@@ -28,6 +28,7 @@ export const GameContext = React.createContext({
     showActionModal: false,
     activeXCord: 0,
     activeYCord: 0,
+    activeZCord: 0,
     handleSetElementDescription: (x, y) => { },
     showDescription: false,
     showMapRoadBackLight: "hide",

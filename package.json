@@ -89,6 +89,7 @@
         "redux-thunk": "^2.3.0",
         "styled-components": "^4.4.1",
         "three": "^0.115.0",
+        "three.interaction": "^0.2.2",
         "typescript": "^3.8.3",
         "underscore": "^1.9.1",
         "uuid": "^3.3.3"
