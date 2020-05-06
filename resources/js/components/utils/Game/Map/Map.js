@@ -4,7 +4,6 @@ import { GameContext } from "./../GameContext";
 import ElementImage from "./ElementImage/ElementImage";
 import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
-import ThreeDView from "./../3DView/3DView";
 import MapThreeD from "./Map3D/MapThreeD"
 import MapRoadPerson from "./MapRoadPerson/MapRoadPerson";
 

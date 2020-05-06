@@ -4,31 +4,21 @@ import {
     Scene,
     PerspectiveCamera,
     WebGLRenderer,
-    CircleGeometry,
     PlaneGeometry,
     MeshBasicMaterial,
     Mesh,
-    BoxGeometry,
     DirectionalLight,
     AmbientLight,
     TextureLoader
 } from 'three';
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
-// import { TextureLoader } from "three/examples/jsm/loaders/TextureLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Interaction } from 'three.interaction';
 import { GameContext } from "./../../GameContext";
 import ActionModal from "./../ActionModal/ActionModal";
 
-
-//const previousContext;
-
-// const contextType = GameContext;
-
 class MapThreeD extends Component {
-
-
     constructor(props) {
         super(props);
 
@@ -38,15 +28,30 @@ class MapThreeD extends Component {
         this.previousContext;
     }
 
+    componentDidMount = async () => {
+        this.loadMapInitSettings();
+    };
 
+    componentDidUpdate() {
+        if (this.previousContext.mapConfig !== this.context.mapConfig) {
+            this.loadRoadAndEmptyMapElements();
+            this.loadMapConfigObjects();
+        }
 
-    loadObj = (x, y, z, name) => {
+        this.previousContext = this.context;
+    }
+
+    componentWillUnmount = () => {
+        this.stop();
+        this.mountMap.removeChild(this.mapRenderer.domElement);
+    };
+
+    loadObj = (x, y, z, name, scaleY = false, scaleParam = 0.0013) => {
         return new Promise(async (resolve, reject) => {
             try {
                 const mtlLoader = new MTLLoader();
                 let materialUrl =
                     `http://127.0.0.1:8000/objects/${name}.mtl`;
-
 
                 mtlLoader.load(materialUrl, materials => {
                     materials.preload();
@@ -66,10 +71,14 @@ class MapThreeD extends Component {
                             }
                         });
 
-                        obj.scale.set(0.0005, 0.0005, 0.0005);
+                        obj.scale.set(scaleParam, scaleParam, scaleParam);
                         this.scene.add(obj);
                         obj.position.set(x, y, z);
-                        //obj.rotateX(-Math.PI * 0.5);
+
+                        //make e.g. road vartical - horizontal
+                        if (scaleY) {
+                            obj.rotateY(Math.PI * 0.5);
+                        }
 
                         resolve("loaded");
                     });
@@ -81,7 +90,7 @@ class MapThreeD extends Component {
         });
     };
 
-    componentDidMount = async () => {
+    loadMapInitSettings = () => {
         this.previousContext = this.context;
 
         const width = this.mountMap.clientWidth;
@@ -93,9 +102,9 @@ class MapThreeD extends Component {
         const camera = new PerspectiveCamera(
             90, width / height, 1, 100
         );
-        camera.position.z = 15;
+        camera.position.z = 5;
         camera.position.x = 5;
-        //camera.position.y = 5;
+        camera.position.y = 1.5;
 
         const mapRenderer = new WebGLRenderer({ antialias: true });
 
@@ -104,16 +113,6 @@ class MapThreeD extends Component {
         this.mapRenderer = mapRenderer;
 
         const interaction = new Interaction(this.mapRenderer, this.scene, this.camera);
-
-
-
-
-
-        // await this.loadObj("top-left", scene);
-        // await this.loadObj("top-right", scene);
-        // await this.loadObj("bottom-right", scene);
-        // await this.loadObj("bottom-left", scene);
-
 
         mapRenderer.setClearColor("#e8f4ff");
         mapRenderer.setSize(width, height, false);
@@ -133,62 +132,75 @@ class MapThreeD extends Component {
 
         this.mountMap.appendChild(this.mapRenderer.domElement);
         this.start();
-
-        // this.loadMapElements()
-    };
-
-    componentDidUpdate() {
-        if (this.previousContext.mapConfig !== this.context.mapConfig) {
-            this.loadMapElements();
-        }
-
-        this.previousContext = this.context;
     }
 
-    loadMapElements = () => {
-        for (let i = 0; i < 10; i++) {
-            for (let j = 0; j < 10; j++) {
+    loadRoadAndEmptyMapElements = async () => {
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                //console.log(["i, j", i, j])
+
                 let geometryLand = new PlaneGeometry(1, 1);
-                let materialLand = new MeshBasicMaterial({ color: i % 2 === 0 && j % 2 === 0 ? "black" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green" });
+                let materialLand = new MeshBasicMaterial({
+                    color:
+                        i % 2 === 0 &&
+                            j % 2 === 0 ? "transparent" :
+                            i % 2 === 0 &&
+                                j % 2 !== 0 ? "red" :
+                                j % 2 === 0 &&
+                                    i % 2 !== 0 ? "blue" : "green"
+                });
                 let land = new Mesh(geometryLand, materialLand);
                 land.rotateX(-Math.PI * 0.5);
-                land.position.set(i, 1, j)
+                land.position.set(i, 0, j)
+
+                // road cross
+                if (i % 2 === 0 &&
+                    j % 2 === 0) {
+                    await this.loadObj(i + 0.04, 0.005, j - 0.05, "roadCross", false, 0.00128);
+                }
+
+                //roadHorizontal
+                if (i % 2 === 0 &&
+                    j % 2 !== 0) {
+                    await this.loadObj(i + 0.07, 0.005, j - 0.08, "roadHorizontal", false, 0.00128);
+                }
+
+                // //roadVertical
+                if (j % 2 === 0 &&
+                    i % 2) {
+                    await this.loadObj(i - 0.08, 0.005, j - 0.08, "roadHorizontal", true, 0.00128);
+                }
 
                 this.scene.add(land);
 
-                //console.log(["this.context", this.context])
-
-                this.context.mapConfig && this.context.mapConfig.length > 0 && this.context.mapConfig.map(async (configElement, i) => {
-                    if (configElement.x === i && configElement.y === 1 && configElement.z === j) {
-                        console.log(configElement)
-                        await this.loadObj(configElement.x, configElement.y, configElement.z, configElement.value);
-                    }
-                })
-
                 land.cursor = 'pointer';
                 land.on('click', (e) => {
-                    console.log("test", e, e.data.target.position)
+                    //console.log("test", e, e.data.target.position)
 
                     let { x, y, z } = e.data.target.position;
 
-                    //this.context.handleSetActionModal(x, y, z)
+                    this.context.handleSetActionModal(x, y, z)
+                });
 
-                    // let geometry = new BoxGeometry(0.3, 0.3, 0.3);
-                    // let material = new MeshBasicMaterial({ color: "#505c62" });
-                    // let cube = new Mesh(geometry, material);
-                    // cube.rotateX(-Math.PI * 0.5);
-
-                    // scene.add(cube);
-                    // cube.position.set(x, y, z);
+                //change opacity on hover
+                let startGreenColor;
+                land.on('mouseover', e => {
+                    startGreenColor = e.data.target.material.color.g;
+                    e.data.target.material.color.g = 0.8
+                });
+                land.on('mouseout', e => {
+                    e.data.target.material.color.g = startGreenColor
                 });
             }
         }
     }
 
-    componentWillUnmount = () => {
-        this.stop();
-        this.mountMap.removeChild(this.mapRenderer.domElement);
-    };
+    loadMapConfigObjects = () => {
+        this.context.mapConfig && this.context.mapConfig.length > 0 && this.context.mapConfig.map(async (configElement, i) => {
+            let { x, y, z, value: name, scaleY, scaleParam } = configElement;
+            await this.loadObj(x, y, z, name, scaleY, scaleParam);
+        })
+    }
 
     start = () => {
         if (!this.frameIdMap) {

@@ -126964,274 +126964,6 @@ var DashboardContainer = function DashboardContainer(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/components/utils/Game/3DView/3DView.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/utils/Game/3DView/3DView.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! three/examples/jsm/loaders/OBJLoader */ "./node_modules/three/examples/jsm/loaders/OBJLoader.js");
-/* harmony import */ var three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/MTLLoader */ "./node_modules/three/examples/jsm/loaders/MTLLoader.js");
-/* harmony import */ var three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! three/examples/jsm/controls/OrbitControls */ "./node_modules/three/examples/jsm/controls/OrbitControls.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var ThreeDView = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(ThreeDView, _Component);
-
-  function ThreeDView(props) {
-    var _this;
-
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, ThreeDView);
-
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(ThreeDView).call(this, props));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadObj", function (position, scene) {
-      return new Promise( /*#__PURE__*/function () {
-        var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(resolve, reject) {
-          var mtlLoader, materialUrl;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  try {
-                    mtlLoader = new three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__["MTLLoader"]();
-                    materialUrl = "http://127.0.0.1:8000/objects/Scene_City.mtl"; // let materialUrl =
-                    //     "http://land-of-mine.com/objects/Scene_City.mtl";
-
-                    mtlLoader.load(materialUrl, function (materials) {
-                      materials.preload();
-                      var objLoader = new three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__["OBJLoader"]();
-                      objLoader.setMaterials(materials);
-                      var modelUrl;
-
-                      if (position === "top-left") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
-                      } else if (position === "top-right") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
-                      } else if (position === "bottom-right") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
-                      } else if (position === "bottom-left") {
-                        modelUrl = "http://127.0.0.1:8000/modeltwo.obj"; //modelUrl = "http://land-of-mine.com/modeltwo.obj";
-                      } else {
-                        modelUrl = "http://127.0.0.1:8000/objects/Scene_City.obj"; // modelUrl =
-                        //     "http://land-of-mine.com/objects/Scene_City.obj";
-                      }
-
-                      objLoader.load(modelUrl, function (obj) {
-                        obj.scale.set(0.006, 0.006, 0.006);
-                        scene.add(obj);
-
-                        if (position === "top-left") {
-                          obj.position.set(-3, 0.2, -3.5);
-                        } else if (position === "top-right") {
-                          obj.position.set(3, 0.2, -3.5);
-                        } else if (position === "bottom-right") {
-                          obj.position.set(3, 0.2, 1.5);
-                        } else if (position === "bottom-left") {
-                          obj.position.set(-3, 0.2, 1.5);
-                        } else {
-                          obj.position.set(-3, 0.2, 3);
-                        }
-
-                        obj.rotateX(0.05);
-                        resolve("loaded");
-                      });
-                    });
-                  } catch (err) {
-                    console.log(err);
-                    reject("not loaded");
-                  }
-
-                case 1:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee);
-        }));
-
-        return function (_x, _x2) {
-          return _ref.apply(this, arguments);
-        };
-      }());
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-      var width, height, scene, camera, renderer, geometryLand, materialLand, land, geometry, material, cube, light;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              width = _this.mount.clientWidth;
-              height = _this.mount.clientHeight;
-              scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
-              camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](75, width / height, 0.1, 1000);
-              camera.position.z = 5; //camera.position.y = 5;
-
-              renderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
-                antialias: true
-              }); //create green land
-
-              geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["CircleGeometry"](10, 1000);
-              materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
-                color: "#b9ffb9"
-              });
-              land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
-              land.rotateX(4.8);
-              scene.add(land); //create vertical road
-
-              geometry = new three__WEBPACK_IMPORTED_MODULE_10__["BoxGeometry"](2, 0.1, 18);
-              material = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
-                color: "#505c62"
-              });
-              cube = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometry, material);
-              cube.rotateX(0.095);
-              scene.add(cube);
-              cube.position.set(0, 0.1, 0);
-              _this.scene = scene;
-              _this.camera = camera;
-              _this.renderer = renderer;
-              _this.land = land;
-              _context2.next = 23;
-              return _this.loadObj("top-left", scene);
-
-            case 23:
-              _context2.next = 25;
-              return _this.loadObj("top-right", scene);
-
-            case 25:
-              _context2.next = 27;
-              return _this.loadObj("bottom-right", scene);
-
-            case 27:
-              _context2.next = 29;
-              return _this.loadObj("bottom-left", scene);
-
-            case 29:
-              // await this.loadObj("bottom-lesdsdft", scene);
-              renderer.setClearColor("#e8f4ff");
-              renderer.setSize(width, height); //light
-
-              light = new three__WEBPACK_IMPORTED_MODULE_10__["DirectionalLight"](0xffffff, 0.5);
-              light.position.setScalar(5);
-              scene.add(light);
-              scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 0.5)); //cursor control
-
-              _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["OrbitControls"](_this.camera, _this.mount);
-
-              _this.controls.target.set(0, 0, 0); // view direction perpendicular to XY-plane
-
-
-              _this.controls.enableZoom = false; // optional
-
-              _this.controls.minPolarAngle = _this.controls.maxPolarAngle = 1.4;
-
-              _this.mount.appendChild(_this.renderer.domElement);
-
-              _this.start();
-
-            case 41:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    })));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentWillUnmount", function () {
-      _this.stop();
-
-      _this.mount.removeChild(_this.renderer.domElement);
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "start", function () {
-      if (!_this.frameId) {
-        _this.frameId = requestAnimationFrame(_this.animate);
-      }
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "stop", function () {
-      cancelAnimationFrame(_this.frameId);
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "animate", function () {
-      _this.land.rotation.z += 0.01;
-
-      _this.renderScene();
-
-      _this.frameId = window.requestAnimationFrame(_this.animate);
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "renderScene", function () {
-      _this.renderer.render(_this.scene, _this.camera);
-    });
-
-    return _this;
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(ThreeDView, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        className: "three-d__container",
-        ref: function ref(mount) {
-          _this2.mount = mount;
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        className: "map__left-top--btn",
-        onClick: function onClick() {
-          return _this2.props.handleShowThreeDView(false);
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, "Go back to the map")));
-    }
-  }]);
-
-  return ThreeDView;
-}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (ThreeDView);
-
-/***/ }),
-
 /***/ "./resources/js/components/utils/Game/BottomPanel/BottomPanel.js":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/utils/Game/BottomPanel/BottomPanel.js ***!
@@ -128691,10 +128423,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
 /* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
 /* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
-/* harmony import */ var _3DView_3DView__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../3DView/3DView */ "./resources/js/components/utils/Game/3DView/3DView.js");
-/* harmony import */ var _Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Map3D/MapThreeD */ "./resources/js/components/utils/Game/Map/Map3D/MapThreeD.js");
-/* harmony import */ var _MapRoadPerson_MapRoadPerson__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./MapRoadPerson/MapRoadPerson */ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.js");
-
+/* harmony import */ var _Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Map3D/MapThreeD */ "./resources/js/components/utils/Game/Map/Map3D/MapThreeD.js");
+/* harmony import */ var _MapRoadPerson_MapRoadPerson__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./MapRoadPerson/MapRoadPerson */ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.js");
 
 
 
@@ -128765,7 +128495,7 @@ var Map = /*#__PURE__*/function (_Component) {
         onClick: function onClick() {
           return _this2.context.handleDayPassed();
         }
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_14__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_13__["default"], null));
     }
   }]);
 
@@ -128826,13 +128556,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import { TextureLoader } from "three/examples/jsm/loaders/TextureLoader";
 
 
 
 
- //const previousContext;
-// const contextType = GameContext;
+
 
 var MapThreeD = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(MapThreeD, _Component);
@@ -128844,13 +128572,36 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(MapThreeD).call(this, props));
 
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _this.loadMapInitSettings();
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    })));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentWillUnmount", function () {
+      _this.stop();
+
+      _this.mountMap.removeChild(_this.mapRenderer.domElement);
+    });
+
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadObj", function (x, y, z, name) {
+      var scaleY = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+      var scaleParam = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0.0013;
       return new Promise( /*#__PURE__*/function () {
-        var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(resolve, reject) {
+        var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(resolve, reject) {
           var mtlLoader, materialUrl;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
             while (1) {
-              switch (_context.prev = _context.next) {
+              switch (_context2.prev = _context2.next) {
                 case 0:
                   try {
                     mtlLoader = new three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__["MTLLoader"]();
@@ -128869,11 +128620,15 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
                             child.material.map = texture;
                           }
                         });
-                        obj.scale.set(0.0005, 0.0005, 0.0005);
+                        obj.scale.set(scaleParam, scaleParam, scaleParam);
 
                         _this.scene.add(obj);
 
-                        obj.position.set(x, y, z); //obj.rotateX(-Math.PI * 0.5);
+                        obj.position.set(x, y, z); //make e.g. road vartical - horizontal
+
+                        if (scaleY) {
+                          obj.rotateY(Math.PI * 0.5);
+                        }
 
                         resolve("loaded");
                       });
@@ -128885,142 +128640,196 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
                 case 1:
                 case "end":
-                  return _context.stop();
+                  return _context2.stop();
               }
             }
-          }, _callee);
+          }, _callee2);
         }));
 
         return function (_x, _x2) {
-          return _ref.apply(this, arguments);
+          return _ref2.apply(this, arguments);
         };
       }());
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-      var width, height, scene, camera, mapRenderer, interaction, light;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _this.previousContext = _this.context;
-              width = _this.mountMap.clientWidth;
-              height = _this.mountMap.clientHeight;
-              console.log(["width", width, height]);
-              scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
-              camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](90, width / height, 1, 100);
-              camera.position.z = 15;
-              camera.position.x = 5; //camera.position.y = 5;
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapInitSettings", function () {
+      _this.previousContext = _this.context;
+      var width = _this.mountMap.clientWidth;
+      var height = _this.mountMap.clientHeight;
+      console.log(["width", width, height]);
+      var scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
+      var camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](90, width / height, 1, 100);
+      camera.position.z = 5;
+      camera.position.x = 5;
+      camera.position.y = 1.5;
+      var mapRenderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
+        antialias: true
+      });
+      _this.scene = scene;
+      _this.camera = camera;
+      _this.mapRenderer = mapRenderer;
+      var interaction = new three_interaction__WEBPACK_IMPORTED_MODULE_14__["Interaction"](_this.mapRenderer, _this.scene, _this.camera);
+      mapRenderer.setClearColor("#e8f4ff");
+      mapRenderer.setSize(width, height, false); //light
 
-              mapRenderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
-                antialias: true
-              });
-              _this.scene = scene;
-              _this.camera = camera;
-              _this.mapRenderer = mapRenderer;
-              interaction = new three_interaction__WEBPACK_IMPORTED_MODULE_14__["Interaction"](_this.mapRenderer, _this.scene, _this.camera); // await this.loadObj("top-left", scene);
-              // await this.loadObj("top-right", scene);
-              // await this.loadObj("bottom-right", scene);
-              // await this.loadObj("bottom-left", scene);
+      var light = new three__WEBPACK_IMPORTED_MODULE_10__["DirectionalLight"](0xffffff, 0.5);
+      light.position.setScalar(5);
+      scene.add(light);
+      scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 0.5)); //cursor control
 
-              mapRenderer.setClearColor("#e8f4ff");
-              mapRenderer.setSize(width, height, false); //light
+      _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["OrbitControls"](_this.camera, _this.mountMap);
 
-              light = new three__WEBPACK_IMPORTED_MODULE_10__["DirectionalLight"](0xffffff, 0.5);
-              light.position.setScalar(5);
-              scene.add(light);
-              scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 0.5)); //cursor control
-
-              _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["OrbitControls"](_this.camera, _this.mountMap);
-
-              _this.controls.target.set(0, 0, 0); // view direction perpendicular to XY-plane
+      _this.controls.target.set(0, 0, 0); // view direction perpendicular to XY-plane
 
 
-              _this.controls.enableZoom = true; // optional
+      _this.controls.enableZoom = true; // optional
 
-              _this.controls.screenSpacePanning = true;
-              _this.controls.minPolarAngle = _this.controls.maxPolarAngle = 1.4;
+      _this.controls.screenSpacePanning = true;
+      _this.controls.minPolarAngle = _this.controls.maxPolarAngle = 1.4;
 
-              _this.mountMap.appendChild(_this.mapRenderer.domElement);
+      _this.mountMap.appendChild(_this.mapRenderer.domElement);
 
-              _this.start(); // this.loadMapElements()
-
-
-            case 26:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    })));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapElements", function () {
-      for (var i = 0; i < 10; i++) {
-        var _loop = function _loop(j) {
-          var geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
-          var materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
-            color: i % 2 === 0 && j % 2 === 0 ? "black" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green"
-          });
-          var land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
-          land.rotateX(-Math.PI * 0.5);
-          land.position.set(i, 1, j);
-
-          _this.scene.add(land); //console.log(["this.context", this.context])
-
-
-          _this.context.mapConfig && _this.context.mapConfig.length > 0 && _this.context.mapConfig.map( /*#__PURE__*/function () {
-            var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(configElement, i) {
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
-                while (1) {
-                  switch (_context3.prev = _context3.next) {
-                    case 0:
-                      if (!(configElement.x === i && configElement.y === 1 && configElement.z === j)) {
-                        _context3.next = 4;
-                        break;
-                      }
-
-                      console.log(configElement);
-                      _context3.next = 4;
-                      return _this.loadObj(configElement.x, configElement.y, configElement.z, configElement.value);
-
-                    case 4:
-                    case "end":
-                      return _context3.stop();
-                  }
-                }
-              }, _callee3);
-            }));
-
-            return function (_x3, _x4) {
-              return _ref3.apply(this, arguments);
-            };
-          }());
-          land.cursor = 'pointer';
-          land.on('click', function (e) {
-            console.log("test", e, e.data.target.position);
-            var _e$data$target$positi = e.data.target.position,
-                x = _e$data$target$positi.x,
-                y = _e$data$target$positi.y,
-                z = _e$data$target$positi.z; //this.context.handleSetActionModal(x, y, z)
-            // let geometry = new BoxGeometry(0.3, 0.3, 0.3);
-            // let material = new MeshBasicMaterial({ color: "#505c62" });
-            // let cube = new Mesh(geometry, material);
-            // cube.rotateX(-Math.PI * 0.5);
-            // scene.add(cube);
-            // cube.position.set(x, y, z);
-          });
-        };
-
-        for (var j = 0; j < 10; j++) {
-          _loop(j);
-        }
-      }
+      _this.start();
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentWillUnmount", function () {
-      _this.stop();
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadRoadAndEmptyMapElements", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+      var i, _loop, j;
 
-      _this.mountMap.removeChild(_this.mapRenderer.domElement);
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              i = 0;
+
+            case 1:
+              if (!(i < 9)) {
+                _context4.next = 12;
+                break;
+              }
+
+              _loop = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(j) {
+                var geometryLand, materialLand, land, startGreenColor;
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+                  while (1) {
+                    switch (_context3.prev = _context3.next) {
+                      case 0:
+                        //console.log(["i, j", i, j])
+                        geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
+                        materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
+                          color: i % 2 === 0 && j % 2 === 0 ? "transparent" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green"
+                        });
+                        land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
+                        land.rotateX(-Math.PI * 0.5);
+                        land.position.set(i, 0, j); // road cross
+
+                        if (!(i % 2 === 0 && j % 2 === 0)) {
+                          _context3.next = 8;
+                          break;
+                        }
+
+                        _context3.next = 8;
+                        return _this.loadObj(i + 0.04, 0.005, j - 0.05, "roadCross", false, 0.00128);
+
+                      case 8:
+                        if (!(i % 2 === 0 && j % 2 !== 0)) {
+                          _context3.next = 11;
+                          break;
+                        }
+
+                        _context3.next = 11;
+                        return _this.loadObj(i + 0.07, 0.005, j - 0.08, "roadHorizontal", false, 0.00128);
+
+                      case 11:
+                        if (!(j % 2 === 0 && i % 2)) {
+                          _context3.next = 14;
+                          break;
+                        }
+
+                        _context3.next = 14;
+                        return _this.loadObj(i - 0.08, 0.005, j - 0.08, "roadHorizontal", true, 0.00128);
+
+                      case 14:
+                        _this.scene.add(land);
+
+                        land.cursor = 'pointer';
+                        land.on('click', function (e) {
+                          //console.log("test", e, e.data.target.position)
+                          var _e$data$target$positi = e.data.target.position,
+                              x = _e$data$target$positi.x,
+                              y = _e$data$target$positi.y,
+                              z = _e$data$target$positi.z;
+
+                          _this.context.handleSetActionModal(x, y, z);
+                        }); //change opacity on hover
+
+                        startGreenColor = void 0;
+                        land.on('mouseover', function (e) {
+                          startGreenColor = e.data.target.material.color.g;
+                          e.data.target.material.color.g = 0.8;
+                        });
+                        land.on('mouseout', function (e) {
+                          e.data.target.material.color.g = startGreenColor;
+                        });
+
+                      case 20:
+                      case "end":
+                        return _context3.stop();
+                    }
+                  }
+                }, _callee3);
+              });
+              j = 0;
+
+            case 4:
+              if (!(j < 9)) {
+                _context4.next = 9;
+                break;
+              }
+
+              return _context4.delegateYield(_loop(j), "t0", 6);
+
+            case 6:
+              j++;
+              _context4.next = 4;
+              break;
+
+            case 9:
+              i++;
+              _context4.next = 1;
+              break;
+
+            case 12:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    })));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapConfigObjects", function () {
+      _this.context.mapConfig && _this.context.mapConfig.length > 0 && _this.context.mapConfig.map( /*#__PURE__*/function () {
+        var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(configElement, i) {
+          var x, y, z, name, scaleY, scaleParam;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+            while (1) {
+              switch (_context5.prev = _context5.next) {
+                case 0:
+                  x = configElement.x, y = configElement.y, z = configElement.z, name = configElement.value, scaleY = configElement.scaleY, scaleParam = configElement.scaleParam;
+                  _context5.next = 3;
+                  return _this.loadObj(x, y, z, name, scaleY, scaleParam);
+
+                case 3:
+                case "end":
+                  return _context5.stop();
+              }
+            }
+          }, _callee5);
+        }));
+
+        return function (_x3, _x4) {
+          return _ref4.apply(this, arguments);
+        };
+      }());
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "start", function () {
@@ -129052,7 +128861,8 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate() {
       if (this.previousContext.mapConfig !== this.context.mapConfig) {
-        this.loadMapElements();
+        this.loadRoadAndEmptyMapElements();
+        this.loadMapConfigObjects();
       }
 
       this.previousContext = this.context;
@@ -129195,14 +129005,15 @@ __webpack_require__.r(__webpack_exports__);
 var initialMapConfig = [//==================== row - 1 ====================
 //x od 0 do 0, y = 1 i z od 0 do 9
 {
-  x: 0,
-  y: 1,
-  z: 9,
+  x: 5 + 0.05,
+  y: 0,
+  z: 5 + 0.3,
   value: "factory",
   initialElement: true,
   population: 0,
   money: 0,
-  haveImage: false
+  scaleY: false,
+  scaleParam: 0.0006
 } // {
 //     x: 1,
 //     y: 1,
