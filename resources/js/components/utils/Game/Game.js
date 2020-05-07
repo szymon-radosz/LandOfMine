@@ -7,12 +7,7 @@ import { MainContext } from "./../../MainContext";
 import initialMapConfig from "./mapConfig";
 import moment from "moment";
 import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
-// import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
-
-// zoomX: 20, zoomY: 10 - start position
-// zoomX: 18, zoomY: 8
-// zoomX: 16, zoomY: 6
-// zoomX: 14, zoomY: 4
+import HomeFirstSection from "./../Home/HomeFirstSection/HomeFirstSection"
 
 class Game extends Component {
     constructor(props) {
@@ -35,14 +30,20 @@ class Game extends Component {
             activeXCord: 0,
             activeYCord: 0,
             activeZCord: 0,
-            showDescription: false,
-            isDragging: false,
-            showMapRoadBackLight: "hide"
+            showMapLoader: true
         };
     }
 
-    handleMapRoadBackLight = status => {
-        this.setState({ showMapRoadBackLight: status });
+    componentDidMount = () => {
+        console.log(["initialMapConfig", initialMapConfig])
+        this.setState({
+            mapConfig: initialMapConfig,
+            date: moment("2000-01-01")
+                .format("DD.MM.YYYY")
+                .toString()
+        });
+
+        this.setLoaderOff();
     };
 
     handleUpdateMapConfigItem = (
@@ -117,40 +118,6 @@ class Game extends Component {
         }
 
         return true;
-    };
-
-    handleZoomChange = operation => {
-        const { zoomX } = this.state;
-
-        if (zoomX < 14 || zoomX > 20) {
-            this.context.handleShowAlert("Maximum length extended", "danger");
-        } else if (zoomX === 20) {
-            if (operation !== "increment") {
-                this.setState({
-                    zoomX: this.state.zoomX - 2,
-                    zoomY: this.state.zoomY - 2
-                });
-            }
-        } else if (zoomX === 14) {
-            if (operation === "increment") {
-                this.setState({
-                    zoomX: this.state.zoomX + 2,
-                    zoomY: this.state.zoomY + 2
-                });
-            }
-        } else {
-            if (operation === "increment") {
-                this.setState({
-                    zoomX: this.state.zoomX + 2,
-                    zoomY: this.state.zoomY + 2
-                });
-            } else {
-                this.setState({
-                    zoomX: this.state.zoomX - 2,
-                    zoomY: this.state.zoomY - 2
-                });
-            }
-        }
     };
 
     handleIncrementFinishedBuildDays = () => {
@@ -240,41 +207,14 @@ class Game extends Component {
         });
     };
 
-    handleSetElementDescription = (x = 0, y = 0, z = 0) => {
-        const { activeXCord, activeYCord, activeZCord, showDescription } = this.state;
-
-        //user clicked in active object Description, then hide that description
-        if (x === activeXCord && y === activeYCord && z === activeZCord && showDescription) {
-            this.setState({
-                showDescription: false,
-                activeXCord: x,
-                activeYCord: y,
-                activeZCord: z
-            });
-        } else {
-            this.setState({
-                showDescription: true,
-                activeXCord: x,
-                activeYCord: y,
-                activeZCord: z
-            });
-        }
-    };
-
-    componentDidMount = () => {
-        console.log(["initialMapConfig", initialMapConfig])
-        this.setState({
-            mapConfig: initialMapConfig,
-            date: moment("2000-01-01")
-                .format("DD.MM.YYYY")
-                .toString()
-        });
-    };
+    setLoaderOff = () => {
+        setTimeout(() => {
+            this.setState({ showMapLoader: false })
+        }, 11000)
+    }
 
     render() {
         const {
-            zoomX,
-            zoomY,
             date,
             money,
             population,
@@ -288,18 +228,13 @@ class Game extends Component {
             activeXCord,
             activeYCord,
             activeZCord,
-            showDescription,
-            isDragging,
-            showMapRoadBackLight
+            showMapLoader
         } = this.state;
 
         return (
             <div className="game__container">
                 <GameContext.Provider
                     value={{
-                        zoomX: zoomX,
-                        zoomY: zoomY,
-                        handleZoomChange: this.handleZoomChange,
                         date: date,
                         money: money,
                         population: population,
@@ -317,18 +252,15 @@ class Game extends Component {
                         activeYCord: activeYCord,
                         activeZCord: activeZCord,
                         handleSetElementDescription: this
-                            .handleSetElementDescription,
-                        showDescription: showDescription,
-                        showMapRoadBackLight: showMapRoadBackLight,
-                        handleMapRoadBackLight: this.handleMapRoadBackLight
+                            .handleSetElementDescription
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
-                    {/* <ReactCursorPosition
-                        activationInteractionMouse={INTERACTIONS.CLICK}
-                    > */}
+
+                    {showMapLoader && <HomeFirstSection loadScreen={true} />}
+
                     <Map />
-                    {/* </ReactCursorPosition> */}
+
                     <BottomPanel />
                 </GameContext.Provider>
             </div>

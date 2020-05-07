@@ -1,193 +1,331 @@
 import React, { Component } from "react";
-import ZoomBtns from "./ZoomBtns/ZoomBtns";
+// import * as THREE from "three";
+import {
+    Scene,
+    PerspectiveCamera,
+    WebGLRenderer,
+    PlaneGeometry,
+    MeshBasicMaterial,
+    Mesh,
+    DirectionalLight,
+    AmbientLight,
+    TextureLoader
+} from 'three';
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
+import { MapControls } from "three/examples/jsm/controls/OrbitControls";
+import { Interaction } from 'three.interaction';
 import { GameContext } from "./../GameContext";
-import ElementImage from "./ElementImage/ElementImage";
-import ElementWithoutImage from "./ElementWithoutImage/ElementWithoutImage";
 import ActionModal from "./ActionModal/ActionModal";
-import MapThreeD from "./Map3D/MapThreeD"
-import MapRoadPerson from "./MapRoadPerson/MapRoadPerson";
 
-class Map extends Component {
+class MapThreeD extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            showThreeDView: true,
-            activeXMapRoadPreview: -1,
-            activeYMapRoadPreview: -1
-        };
+            initialObjectScale: 0.00128,
+        }
+
+        this.previousContext;
     }
 
-    handleShowThreeDView = (status) => {
-        this.setState({ showThreeDView: status });
+    componentDidMount = async () => {
+        this.loadMapInitSettings();
+        //load roads and default elements once
+        this.loadRoadAndEmptyMapElements();
     };
 
-    handleSetMapActiveCoords = (cord, value) => {
-        if (cord === "x") {
-            this.setState({ activeXMapRoadPreview: value });
+    // setLoaderOff = () => {
+    //     setTimeout(() => {
+    //         this.setState({ showLoader: false })
+    //     }, 1000000)
+    // }
+
+    componentDidUpdate() {
+        if (this.previousContext.mapConfig !== this.context.mapConfig) {
+            this.loadMapConfigObjects();
         }
-        this.setState({ activeYMapRoadPreview: value });
+
+        this.previousContext = this.context;
+    }
+
+    componentWillUnmount = () => {
+        this.stop();
+        this.mountMap.removeChild(this.mapRenderer.domElement);
+    };
+
+    loadObj = (x, y, z, name, scaleY = false, scaleParam = 0.0013, descriptionHeader, descriptionContent) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const mtlLoader = new MTLLoader();
+                let materialUrl =
+                    `http://127.0.0.1:8000/objects/${name}.mtl`;
+
+                mtlLoader.load(materialUrl, materials => {
+                    materials.preload();
+
+                    const objLoader = new OBJLoader();
+                    objLoader.setMaterials(materials);
+
+                    let modelUrl = `http://127.0.0.1:8000/objects/${name}.obj`;
+
+                    objLoader.load(modelUrl, obj => {
+                        let texture = new TextureLoader().load(`http://127.0.0.1:8000/objects/${name}.png`);
+                        obj.traverse(function (child) {   // aka setTexture
+                            if (child instanceof Mesh) {
+                                child.material.map = texture;
+                            }
+                        });
+
+                        obj.scale.set(scaleParam, scaleParam, scaleParam);
+                        this.scene.add(obj);
+                        obj.position.set(x, y, z);
+
+                        obj.on('click', e => {
+                            console.log(["description", descriptionHeader, descriptionContent])
+                        });
+
+                        //make e.g. road vartical - horizontal
+                        if (scaleY) {
+                            obj.rotateY(Math.PI * 0.5);
+                        }
+
+                        resolve("loaded");
+                    });
+                });
+            } catch (err) {
+                console.log(err);
+                reject("not loaded");
+            }
+        });
+    };
+
+    loadMapInitSettings = () => {
+        this.previousContext = this.context;
+
+        const width = this.mountMap.clientWidth;
+        const height = this.mountMap.clientHeight;
+
+        //console.log(["width", width, height])
+
+        const scene = new Scene();
+        const camera = new PerspectiveCamera(
+            20, width / height, 1, 1000
+        );
+        camera.position.z = 5;
+        camera.position.x = 5;
+        camera.position.y = 5.5;
+
+        const mapRenderer = new WebGLRenderer({ antialias: true });
+
+        this.scene = scene;
+        this.camera = camera;
+        this.mapRenderer = mapRenderer;
+
+        const interaction = new Interaction(this.mapRenderer, this.scene, this.camera);
+
+        mapRenderer.setClearColor("#e8f4ff");
+        mapRenderer.setSize(width, height, false);
+        mapRenderer.setPixelRatio(window.devicePixelRatio);
+
+        //light
+        var light = new DirectionalLight(0xffffff, 0.5);
+        light.position.setScalar(5);
+        scene.add(light);
+        scene.add(new AmbientLight(0xffffff, 1));
+
+        //cursor control
+        this.controls = new MapControls(this.camera, this.mountMap);
+        this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+        this.controls.dampingFactor = 0.05;
+
+        //this.controls.screenSpacePanning = false;
+
+        this.controls.minDistance = 5;
+        this.controls.maxDistance = 10;
+        this.controls.enableRotate = false;
+        this.controls.maxPolarAngle = Math.PI / 2;
+
+        //set fundamental plate
+        let geometryFundament = new PlaneGeometry(50, 50);
+        let materialFundament = new MeshBasicMaterial({
+            color: "black"
+        });
+        let fundament = new Mesh(geometryFundament, materialFundament);
+        fundament.rotateX(-Math.PI * 0.5);
+        fundament.position.set(-7, -1.015, -5)
+        this.scene.add(fundament);
+
+        //fundamental on mouse over will restart camera position to the initial value - then the user not go further!!!!
+        // fundament.on('mouseover', e => {
+        //     this.camera.position.z = 5
+        //     this.camera.position.x = 5;
+        //     this.camera.position.y = 1;
+        // });
+
+
+        //window.addEventListener('resize', this.onWindowResize, false);
+        this.mountMap.appendChild(this.mapRenderer.domElement);
+        this.start();
+    }
+
+    // onWindowResize = () => {
+
+    //     this.camera.aspect = window.innerWidth / window.innerHeight;
+    //     this.camera.updateProjectionMatrix();
+
+    //     this.mapRenderer.setSize(2, 2);
+
+    // }
+
+    loadRoadAndEmptyMapElements = async () => {
+        const { initialObjectScale } = this.state;
+        for (let i = 0; i < 30; i++) {
+            for (let j = 0; j < 30; j++) {
+                //console.log(["i, j", i, j])
+
+                // road cross
+                if (i % 2 === 0 &&
+                    j % 2 === 0) {
+                    await this.loadObj(i + 0.05 - 20, -1, j - 0.05 - 20, "roadCross", false, initialObjectScale);
+                }
+
+                //roadHorizontal
+                else if (i % 2 === 0 &&
+                    j % 2 !== 0) {
+                    await this.loadObj(i + 0.09 - 20, -1, j - 0.08 - 20, "roadHorizontal", false, initialObjectScale);
+                }
+
+                // //roadVertical
+                else if (j % 2 === 0 &&
+                    i % 2) {
+                    await this.loadObj(i - 0.08 - 20, -1, j - 0.07 - 20, "roadHorizontal", true, initialObjectScale);
+                }
+
+                //empty land
+                else {
+
+                    let geometryLand = new PlaneGeometry(1, 1);
+                    let materialLand = new MeshBasicMaterial({
+                        color:
+                            i % 2 === 0 &&
+                                j % 2 === 0 ? "white" :
+                                i % 2 === 0 &&
+                                    j % 2 !== 0 ? "red" :
+                                    j % 2 === 0 &&
+                                        i % 2 !== 0 ? "blue" : "green"
+                    });
+
+                    let land = new Mesh(geometryLand, materialLand);
+                    land.rotateX(-Math.PI * 0.5);
+                    land.position.set(i - 20, -1.005, j - 20)
+
+                    this.scene.add(land);
+
+                    land.cursor = 'pointer';
+                    land.on('click', (e) => {
+                        //console.log("test", e, e.data.target.position)
+
+                        let { x, y, z } = e.data.target.position;
+
+                        this.context.handleSetActionModal(x, y, z)
+                    });
+
+                    //change opacity on hover
+                    let startGreenColor;
+                    land.on('mouseover', e => {
+                        if (
+                            e.data &&
+                            e.data.target &&
+                            e.data.target.material &&
+                            e.data.target.material.color &&
+                            e.data.target.material.color.g
+                        ) {
+                            startGreenColor = e.data.target.material.color.g;
+                            e.data.target.material.color.g = 0.8
+                        }
+
+                    });
+                    land.on('mouseout', e => {
+                        if (
+                            e.data &&
+                            e.data.target &&
+                            e.data.target.material &&
+                            e.data.target.material.color &&
+                            e.data.target.material.color.g
+                        ) {
+                            e.data.target.material.color.g = startGreenColor
+                        }
+                    });
+                }
+            }
+        }
+    }
+
+    loadMapConfigObjects = () => {
+        this.context.mapConfig && this.context.mapConfig.length > 0 && this.context.mapConfig.map(async (configElement, i) => {
+            const { x, y, z, value: name, scaleY, scaleParam, descriptionHeader, descriptionContent } = configElement;
+
+            console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent])
+            await this.loadObj(x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent);
+
+            //load plate above initial green plate an object to make plate unclickable
+            this.renderBuildingPlateFundament(x, z);
+
+            //plate and object should display description on click
+        })
+    }
+
+    renderBuildingPlateFundament = (x, z) => {
+        let geometryObjectPlate = new PlaneGeometry(2, 2);
+        let materialObjectPlate = new MeshBasicMaterial({
+            color:
+                "yellow"
+        });
+
+        let objectPlate = new Mesh(geometryObjectPlate, materialObjectPlate);
+        objectPlate.rotateX(-Math.PI * 0.5);
+        objectPlate.position.set(x, -1.002, z)
+
+        this.scene.add(objectPlate);
+    }
+
+    start = () => {
+        if (!this.frameIdMap) {
+            this.frameIdMap = requestAnimationFrame(this.animate);
+        }
+    };
+
+    stop = () => {
+        cancelAnimationFrame(this.frameIdMap);
+    };
+
+    animate = () => {
+        this.renderScene();
+        this.frameIdMap = window.requestAnimationFrame(this.animate);
+    };
+
+    renderScene = () => {
+        this.mapRenderer.render(this.scene, this.camera);
     };
 
     render() {
-        //const { zoomX, zoomY, mapConfig, showActionModal } = this.context;
-        const {
-            showThreeDView,
-            activeXMapRoadPreview,
-            activeYMapRoadPreview
-        } = this.state;
+        const { showActionModal } = this.context;
+        //const { showLoader } = this.state;
 
         return (
-            <div className="game__map--container">
-                {/* {zoomY &&
-                    [...Array(zoomY)].map((yElement, y) => {
-                        //console.log(["=======", y]);
-                        return (
-                            <div
-                                className={`map__floor map__floor-${y}`}
-                                key={`map__floor-${y}`}
-                            >
-                                {zoomX &&
-                                    [...Array(zoomX)].map((Xelement, x) => {
-                                        // console.log([
-                                        //     "x,y",
-                                        //     zoomX,
-                                        //     zoomY,
-                                        //     x,
-                                        //     y
-                                        // ]);
-                                        return (
-                                            <div
-                                                className={`map-square map-square__${(20 -
-                                                    zoomX) /
-                                                    2 +
-                                                    x}-${(10 - zoomY) / 2 + y}`}
-                                                style={{
-                                                    height: `calc(100vh/${zoomY}`,
-                                                    width: `calc(100vw/${zoomX})`
-                                                }}
-                                                key={`map-square__${(20 -
-                                                    zoomX) /
-                                                    2 +
-                                                    x}-${(10 - zoomY) / 2 + y}`}
-                                            >
-                                                {mapConfig &&
-                                                    mapConfig.map(
-                                                        (
-                                                            configElement,
-                                                            index
-                                                        ) => {
-                                                            if (
-                                                                configElement.x ===
-                                                                (20 -
-                                                                    zoomX) /
-                                                                2 +
-                                                                x &&
-                                                                configElement.y ===
-                                                                (10 -
-                                                                    zoomY) /
-                                                                2 +
-                                                                y &&
-                                                                configElement.haveImage
-                                                            ) {
-                                                                if (
-                                                                    configElement.finishedBuildDays &&
-                                                                    configElement.durationBuildDays &&
-                                                                    configElement.finishedBuildDays !==
-                                                                    configElement.durationBuildDays
-                                                                ) {
-                                                                    return (
-                                                                        <div className="map-element__during-build--container">
-                                                                            <ElementImage
-                                                                                configElement={
-                                                                                    configElement
-                                                                                }
-                                                                                key={`element-image-${configElement.value}-${index}`}
-                                                                            />
-                                                                        </div>
-                                                                    );
-                                                                } else {
-                                                                    return (
-                                                                        <ElementImage
-                                                                            configElement={
-                                                                                configElement
-                                                                            }
-                                                                            key={`element-image-${configElement.value}-${index}`}
-                                                                        />
-                                                                    );
-                                                                }
-                                                            } else if (
-                                                                configElement.x ===
-                                                                (20 -
-                                                                    zoomX) /
-                                                                2 +
-                                                                x &&
-                                                                configElement.y ===
-                                                                (10 -
-                                                                    zoomY) /
-                                                                2 +
-                                                                y &&
-                                                                !configElement.haveImage
-                                                            ) {
-                                                                return (
-                                                                    <ElementWithoutImage
-                                                                        configElement={
-                                                                            configElement
-                                                                        }
-                                                                        key={`element-without-image-${configElement.value}-${index}`}
-                                                                        x={
-                                                                            (20 -
-                                                                                zoomX) /
-                                                                            2 +
-                                                                            x
-                                                                        }
-                                                                        y={
-                                                                            (10 -
-                                                                                zoomY) /
-                                                                            2 +
-                                                                            y
-                                                                        }
-                                                                    />
-                                                                );
-                                                            }
-                                                        }
-                                                    )}
-                                            </div>
-                                        );
-                                    })}
-                            </div>
-                        );
-                    })} */}
-
-                {/* {showActionModal && <ActionModal />} */}
-
-                {!showThreeDView && (
-                    <div
-                        className="map__left-top--btn"
-                        data-cy="finish-day__btn"
-                        onClick={() => this.context.handleDayPassed()}
-                    >
-                        <p>Go to next day</p>
-                    </div>
-                )}
-
-                {/* {showThreeDView && (
-                    <ThreeDView
-                        handleShowThreeDView={this.handleShowThreeDView}
-                    />
-                )} */}
-
-                {/* <ZoomBtns /> */}
-
-                <MapThreeD />
-
-                {/* <MapRoadPerson
-                    handleShowThreeDView={this.handleShowThreeDView}
-                    handleSetMapActiveCoords={this.handleSetMapActiveCoords}
-                /> */}
+            <div
+                className="three-d__container"
+                ref={mount => {
+                    this.mountMap = mount;
+                }}
+            >
+                {/* {showLoader &&
+                    <div className="map-loader"></div>} */}
+                {showActionModal && <ActionModal />}
             </div>
         );
     }
 }
-Map.contextType = GameContext;
-export default Map;
+MapThreeD.contextType = GameContext;
+export default MapThreeD;

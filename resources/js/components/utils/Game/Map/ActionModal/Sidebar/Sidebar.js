@@ -21,11 +21,6 @@ const Sidebar = ({
                                 handleSetActiveSidebarOption(option.name)
                             }
                         >
-                            <img
-                                src={option.icon}
-                                alt={option.altIcon}
-                                title={option.name}
-                            />
                             <p
                                 className={
                                     activeSidebarOption === option.name

@@ -125602,19 +125602,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/allIcon.png":
-/*!*********************************************!*\
-  !*** ./resources/assets/images/allIcon.png ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/allIcon.png?e310c9a75daf44017fed2a5844d612b1");
-
-/***/ }),
-
 /***/ "./resources/assets/images/auto-service.png":
 /*!**************************************************!*\
   !*** ./resources/assets/images/auto-service.png ***!
@@ -125664,32 +125651,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("/images/book-shop.png?7c087e25eed6125e902fa4f7c02bc58f");
-
-/***/ }),
-
-/***/ "./resources/assets/images/buildingsIcon.png":
-/*!***************************************************!*\
-  !*** ./resources/assets/images/buildingsIcon.png ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/buildingsIcon.png?739d4f450a23bf67cf61e595a528a5e2");
-
-/***/ }),
-
-/***/ "./resources/assets/images/businessIcon.png":
-/*!**************************************************!*\
-  !*** ./resources/assets/images/businessIcon.png ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/businessIcon.png?1aadc1afc99f40f902015b576cb3cab5");
 
 /***/ }),
 
@@ -125771,19 +125732,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/entertainmentIcon.png":
-/*!*******************************************************!*\
-  !*** ./resources/assets/images/entertainmentIcon.png ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/entertainmentIcon.png?7e010eb317080071d2ef1c7ac59e6f3e");
-
-/***/ }),
-
 /***/ "./resources/assets/images/factory.png":
 /*!*********************************************!*\
   !*** ./resources/assets/images/factory.png ***!
@@ -125859,19 +125807,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("/images/gift-shop.png?1b59d5db3c9a2442a2c2fa9224a4c0ef");
-
-/***/ }),
-
-/***/ "./resources/assets/images/greetingMan.png":
-/*!*************************************************!*\
-  !*** ./resources/assets/images/greetingMan.png ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/greetingMan.png?91dd06fee3e1fd91476aec832471318b");
 
 /***/ }),
 
@@ -126005,84 +125940,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/road-horizontal.png":
-/*!*****************************************************!*\
-  !*** ./resources/assets/images/road-horizontal.png ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-horizontal.png?07362e8a8aa2e72a9e75b640e581ab5d");
-
-/***/ }),
-
-/***/ "./resources/assets/images/road-left-bottom.png":
-/*!******************************************************!*\
-  !*** ./resources/assets/images/road-left-bottom.png ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-bottom.png?6fe81f3189c0722687d83991c28d074a");
-
-/***/ }),
-
-/***/ "./resources/assets/images/road-left-top.png":
-/*!***************************************************!*\
-  !*** ./resources/assets/images/road-left-top.png ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-left-top.png?11f072626ee76c003dd0f7b98215b3ee");
-
-/***/ }),
-
-/***/ "./resources/assets/images/road-right-bottom.png":
-/*!*******************************************************!*\
-  !*** ./resources/assets/images/road-right-bottom.png ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-bottom.png?c868e2279724c204aa5c16bb0ff03eac");
-
-/***/ }),
-
-/***/ "./resources/assets/images/road-right-top.png":
-/*!****************************************************!*\
-  !*** ./resources/assets/images/road-right-top.png ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-right-top.png?9a6e8c96c2bea58d8d62303d4be0d2ee");
-
-/***/ }),
-
-/***/ "./resources/assets/images/road-vertically.png":
-/*!*****************************************************!*\
-  !*** ./resources/assets/images/road-vertically.png ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/road-vertically.png?ac63bd3b348213059579e286d8f9b021");
-
-/***/ }),
-
 /***/ "./resources/assets/images/shoes-shop.png":
 /*!************************************************!*\
   !*** ./resources/assets/images/shoes-shop.png ***!
@@ -126158,19 +126015,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("/images/supermarket.png?86bd033f98348ad571a26f80bd435f8c");
-
-/***/ }),
-
-/***/ "./resources/assets/images/walkingMan.png":
-/*!************************************************!*\
-  !*** ./resources/assets/images/walkingMan.png ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/walkingMan.png?99804100e56fd579a44614febab45c6a");
 
 /***/ }),
 
@@ -127073,6 +126917,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./DaylightOverlay/DaylightOverlay */ "./resources/js/components/utils/Game/DaylightOverlay/DaylightOverlay.js");
+/* harmony import */ var _Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../Home/HomeFirstSection/HomeFirstSection */ "./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js");
 
 
 
@@ -127090,11 +126935,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
-// zoomX: 20, zoomY: 10 - start position
-// zoomX: 18, zoomY: 8
-// zoomX: 16, zoomY: 6
-// zoomX: 14, zoomY: 4
+
+
 
 var Game = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(Game, _Component);
@@ -127106,10 +126948,15 @@ var Game = /*#__PURE__*/function (_Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Game).call(this, props)); //initially we create reactange of recteangles 10x6
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleMapRoadBackLight", function (status) {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", function () {
+      console.log(["initialMapConfig", _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"]]);
+
       _this.setState({
-        showMapRoadBackLight: status
+        mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"],
+        date: moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()
       });
+
+      _this.setLoaderOff();
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
@@ -127166,40 +127013,6 @@ var Game = /*#__PURE__*/function (_Component) {
       }
 
       return true;
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleZoomChange", function (operation) {
-      var zoomX = _this.state.zoomX;
-
-      if (zoomX < 14 || zoomX > 20) {
-        _this.context.handleShowAlert("Maximum length extended", "danger");
-      } else if (zoomX === 20) {
-        if (operation !== "increment") {
-          _this.setState({
-            zoomX: _this.state.zoomX - 2,
-            zoomY: _this.state.zoomY - 2
-          });
-        }
-      } else if (zoomX === 14) {
-        if (operation === "increment") {
-          _this.setState({
-            zoomX: _this.state.zoomX + 2,
-            zoomY: _this.state.zoomY + 2
-          });
-        }
-      } else {
-        if (operation === "increment") {
-          _this.setState({
-            zoomX: _this.state.zoomX + 2,
-            zoomY: _this.state.zoomY + 2
-          });
-        } else {
-          _this.setState({
-            zoomX: _this.state.zoomX - 2,
-            zoomY: _this.state.zoomY - 2
-          });
-        }
-      }
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleIncrementFinishedBuildDays", function () {
@@ -127298,40 +127111,12 @@ var Game = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleSetElementDescription", function () {
-      var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-      var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-      var _this$state2 = _this.state,
-          activeXCord = _this$state2.activeXCord,
-          activeYCord = _this$state2.activeYCord,
-          activeZCord = _this$state2.activeZCord,
-          showDescription = _this$state2.showDescription; //user clicked in active object Description, then hide that description
-
-      if (x === activeXCord && y === activeYCord && z === activeZCord && showDescription) {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "setLoaderOff", function () {
+      setTimeout(function () {
         _this.setState({
-          showDescription: false,
-          activeXCord: x,
-          activeYCord: y,
-          activeZCord: z
+          showMapLoader: false
         });
-      } else {
-        _this.setState({
-          showDescription: true,
-          activeXCord: x,
-          activeYCord: y,
-          activeZCord: z
-        });
-      }
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", function () {
-      console.log(["initialMapConfig", _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"]]);
-
-      _this.setState({
-        mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"],
-        date: moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()
-      });
+      }, 11000);
     });
 
     _this.state = {
@@ -127350,9 +127135,7 @@ var Game = /*#__PURE__*/function (_Component) {
       activeXCord: 0,
       activeYCord: 0,
       activeZCord: 0,
-      showDescription: false,
-      isDragging: false,
-      showMapRoadBackLight: "hide"
+      showMapLoader: true
     };
     return _this;
   }
@@ -127360,32 +127143,25 @@ var Game = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Game, [{
     key: "render",
     value: function render() {
-      var _this$state3 = this.state,
-          zoomX = _this$state3.zoomX,
-          zoomY = _this$state3.zoomY,
-          date = _this$state3.date,
-          money = _this$state3.money,
-          population = _this$state3.population,
-          freeHumanResources = _this$state3.freeHumanResources,
-          mapConfig = _this$state3.mapConfig,
-          materials = _this$state3.materials,
-          societyHappiness = _this$state3.societyHappiness,
-          daysPassed = _this$state3.daysPassed,
-          daylight = _this$state3.daylight,
-          showActionModal = _this$state3.showActionModal,
-          activeXCord = _this$state3.activeXCord,
-          activeYCord = _this$state3.activeYCord,
-          activeZCord = _this$state3.activeZCord,
-          showDescription = _this$state3.showDescription,
-          isDragging = _this$state3.isDragging,
-          showMapRoadBackLight = _this$state3.showMapRoadBackLight;
+      var _this$state2 = this.state,
+          date = _this$state2.date,
+          money = _this$state2.money,
+          population = _this$state2.population,
+          freeHumanResources = _this$state2.freeHumanResources,
+          mapConfig = _this$state2.mapConfig,
+          materials = _this$state2.materials,
+          societyHappiness = _this$state2.societyHappiness,
+          daysPassed = _this$state2.daysPassed,
+          daylight = _this$state2.daylight,
+          showActionModal = _this$state2.showActionModal,
+          activeXCord = _this$state2.activeXCord,
+          activeYCord = _this$state2.activeYCord,
+          activeZCord = _this$state2.activeZCord,
+          showMapLoader = _this$state2.showMapLoader;
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "game__container"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_12__["GameContext"].Provider, {
         value: {
-          zoomX: zoomX,
-          zoomY: zoomY,
-          handleZoomChange: this.handleZoomChange,
           date: date,
           money: money,
           population: population,
@@ -127401,12 +127177,11 @@ var Game = /*#__PURE__*/function (_Component) {
           activeXCord: activeXCord,
           activeYCord: activeYCord,
           activeZCord: activeZCord,
-          handleSetElementDescription: this.handleSetElementDescription,
-          showDescription: showDescription,
-          showMapRoadBackLight: showMapRoadBackLight,
-          handleMapRoadBackLight: this.handleMapRoadBackLight
+          handleSetElementDescription: this.handleSetElementDescription
         }
-      }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
+      }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), showMapLoader && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        loadScreen: true
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
     }
   }]);
 
@@ -127432,9 +127207,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
-  zoomX: 14,
-  zoomY: 6,
-  handleZoomChange: function handleZoomChange(operation) {},
   date: "",
   money: 0,
   population: 0,
@@ -127486,42 +127258,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
 /* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js");
 /* harmony import */ var _Options_Options__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Options/Options */ "./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js");
-/* harmony import */ var _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/businessIcon.png */ "./resources/assets/images/businessIcon.png");
-/* harmony import */ var _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/buildingsIcon.png */ "./resources/assets/images/buildingsIcon.png");
-/* harmony import */ var _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/entertainmentIcon.png */ "./resources/assets/images/entertainmentIcon.png");
-/* harmony import */ var _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/allIcon.png */ "./resources/assets/images/allIcon.png");
-/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
-/* harmony import */ var _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/house-blue.png */ "./resources/assets/images/house-blue.png");
-/* harmony import */ var _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/house-green.png */ "./resources/assets/images/house-green.png");
-/* harmony import */ var _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/house-red.png */ "./resources/assets/images/house-red.png");
-/* harmony import */ var _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-green.png */ "./resources/assets/images/residence-green.png");
-/* harmony import */ var _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-red.png */ "./resources/assets/images/residence-red.png");
-/* harmony import */ var _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-yellow.png */ "./resources/assets/images/residence-yellow.png");
-/* harmony import */ var _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-green.png */ "./resources/assets/images/sky-building-green.png");
-/* harmony import */ var _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-red.png */ "./resources/assets/images/sky-building-red.png");
-/* harmony import */ var _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-yellow.png */ "./resources/assets/images/sky-building-yellow.png");
-/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
-/* harmony import */ var _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../../../../../../assets/images/auto-service.png */ "./resources/assets/images/auto-service.png");
-/* harmony import */ var _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../../../../../../assets/images/bakery.png */ "./resources/assets/images/bakery.png");
-/* harmony import */ var _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../../../../../../assets/images/book-shop.png */ "./resources/assets/images/book-shop.png");
-/* harmony import */ var _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../../../../../../assets/images/clothing-shop.png */ "./resources/assets/images/clothing-shop.png");
-/* harmony import */ var _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../../../../../../assets/images/drug-store.png */ "./resources/assets/images/drug-store.png");
-/* harmony import */ var _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../../../../../../assets/images/fruit-shop.png */ "./resources/assets/images/fruit-shop.png");
-/* harmony import */ var _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../../../../../../assets/images/gas-station.png */ "./resources/assets/images/gas-station.png");
-/* harmony import */ var _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../../../../../../assets/images/gift-shop.png */ "./resources/assets/images/gift-shop.png");
-/* harmony import */ var _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../../../../../../assets/images/music-shop.png */ "./resources/assets/images/music-shop.png");
-/* harmony import */ var _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../../../../../../assets/images/shoes-shop.png */ "./resources/assets/images/shoes-shop.png");
-/* harmony import */ var _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../../../../../../assets/images/supermarket.png */ "./resources/assets/images/supermarket.png");
-/* harmony import */ var _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../../../../../../assets/images/coffee-shop.png */ "./resources/assets/images/coffee-shop.png");
-/* harmony import */ var _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../../../../../../assets/images/bar.png */ "./resources/assets/images/bar.png");
-/* harmony import */ var _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../../../../../../assets/images/fast-food.png */ "./resources/assets/images/fast-food.png");
-/* harmony import */ var _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../../../../../../assets/images/fried-chicken.png */ "./resources/assets/images/fried-chicken.png");
-/* harmony import */ var _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../../../../../../assets/images/restaurant.png */ "./resources/assets/images/restaurant.png");
-/* harmony import */ var _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../../../../../../assets/images/stadium.png */ "./resources/assets/images/stadium.png");
-
-
-
-
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
+/* harmony import */ var _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/house-blue.png */ "./resources/assets/images/house-blue.png");
+/* harmony import */ var _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/house-green.png */ "./resources/assets/images/house-green.png");
+/* harmony import */ var _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/house-red.png */ "./resources/assets/images/house-red.png");
+/* harmony import */ var _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-green.png */ "./resources/assets/images/residence-green.png");
+/* harmony import */ var _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-red.png */ "./resources/assets/images/residence-red.png");
+/* harmony import */ var _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-yellow.png */ "./resources/assets/images/residence-yellow.png");
+/* harmony import */ var _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-green.png */ "./resources/assets/images/sky-building-green.png");
+/* harmony import */ var _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-red.png */ "./resources/assets/images/sky-building-red.png");
+/* harmony import */ var _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-yellow.png */ "./resources/assets/images/sky-building-yellow.png");
+/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
+/* harmony import */ var _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../../../../../../assets/images/auto-service.png */ "./resources/assets/images/auto-service.png");
+/* harmony import */ var _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../../../../../../assets/images/bakery.png */ "./resources/assets/images/bakery.png");
+/* harmony import */ var _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../../../../../../assets/images/book-shop.png */ "./resources/assets/images/book-shop.png");
+/* harmony import */ var _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../../../../../../assets/images/clothing-shop.png */ "./resources/assets/images/clothing-shop.png");
+/* harmony import */ var _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../../../../../../assets/images/drug-store.png */ "./resources/assets/images/drug-store.png");
+/* harmony import */ var _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../../../../../../assets/images/fruit-shop.png */ "./resources/assets/images/fruit-shop.png");
+/* harmony import */ var _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../../../../../../assets/images/gas-station.png */ "./resources/assets/images/gas-station.png");
+/* harmony import */ var _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../../../../../../assets/images/gift-shop.png */ "./resources/assets/images/gift-shop.png");
+/* harmony import */ var _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../../../../../../assets/images/music-shop.png */ "./resources/assets/images/music-shop.png");
+/* harmony import */ var _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../../../../../../assets/images/shoes-shop.png */ "./resources/assets/images/shoes-shop.png");
+/* harmony import */ var _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../../../../../../assets/images/supermarket.png */ "./resources/assets/images/supermarket.png");
+/* harmony import */ var _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../../../../../../assets/images/coffee-shop.png */ "./resources/assets/images/coffee-shop.png");
+/* harmony import */ var _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../../../../../../assets/images/bar.png */ "./resources/assets/images/bar.png");
+/* harmony import */ var _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../../../../../../assets/images/fast-food.png */ "./resources/assets/images/fast-food.png");
+/* harmony import */ var _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../../../../../../assets/images/fried-chicken.png */ "./resources/assets/images/fried-chicken.png");
+/* harmony import */ var _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../../../../../../assets/images/restaurant.png */ "./resources/assets/images/restaurant.png");
+/* harmony import */ var _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../../../../../../assets/images/stadium.png */ "./resources/assets/images/stadium.png");
 
 
 
@@ -127593,22 +127357,18 @@ var ActionModal = /*#__PURE__*/function (_Component) {
       sidebarOptions: [{
         id: 0,
         name: "All",
-        icon: _assets_images_allIcon_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
         id: 1,
         name: "Buildings",
-        icon: _assets_images_buildingsIcon_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
         id: 2,
         name: "Businesses",
-        icon: _assets_images_businessIcon_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }, {
         id: 3,
         name: "Entertainment",
-        icon: _assets_images_entertainmentIcon_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         altIcon: "Icon made by Freepik from www.flaticon.com"
       }],
       optionElements: [
@@ -127621,7 +127381,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_16__["default"],
+        icon: _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         desriptionHeader: "House - Blue",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127638,7 +127398,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+        icon: _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         desriptionHeader: "House - Green",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127655,7 +127415,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_18__["default"],
+        icon: _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         desriptionHeader: "House - Red",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127672,7 +127432,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_19__["default"],
+        icon: _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         desriptionHeader: "Residence - Green",
         finishedBuildDays: 1,
         durationBuildDays: 5,
@@ -127689,7 +127449,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_20__["default"],
+        icon: _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_16__["default"],
         desriptionHeader: "Residence - Red",
         finishedBuildDays: 1,
         durationBuildDays: 5,
@@ -127706,7 +127466,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_21__["default"],
+        icon: _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_17__["default"],
         desriptionHeader: "Residence - Yellow",
         finishedBuildDays: 1,
         durationBuildDays: 5,
@@ -127723,7 +127483,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 1000,
         money: 0,
         materials: 300,
-        icon: _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_22__["default"],
+        icon: _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_18__["default"],
         desriptionHeader: "Sky Building - Green",
         finishedBuildDays: 1,
         durationBuildDays: 7,
@@ -127740,7 +127500,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 1000,
         money: 0,
         materials: 300,
-        icon: _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_23__["default"],
+        icon: _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_19__["default"],
         desriptionHeader: "Sky Building - Red",
         finishedBuildDays: 1,
         durationBuildDays: 7,
@@ -127757,7 +127517,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 1000,
         money: 0,
         materials: 300,
-        icon: _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_24__["default"],
+        icon: _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_20__["default"],
         desriptionHeader: "Sky Building - Yellow",
         finishedBuildDays: 1,
         durationBuildDays: 7,
@@ -127776,7 +127536,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 10000,
         materials: 300,
-        icon: _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_25__["default"],
+        icon: _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_21__["default"],
         desriptionHeader: "Factory",
         finishedBuildDays: 1,
         durationBuildDays: 7,
@@ -127793,7 +127553,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 50,
-        icon: _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_26__["default"],
+        icon: _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_22__["default"],
         desriptionHeader: "Auto Service",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127810,7 +127570,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_27__["default"],
+        icon: _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_23__["default"],
         desriptionHeader: "Bakery",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127827,7 +127587,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_28__["default"],
+        icon: _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_24__["default"],
         desriptionHeader: "Book Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127844,7 +127604,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 40,
-        icon: _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_29__["default"],
+        icon: _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_25__["default"],
         desriptionHeader: "Clothing Shop",
         finishedBuildDays: 1,
         durationBuildDays: 4,
@@ -127861,7 +127621,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_30__["default"],
+        icon: _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_26__["default"],
         desriptionHeader: "Drug Store",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127878,7 +127638,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_31__["default"],
+        icon: _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_27__["default"],
         desriptionHeader: "Fruit Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127895,7 +127655,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_32__["default"],
+        icon: _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_28__["default"],
         desriptionHeader: "Gas Station",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127912,7 +127672,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_33__["default"],
+        icon: _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_29__["default"],
         desriptionHeader: "Gift Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127929,7 +127689,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_34__["default"],
+        icon: _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_30__["default"],
         desriptionHeader: "Music Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127946,7 +127706,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_35__["default"],
+        icon: _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_31__["default"],
         desriptionHeader: "Shoes Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127963,7 +127723,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 50,
-        icon: _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_36__["default"],
+        icon: _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_32__["default"],
         desriptionHeader: "Supermarket",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127982,7 +127742,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_37__["default"],
+        icon: _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_33__["default"],
         desriptionHeader: "Coffee Shop",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -127999,7 +127759,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_38__["default"],
+        icon: _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_34__["default"],
         desriptionHeader: "Bar",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -128016,7 +127776,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_39__["default"],
+        icon: _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_35__["default"],
         desriptionHeader: "Fast Food",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -128033,7 +127793,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_40__["default"],
+        icon: _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_36__["default"],
         desriptionHeader: "Fried Chicken",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -128050,7 +127810,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_41__["default"],
+        icon: _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_37__["default"],
         desriptionHeader: "Restaurant",
         finishedBuildDays: 1,
         durationBuildDays: 3,
@@ -128067,7 +127827,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 10000,
         materials: 300,
-        icon: _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_42__["default"],
+        icon: _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_38__["default"],
         desriptionHeader: "Stadium",
         finishedBuildDays: 1,
         durationBuildDays: 7,
@@ -128099,7 +127859,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         },
         title: "Close"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_15__["default"],
+        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         alt: "Close"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__["default"], {
         options: sidebarOptions,
@@ -128236,11 +127996,7 @@ var Sidebar = function Sidebar(_ref) {
       onClick: function onClick() {
         return handleSetActiveSidebarOption(option.name);
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: option.icon,
-      alt: option.altIcon,
-      title: option.name
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: activeSidebarOption === option.name ? "bold" : ""
     }, option.name));
   }));
@@ -128250,267 +128006,10 @@ var Sidebar = function Sidebar(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-
-
-
-
-var ElementImage = function ElementImage(_ref) {
-  var configElement = _ref.configElement;
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(""),
-      _React$useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_React$useState, 2),
-      elementPositionOnMap = _React$useState2[0],
-      setElementPositionOnMap = _React$useState2[1];
-
-  var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_2__["GameContext"]);
-
-  var getElementPositionOnMap = function getElementPositionOnMap() {
-    //element in top-left map area
-    if (configElement.x < context.zoomX / 2 && configElement.y < context.zoomY / 2) {
-      setElementPositionOnMap("top-left");
-    } //element in bottom-left map area
-    else if (configElement.x < context.zoomX / 2 && configElement.y > context.zoomY / 2) {
-        setElementPositionOnMap("bottom-left");
-      } //element in top-right map area
-      else if (configElement.x > context.zoomX / 2 && configElement.y < context.zoomY / 2) {
-          setElementPositionOnMap("top-right");
-        } //element in bottom-right map area
-        else if (configElement.x > context.zoomX / 2 && configElement.y > context.zoomY / 2) {
-            setElementPositionOnMap("bottom-right");
-          }
-  };
-
-  var getImage = function getImage() {};
-
-  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
-    getElementPositionOnMap();
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "map-element__container",
-    onClick: function onClick(e) {
-      context.handleSetElementDescription(configElement.x, configElement.y);
-    }
-  }, configElement.desriptionHeader && configElement.descriptionContent && context.activeXCord === configElement.x && context.activeYCord === configElement.y && context.showDescription && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "map-element__description--container description-".concat(elementPositionOnMap && elementPositionOnMap, " ").concat(!context.showDescription && "hide")
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "map-element__description--header"
-  }, configElement.desriptionHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "map-element__description--content pre-line"
-  }, configElement.descriptionContent), configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "map-element__description--content map-element__description--progress"
-  }, "Progress:\n                                    ".concat(Math.floor(configElement.finishedBuildDays / configElement.durationBuildDays * 100), "\n                                    %"))), configElement.haveImage && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: "./images/".concat(configElement.value, ".png"),
-    style: configElement.finishedBuildDays && configElement.durationBuildDays && configElement.finishedBuildDays !== configElement.durationBuildDays ? {
-      WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, ".concat(configElement.finishedBuildDays / configElement.durationBuildDays, "))")
-    } : {}
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ElementImage);
-
-/***/ }),
-
-/***/ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _assets_images_road_vertically_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../../../../assets/images/road-vertically.png */ "./resources/assets/images/road-vertically.png");
-/* harmony import */ var _assets_images_road_horizontal_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../../../../assets/images/road-horizontal.png */ "./resources/assets/images/road-horizontal.png");
-/* harmony import */ var _assets_images_road_left_bottom_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../../../../assets/images/road-left-bottom.png */ "./resources/assets/images/road-left-bottom.png");
-/* harmony import */ var _assets_images_road_left_top_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../../../../assets/images/road-left-top.png */ "./resources/assets/images/road-left-top.png");
-/* harmony import */ var _assets_images_road_right_bottom_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../../../../../assets/images/road-right-bottom.png */ "./resources/assets/images/road-right-bottom.png");
-/* harmony import */ var _assets_images_road_right_top_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../../../../assets/images/road-right-top.png */ "./resources/assets/images/road-right-top.png");
-
-
-
-
-
-
-
-
-
-
-var ElementWithoutImage = function ElementWithoutImage(_ref) {
-  var configElement = _ref.configElement,
-      x = _ref.x,
-      y = _ref.y;
-  var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_2__["GameContext"]);
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
-      _React$useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_React$useState, 2),
-      addBacklightClass = _React$useState2[0],
-      setAddBacklightClass = _React$useState2[1];
-
-  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
-    if (context.showMapRoadBackLight) {
-      if (context.showMapRoadBackLight === "show") {
-        setAddBacklightClass(true);
-      } else {
-        setAddBacklightClass(false);
-      }
-    }
-  }, [context.showMapRoadBackLight]);
-
-  if (configElement.value === "road-horizontal" || configElement.value === "road-vertical" || configElement.value === "road-right-bottom" || configElement.value === "road-left-bottom" || configElement.value === "road-right-top" || configElement.value === "road-left-top") {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: configElement.value === "road-horizontal" ? "road road-".concat(configElement.x, "-").concat(configElement.y, " road-horizontal ").concat(addBacklightClass ? "road-backlight" : "") : configElement.value === "road-vertical" ? "road road-".concat(configElement.x, "-").concat(configElement.y, " road-vertical ").concat(addBacklightClass ? "road-backlight" : "") : configElement.value === "road-right-bottom" ? "road road-".concat(configElement.x, "-").concat(configElement.y, " road-right-bottom ").concat(addBacklightClass ? "road-backlight" : "") : configElement.value === "road-left-bottom" ? "road road-".concat(configElement.x, "-").concat(configElement.y, " road-left-bottom ").concat(addBacklightClass ? "road-backlight" : "") : configElement.value === "road-right-top" ? "road road-".concat(configElement.x, "-").concat(configElement.y, " road-right-top ").concat(addBacklightClass ? "road-backlight" : "") : configElement.value === "road-left-top" && "road road-".concat(configElement.x, "-").concat(configElement.y, " road-left-top ").concat(addBacklightClass ? "road-backlight" : "")
-    });
-  } else if (configElement.value === "map-empty") {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "map-empty",
-      onClick: function onClick() {
-        return context.handleSetActionModal(x, y);
-      }
-    });
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ElementWithoutImage);
-
-/***/ }),
-
 /***/ "./resources/js/components/utils/Game/Map/Map.js":
 /*!*******************************************************!*\
   !*** ./resources/js/components/utils/Game/Map/Map.js ***!
   \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _ZoomBtns_ZoomBtns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ZoomBtns/ZoomBtns */ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _ElementImage_ElementImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ElementImage/ElementImage */ "./resources/js/components/utils/Game/Map/ElementImage/ElementImage.js");
-/* harmony import */ var _ElementWithoutImage_ElementWithoutImage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ElementWithoutImage/ElementWithoutImage */ "./resources/js/components/utils/Game/Map/ElementWithoutImage/ElementWithoutImage.js");
-/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
-/* harmony import */ var _Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Map3D/MapThreeD */ "./resources/js/components/utils/Game/Map/Map3D/MapThreeD.js");
-/* harmony import */ var _MapRoadPerson_MapRoadPerson__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./MapRoadPerson/MapRoadPerson */ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var Map = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Map, _Component);
-
-  function Map(props) {
-    var _this;
-
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Map);
-
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Map).call(this, props));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleShowThreeDView", function (status) {
-      _this.setState({
-        showThreeDView: status
-      });
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleSetMapActiveCoords", function (cord, value) {
-      if (cord === "x") {
-        _this.setState({
-          activeXMapRoadPreview: value
-        });
-      }
-
-      _this.setState({
-        activeYMapRoadPreview: value
-      });
-    });
-
-    _this.state = {
-      showThreeDView: true,
-      activeXMapRoadPreview: -1,
-      activeYMapRoadPreview: -1
-    };
-    return _this;
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Map, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      //const { zoomX, zoomY, mapConfig, showActionModal } = this.context;
-      var _this$state = this.state,
-          showThreeDView = _this$state.showThreeDView,
-          activeXMapRoadPreview = _this$state.activeXMapRoadPreview,
-          activeYMapRoadPreview = _this$state.activeYMapRoadPreview;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "game__map--container"
-      }, !showThreeDView && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "map__left-top--btn",
-        "data-cy": "finish-day__btn",
-        onClick: function onClick() {
-          return _this2.context.handleDayPassed();
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Go to next day")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Map3D_MapThreeD__WEBPACK_IMPORTED_MODULE_13__["default"], null));
-    }
-  }]);
-
-  return Map;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
-
-Map.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_9__["GameContext"];
-/* harmony default export */ __webpack_exports__["default"] = (Map);
-
-/***/ }),
-
-/***/ "./resources/js/components/utils/Game/Map/Map3D/MapThreeD.js":
-/*!*******************************************************************!*\
-  !*** ./resources/js/components/utils/Game/Map/Map3D/MapThreeD.js ***!
-  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -128541,8 +128040,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var three_examples_jsm_loaders_MTLLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/MTLLoader */ "./node_modules/three/examples/jsm/loaders/MTLLoader.js");
 /* harmony import */ var three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! three/examples/jsm/controls/OrbitControls */ "./node_modules/three/examples/jsm/controls/OrbitControls.js");
 /* harmony import */ var three_interaction__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! three.interaction */ "./node_modules/three.interaction/build/three.interaction.module.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
 
 
 
@@ -128577,9 +128076,12 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _this.loadMapInitSettings();
+              _this.loadMapInitSettings(); //load roads and default elements once
 
-            case 1:
+
+              _this.loadRoadAndEmptyMapElements();
+
+            case 2:
             case "end":
               return _context.stop();
           }
@@ -128596,6 +128098,8 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadObj", function (x, y, z, name) {
       var scaleY = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
       var scaleParam = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0.0013;
+      var descriptionHeader = arguments.length > 6 ? arguments[6] : undefined;
+      var descriptionContent = arguments.length > 7 ? arguments[7] : undefined;
       return new Promise( /*#__PURE__*/function () {
         var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(resolve, reject) {
           var mtlLoader, materialUrl;
@@ -128611,7 +128115,6 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
                       var objLoader = new three_examples_jsm_loaders_OBJLoader__WEBPACK_IMPORTED_MODULE_11__["OBJLoader"]();
                       objLoader.setMaterials(materials);
                       var modelUrl = "http://127.0.0.1:8000/objects/".concat(name, ".obj");
-                      console.log(["http://127.0.0.1:8000/objects/".concat(name, ".obj")]);
                       objLoader.load(modelUrl, function (obj) {
                         var texture = new three__WEBPACK_IMPORTED_MODULE_10__["TextureLoader"]().load("http://127.0.0.1:8000/objects/".concat(name, ".png"));
                         obj.traverse(function (child) {
@@ -128624,7 +128127,10 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
                         _this.scene.add(obj);
 
-                        obj.position.set(x, y, z); //make e.g. road vartical - horizontal
+                        obj.position.set(x, y, z);
+                        obj.on('click', function (e) {
+                          console.log(["description", descriptionHeader, descriptionContent]);
+                        }); //make e.g. road vartical - horizontal
 
                         if (scaleY) {
                           obj.rotateY(Math.PI * 0.5);
@@ -128655,13 +128161,13 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapInitSettings", function () {
       _this.previousContext = _this.context;
       var width = _this.mountMap.clientWidth;
-      var height = _this.mountMap.clientHeight;
-      console.log(["width", width, height]);
+      var height = _this.mountMap.clientHeight; //console.log(["width", width, height])
+
       var scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
-      var camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](90, width / height, 1, 100);
+      var camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](20, width / height, 1, 1000);
       camera.position.z = 5;
       camera.position.x = 5;
-      camera.position.y = 1.5;
+      camera.position.y = 5.5;
       var mapRenderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
         antialias: true
       });
@@ -128670,166 +128176,204 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
       _this.mapRenderer = mapRenderer;
       var interaction = new three_interaction__WEBPACK_IMPORTED_MODULE_14__["Interaction"](_this.mapRenderer, _this.scene, _this.camera);
       mapRenderer.setClearColor("#e8f4ff");
-      mapRenderer.setSize(width, height, false); //light
+      mapRenderer.setSize(width, height, false);
+      mapRenderer.setPixelRatio(window.devicePixelRatio); //light
 
       var light = new three__WEBPACK_IMPORTED_MODULE_10__["DirectionalLight"](0xffffff, 0.5);
       light.position.setScalar(5);
       scene.add(light);
-      scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 0.5)); //cursor control
+      scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 1)); //cursor control
 
-      _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["OrbitControls"](_this.camera, _this.mountMap);
+      _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["MapControls"](_this.camera, _this.mountMap);
+      _this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
 
-      _this.controls.target.set(0, 0, 0); // view direction perpendicular to XY-plane
+      _this.controls.dampingFactor = 0.05; //this.controls.screenSpacePanning = false;
 
+      _this.controls.minDistance = 5;
+      _this.controls.maxDistance = 10;
+      _this.controls.enableRotate = false;
+      _this.controls.maxPolarAngle = Math.PI / 2; //set fundamental plate
 
-      _this.controls.enableZoom = true; // optional
+      var geometryFundament = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](50, 50);
+      var materialFundament = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
+        color: "black"
+      });
+      var fundament = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryFundament, materialFundament);
+      fundament.rotateX(-Math.PI * 0.5);
+      fundament.position.set(-7, -1.015, -5);
 
-      _this.controls.screenSpacePanning = true;
-      _this.controls.minPolarAngle = _this.controls.maxPolarAngle = 1.4;
+      _this.scene.add(fundament); //fundamental on mouse over will restart camera position to the initial value - then the user not go further!!!!
+      // fundament.on('mouseover', e => {
+      //     this.camera.position.z = 5
+      //     this.camera.position.x = 5;
+      //     this.camera.position.y = 1;
+      // });
+      //window.addEventListener('resize', this.onWindowResize, false);
+
 
       _this.mountMap.appendChild(_this.mapRenderer.domElement);
 
       _this.start();
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadRoadAndEmptyMapElements", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
-      var i, _loop, j;
-
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadRoadAndEmptyMapElements", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+      var initialObjectScale, i, j;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
         while (1) {
-          switch (_context4.prev = _context4.next) {
+          switch (_context3.prev = _context3.next) {
             case 0:
+              initialObjectScale = _this.state.initialObjectScale;
               i = 0;
 
-            case 1:
-              if (!(i < 9)) {
-                _context4.next = 12;
+            case 2:
+              if (!(i < 30)) {
+                _context3.next = 27;
                 break;
               }
 
-              _loop = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(j) {
-                var geometryLand, materialLand, land, startGreenColor;
-                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
-                  while (1) {
-                    switch (_context3.prev = _context3.next) {
-                      case 0:
-                        //console.log(["i, j", i, j])
-                        geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
-                        materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
-                          color: i % 2 === 0 && j % 2 === 0 ? "transparent" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green"
-                        });
-                        land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
-                        land.rotateX(-Math.PI * 0.5);
-                        land.position.set(i, 0, j); // road cross
-
-                        if (!(i % 2 === 0 && j % 2 === 0)) {
-                          _context3.next = 8;
-                          break;
-                        }
-
-                        _context3.next = 8;
-                        return _this.loadObj(i + 0.04, 0.005, j - 0.05, "roadCross", false, 0.00128);
-
-                      case 8:
-                        if (!(i % 2 === 0 && j % 2 !== 0)) {
-                          _context3.next = 11;
-                          break;
-                        }
-
-                        _context3.next = 11;
-                        return _this.loadObj(i + 0.07, 0.005, j - 0.08, "roadHorizontal", false, 0.00128);
-
-                      case 11:
-                        if (!(j % 2 === 0 && i % 2)) {
-                          _context3.next = 14;
-                          break;
-                        }
-
-                        _context3.next = 14;
-                        return _this.loadObj(i - 0.08, 0.005, j - 0.08, "roadHorizontal", true, 0.00128);
-
-                      case 14:
-                        _this.scene.add(land);
-
-                        land.cursor = 'pointer';
-                        land.on('click', function (e) {
-                          //console.log("test", e, e.data.target.position)
-                          var _e$data$target$positi = e.data.target.position,
-                              x = _e$data$target$positi.x,
-                              y = _e$data$target$positi.y,
-                              z = _e$data$target$positi.z;
-
-                          _this.context.handleSetActionModal(x, y, z);
-                        }); //change opacity on hover
-
-                        startGreenColor = void 0;
-                        land.on('mouseover', function (e) {
-                          startGreenColor = e.data.target.material.color.g;
-                          e.data.target.material.color.g = 0.8;
-                        });
-                        land.on('mouseout', function (e) {
-                          e.data.target.material.color.g = startGreenColor;
-                        });
-
-                      case 20:
-                      case "end":
-                        return _context3.stop();
-                    }
-                  }
-                }, _callee3);
-              });
               j = 0;
 
             case 4:
-              if (!(j < 9)) {
-                _context4.next = 9;
+              if (!(j < 30)) {
+                _context3.next = 24;
                 break;
               }
 
-              return _context4.delegateYield(_loop(j), "t0", 6);
+              if (!(i % 2 === 0 && j % 2 === 0)) {
+                _context3.next = 10;
+                break;
+              }
 
-            case 6:
+              _context3.next = 8;
+              return _this.loadObj(i + 0.05 - 20, -1, j - 0.05 - 20, "roadCross", false, initialObjectScale);
+
+            case 8:
+              _context3.next = 21;
+              break;
+
+            case 10:
+              if (!(i % 2 === 0 && j % 2 !== 0)) {
+                _context3.next = 15;
+                break;
+              }
+
+              _context3.next = 13;
+              return _this.loadObj(i + 0.09 - 20, -1, j - 0.08 - 20, "roadHorizontal", false, initialObjectScale);
+
+            case 13:
+              _context3.next = 21;
+              break;
+
+            case 15:
+              if (!(j % 2 === 0 && i % 2)) {
+                _context3.next = 20;
+                break;
+              }
+
+              _context3.next = 18;
+              return _this.loadObj(i - 0.08 - 20, -1, j - 0.07 - 20, "roadHorizontal", true, initialObjectScale);
+
+            case 18:
+              _context3.next = 21;
+              break;
+
+            case 20:
+              (function () {
+                var geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
+                var materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
+                  color: i % 2 === 0 && j % 2 === 0 ? "white" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green"
+                });
+                var land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
+                land.rotateX(-Math.PI * 0.5);
+                land.position.set(i - 20, -1.005, j - 20);
+
+                _this.scene.add(land);
+
+                land.cursor = 'pointer';
+                land.on('click', function (e) {
+                  //console.log("test", e, e.data.target.position)
+                  var _e$data$target$positi = e.data.target.position,
+                      x = _e$data$target$positi.x,
+                      y = _e$data$target$positi.y,
+                      z = _e$data$target$positi.z;
+
+                  _this.context.handleSetActionModal(x, y, z);
+                }); //change opacity on hover
+
+                var startGreenColor = void 0;
+                land.on('mouseover', function (e) {
+                  if (e.data && e.data.target && e.data.target.material && e.data.target.material.color && e.data.target.material.color.g) {
+                    startGreenColor = e.data.target.material.color.g;
+                    e.data.target.material.color.g = 0.8;
+                  }
+                });
+                land.on('mouseout', function (e) {
+                  if (e.data && e.data.target && e.data.target.material && e.data.target.material.color && e.data.target.material.color.g) {
+                    e.data.target.material.color.g = startGreenColor;
+                  }
+                });
+              })();
+
+            case 21:
               j++;
-              _context4.next = 4;
+              _context3.next = 4;
               break;
 
-            case 9:
+            case 24:
               i++;
-              _context4.next = 1;
+              _context3.next = 2;
               break;
 
-            case 12:
+            case 27:
             case "end":
-              return _context4.stop();
+              return _context3.stop();
           }
         }
-      }, _callee4);
+      }, _callee3);
     })));
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapConfigObjects", function () {
       _this.context.mapConfig && _this.context.mapConfig.length > 0 && _this.context.mapConfig.map( /*#__PURE__*/function () {
-        var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(configElement, i) {
-          var x, y, z, name, scaleY, scaleParam;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+        var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(configElement, i) {
+          var x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
             while (1) {
-              switch (_context5.prev = _context5.next) {
+              switch (_context4.prev = _context4.next) {
                 case 0:
-                  x = configElement.x, y = configElement.y, z = configElement.z, name = configElement.value, scaleY = configElement.scaleY, scaleParam = configElement.scaleParam;
-                  _context5.next = 3;
-                  return _this.loadObj(x, y, z, name, scaleY, scaleParam);
+                  x = configElement.x, y = configElement.y, z = configElement.z, name = configElement.value, scaleY = configElement.scaleY, scaleParam = configElement.scaleParam, descriptionHeader = configElement.descriptionHeader, descriptionContent = configElement.descriptionContent;
+                  console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent]);
+                  _context4.next = 4;
+                  return _this.loadObj(x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent);
 
-                case 3:
+                case 4:
+                  //load plate above initial green plate an object to make plate unclickable
+                  _this.renderBuildingPlateFundament(x, z); //plate and object should display description on click
+
+
+                case 5:
                 case "end":
-                  return _context5.stop();
+                  return _context4.stop();
               }
             }
-          }, _callee5);
+          }, _callee4);
         }));
 
         return function (_x3, _x4) {
           return _ref4.apply(this, arguments);
         };
       }());
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "renderBuildingPlateFundament", function (x, z) {
+      var geometryObjectPlate = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](2, 2);
+      var materialObjectPlate = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
+        color: "yellow"
+      });
+      var objectPlate = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryObjectPlate, materialObjectPlate);
+      objectPlate.rotateX(-Math.PI * 0.5);
+      objectPlate.position.set(x, -1.002, z);
+
+      _this.scene.add(objectPlate);
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "start", function () {
@@ -128852,16 +128396,22 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
       _this.mapRenderer.render(_this.scene, _this.camera);
     });
 
-    _this.state = {};
+    _this.state = {
+      initialObjectScale: 0.00128
+    };
     _this.previousContext;
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(MapThreeD, [{
     key: "componentDidUpdate",
+    // setLoaderOff = () => {
+    //     setTimeout(() => {
+    //         this.setState({ showLoader: false })
+    //     }, 1000000)
+    // }
     value: function componentDidUpdate() {
       if (this.previousContext.mapConfig !== this.context.mapConfig) {
-        this.loadRoadAndEmptyMapElements();
         this.loadMapConfigObjects();
       }
 
@@ -128872,7 +128422,8 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var showActionModal = this.context.showActionModal;
+      var showActionModal = this.context.showActionModal; //const { showLoader } = this.state;
+
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "three-d__container",
         ref: function ref(mount) {
@@ -128890,109 +128441,6 @@ MapThreeD.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_15__["GameContext"
 
 /***/ }),
 
-/***/ "./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.js":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/utils/Game/Map/MapRoadPerson/MapRoadPerson.js ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _assets_images_greetingMan_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../../../../assets/images/greetingMan.png */ "./resources/assets/images/greetingMan.png");
-/* harmony import */ var _assets_images_walkingMan_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../../../../assets/images/walkingMan.png */ "./resources/assets/images/walkingMan.png");
-
-
-
-
-
-
-var MapRoadPerson = function MapRoadPerson(_ref) {
-  var handleShowThreeDView = _ref.handleShowThreeDView,
-      handleSetMapActiveCoords = _ref.handleSetMapActiveCoords;
-  var gameContext = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_2__["GameContext"]);
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(true),
-      _React$useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_React$useState, 2),
-      showGreetingMan = _React$useState2[0],
-      setShowGreetingMan = _React$useState2[1];
-
-  var getRoadCoordinates = function getRoadCoordinates(e) {
-    var roadHtmlClass = document.elementFromPoint(e.pageX, e.pageY).className;
-
-    if (roadHtmlClass.includes("road")) {
-      var roadCoordsClass = roadHtmlClass.split(" ")[1];
-      var roadCoordsX = roadCoordsClass.split("-")[1];
-      var roadCoordsY = roadCoordsClass.split("-")[2];
-      handleSetMapActiveCoords("x", Number(roadCoordsX));
-      handleSetMapActiveCoords("y", Number(roadCoordsY));
-      handleShowThreeDView(true);
-    }
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "map-raad-person__container",
-    onMouseOver: function onMouseOver() {
-      setShowGreetingMan(false);
-      gameContext.handleMapRoadBackLight("show");
-    },
-    onMouseOut: function onMouseOut() {
-      setShowGreetingMan(true);
-      gameContext.handleMapRoadBackLight("hide");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    onDragEnd: function onDragEnd(e) {
-      return getRoadCoordinates(e);
-    },
-    src: showGreetingMan ? _assets_images_greetingMan_png__WEBPACK_IMPORTED_MODULE_3__["default"] : _assets_images_walkingMan_png__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (MapRoadPerson);
-
-/***/ }),
-
-/***/ "./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/utils/Game/Map/ZoomBtns/ZoomBtns.js ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-
-
-
-var ZoomBtns = function ZoomBtns() {
-  var gameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "zoom-btns__container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: gameContext.zoomX === 14 ? "zoom-btns__container--top zoom-btns__container--disable" : "zoom-btns__container--top zoom-btns__container--enable",
-    onClick: function onClick() {
-      return gameContext.handleZoomChange("decrement");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "+")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: gameContext.zoomX === 20 ? "zoom-btns__container--bottom zoom-btns__container--disable" : "zoom-btns__container--bottom zoom-btns__container--enable",
-    onClick: function onClick() {
-      return gameContext.handleZoomChange("increment");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "-")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ZoomBtns);
-
-/***/ }),
-
 /***/ "./resources/js/components/utils/Game/mapConfig.js":
 /*!*********************************************************!*\
   !*** ./resources/js/components/utils/Game/mapConfig.js ***!
@@ -129002,2045 +128450,24 @@ var ZoomBtns = function ZoomBtns() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var initialMapConfig = [//==================== row - 1 ====================
-//x od 0 do 0, y = 1 i z od 0 do 9
-{
-  x: 5 + 0.05,
-  y: 0,
-  z: 5 + 0.3,
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var _ref;
+
+var initialMapConfig = [(_ref = {
+  x: 3 + 0.05,
+  y: -1,
+  z: 3 + 0.3,
   value: "factory",
   initialElement: true,
   population: 0,
-  money: 0,
-  scaleY: false,
-  scaleParam: 0.0006
-} // {
-//     x: 1,
-//     y: 1,
-//     z: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 1,
-//     z: 0,
-//     value: "road-right-bottom",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 1,
-//     z: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 1,
-//     z: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 1,
-//     z: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 1,
-//     z: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 0,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 0,
-//     value: "road-left-bottom",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 0,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// // ==================== row - 2 ====================
-// {
-//     x: 0,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 1,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 1,
-//     value: "stone",
-//     initialElement: true,
-//     population: 0,
-//     finishedBuildDays: 2,
-//     durationBuildDays: 2,
-//     money: 0,
-//     materials: 100,
-//     desriptionHeader: "Stone",
-//     descriptionContent: "Added 100 of Materials every day",
-//     haveImage: true
-// },
-// {
-//     x: 6,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 1,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 1,
-//     value: "sky-building-green",
-//     initialElement: true,
-//     population: 1000,
-//     materials: 0,
-//     finishedBuildDays: 7,
-//     durationBuildDays: 7,
-//     money: 0,
-//     desriptionHeader: "Sky Building Green",
-//     descriptionContent: "+1000 Free Human Resources",
-//     haveImage: true
-// },
-// {
-//     x: 14,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 1,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 3 ====================
-// {
-//     x: 0,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 2,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 2,
-//     value: "stone",
-//     initialElement: true,
-//     population: 0,
-//     materials: 100,
-//     finishedBuildDays: 1,
-//     durationBuildDays: 1,
-//     money: 0,
-//     desriptionHeader: "Stone",
-//     descriptionContent: "Added 100 of Materials every day",
-//     haveImage: true
-// },
-// {
-//     x: 6,
-//     y: 2,
-//     value: "stone",
-//     initialElement: true,
-//     finishedBuildDays: 1,
-//     durationBuildDays: 1,
-//     population: 0,
-//     materials: 100,
-//     money: 0,
-//     desriptionHeader: "Stone",
-//     descriptionContent: "Added 100 of Materials every day",
-//     haveImage: true
-// },
-// {
-//     x: 7,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 2,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 2,
-//     value: "sky-building-red",
-//     initialElement: true,
-//     population: 1000,
-//     materials: 0,
-//     finishedBuildDays: 7,
-//     durationBuildDays: 7,
-//     money: 0,
-//     desriptionHeader: "Sky Building Red",
-//     descriptionContent: "+1000 Free Human Resources",
-//     haveImage: true
-// },
-// {
-//     x: 14,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 2,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 4 ====================
-// {
-//     x: 0,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 3,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 3,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 3,
-//     value: "sky-building-yellow",
-//     initialElement: true,
-//     population: 1000,
-//     materials: 0,
-//     finishedBuildDays: 7,
-//     durationBuildDays: 7,
-//     money: 0,
-//     desriptionHeader: "Sky Building Yellow",
-//     descriptionContent: "+1000 Free Human Resources",
-//     haveImage: true
-// },
-// {
-//     x: 14,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 3,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 5 ====================
-// {
-//     x: 0,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 4,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 4,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 4,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 6 ====================
-// {
-//     x: 0,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 5,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 5,
-//     value: "road-right-top",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 5,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 5,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 5,
-//     value: "road-left-bottom",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 5,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 7 ====================
-// {
-//     x: 0,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 6,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 6,
-//     value: "factory",
-//     initialElement: true,
-//     population: 0,
-//     money: 10000,
-//     materials: 0,
-//     finishedBuildDays: 6,
-//     durationBuildDays: 6,
-//     desriptionHeader: "Factory",
-//     descriptionContent: "+10000 money everyday",
-//     haveImage: true
-// },
-// {
-//     x: 4,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 6,
-//     value: "hospital",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     desriptionHeader: "Hospital",
-//     descriptionContent: "Lorem ipsum",
-//     haveImage: true,
-//     finishedBuildDays: 4,
-//     durationBuildDays: 4
-// },
-// {
-//     x: 9,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 6,
-//     value: "road-vertical",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 6,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 8 ====================
-// {
-//     x: 0,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 7,
-//     value: "road-right-top",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 7,
-//     value: "road-horizontal",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 7,
-//     value: "road-left-top",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 7,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 9 ====================
-// {
-//     x: 0,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 8,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 10 ====================
-// {
-//     x: 0,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 9,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// //==================== row - 11 ====================
-// {
-//     x: 0,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 1,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 2,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 3,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 4,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 5,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 6,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 7,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 8,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 9,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 10,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 11,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 12,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 13,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 14,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 15,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 16,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 17,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 18,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// },
-// {
-//     x: 19,
-//     y: 10,
-//     value: "map-empty",
-//     initialElement: true,
-//     population: 0,
-//     money: 0,
-//     haveImage: false
-// }
-];
+  money: 10000,
+  materials: 0,
+  descriptionHeader: "Factory",
+  descriptionContent: "+10000 money everyday"
+}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "initialElement", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleY", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleParam", 0.0006), _ref)];
 /* harmony default export */ __webpack_exports__["default"] = (initialMapConfig);
 
 /***/ }),
@@ -131060,11 +128487,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _global_Head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../global/Head */ "./resources/js/components/global/Head.js");
 /* harmony import */ var _global_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../global/Footer */ "./resources/js/components/global/Footer.js");
-/* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../MainContext */ "./resources/js/components/MainContext.js");
-/* harmony import */ var _global_Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../global/Menu */ "./resources/js/components/global/Menu.js");
-/* harmony import */ var _global_SideOptions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../global/SideOptions */ "./resources/js/components/global/SideOptions.js");
-/* harmony import */ var _global_Newsletter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../global/Newsletter */ "./resources/js/components/global/Newsletter.js");
-/* harmony import */ var _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../../assets/images/about.jpg?v=1 */ "./resources/assets/images/about.jpg?v=1");
+/* harmony import */ var _global_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../global/Menu */ "./resources/js/components/global/Menu.js");
+/* harmony import */ var _global_SideOptions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../global/SideOptions */ "./resources/js/components/global/SideOptions.js");
+/* harmony import */ var _global_Newsletter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../global/Newsletter */ "./resources/js/components/global/Newsletter.js");
+/* harmony import */ var _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../../../assets/images/about.jpg?v=1 */ "./resources/assets/images/about.jpg?v=1");
+/* harmony import */ var _HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./HomeFirstSection/HomeFirstSection */ "./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js");
 
 
 
@@ -131076,8 +128503,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home() {
-  var context = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_MainContext__WEBPACK_IMPORTED_MODULE_4__["MainContext"]);
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(1),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
       activeSideOptionNumber = _useState2[0],
@@ -131085,42 +128510,145 @@ var Home = function Home() {
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Head__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Land of mine - Build your own city"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_SideOptions__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_SideOptions__WEBPACK_IMPORTED_MODULE_5__["default"], {
     activeSideOptionNumber: activeSideOptionNumber
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "page__main-section--container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "page__main-section--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "page__main-section--content"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "page__main-section--top"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Land of mine"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Build your own city"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "main-section__top--btn",
-    onClick: function onClick() {
-      return context.handleChangePath("game");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Try now"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "https://www.freepik.com/free-photos-vectors/food",
-    target: "_blank"
-  }, "Food vector created by upklyak - www.freepik.com")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--container"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--left"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_8__["default"]
+    src: _assets_images_about_jpg_v_1__WEBPACK_IMPORTED_MODULE_7__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--right"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, "About The Game"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Land of mine is free city simulator working in your browser to make that accessible from various devices anytime when you're plugged in."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Build the city, manage and take decision to make every day improvements. Build new necessary building when you have appropierate amount of materials and money. After going to the next day you will get new resources which your city produces."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Land of mine is still trial project developed by", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://tech-bulb.com/",
     title: "Visit author website",
     target: "_blank"
-  }, "Szymon Radosz"), ".")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Newsletter__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }, "Szymon Radosz"), ".")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Newsletter__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../MainContext */ "./resources/js/components/MainContext.js");
+
+
+
+
+
+
+
+
+
+
+var HomeFirstSection = /*#__PURE__*/function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(HomeFirstSection, _Component);
+
+  function HomeFirstSection(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, HomeFirstSection);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(HomeFirstSection).call(this, props));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "componentDidMount", function () {
+      _this.intervalId = setInterval(_this.timer, 1000);
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "componentWillUnmount", function () {
+      clearInterval(_this.intervalId);
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "timer", function () {
+      _this.setState({
+        currentCount: _this.state.currentCount + 10
+      });
+
+      if (_this.state.currentCount === 100) {
+        clearInterval(_this.intervalId);
+
+        _this.setState({
+          showProgressPrecentage: true
+        });
+      }
+    });
+
+    _this.state = {
+      currentCount: 10,
+      showProgressPrecentage: false
+    };
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HomeFirstSection, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$state = this.state,
+          showProgressPrecentage = _this$state.showProgressPrecentage,
+          currentCount = _this$state.currentCount;
+      var loadScreen = this.props.loadScreen;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "page__main-section--container ".concat(loadScreen && "page__main-section--loading")
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "page__main-section--wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "page__main-section--content"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "page__main-section--top"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", null, "Land of mine"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", null, "Build your own city"), !loadScreen && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "main-section__top--btn",
+        onClick: function onClick() {
+          return _this2.context.handleChangePath("game");
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Try now")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "map-loader__container"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "map-loader__bar",
+        style: {
+          width: "calc(".concat(currentCount, "% - 4px)")
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, !showProgressPrecentage ? "".concat(currentCount, " %") : "GET STARTED"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "https://www.freepik.com/free-photos-vectors/food",
+        target: "_blank"
+      }, "Food vector created by upklyak - www.freepik.com"))));
+    }
+  }]);
+
+  return HomeFirstSection;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+
+HomeFirstSection.contextType = _MainContext__WEBPACK_IMPORTED_MODULE_8__["MainContext"];
+/* harmony default export */ __webpack_exports__["default"] = (HomeFirstSection);
 
 /***/ }),
 

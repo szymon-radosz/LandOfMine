@@ -1,3 +1,35 @@
+
+.page__main-section--loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+
+    .map-loader__container{
+        max-width: 300px;
+        width: 90%;
+        height: 25px;
+        margin-top: 65px;
+        position: relative;
+        border: 2px solid #fff;
+
+        .map-loader__bar{
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            height: 17px;
+            background-color: #fff;
+        }
+
+        p{
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+}
+
 .page__main-section--container {
     background-image: url("/images/land-of-mine-landing-bg.jpg?v=1"),
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));

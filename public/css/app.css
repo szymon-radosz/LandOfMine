@@ -565,6 +565,37 @@ body .pagination > li:last-child > span {
   }
 }
 
+.page__main-section--loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.page__main-section--loading .map-loader__container {
+  max-width: 300px;
+  width: 90%;
+  height: 25px;
+  margin-top: 65px;
+  position: relative;
+  border: 2px solid #fff;
+}
+
+.page__main-section--loading .map-loader__container .map-loader__bar {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 17px;
+  background-color: #fff;
+}
+
+.page__main-section--loading .map-loader__container p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
 .page__main-section--container {
   background-image: url("/images/land-of-mine-landing-bg.jpg?v=1"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-blend-mode: overlay;
@@ -1542,126 +1573,6 @@ body .pagination > li:last-child > span {
   background-image: url("/images/road-left-bottom.png?v=1");
 }
 
-.game__container .game__map--container .action-modal__container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #012d4a;
-  padding: 11px 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__close img {
-  width: 12px;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__close:hover {
-  background-color: #294e65;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__sidebar--container {
-  padding-right: 60px;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element img {
-  max-height: 40px;
-}
-
-.game__container .game__map--container .action-modal__container .action-modal__sidebar--container .sidebar__element p {
-  margin: 0;
-  font-size: 14px;
-  padding-left: 20px;
-}
-
-.game__container .game__map--container .action-modal__container .options__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-height: 320px;
-  overflow-y: scroll;
-  width: 35vw;
-  max-width: 390px;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element {
-  max-width: 170px;
-  text-align: center;
-  flex: 1 0 50%;
-  margin-bottom: 50px;
-  flex-direction: column;
-  justify-content: flex-end;
-  display: flex;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element img {
-  max-height: 110px;
-  max-width: 90%;
-  margin: 0 auto;
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--header {
-  margin: 10px 0;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--description {
-  font-size: 12px;
-  margin: 10px 0;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--cost {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit {
-  border: 3px solid #012d4a;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit p {
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: #012d4a;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit:hover {
-  background-color: #012d4a;
-}
-
-.game__container .game__map--container .action-modal__container .options__container .options__element .options__element--submit:hover p {
-  color: #fff;
-}
-
 .game__container .bottom-panel-game__container {
   position: fixed;
   bottom: 0;
@@ -1755,6 +1666,126 @@ body .pagination > li:last-child > span {
 
 .game__container .three-d__container canvas {
   height: 100vh !important;
+}
+
+.action-modal__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.action-modal__container .action-modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #012d4a;
+  padding: 11px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.action-modal__container .action-modal__close img {
+  width: 12px;
+}
+
+.action-modal__container .action-modal__close:hover {
+  background-color: #294e65;
+}
+
+.action-modal__container .action-modal__sidebar--container {
+  padding-right: 60px;
+}
+
+.action-modal__container .action-modal__sidebar--container .sidebar__element {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.action-modal__container .action-modal__sidebar--container .sidebar__element img {
+  max-height: 40px;
+}
+
+.action-modal__container .action-modal__sidebar--container .sidebar__element p {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.action-modal__container .options__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 320px;
+  overflow-y: scroll;
+  width: 35vw;
+  max-width: 390px;
+}
+
+.action-modal__container .options__container .options__element {
+  max-width: 170px;
+  text-align: center;
+  flex: 1 0 50%;
+  margin-bottom: 50px;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.action-modal__container .options__container .options__element img {
+  max-height: 110px;
+  max-width: 90%;
+  margin: 0 auto;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+
+.action-modal__container .options__container .options__element .options__element--header {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.action-modal__container .options__container .options__element .options__element--description {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.action-modal__container .options__container .options__element .options__element--cost {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.action-modal__container .options__container .options__element .options__element--submit {
+  border: 3px solid #012d4a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-modal__container .options__container .options__element .options__element--submit p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #012d4a;
+}
+
+.action-modal__container .options__container .options__element .options__element--submit:hover {
+  background-color: #012d4a;
+}
+
+.action-modal__container .options__container .options__element .options__element--submit:hover p {
+  color: #fff;
 }
 
 .hide {

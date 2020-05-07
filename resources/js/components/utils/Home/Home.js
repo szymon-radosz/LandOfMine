@@ -1,14 +1,13 @@
 import React, { useContext, useState } from "react";
 import Head from "./../../global/Head";
 import Footer from "./../../global/Footer";
-import { MainContext } from "./../../MainContext";
 import Menu from "./../../global/Menu";
 import SideOptions from "./../../global/SideOptions";
 import Newsletter from "./../../global/Newsletter";
 import aboutImg from "./../../../../assets/images/about.jpg?v=1";
+import HomeFirstSection from "./HomeFirstSection/HomeFirstSection"
 
 const Home = () => {
-    const context = useContext(MainContext);
     const [activeSideOptionNumber, setActiveSideOptionNumber] = useState(1);
     return (
         <>
@@ -18,28 +17,7 @@ const Home = () => {
 
             <SideOptions activeSideOptionNumber={activeSideOptionNumber} />
 
-            <div className="page__main-section--container">
-                <div className="page__main-section--wrapper">
-                    <div className="page__main-section--content">
-                        <div className="page__main-section--top">
-                            <h1>Land of mine</h1>
-                            <h2>Build your own city</h2>
-                            <div
-                                className="main-section__top--btn"
-                                onClick={() => context.handleChangePath("game")}
-                            >
-                                <p>Try now</p>
-                            </div>
-                        </div>
-                        <a
-                            href="https://www.freepik.com/free-photos-vectors/food"
-                            target="_blank"
-                        >
-                            Food vector created by upklyak - www.freepik.com
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <HomeFirstSection />
 
             <div className="page__about-section--container">
                 <div className="page__about-section--wrapper">

@@ -1,8 +1,5 @@
 import React from "react";
 export const GameContext = React.createContext({
-    zoomX: 14,
-    zoomY: 6,
-    handleZoomChange: operation => { },
     date: "",
     money: 0,
     population: 0,

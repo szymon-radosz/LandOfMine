@@ -2,13 +2,17 @@ const initialMapConfig = [
     //==================== row - 1 ====================
     //x od 0 do 0, y = 1 i z od 0 do 9
     {
-        x: 5 + 0.05,
-        y: 0,
-        z: 5 + 0.3,
+        x: 3 + 0.05,
+        y: -1,
+        z: 3 + 0.3,
         value: "factory",
         initialElement: true,
         population: 0,
-        money: 0,
+        money: 10000,
+        materials: 0,
+        descriptionHeader: "Factory",
+        descriptionContent: "+10000 money everyday",
+        initialElement: true,
         scaleY: false,
         scaleParam: 0.0006
     },

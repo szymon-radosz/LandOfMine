@@ -3,11 +3,6 @@ import { GameContext } from "./../../GameContext";
 import Sidebar from "./Sidebar/Sidebar";
 import Options from "./Options/Options";
 
-import businessIcon from "./../../../../../../assets/images/businessIcon.png";
-import buildingsIcon from "./../../../../../../assets/images/buildingsIcon.png";
-import entertainmentIcon from "./../../../../../../assets/images/entertainmentIcon.png";
-
-import allIcon from "./../../../../../../assets/images/allIcon.png";
 import close from "./../../../../../../assets/images/close.png";
 
 /* buildings */
@@ -55,25 +50,21 @@ class ActionModal extends Component {
                 {
                     id: 0,
                     name: "All",
-                    icon: allIcon,
                     altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 1,
                     name: "Buildings",
-                    icon: buildingsIcon,
                     altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 2,
                     name: "Businesses",
-                    icon: businessIcon,
                     altIcon: "Icon made by Freepik from www.flaticon.com"
                 },
                 {
                     id: 3,
                     name: "Entertainment",
-                    icon: entertainmentIcon,
                     altIcon: "Icon made by Freepik from www.flaticon.com"
                 }
             ],
