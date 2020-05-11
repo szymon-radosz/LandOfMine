@@ -30,12 +30,15 @@ class Game extends Component {
             activeXCord: 0,
             activeYCord: 0,
             activeZCord: 0,
+            showDescriptionModal: false,
+            activeDescriptionHeader: "",
+            activeDescriptionContent: "",
             showMapLoader: true
         };
     }
 
     componentDidMount = () => {
-        console.log(["initialMapConfig", initialMapConfig])
+        //console.log(["initialMapConfig", initialMapConfig])
         this.setState({
             mapConfig: initialMapConfig,
             date: moment("2000-01-01")
@@ -54,38 +57,46 @@ class Game extends Component {
         money,
         desriptionHeader,
         descriptionContent,
-        finishedBuildDays,
-        durationBuildDays,
-        notAddedHumanResources
+        notAddedHumanResources,
+        scaleParam
     ) => {
-        let allowed = this.checkAllowBuild(
-            money,
+        // let allowed = this.checkAllowBuild(
+        //     money,
+        //     freeHumanResources,
+        //     materials
+        // );
+
+        let allowed = true
+
+        console.log(["allowed", allowed, value,
+            population,
             freeHumanResources,
-            materials
-        );
+            materials,
+            money,
+            desriptionHeader,
+            descriptionContent,
+            notAddedHumanResources,
+            scaleParam])
 
         if (allowed) {
             this.handleSetActionModal();
 
             this.setState(prevState => ({
-                mapConfig: prevState.mapConfig.map(mapConfigObject =>
-                    mapConfigObject.x == this.state.activeXCord &&
-                        mapConfigObject.y == this.state.activeYCord &&
-                        mapConfigObject.z == this.state.activeZCord ? Object.assign(mapConfigObject, {
-                            value: value,
-                            initialElement: false,
-                            population: population,
-                            money: money,
-                            desriptionHeader: desriptionHeader,
-                            descriptionContent: descriptionContent,
-                            haveImage: true,
-                            finishedBuildDays: finishedBuildDays,
-                            durationBuildDays: durationBuildDays,
-                            notAddedHumanResources: notAddedHumanResources
-                        })
-                        : mapConfigObject
-                )
-            }));
+                mapConfig: [...prevState.mapConfig, {
+                    x: this.state.activeXCord,
+                    y: this.state.activeYCord,
+                    z: this.state.activeZCord,
+                    value: value,
+                    initialElement: false,
+                    population: population,
+                    money: money,
+                    materials: 0,
+                    descriptionHeader: desriptionHeader,
+                    descriptionContent: descriptionContent,
+                    scaleY: false,
+                    scaleParam: scaleParam
+                }]
+            }))
 
             this.setState({
                 freeHumanResources:
@@ -120,22 +131,6 @@ class Game extends Component {
         return true;
     };
 
-    handleIncrementFinishedBuildDays = () => {
-        this.setState(prevState => ({
-            mapConfig: prevState.mapConfig.map(mapConfigObject =>
-                mapConfigObject.finishedBuildDays &&
-                    mapConfigObject.durationBuildDays &&
-                    mapConfigObject.finishedBuildDays !==
-                    mapConfigObject.durationBuildDays
-                    ? Object.assign(mapConfigObject, {
-                        finishedBuildDays:
-                            mapConfigObject.finishedBuildDays + 1
-                    })
-                    : mapConfigObject
-            )
-        }));
-    };
-
     handleAssetsEarning = () => {
         let moneySum = 0;
         let materialsSum = 0;
@@ -145,31 +140,11 @@ class Game extends Component {
         let mapConfigCopy = this.state.mapConfig;
 
         mapConfigCopy.map(async mapConfigObject => {
-            if (
-                mapConfigObject.materials &&
-                mapConfigObject.finishedBuildDays ===
-                mapConfigObject.durationBuildDays
-            ) {
-                materialsSum += mapConfigObject.materials;
-            }
-
-            if (
-                mapConfigObject.money &&
-                mapConfigObject.finishedBuildDays ===
-                mapConfigObject.durationBuildDays
-            ) {
-                moneySum += mapConfigObject.money;
-            }
-
-            if (
-                mapConfigObject.notAddedHumanResources &&
-                mapConfigObject.finishedBuildDays ===
-                mapConfigObject.durationBuildDays
-            ) {
-                mapConfigObject.notAddedHumanResources = false;
-                freeHumanResoucesSum += mapConfigObject.population;
-                populationSum += mapConfigObject.population;
-            }
+            materialsSum += mapConfigObject.materials;
+            moneySum += mapConfigObject.money;
+            mapConfigObject.notAddedHumanResources = false;
+            freeHumanResoucesSum += mapConfigObject.population;
+            populationSum += mapConfigObject.population;
         });
 
         this.setState(prevState => ({
@@ -184,7 +159,6 @@ class Game extends Component {
 
     handleDayPassed = () => {
         this.setState({ daylight: false });
-        this.handleIncrementFinishedBuildDays();
         this.handleAssetsEarning();
         this.setState({
             daysPassed: this.state.daysPassed + 1,
@@ -207,10 +181,18 @@ class Game extends Component {
         });
     };
 
+    handleSetDescriptionModal = (descriptionHeader = "", descriptionContent = "") => {
+        this.setState({
+            showDescriptionModal: descriptionHeader ? true : false,
+            activeDescriptionHeader: descriptionHeader,
+            activeDescriptionContent: descriptionContent
+        })
+    }
+
     setLoaderOff = () => {
         setTimeout(() => {
             this.setState({ showMapLoader: false })
-        }, 11000)
+        }, 6000)
     }
 
     render() {
@@ -228,7 +210,11 @@ class Game extends Component {
             activeXCord,
             activeYCord,
             activeZCord,
-            showMapLoader
+            showDescriptionModal,
+            activeDescriptionHeader,
+            activeDescriptionContent,
+            showMapLoader,
+
         } = this.state;
 
         return (
@@ -251,13 +237,17 @@ class Game extends Component {
                         activeXCord: activeXCord,
                         activeYCord: activeYCord,
                         activeZCord: activeZCord,
+                        showDescriptionModal: showDescriptionModal,
+                        activeDescriptionHeader: activeDescriptionHeader,
+                        activeDescriptionContent: activeDescriptionContent,
+                        handleSetDescriptionModal: this.handleSetDescriptionModal,
                         handleSetElementDescription: this
                             .handleSetElementDescription
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
 
-                    {showMapLoader && <HomeFirstSection loadScreen={true} />}
+                    {/* {showMapLoader && <HomeFirstSection loadScreen={true} />} */}
 
                     <Map />
 

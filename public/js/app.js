@@ -101,6 +101,27 @@ module.exports = _arrayWithHoles;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+module.exports = _arrayWithoutHoles;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -375,6 +396,21 @@ module.exports = _inheritsLoose;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
@@ -428,6 +464,21 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+module.exports = _nonIterableSpread;
 
 /***/ }),
 
@@ -515,6 +566,27 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 module.exports = _taggedTemplateLiteral;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+
+var iterableToArray = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
+
+var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
 
 /***/ }),
 
@@ -125992,19 +126064,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/images/stadium.png":
-/*!*********************************************!*\
-  !*** ./resources/assets/images/stadium.png ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/images/stadium.png?5f130edec0051178f08ba80515d6187f");
-
-/***/ }),
-
 /***/ "./resources/assets/images/supermarket.png":
 /*!*************************************************!*\
   !*** ./resources/assets/images/supermarket.png ***!
@@ -126893,31 +126952,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./BottomPanel/BottomPanel */ "./resources/js/components/utils/Game/BottomPanel/BottomPanel.js");
-/* harmony import */ var _Map_Map__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Map/Map */ "./resources/js/components/utils/Game/Map/Map.js");
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../MainContext */ "./resources/js/components/MainContext.js");
-/* harmony import */ var _mapConfig__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./mapConfig */ "./resources/js/components/utils/Game/mapConfig.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./DaylightOverlay/DaylightOverlay */ "./resources/js/components/utils/Game/DaylightOverlay/DaylightOverlay.js");
-/* harmony import */ var _Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../Home/HomeFirstSection/HomeFirstSection */ "./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./BottomPanel/BottomPanel */ "./resources/js/components/utils/Game/BottomPanel/BottomPanel.js");
+/* harmony import */ var _Map_Map__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Map/Map */ "./resources/js/components/utils/Game/Map/Map.js");
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _MainContext__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../MainContext */ "./resources/js/components/MainContext.js");
+/* harmony import */ var _mapConfig__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./mapConfig */ "./resources/js/components/utils/Game/mapConfig.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./DaylightOverlay/DaylightOverlay */ "./resources/js/components/utils/Game/DaylightOverlay/DaylightOverlay.js");
+/* harmony import */ var _Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../Home/HomeFirstSection/HomeFirstSection */ "./resources/js/components/utils/Home/HomeFirstSection/HomeFirstSection.js");
+
 
 
 
@@ -126939,48 +127001,53 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Game = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(Game, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default()(Game, _Component);
 
   function Game(props) {
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Game);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, Game);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Game).call(this, props)); //initially we create reactange of recteangles 10x6
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Game).call(this, props)); //initially we create reactange of recteangles 10x6
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "componentDidMount", function () {
-      console.log(["initialMapConfig", _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"]]);
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "componentDidMount", function () {
+      //console.log(["initialMapConfig", initialMapConfig])
       _this.setState({
-        mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_14__["default"],
-        date: moment__WEBPACK_IMPORTED_MODULE_15___default()("2000-01-01").format("DD.MM.YYYY").toString()
+        mapConfig: _mapConfig__WEBPACK_IMPORTED_MODULE_15__["default"],
+        date: moment__WEBPACK_IMPORTED_MODULE_16___default()("2000-01-01").format("DD.MM.YYYY").toString()
       });
 
       _this.setLoaderOff();
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
-      var allowed = _this.checkAllowBuild(money, freeHumanResources, materials);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleUpdateMapConfigItem", function (value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, notAddedHumanResources, scaleParam) {
+      // let allowed = this.checkAllowBuild(
+      //     money,
+      //     freeHumanResources,
+      //     materials
+      // );
+      var allowed = true;
+      console.log(["allowed", allowed, value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, notAddedHumanResources, scaleParam]);
 
       if (allowed) {
         _this.handleSetActionModal();
 
         _this.setState(function (prevState) {
           return {
-            mapConfig: prevState.mapConfig.map(function (mapConfigObject) {
-              return mapConfigObject.x == _this.state.activeXCord && mapConfigObject.y == _this.state.activeYCord && mapConfigObject.z == _this.state.activeZCord ? Object.assign(mapConfigObject, {
-                value: value,
-                initialElement: false,
-                population: population,
-                money: money,
-                desriptionHeader: desriptionHeader,
-                descriptionContent: descriptionContent,
-                haveImage: true,
-                finishedBuildDays: finishedBuildDays,
-                durationBuildDays: durationBuildDays,
-                notAddedHumanResources: notAddedHumanResources
-              }) : mapConfigObject;
-            })
+            mapConfig: [].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default()(prevState.mapConfig), [{
+              x: _this.state.activeXCord,
+              y: _this.state.activeYCord,
+              z: _this.state.activeZCord,
+              value: value,
+              initialElement: false,
+              population: population,
+              money: money,
+              materials: 0,
+              descriptionHeader: desriptionHeader,
+              descriptionContent: descriptionContent,
+              scaleY: false,
+              scaleParam: scaleParam
+            }])
           };
         });
 
@@ -126992,7 +127059,7 @@ var Game = /*#__PURE__*/function (_Component) {
       }
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "checkAllowBuild", function (moneyPrompt, freeHumanResourcesPrompt, materialsPrompt) {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "checkAllowBuild", function (moneyPrompt, freeHumanResourcesPrompt, materialsPrompt) {
       var _this$state = _this.state,
           money = _this$state.money,
           freeHumanResources = _this$state.freeHumanResources,
@@ -127015,19 +127082,7 @@ var Game = /*#__PURE__*/function (_Component) {
       return true;
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleIncrementFinishedBuildDays", function () {
-      _this.setState(function (prevState) {
-        return {
-          mapConfig: prevState.mapConfig.map(function (mapConfigObject) {
-            return mapConfigObject.finishedBuildDays && mapConfigObject.durationBuildDays && mapConfigObject.finishedBuildDays !== mapConfigObject.durationBuildDays ? Object.assign(mapConfigObject, {
-              finishedBuildDays: mapConfigObject.finishedBuildDays + 1
-            }) : mapConfigObject;
-          })
-        };
-      });
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleAssetsEarning", function () {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleAssetsEarning", function () {
       var moneySum = 0;
       var materialsSum = 0;
       var freeHumanResoucesSum = 0;
@@ -127039,21 +127094,13 @@ var Game = /*#__PURE__*/function (_Component) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
-                  if (mapConfigObject.materials && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
-                    materialsSum += mapConfigObject.materials;
-                  }
+                  materialsSum += mapConfigObject.materials;
+                  moneySum += mapConfigObject.money;
+                  mapConfigObject.notAddedHumanResources = false;
+                  freeHumanResoucesSum += mapConfigObject.population;
+                  populationSum += mapConfigObject.population;
 
-                  if (mapConfigObject.money && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
-                    moneySum += mapConfigObject.money;
-                  }
-
-                  if (mapConfigObject.notAddedHumanResources && mapConfigObject.finishedBuildDays === mapConfigObject.durationBuildDays) {
-                    mapConfigObject.notAddedHumanResources = false;
-                    freeHumanResoucesSum += mapConfigObject.population;
-                    populationSum += mapConfigObject.population;
-                  }
-
-                case 3:
+                case 5:
                 case "end":
                   return _context.stop();
               }
@@ -127077,18 +127124,16 @@ var Game = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleDayPassed", function () {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleDayPassed", function () {
       _this.setState({
         daylight: false
       });
-
-      _this.handleIncrementFinishedBuildDays();
 
       _this.handleAssetsEarning();
 
       _this.setState({
         daysPassed: _this.state.daysPassed + 1,
-        date: moment__WEBPACK_IMPORTED_MODULE_15___default()(_this.state.date, "DD.MM.YYYY").add("days", 1).format("DD.MM.YYYY")
+        date: moment__WEBPACK_IMPORTED_MODULE_16___default()(_this.state.date, "DD.MM.YYYY").add("days", 1).format("DD.MM.YYYY")
       });
 
       setTimeout(function () {
@@ -127098,7 +127143,7 @@ var Game = /*#__PURE__*/function (_Component) {
       }, 1000);
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "handleSetActionModal", function () {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleSetActionModal", function () {
       var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
       var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
@@ -127111,12 +127156,23 @@ var Game = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "setLoaderOff", function () {
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleSetDescriptionModal", function () {
+      var descriptionHeader = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+      var descriptionContent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+
+      _this.setState({
+        showDescriptionModal: descriptionHeader ? true : false,
+        activeDescriptionHeader: descriptionHeader,
+        activeDescriptionContent: descriptionContent
+      });
+    });
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "setLoaderOff", function () {
       setTimeout(function () {
         _this.setState({
           showMapLoader: false
         });
-      }, 11000);
+      }, 6000);
     });
 
     _this.state = {
@@ -127135,12 +127191,15 @@ var Game = /*#__PURE__*/function (_Component) {
       activeXCord: 0,
       activeYCord: 0,
       activeZCord: 0,
+      showDescriptionModal: false,
+      activeDescriptionHeader: "",
+      activeDescriptionContent: "",
       showMapLoader: true
     };
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Game, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(Game, [{
     key: "render",
     value: function render() {
       var _this$state2 = this.state,
@@ -127157,10 +127216,13 @@ var Game = /*#__PURE__*/function (_Component) {
           activeXCord = _this$state2.activeXCord,
           activeYCord = _this$state2.activeYCord,
           activeZCord = _this$state2.activeZCord,
+          showDescriptionModal = _this$state2.showDescriptionModal,
+          activeDescriptionHeader = _this$state2.activeDescriptionHeader,
+          activeDescriptionContent = _this$state2.activeDescriptionContent,
           showMapLoader = _this$state2.showMapLoader;
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "game__container"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_12__["GameContext"].Provider, {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_GameContext__WEBPACK_IMPORTED_MODULE_13__["GameContext"].Provider, {
         value: {
           date: date,
           money: money,
@@ -127177,18 +127239,20 @@ var Game = /*#__PURE__*/function (_Component) {
           activeXCord: activeXCord,
           activeYCord: activeYCord,
           activeZCord: activeZCord,
+          showDescriptionModal: showDescriptionModal,
+          activeDescriptionHeader: activeDescriptionHeader,
+          activeDescriptionContent: activeDescriptionContent,
+          handleSetDescriptionModal: this.handleSetDescriptionModal,
           handleSetElementDescription: this.handleSetElementDescription
         }
-      }, !daylight && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_16__["default"], null), showMapLoader && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_17__["default"], {
-        loadScreen: true
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
+      }, !daylight && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_17__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_11__["default"], null)));
     }
   }]);
 
   return Game;
-}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_10__["Component"]);
 
-Game.contextType = _MainContext__WEBPACK_IMPORTED_MODULE_13__["MainContext"];
+Game.contextType = _MainContext__WEBPACK_IMPORTED_MODULE_14__["MainContext"];
 /* harmony default export */ __webpack_exports__["default"] = (Game);
 
 /***/ }),
@@ -127216,7 +127280,7 @@ var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
   mapConfig: [],
   daysPassed: 0,
   handleDayPassed: function handleDayPassed() {},
-  handleUpdateMapConfigItem: function handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {},
+  handleUpdateMapConfigItem: function handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, notAddedHumanResources) {},
   handleSetActionModal: function handleSetActionModal(x, y) {},
   showActionModal: false,
   activeXCord: 0,
@@ -127225,7 +127289,11 @@ var GameContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
   handleSetElementDescription: function handleSetElementDescription(x, y) {},
   showDescription: false,
   showMapRoadBackLight: "hide",
-  handleMapRoadBackLight: function handleMapRoadBackLight(status) {}
+  handleMapRoadBackLight: function handleMapRoadBackLight(status) {},
+  showDescriptionModal: false,
+  activeDescriptionHeader: "",
+  activeDescriptionContent: "",
+  handleSetDescriptionModal: function handleSetDescriptionModal(descriptionHeader, descriptionContent) {}
 });
 
 /***/ }),
@@ -127247,47 +127315,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
-/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js");
-/* harmony import */ var _Options_Options__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Options/Options */ "./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js");
-/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
-/* harmony import */ var _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/house-blue.png */ "./resources/assets/images/house-blue.png");
-/* harmony import */ var _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/house-green.png */ "./resources/assets/images/house-green.png");
-/* harmony import */ var _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/house-red.png */ "./resources/assets/images/house-red.png");
-/* harmony import */ var _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-green.png */ "./resources/assets/images/residence-green.png");
-/* harmony import */ var _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-red.png */ "./resources/assets/images/residence-red.png");
-/* harmony import */ var _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-yellow.png */ "./resources/assets/images/residence-yellow.png");
-/* harmony import */ var _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-green.png */ "./resources/assets/images/sky-building-green.png");
-/* harmony import */ var _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-red.png */ "./resources/assets/images/sky-building-red.png");
-/* harmony import */ var _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-yellow.png */ "./resources/assets/images/sky-building-yellow.png");
-/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
-/* harmony import */ var _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../../../../../../assets/images/auto-service.png */ "./resources/assets/images/auto-service.png");
-/* harmony import */ var _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../../../../../../assets/images/bakery.png */ "./resources/assets/images/bakery.png");
-/* harmony import */ var _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../../../../../../assets/images/book-shop.png */ "./resources/assets/images/book-shop.png");
-/* harmony import */ var _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../../../../../../assets/images/clothing-shop.png */ "./resources/assets/images/clothing-shop.png");
-/* harmony import */ var _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../../../../../../assets/images/drug-store.png */ "./resources/assets/images/drug-store.png");
-/* harmony import */ var _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../../../../../../assets/images/fruit-shop.png */ "./resources/assets/images/fruit-shop.png");
-/* harmony import */ var _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../../../../../../assets/images/gas-station.png */ "./resources/assets/images/gas-station.png");
-/* harmony import */ var _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../../../../../../assets/images/gift-shop.png */ "./resources/assets/images/gift-shop.png");
-/* harmony import */ var _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../../../../../../assets/images/music-shop.png */ "./resources/assets/images/music-shop.png");
-/* harmony import */ var _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../../../../../../assets/images/shoes-shop.png */ "./resources/assets/images/shoes-shop.png");
-/* harmony import */ var _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../../../../../../assets/images/supermarket.png */ "./resources/assets/images/supermarket.png");
-/* harmony import */ var _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../../../../../../assets/images/coffee-shop.png */ "./resources/assets/images/coffee-shop.png");
-/* harmony import */ var _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../../../../../../assets/images/bar.png */ "./resources/assets/images/bar.png");
-/* harmony import */ var _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../../../../../../assets/images/fast-food.png */ "./resources/assets/images/fast-food.png");
-/* harmony import */ var _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../../../../../../assets/images/fried-chicken.png */ "./resources/assets/images/fried-chicken.png");
-/* harmony import */ var _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../../../../../../assets/images/restaurant.png */ "./resources/assets/images/restaurant.png");
-/* harmony import */ var _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../../../../../../assets/images/stadium.png */ "./resources/assets/images/stadium.png");
-
-
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/utils/Game/Map/ActionModal/Sidebar/Sidebar.js");
+/* harmony import */ var _Options_Options__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Options/Options */ "./resources/js/components/utils/Game/Map/ActionModal/Options/Options.js");
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
+/* harmony import */ var _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../../../../../assets/images/house-blue.png */ "./resources/assets/images/house-blue.png");
+/* harmony import */ var _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../../../../../assets/images/house-green.png */ "./resources/assets/images/house-green.png");
+/* harmony import */ var _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../../../../../assets/images/house-red.png */ "./resources/assets/images/house-red.png");
+/* harmony import */ var _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-green.png */ "./resources/assets/images/residence-green.png");
+/* harmony import */ var _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-red.png */ "./resources/assets/images/residence-red.png");
+/* harmony import */ var _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../../../../../../assets/images/residence-yellow.png */ "./resources/assets/images/residence-yellow.png");
+/* harmony import */ var _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-green.png */ "./resources/assets/images/sky-building-green.png");
+/* harmony import */ var _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-red.png */ "./resources/assets/images/sky-building-red.png");
+/* harmony import */ var _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../../../../../assets/images/sky-building-yellow.png */ "./resources/assets/images/sky-building-yellow.png");
+/* harmony import */ var _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../../../../../../assets/images/factory.png */ "./resources/assets/images/factory.png");
+/* harmony import */ var _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../../../../../../assets/images/auto-service.png */ "./resources/assets/images/auto-service.png");
+/* harmony import */ var _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../../../../../../assets/images/bakery.png */ "./resources/assets/images/bakery.png");
+/* harmony import */ var _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../../../../../../assets/images/book-shop.png */ "./resources/assets/images/book-shop.png");
+/* harmony import */ var _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../../../../../../assets/images/clothing-shop.png */ "./resources/assets/images/clothing-shop.png");
+/* harmony import */ var _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../../../../../../assets/images/drug-store.png */ "./resources/assets/images/drug-store.png");
+/* harmony import */ var _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../../../../../../assets/images/fruit-shop.png */ "./resources/assets/images/fruit-shop.png");
+/* harmony import */ var _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../../../../../../assets/images/gas-station.png */ "./resources/assets/images/gas-station.png");
+/* harmony import */ var _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../../../../../../assets/images/gift-shop.png */ "./resources/assets/images/gift-shop.png");
+/* harmony import */ var _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../../../../../../assets/images/music-shop.png */ "./resources/assets/images/music-shop.png");
+/* harmony import */ var _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../../../../../../assets/images/shoes-shop.png */ "./resources/assets/images/shoes-shop.png");
+/* harmony import */ var _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../../../../../../assets/images/supermarket.png */ "./resources/assets/images/supermarket.png");
+/* harmony import */ var _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../../../../../../assets/images/coffee-shop.png */ "./resources/assets/images/coffee-shop.png");
+/* harmony import */ var _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../../../../../../assets/images/bar.png */ "./resources/assets/images/bar.png");
+/* harmony import */ var _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../../../../../../assets/images/fast-food.png */ "./resources/assets/images/fast-food.png");
+/* harmony import */ var _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../../../../../../assets/images/fried-chicken.png */ "./resources/assets/images/fried-chicken.png");
+/* harmony import */ var _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../../../../../../assets/images/restaurant.png */ "./resources/assets/images/restaurant.png");
 
 
 
@@ -127331,9 +127392,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var ActionModal = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(ActionModal, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(ActionModal, _Component);
 
   function ActionModal(props) {
     var _this;
@@ -127341,36 +127401,7 @@ var ActionModal = /*#__PURE__*/function (_Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ActionModal);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ActionModal).call(this, props));
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleSetActiveSidebarOption", function (name) {
-      _this.setState({
-        activeSidebarOption: name
-      });
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handleUpdateItem", function (value, freeHumanResources, population, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources) {
-      _this.context.handleUpdateMapConfigItem(value, population, freeHumanResources, materials, money, desriptionHeader, descriptionContent, finishedBuildDays, durationBuildDays, notAddedHumanResources);
-    });
-
     _this.state = {
-      activeSidebarOption: "All",
-      sidebarOptions: [{
-        id: 0,
-        name: "All",
-        altIcon: "Icon made by Freepik from www.flaticon.com"
-      }, {
-        id: 1,
-        name: "Buildings",
-        altIcon: "Icon made by Freepik from www.flaticon.com"
-      }, {
-        id: 2,
-        name: "Businesses",
-        altIcon: "Icon made by Freepik from www.flaticon.com"
-      }, {
-        id: 3,
-        name: "Entertainment",
-        altIcon: "Icon made by Freepik from www.flaticon.com"
-      }],
       optionElements: [
       /* buildings */
       {
@@ -127381,15 +127412,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_12__["default"],
+        icon: _assets_images_house_blue_png__WEBPACK_IMPORTED_MODULE_10__["default"],
         desriptionHeader: "House - Blue",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+10 Free Human Resources",
         descriptionActionModal: "+10 Free Human Resources\n -100 materials",
         cost: 500000,
         notAddedHumanResources: true,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Buildings",
         name: "House - Green",
@@ -127398,15 +127428,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_13__["default"],
+        icon: _assets_images_house_green_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         desriptionHeader: "House - Green",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+10 Free Human Resources",
         descriptionActionModal: "+10 Free Human Resources\n -100 materials",
         cost: 500000,
         notAddedHumanResources: true,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Buildings",
         name: "House - Red",
@@ -127415,15 +127444,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 10,
         money: 0,
         materials: 100,
-        icon: _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_14__["default"],
+        icon: _assets_images_house_red_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         desriptionHeader: "House - Red",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+10 Free Human Resources",
         descriptionActionModal: "+10 Free Human Resources\n -100 materials",
         cost: 500000,
         notAddedHumanResources: true,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Buildings",
         name: "Residence - Green",
@@ -127432,15 +127460,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_15__["default"],
+        icon: _assets_images_residence_green_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         desriptionHeader: "Residence - Green",
-        finishedBuildDays: 1,
-        durationBuildDays: 5,
         description: "+100 Free Human Resources",
         descriptionActionModal: "+100 Free Human Resources\n -200 materials",
         cost: 5000000,
         notAddedHumanResources: true,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Buildings",
         name: "Residence - Red",
@@ -127449,15 +127476,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_16__["default"],
+        icon: _assets_images_residence_red_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         desriptionHeader: "Residence - Red",
-        finishedBuildDays: 1,
-        durationBuildDays: 5,
         description: "+100 Free Human Resources",
         descriptionActionModal: "+100 Free Human Resources\n -200 materials",
         cost: 5000000,
         notAddedHumanResources: true,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Buildings",
         name: "Residence - Yellow",
@@ -127466,86 +127492,85 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 100,
         money: 0,
         materials: 200,
-        icon: _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+        icon: _assets_images_residence_yellow_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         desriptionHeader: "Residence - Yellow",
-        finishedBuildDays: 1,
-        durationBuildDays: 5,
         description: "+100 Free Human Resources",
         descriptionActionModal: "+100 Free Human Resources\n -200 materials",
         cost: 5000000,
         notAddedHumanResources: true,
-        haveImage: true
-      }, {
-        sidebarOption: "Buildings",
-        name: "Sky Building - Green",
-        value: "sky-building-green",
-        freeHumanResources: 0,
-        population: 1000,
-        money: 0,
-        materials: 300,
-        icon: _assets_images_sky_building_green_png__WEBPACK_IMPORTED_MODULE_18__["default"],
-        desriptionHeader: "Sky Building - Green",
-        finishedBuildDays: 1,
-        durationBuildDays: 7,
-        description: "+1000 Free Human Resources",
-        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
-        cost: 50000000,
-        notAddedHumanResources: true,
-        haveImage: true
-      }, {
-        sidebarOption: "Buildings",
-        name: "Sky Building - Red",
-        value: "sky-building-red",
-        freeHumanResources: 0,
-        population: 1000,
-        money: 0,
-        materials: 300,
-        icon: _assets_images_sky_building_red_png__WEBPACK_IMPORTED_MODULE_19__["default"],
-        desriptionHeader: "Sky Building - Red",
-        finishedBuildDays: 1,
-        durationBuildDays: 7,
-        description: "+1000 Free Human Resources",
-        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
-        cost: 50000000,
-        notAddedHumanResources: true,
-        haveImage: true
-      }, {
-        sidebarOption: "Buildings",
-        name: "Sky Building - Yellow",
-        value: "sky-building-yellow",
-        freeHumanResources: 0,
-        population: 1000,
-        money: 0,
-        materials: 300,
-        icon: _assets_images_sky_building_yellow_png__WEBPACK_IMPORTED_MODULE_20__["default"],
-        desriptionHeader: "Sky Building - Yellow",
-        finishedBuildDays: 1,
-        durationBuildDays: 7,
-        description: "+1000 Free Human Resources",
-        descriptionActionModal: "+1000 Free Human Resources\n -300 materials",
-        cost: 50000000,
-        notAddedHumanResources: true,
-        haveImage: true
-      },
+        haveImage: true,
+        scaleParam: 0.001
+      }, // {
+      //     sidebarOption: "Buildings",
+      //     name: "Sky Building - Green",
+      //     value: "sky-building-green",
+      //     freeHumanResources: 0,
+      //     population: 1000,
+      //     money: 0,
+      //     materials: 300,
+      //     icon: skyBuildingGreen,
+      //     desriptionHeader: "Sky Building - Green",
+      //     description: "+1000 Free Human Resources",
+      //     descriptionActionModal:
+      //         "+1000 Free Human Resources\n -300 materials",
+      //     cost: 50000000,
+      //     notAddedHumanResources: true,
+      //     haveImage: true
+      // },
+      // {
+      //     sidebarOption: "Buildings",
+      //     name: "Sky Building - Red",
+      //     value: "sky-building-red",
+      //     freeHumanResources: 0,
+      //     population: 1000,
+      //     money: 0,
+      //     materials: 300,
+      //     icon: skyBuildingRed,
+      //     desriptionHeader: "Sky Building - Red",
+      //     description: "+1000 Free Human Resources",
+      //     descriptionActionModal:
+      //         "+1000 Free Human Resources\n -300 materials",
+      //     cost: 50000000,
+      //     notAddedHumanResources: true,
+      //     haveImage: true
+      // },
+      // {
+      //     sidebarOption: "Buildings",
+      //     name: "Sky Building - Yellow",
+      //     value: "sky-building-yellow",
+      //     freeHumanResources: 0,
+      //     population: 1000,
+      //     money: 0,
+      //     materials: 300,
+      //     icon: skyBuildingYellow,
+      //     desriptionHeader: "Sky Building - Yellow",
+      //     description: "+1000 Free Human Resources",
+      //     descriptionActionModal:
+      //         "+1000 Free Human Resources\n -300 materials",
+      //     cost: 50000000,
+      //     notAddedHumanResources: true,
+      //     haveImage: true
+      // },
+
       /* businesses */
+      // {
+      //     sidebarOption: "Businesses",
+      //     name: "Factory",
+      //     value: "factory",
+      //     freeHumanResources: 1000,
+      //     population: 0,
+      //     money: 10000,
+      //     materials: 300,
+      //     icon: factory,
+      //     desriptionHeader: "Factory",
+      //     description: "+50000 money everyday",
+      //     descriptionActionModal:
+      //         "+50000 money everyday\n -1000 human resources \n -200 materials",
+      //     cost: 30000000,
+      //     notAddedHumanResources: false,
+      //     haveImage: true
+      // },
       {
-        sidebarOption: "Businesses",
-        name: "Factory",
-        value: "factory",
-        freeHumanResources: 1000,
-        population: 0,
-        money: 10000,
-        materials: 300,
-        icon: _assets_images_factory_png__WEBPACK_IMPORTED_MODULE_21__["default"],
-        desriptionHeader: "Factory",
-        finishedBuildDays: 1,
-        durationBuildDays: 7,
-        description: "+50000 money everyday",
-        descriptionActionModal: "+50000 money everyday\n -1000 human resources \n -200 materials",
-        cost: 30000000,
-        notAddedHumanResources: false,
-        haveImage: true
-      }, {
         sidebarOption: "Businesses",
         name: "Auto Service",
         value: "auto-service",
@@ -127553,15 +127578,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 50,
-        icon: _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_22__["default"],
+        icon: _assets_images_auto_service_png__WEBPACK_IMPORTED_MODULE_20__["default"],
         desriptionHeader: "Auto Service",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+5000 money everyday",
         descriptionActionModal: "+5000 money everyday\n -100 human resources \n -50 materials",
         cost: 200000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Businesses",
         name: "Bakery",
@@ -127570,15 +127594,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_23__["default"],
+        icon: _assets_images_bakery_png__WEBPACK_IMPORTED_MODULE_21__["default"],
         desriptionHeader: "Bakery",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Businesses",
         name: "Book Shop",
@@ -127587,15 +127610,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_24__["default"],
+        icon: _assets_images_book_shop_png__WEBPACK_IMPORTED_MODULE_22__["default"],
         desriptionHeader: "Book Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Businesses",
         name: "Clothing Shop",
@@ -127604,15 +127626,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 40,
-        icon: _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_25__["default"],
+        icon: _assets_images_clothing_shop_png__WEBPACK_IMPORTED_MODULE_23__["default"],
         desriptionHeader: "Clothing Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 4,
         description: "+5000 money everyday",
         descriptionActionModal: "+5000 money everyday\n -80 human resources \n -40 materials",
         cost: 150000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Businesses",
         name: "Drug Store",
@@ -127621,33 +127642,33 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_26__["default"],
+        icon: _assets_images_drug_store_png__WEBPACK_IMPORTED_MODULE_24__["default"],
         desriptionHeader: "Drug Store",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
-      }, {
-        sidebarOption: "Businesses",
-        name: "Fruit Shop",
-        value: "fruit-shop",
-        freeHumanResources: 50,
-        population: 0,
-        money: 3000,
-        materials: 30,
-        icon: _assets_images_fruit_shop_png__WEBPACK_IMPORTED_MODULE_27__["default"],
-        desriptionHeader: "Fruit Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
-        description: "+3000 money everyday",
-        descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
-        cost: 100000,
-        notAddedHumanResources: false,
-        haveImage: true
-      }, {
+        haveImage: true,
+        scaleParam: 0.001
+      }, // {
+      //     sidebarOption: "Businesses",
+      //     name: "Fruit Shop",
+      //     value: "fruit-shop",
+      //     freeHumanResources: 50,
+      //     population: 0,
+      //     money: 3000,
+      //     materials: 30,
+      //     icon: fruitShop,
+      //     desriptionHeader: "Fruit Shop",
+      //     description: "+3000 money everyday",
+      //     descriptionActionModal:
+      //         "+3000 money everyday\n -50 human resources \n -30 materials",
+      //     cost: 100000,
+      //     notAddedHumanResources: false,
+      //     haveImage: true,
+      //     scaleParam: 0.001
+      // },
+      {
         sidebarOption: "Businesses",
         name: "Gas Station",
         value: "gas-station",
@@ -127655,15 +127676,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_28__["default"],
+        icon: _assets_images_gas_station_png__WEBPACK_IMPORTED_MODULE_26__["default"],
         desriptionHeader: "Gas Station",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0007
       }, {
         sidebarOption: "Businesses",
         name: "Gift Shop",
@@ -127672,15 +127692,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_29__["default"],
+        icon: _assets_images_gift_shop_png__WEBPACK_IMPORTED_MODULE_27__["default"],
         desriptionHeader: "Gift Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.001
       }, {
         sidebarOption: "Businesses",
         name: "Music Shop",
@@ -127689,15 +127708,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_30__["default"],
+        icon: _assets_images_music_shop_png__WEBPACK_IMPORTED_MODULE_28__["default"],
         desriptionHeader: "Music Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0011
       }, {
         sidebarOption: "Businesses",
         name: "Shoes Shop",
@@ -127706,15 +127724,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_31__["default"],
+        icon: _assets_images_shoes_shop_png__WEBPACK_IMPORTED_MODULE_29__["default"],
         desriptionHeader: "Shoes Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0012
       }, {
         sidebarOption: "Businesses",
         name: "Supermarket",
@@ -127723,15 +127740,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 5000,
         materials: 50,
-        icon: _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_32__["default"],
+        icon: _assets_images_supermarket_png__WEBPACK_IMPORTED_MODULE_30__["default"],
         desriptionHeader: "Supermarket",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+5000 money everyday",
         descriptionActionModal: "+5000 money everyday\n -100 human resources \n -50 materials",
         cost: 200000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0007
       },
       /* entertainment */
       {
@@ -127742,15 +127758,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_33__["default"],
+        icon: _assets_images_coffee_shop_png__WEBPACK_IMPORTED_MODULE_31__["default"],
         desriptionHeader: "Coffee Shop",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0008
       }, {
         sidebarOption: "Entertainment",
         name: "Bar",
@@ -127759,15 +127774,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_34__["default"],
+        icon: _assets_images_bar_png__WEBPACK_IMPORTED_MODULE_32__["default"],
         desriptionHeader: "Bar",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0012
       }, {
         sidebarOption: "Entertainment",
         name: "Fast Food",
@@ -127776,15 +127790,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_35__["default"],
+        icon: _assets_images_fast_food_png__WEBPACK_IMPORTED_MODULE_33__["default"],
         desriptionHeader: "Fast Food",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0012
       }, {
         sidebarOption: "Entertainment",
         name: "Fried Chicken",
@@ -127793,15 +127806,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_36__["default"],
+        icon: _assets_images_fried_chicken_png__WEBPACK_IMPORTED_MODULE_34__["default"],
         desriptionHeader: "Fried Chicken",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.0011
       }, {
         sidebarOption: "Entertainment",
         name: "Restaurant",
@@ -127810,32 +127822,14 @@ var ActionModal = /*#__PURE__*/function (_Component) {
         population: 0,
         money: 3000,
         materials: 30,
-        icon: _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_37__["default"],
+        icon: _assets_images_restaurant_png__WEBPACK_IMPORTED_MODULE_35__["default"],
         desriptionHeader: "Restaurant",
-        finishedBuildDays: 1,
-        durationBuildDays: 3,
         description: "+3000 money everyday",
         descriptionActionModal: "+3000 money everyday\n -50 human resources \n -30 materials",
         cost: 100000,
         notAddedHumanResources: false,
-        haveImage: true
-      }, {
-        sidebarOption: "Entertainment",
-        name: "Stadium",
-        value: "stadium",
-        freeHumanResources: 1000,
-        population: 0,
-        money: 10000,
-        materials: 300,
-        icon: _assets_images_stadium_png__WEBPACK_IMPORTED_MODULE_38__["default"],
-        desriptionHeader: "Stadium",
-        finishedBuildDays: 1,
-        durationBuildDays: 7,
-        description: "+10000 money everyday",
-        descriptionActionModal: "+50000 money everyday\n -1000 human resources \n -200 materials",
-        cost: 30000000,
-        notAddedHumanResources: false,
-        haveImage: true
+        haveImage: true,
+        scaleParam: 0.002
       }]
     };
     return _this;
@@ -127846,37 +127840,28 @@ var ActionModal = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$state = this.state,
-          sidebarOptions = _this$state.sidebarOptions,
-          activeSidebarOption = _this$state.activeSidebarOption,
-          optionElements = _this$state.optionElements;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      var optionElements = this.state.optionElements;
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "action-modal__container"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "action-modal__close",
         onClick: function onClick() {
           return _this2.context.handleSetActionModal();
         },
         title: "Close"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_11__["default"],
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_9__["default"],
         alt: "Close"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        options: sidebarOptions,
-        handleSetActiveSidebarOption: this.handleSetActiveSidebarOption,
-        activeSidebarOption: activeSidebarOption
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Options_Options__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        optionElements: optionElements,
-        activeSidebarOption: activeSidebarOption,
-        handleUpdateItem: this.handleUpdateItem
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Options_Options__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        optionElements: optionElements
       }));
     }
   }]);
 
   return ActionModal;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
-ActionModal.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_8__["GameContext"];
+ActionModal.contextType = _GameContext__WEBPACK_IMPORTED_MODULE_6__["GameContext"];
 /* harmony default export */ __webpack_exports__["default"] = (ActionModal);
 
 /***/ }),
@@ -127897,17 +127882,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Options = function Options(_ref) {
-  var optionElements = _ref.optionElements,
-      activeSidebarOption = _ref.activeSidebarOption,
-      handleUpdateItem = _ref.handleUpdateItem;
+  var optionElements = _ref.optionElements;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__container"
   }, optionElements && optionElements.map(function (option, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SingleOption_SingleOption__WEBPACK_IMPORTED_MODULE_1__["default"], {
       option: option,
-      activeSidebarOption: activeSidebarOption,
-      key: "option-".concat(i),
-      handleUpdateItem: handleUpdateItem
+      key: "option-".concat(i)
     });
   }));
 };
@@ -127927,13 +127908,14 @@ var Options = function Options(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+
 
 
 var SingleOption = function SingleOption(_ref) {
-  var option = _ref.option,
-      activeSidebarOption = _ref.activeSidebarOption,
-      handleUpdateItem = _ref.handleUpdateItem;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, activeSidebarOption === option.sidebarOption && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var option = _ref.option;
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: option.icon
@@ -127946,24 +127928,9 @@ var SingleOption = function SingleOption(_ref) {
   }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "options__element--submit",
     onClick: function onClick() {
-      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays, option.notAddedHumanResources);
+      context.handleUpdateMapConfigItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.notAddedHumanResources, option.scaleParam);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))), activeSidebarOption === "All" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "options__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: option.icon
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "options__element--header"
-  }, option.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "options__element--description pre-line"
-  }, option.descriptionActionModal), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "options__element--cost"
-  }, "Cost: ", option.cost), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "options__element--submit",
-    onClick: function onClick() {
-      handleUpdateItem(option.value, option.freeHumanResources, option.population, option.materials, option.money, option.desriptionHeader, option.description, option.finishedBuildDays, option.durationBuildDays, option.notAddedHumanResources);
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy now")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SingleOption);
@@ -128006,6 +127973,49 @@ var Sidebar = function Sidebar(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/components/utils/Game/Map/DescriptionModal/DescriptionModal.js":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/utils/Game/Map/DescriptionModal/DescriptionModal.js ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
+/* harmony import */ var _assets_images_close_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../../../../assets/images/close.png */ "./resources/assets/images/close.png");
+
+
+
+
+var DescriptionModal = function DescriptionModal() {
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_GameContext__WEBPACK_IMPORTED_MODULE_1__["GameContext"]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "action-modal__container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "action-modal__close",
+    onClick: function onClick() {
+      return context.handleSetDescriptionModal();
+    },
+    title: "Close"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_images_close_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+    alt: "Close"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal__content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "modal__content--header"
+  }, context.activeDescriptionHeader && context.activeDescriptionHeader), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "modal__content--description"
+  }, context.activeDescriptionContent && context.activeDescriptionContent)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DescriptionModal);
+
+/***/ }),
+
 /***/ "./resources/js/components/utils/Game/Map/Map.js":
 /*!*******************************************************!*\
   !*** ./resources/js/components/utils/Game/Map/Map.js ***!
@@ -128042,6 +128052,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var three_interaction__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! three.interaction */ "./node_modules/three.interaction/build/three.interaction.module.js");
 /* harmony import */ var _GameContext__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../GameContext */ "./resources/js/components/utils/Game/GameContext.js");
 /* harmony import */ var _ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ActionModal/ActionModal */ "./resources/js/components/utils/Game/Map/ActionModal/ActionModal.js");
+/* harmony import */ var _DescriptionModal_DescriptionModal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./DescriptionModal/DescriptionModal */ "./resources/js/components/utils/Game/Map/DescriptionModal/DescriptionModal.js");
 
 
 
@@ -128052,6 +128063,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import * as THREE from "three";
+
 
 
 
@@ -128097,7 +128109,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadObj", function (x, y, z, name) {
       var scaleY = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-      var scaleParam = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0.0013;
+      var scaleParam = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0.001;
       var descriptionHeader = arguments.length > 6 ? arguments[6] : undefined;
       var descriptionContent = arguments.length > 7 ? arguments[7] : undefined;
       return new Promise( /*#__PURE__*/function () {
@@ -128130,6 +128142,8 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
                         obj.position.set(x, y, z);
                         obj.on('click', function (e) {
                           console.log(["description", descriptionHeader, descriptionContent]);
+
+                          _this.context.handleSetDescriptionModal(descriptionHeader, descriptionContent);
                         }); //make e.g. road vartical - horizontal
 
                         if (scaleY) {
@@ -128187,12 +128201,11 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
       _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["MapControls"](_this.camera, _this.mountMap);
       _this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
 
-      _this.controls.dampingFactor = 0.05; //this.controls.screenSpacePanning = false;
-
+      _this.controls.dampingFactor = 0.05;
       _this.controls.minDistance = 5;
       _this.controls.maxDistance = 10;
       _this.controls.enableRotate = false;
-      _this.controls.maxPolarAngle = Math.PI / 2; //set fundamental plate
+      _this.controls.maxPolarAngle = Math.PI / 2; //set fundamental black plate
 
       var geometryFundament = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](50, 50);
       var materialFundament = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
@@ -128217,7 +128230,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadRoadAndEmptyMapElements", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-      var initialObjectScale, i, j;
+      var initialObjectScale, i, j, geometryLand, materialLand, land;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
@@ -128227,7 +128240,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
             case 2:
               if (!(i < 30)) {
-                _context3.next = 27;
+                _context3.next = 34;
                 break;
               }
 
@@ -128235,7 +128248,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
             case 4:
               if (!(j < 30)) {
-                _context3.next = 24;
+                _context3.next = 31;
                 break;
               }
 
@@ -128248,7 +128261,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               return _this.loadObj(i + 0.05 - 20, -1, j - 0.05 - 20, "roadCross", false, initialObjectScale);
 
             case 8:
-              _context3.next = 21;
+              _context3.next = 28;
               break;
 
             case 10:
@@ -128261,7 +128274,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               return _this.loadObj(i + 0.09 - 20, -1, j - 0.08 - 20, "roadHorizontal", false, initialObjectScale);
 
             case 13:
-              _context3.next = 21;
+              _context3.next = 28;
               break;
 
             case 15:
@@ -128274,57 +128287,42 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               return _this.loadObj(i - 0.08 - 20, -1, j - 0.07 - 20, "roadHorizontal", true, initialObjectScale);
 
             case 18:
-              _context3.next = 21;
+              _context3.next = 28;
               break;
 
             case 20:
-              (function () {
-                var geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
-                var materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
-                  color: i % 2 === 0 && j % 2 === 0 ? "white" : i % 2 === 0 && j % 2 !== 0 ? "red" : j % 2 === 0 && i % 2 !== 0 ? "blue" : "green"
-                });
-                var land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
-                land.rotateX(-Math.PI * 0.5);
-                land.position.set(i - 20, -1.005, j - 20);
+              geometryLand = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](1, 1);
+              materialLand = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
+                color: "green"
+              });
+              land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
+              land.rotateX(-Math.PI * 0.5);
+              land.position.set(i - 20, -1.005, j - 20);
 
-                _this.scene.add(land);
+              _this.scene.add(land);
 
-                land.cursor = 'pointer';
-                land.on('click', function (e) {
-                  //console.log("test", e, e.data.target.position)
-                  var _e$data$target$positi = e.data.target.position,
-                      x = _e$data$target$positi.x,
-                      y = _e$data$target$positi.y,
-                      z = _e$data$target$positi.z;
+              land.cursor = 'pointer';
+              land.on('click', function (e) {
+                //console.log("test", e, e.data.target.position)
+                var _e$data$target$positi = e.data.target.position,
+                    x = _e$data$target$positi.x,
+                    y = _e$data$target$positi.y,
+                    z = _e$data$target$positi.z;
 
-                  _this.context.handleSetActionModal(x, y, z);
-                }); //change opacity on hover
+                _this.context.handleSetActionModal(x, y, z);
+              });
 
-                var startGreenColor = void 0;
-                land.on('mouseover', function (e) {
-                  if (e.data && e.data.target && e.data.target.material && e.data.target.material.color && e.data.target.material.color.g) {
-                    startGreenColor = e.data.target.material.color.g;
-                    e.data.target.material.color.g = 0.8;
-                  }
-                });
-                land.on('mouseout', function (e) {
-                  if (e.data && e.data.target && e.data.target.material && e.data.target.material.color && e.data.target.material.color.g) {
-                    e.data.target.material.color.g = startGreenColor;
-                  }
-                });
-              })();
-
-            case 21:
+            case 28:
               j++;
               _context3.next = 4;
               break;
 
-            case 24:
+            case 31:
               i++;
               _context3.next = 2;
               break;
 
-            case 27:
+            case 34:
             case "end":
               return _context3.stop();
           }
@@ -128340,17 +128338,17 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
             while (1) {
               switch (_context4.prev = _context4.next) {
                 case 0:
-                  x = configElement.x, y = configElement.y, z = configElement.z, name = configElement.value, scaleY = configElement.scaleY, scaleParam = configElement.scaleParam, descriptionHeader = configElement.descriptionHeader, descriptionContent = configElement.descriptionContent;
-                  console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent]);
-                  _context4.next = 4;
+                  x = configElement.x, y = configElement.y, z = configElement.z, name = configElement.value, scaleY = configElement.scaleY, scaleParam = configElement.scaleParam, descriptionHeader = configElement.descriptionHeader, descriptionContent = configElement.descriptionContent; //console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent])
+
+                  _context4.next = 3;
                   return _this.loadObj(x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent);
 
-                case 4:
+                case 3:
                   //load plate above initial green plate an object to make plate unclickable
                   _this.renderBuildingPlateFundament(x, z); //plate and object should display description on click
 
 
-                case 5:
+                case 4:
                 case "end":
                   return _context4.stop();
               }
@@ -128405,11 +128403,6 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(MapThreeD, [{
     key: "componentDidUpdate",
-    // setLoaderOff = () => {
-    //     setTimeout(() => {
-    //         this.setState({ showLoader: false })
-    //     }, 1000000)
-    // }
     value: function componentDidUpdate() {
       if (this.previousContext.mapConfig !== this.context.mapConfig) {
         this.loadMapConfigObjects();
@@ -128422,14 +128415,15 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var showActionModal = this.context.showActionModal; //const { showLoader } = this.state;
-
+      var _this$context = this.context,
+          showActionModal = _this$context.showActionModal,
+          showDescriptionModal = _this$context.showDescriptionModal;
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "three-d__container",
         ref: function ref(mount) {
           _this2.mountMap = mount;
         }
-      }, showActionModal && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_16__["default"], null));
+      }, showActionModal && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_ActionModal_ActionModal__WEBPACK_IMPORTED_MODULE_16__["default"], null), showDescriptionModal && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_DescriptionModal_DescriptionModal__WEBPACK_IMPORTED_MODULE_17__["default"], null));
     }
   }]);
 
@@ -128459,15 +128453,15 @@ var _ref;
 var initialMapConfig = [(_ref = {
   x: 3 + 0.05,
   y: -1,
-  z: 3 + 0.3,
-  value: "factory",
+  z: 3 - 0.05,
+  value: "bakery",
   initialElement: true,
   population: 0,
   money: 10000,
   materials: 0,
-  descriptionHeader: "Factory",
+  descriptionHeader: "Bakery",
   descriptionContent: "+10000 money everyday"
-}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "initialElement", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleY", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleParam", 0.0006), _ref)];
+}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "initialElement", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleY", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_ref, "scaleParam", 0.001), _ref)];
 /* harmony default export */ __webpack_exports__["default"] = (initialMapConfig);
 
 /***/ }),
@@ -128589,7 +128583,7 @@ var HomeFirstSection = /*#__PURE__*/function (_Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "timer", function () {
       _this.setState({
-        currentCount: _this.state.currentCount + 10
+        currentCount: _this.state.currentCount + 20
       });
 
       if (_this.state.currentCount === 100) {
@@ -128602,7 +128596,7 @@ var HomeFirstSection = /*#__PURE__*/function (_Component) {
     });
 
     _this.state = {
-      currentCount: 10,
+      currentCount: 0,
       showProgressPrecentage: false
     };
     return _this;
@@ -128630,7 +128624,7 @@ var HomeFirstSection = /*#__PURE__*/function (_Component) {
         onClick: function onClick() {
           return _this2.context.handleChangePath("game");
         }
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Try now")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Try now")), loadScreen && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "map-loader__container"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "map-loader__bar",

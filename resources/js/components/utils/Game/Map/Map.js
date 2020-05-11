@@ -17,6 +17,7 @@ import { MapControls } from "three/examples/jsm/controls/OrbitControls";
 import { Interaction } from 'three.interaction';
 import { GameContext } from "./../GameContext";
 import ActionModal from "./ActionModal/ActionModal";
+import DescriptionModal from "./DescriptionModal/DescriptionModal"
 
 class MapThreeD extends Component {
     constructor(props) {
@@ -31,15 +32,10 @@ class MapThreeD extends Component {
 
     componentDidMount = async () => {
         this.loadMapInitSettings();
+
         //load roads and default elements once
         this.loadRoadAndEmptyMapElements();
     };
-
-    // setLoaderOff = () => {
-    //     setTimeout(() => {
-    //         this.setState({ showLoader: false })
-    //     }, 1000000)
-    // }
 
     componentDidUpdate() {
         if (this.previousContext.mapConfig !== this.context.mapConfig) {
@@ -54,7 +50,7 @@ class MapThreeD extends Component {
         this.mountMap.removeChild(this.mapRenderer.domElement);
     };
 
-    loadObj = (x, y, z, name, scaleY = false, scaleParam = 0.0013, descriptionHeader, descriptionContent) => {
+    loadObj = (x, y, z, name, scaleY = false, scaleParam = 0.001, descriptionHeader, descriptionContent) => {
         return new Promise(async (resolve, reject) => {
             try {
                 const mtlLoader = new MTLLoader();
@@ -83,6 +79,8 @@ class MapThreeD extends Component {
 
                         obj.on('click', e => {
                             console.log(["description", descriptionHeader, descriptionContent])
+
+                            this.context.handleSetDescriptionModal(descriptionHeader, descriptionContent)
                         });
 
                         //make e.g. road vartical - horizontal
@@ -138,15 +136,12 @@ class MapThreeD extends Component {
         this.controls = new MapControls(this.camera, this.mountMap);
         this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
         this.controls.dampingFactor = 0.05;
-
-        //this.controls.screenSpacePanning = false;
-
         this.controls.minDistance = 5;
         this.controls.maxDistance = 10;
         this.controls.enableRotate = false;
         this.controls.maxPolarAngle = Math.PI / 2;
 
-        //set fundamental plate
+        //set fundamental black plate
         let geometryFundament = new PlaneGeometry(50, 50);
         let materialFundament = new MeshBasicMaterial({
             color: "black"
@@ -163,20 +158,10 @@ class MapThreeD extends Component {
         //     this.camera.position.y = 1;
         // });
 
-
         //window.addEventListener('resize', this.onWindowResize, false);
         this.mountMap.appendChild(this.mapRenderer.domElement);
         this.start();
     }
-
-    // onWindowResize = () => {
-
-    //     this.camera.aspect = window.innerWidth / window.innerHeight;
-    //     this.camera.updateProjectionMatrix();
-
-    //     this.mapRenderer.setSize(2, 2);
-
-    // }
 
     loadRoadAndEmptyMapElements = async () => {
         const { initialObjectScale } = this.state;
@@ -208,12 +193,7 @@ class MapThreeD extends Component {
                     let geometryLand = new PlaneGeometry(1, 1);
                     let materialLand = new MeshBasicMaterial({
                         color:
-                            i % 2 === 0 &&
-                                j % 2 === 0 ? "white" :
-                                i % 2 === 0 &&
-                                    j % 2 !== 0 ? "red" :
-                                    j % 2 === 0 &&
-                                        i % 2 !== 0 ? "blue" : "green"
+                            "green"
                     });
 
                     let land = new Mesh(geometryLand, materialLand);
@@ -230,33 +210,6 @@ class MapThreeD extends Component {
 
                         this.context.handleSetActionModal(x, y, z)
                     });
-
-                    //change opacity on hover
-                    let startGreenColor;
-                    land.on('mouseover', e => {
-                        if (
-                            e.data &&
-                            e.data.target &&
-                            e.data.target.material &&
-                            e.data.target.material.color &&
-                            e.data.target.material.color.g
-                        ) {
-                            startGreenColor = e.data.target.material.color.g;
-                            e.data.target.material.color.g = 0.8
-                        }
-
-                    });
-                    land.on('mouseout', e => {
-                        if (
-                            e.data &&
-                            e.data.target &&
-                            e.data.target.material &&
-                            e.data.target.material.color &&
-                            e.data.target.material.color.g
-                        ) {
-                            e.data.target.material.color.g = startGreenColor
-                        }
-                    });
                 }
             }
         }
@@ -266,7 +219,7 @@ class MapThreeD extends Component {
         this.context.mapConfig && this.context.mapConfig.length > 0 && this.context.mapConfig.map(async (configElement, i) => {
             const { x, y, z, value: name, scaleY, scaleParam, descriptionHeader, descriptionContent } = configElement;
 
-            console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent])
+            //console.log(["x, y, z, value: name, scaleY, scaleParam ", x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent])
             await this.loadObj(x, y, z, name, scaleY, scaleParam, descriptionHeader, descriptionContent);
 
             //load plate above initial green plate an object to make plate unclickable
@@ -278,10 +231,7 @@ class MapThreeD extends Component {
 
     renderBuildingPlateFundament = (x, z) => {
         let geometryObjectPlate = new PlaneGeometry(2, 2);
-        let materialObjectPlate = new MeshBasicMaterial({
-            color:
-                "yellow"
-        });
+        let materialObjectPlate = new MeshBasicMaterial({ color: "yellow" });
 
         let objectPlate = new Mesh(geometryObjectPlate, materialObjectPlate);
         objectPlate.rotateX(-Math.PI * 0.5);
@@ -310,8 +260,7 @@ class MapThreeD extends Component {
     };
 
     render() {
-        const { showActionModal } = this.context;
-        //const { showLoader } = this.state;
+        const { showActionModal, showDescriptionModal } = this.context;
 
         return (
             <div
@@ -320,9 +269,9 @@ class MapThreeD extends Component {
                     this.mountMap = mount;
                 }}
             >
-                {/* {showLoader &&
-                    <div className="map-loader"></div>} */}
                 {showActionModal && <ActionModal />}
+
+                {showDescriptionModal && <DescriptionModal />}
             </div>
         );
     }

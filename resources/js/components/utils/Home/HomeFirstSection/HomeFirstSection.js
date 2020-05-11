@@ -5,7 +5,7 @@ class HomeFirstSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentCount: 10,
+            currentCount: 0,
             showProgressPrecentage: false
         }
     }
@@ -20,7 +20,7 @@ class HomeFirstSection extends Component {
 
     timer = () => {
         this.setState({
-            currentCount: this.state.currentCount + 10
+            currentCount: this.state.currentCount + 20
         })
         if (this.state.currentCount === 100) {
             clearInterval(this.intervalId);
@@ -45,10 +45,10 @@ class HomeFirstSection extends Component {
                             >
                                 <p>Try now</p>
                             </div>}
-                            <div className="map-loader__container">
+                            {loadScreen && <div className="map-loader__container">
                                 <div className="map-loader__bar" style={{ width: `calc(${currentCount}% - 4px)` }}></div>
                                 <p>{!showProgressPrecentage ? `${currentCount} %` : "GET STARTED"}</p>
-                            </div>
+                            </div>}
                         </div>
                         <a
                             href="https://www.freepik.com/free-photos-vectors/food"

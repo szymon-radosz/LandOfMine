@@ -17,8 +17,6 @@ export const GameContext = React.createContext({
         money,
         desriptionHeader,
         descriptionContent,
-        finishedBuildDays,
-        durationBuildDays,
         notAddedHumanResources
     ) => { },
     handleSetActionModal: (x, y) => { },
@@ -29,5 +27,9 @@ export const GameContext = React.createContext({
     handleSetElementDescription: (x, y) => { },
     showDescription: false,
     showMapRoadBackLight: "hide",
-    handleMapRoadBackLight: (status) => { }
+    handleMapRoadBackLight: (status) => { },
+    showDescriptionModal: false,
+    activeDescriptionHeader: "",
+    activeDescriptionContent: "",
+    handleSetDescriptionModal: (descriptionHeader, descriptionContent) => { }
 });

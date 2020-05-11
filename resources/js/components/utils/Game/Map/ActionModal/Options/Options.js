@@ -3,8 +3,6 @@ import SingleOption from "./SingleOption/SingleOption";
 
 const Options = ({
     optionElements,
-    activeSidebarOption,
-    handleUpdateItem
 }) => {
     return (
         <div className="options__container">
@@ -13,9 +11,7 @@ const Options = ({
                     return (
                         <SingleOption
                             option={option}
-                            activeSidebarOption={activeSidebarOption}
                             key={`option-${i}`}
-                            handleUpdateItem={handleUpdateItem}
                         />
                     );
                 })}

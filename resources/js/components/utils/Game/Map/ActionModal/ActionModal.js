@@ -38,36 +38,12 @@ import bar from "./../../../../../../assets/images/bar.png";
 import fastFood from "./../../../../../../assets/images/fast-food.png";
 import friedChicken from "./../../../../../../assets/images/fried-chicken.png";
 import restaurant from "./../../../../../../assets/images/restaurant.png";
-import stadium from "./../../../../../../assets/images/stadium.png";
 
 class ActionModal extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            activeSidebarOption: "All",
-            sidebarOptions: [
-                {
-                    id: 0,
-                    name: "All",
-                    altIcon: "Icon made by Freepik from www.flaticon.com"
-                },
-                {
-                    id: 1,
-                    name: "Buildings",
-                    altIcon: "Icon made by Freepik from www.flaticon.com"
-                },
-                {
-                    id: 2,
-                    name: "Businesses",
-                    altIcon: "Icon made by Freepik from www.flaticon.com"
-                },
-                {
-                    id: 3,
-                    name: "Entertainment",
-                    altIcon: "Icon made by Freepik from www.flaticon.com"
-                }
-            ],
             optionElements: [
                 /* buildings */
                 {
@@ -80,14 +56,13 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseBlue,
                     desriptionHeader: "House - Blue",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+10 Free Human Resources",
                     descriptionActionModal:
                         "+10 Free Human Resources\n -100 materials",
                     cost: 500000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Buildings",
@@ -99,14 +74,13 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseGreen,
                     desriptionHeader: "House - Green",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+10 Free Human Resources",
                     descriptionActionModal:
                         "+10 Free Human Resources\n -100 materials",
                     cost: 500000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Buildings",
@@ -118,14 +92,13 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseRed,
                     desriptionHeader: "House - Red",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+10 Free Human Resources",
                     descriptionActionModal:
                         "+10 Free Human Resources\n -100 materials",
                     cost: 500000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Buildings",
@@ -137,14 +110,13 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceGreen,
                     desriptionHeader: "Residence - Green",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 5,
                     description: "+100 Free Human Resources",
                     descriptionActionModal:
                         "+100 Free Human Resources\n -200 materials",
                     cost: 5000000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Buildings",
@@ -156,14 +128,13 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceRed,
                     desriptionHeader: "Residence - Red",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 5,
                     description: "+100 Free Human Resources",
                     descriptionActionModal:
                         "+100 Free Human Resources\n -200 materials",
                     cost: 5000000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Buildings",
@@ -175,93 +146,84 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceYellow,
                     desriptionHeader: "Residence - Yellow",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 5,
                     description: "+100 Free Human Resources",
                     descriptionActionModal:
                         "+100 Free Human Resources\n -200 materials",
                     cost: 5000000,
                     notAddedHumanResources: true,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
-                {
-                    sidebarOption: "Buildings",
-                    name: "Sky Building - Green",
-                    value: "sky-building-green",
-                    freeHumanResources: 0,
-                    population: 1000,
-                    money: 0,
-                    materials: 300,
-                    icon: skyBuildingGreen,
-                    desriptionHeader: "Sky Building - Green",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 7,
-                    description: "+1000 Free Human Resources",
-                    descriptionActionModal:
-                        "+1000 Free Human Resources\n -300 materials",
-                    cost: 50000000,
-                    notAddedHumanResources: true,
-                    haveImage: true
-                },
-                {
-                    sidebarOption: "Buildings",
-                    name: "Sky Building - Red",
-                    value: "sky-building-red",
-                    freeHumanResources: 0,
-                    population: 1000,
-                    money: 0,
-                    materials: 300,
-                    icon: skyBuildingRed,
-                    desriptionHeader: "Sky Building - Red",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 7,
-                    description: "+1000 Free Human Resources",
-                    descriptionActionModal:
-                        "+1000 Free Human Resources\n -300 materials",
-                    cost: 50000000,
-                    notAddedHumanResources: true,
-                    haveImage: true
-                },
-                {
-                    sidebarOption: "Buildings",
-                    name: "Sky Building - Yellow",
-                    value: "sky-building-yellow",
-                    freeHumanResources: 0,
-                    population: 1000,
-                    money: 0,
-                    materials: 300,
-                    icon: skyBuildingYellow,
-                    desriptionHeader: "Sky Building - Yellow",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 7,
-                    description: "+1000 Free Human Resources",
-                    descriptionActionModal:
-                        "+1000 Free Human Resources\n -300 materials",
-                    cost: 50000000,
-                    notAddedHumanResources: true,
-                    haveImage: true
-                },
+                // {
+                //     sidebarOption: "Buildings",
+                //     name: "Sky Building - Green",
+                //     value: "sky-building-green",
+                //     freeHumanResources: 0,
+                //     population: 1000,
+                //     money: 0,
+                //     materials: 300,
+                //     icon: skyBuildingGreen,
+                //     desriptionHeader: "Sky Building - Green",
+                //     description: "+1000 Free Human Resources",
+                //     descriptionActionModal:
+                //         "+1000 Free Human Resources\n -300 materials",
+                //     cost: 50000000,
+                //     notAddedHumanResources: true,
+                //     haveImage: true
+                // },
+                // {
+                //     sidebarOption: "Buildings",
+                //     name: "Sky Building - Red",
+                //     value: "sky-building-red",
+                //     freeHumanResources: 0,
+                //     population: 1000,
+                //     money: 0,
+                //     materials: 300,
+                //     icon: skyBuildingRed,
+                //     desriptionHeader: "Sky Building - Red",
+                //     description: "+1000 Free Human Resources",
+                //     descriptionActionModal:
+                //         "+1000 Free Human Resources\n -300 materials",
+                //     cost: 50000000,
+                //     notAddedHumanResources: true,
+                //     haveImage: true
+                // },
+                // {
+                //     sidebarOption: "Buildings",
+                //     name: "Sky Building - Yellow",
+                //     value: "sky-building-yellow",
+                //     freeHumanResources: 0,
+                //     population: 1000,
+                //     money: 0,
+                //     materials: 300,
+                //     icon: skyBuildingYellow,
+                //     desriptionHeader: "Sky Building - Yellow",
+                //     description: "+1000 Free Human Resources",
+                //     descriptionActionModal:
+                //         "+1000 Free Human Resources\n -300 materials",
+                //     cost: 50000000,
+                //     notAddedHumanResources: true,
+                //     haveImage: true
+                // },
 
                 /* businesses */
-                {
-                    sidebarOption: "Businesses",
-                    name: "Factory",
-                    value: "factory",
-                    freeHumanResources: 1000,
-                    population: 0,
-                    money: 10000,
-                    materials: 300,
-                    icon: factory,
-                    desriptionHeader: "Factory",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 7,
-                    description: "+50000 money everyday",
-                    descriptionActionModal:
-                        "+50000 money everyday\n -1000 human resources \n -200 materials",
-                    cost: 30000000,
-                    notAddedHumanResources: false,
-                    haveImage: true
-                },
+                // {
+                //     sidebarOption: "Businesses",
+                //     name: "Factory",
+                //     value: "factory",
+                //     freeHumanResources: 1000,
+                //     population: 0,
+                //     money: 10000,
+                //     materials: 300,
+                //     icon: factory,
+                //     desriptionHeader: "Factory",
+                //     description: "+50000 money everyday",
+                //     descriptionActionModal:
+                //         "+50000 money everyday\n -1000 human resources \n -200 materials",
+                //     cost: 30000000,
+                //     notAddedHumanResources: false,
+                //     haveImage: true
+                // },
                 {
                     sidebarOption: "Businesses",
                     name: "Auto Service",
@@ -272,14 +234,13 @@ class ActionModal extends Component {
                     materials: 50,
                     icon: autoService,
                     desriptionHeader: "Auto Service",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+5000 money everyday",
                     descriptionActionModal:
                         "+5000 money everyday\n -100 human resources \n -50 materials",
                     cost: 200000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Businesses",
@@ -291,14 +252,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bakery,
                     desriptionHeader: "Bakery",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Businesses",
@@ -310,14 +270,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bookShop,
                     desriptionHeader: "Book Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Businesses",
@@ -329,14 +288,13 @@ class ActionModal extends Component {
                     materials: 40,
                     icon: clothingShop,
                     desriptionHeader: "Clothing Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 4,
                     description: "+5000 money everyday",
                     descriptionActionModal:
                         "+5000 money everyday\n -80 human resources \n -40 materials",
                     cost: 150000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Businesses",
@@ -348,34 +306,32 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: drugStore,
                     desriptionHeader: "Drug Store",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
-                {
-                    sidebarOption: "Businesses",
-                    name: "Fruit Shop",
-                    value: "fruit-shop",
-                    freeHumanResources: 50,
-                    population: 0,
-                    money: 3000,
-                    materials: 30,
-                    icon: fruitShop,
-                    desriptionHeader: "Fruit Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
-                    description: "+3000 money everyday",
-                    descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
-                    cost: 100000,
-                    notAddedHumanResources: false,
-                    haveImage: true
-                },
+                // {
+                //     sidebarOption: "Businesses",
+                //     name: "Fruit Shop",
+                //     value: "fruit-shop",
+                //     freeHumanResources: 50,
+                //     population: 0,
+                //     money: 3000,
+                //     materials: 30,
+                //     icon: fruitShop,
+                //     desriptionHeader: "Fruit Shop",
+                //     description: "+3000 money everyday",
+                //     descriptionActionModal:
+                //         "+3000 money everyday\n -50 human resources \n -30 materials",
+                //     cost: 100000,
+                //     notAddedHumanResources: false,
+                //     haveImage: true,
+                //     scaleParam: 0.001
+                // },
                 {
                     sidebarOption: "Businesses",
                     name: "Gas Station",
@@ -386,14 +342,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: gasStation,
                     desriptionHeader: "Gas Station",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0007
                 },
                 {
                     sidebarOption: "Businesses",
@@ -405,14 +360,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: giftShop,
                     desriptionHeader: "Gift Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.001
                 },
                 {
                     sidebarOption: "Businesses",
@@ -424,14 +378,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: musicShop,
                     desriptionHeader: "Music Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0011
                 },
                 {
                     sidebarOption: "Businesses",
@@ -443,14 +396,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: shoesShop,
                     desriptionHeader: "Shoes Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0012
                 },
                 {
                     sidebarOption: "Businesses",
@@ -462,14 +414,13 @@ class ActionModal extends Component {
                     materials: 50,
                     icon: supermarket,
                     desriptionHeader: "Supermarket",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+5000 money everyday",
                     descriptionActionModal:
                         "+5000 money everyday\n -100 human resources \n -50 materials",
                     cost: 200000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0007
                 },
 
                 /* entertainment */
@@ -483,14 +434,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: coffeeShop,
                     desriptionHeader: "Coffee Shop",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0008
                 },
                 {
                     sidebarOption: "Entertainment",
@@ -502,14 +452,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bar,
                     desriptionHeader: "Bar",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0012
                 },
                 {
                     sidebarOption: "Entertainment",
@@ -521,14 +470,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: fastFood,
                     desriptionHeader: "Fast Food",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0012
                 },
                 {
                     sidebarOption: "Entertainment",
@@ -540,14 +488,13 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: friedChicken,
                     desriptionHeader: "Fried Chicken",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.0011
                 },
                 {
                     sidebarOption: "Entertainment",
@@ -559,72 +506,21 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: restaurant,
                     desriptionHeader: "Restaurant",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 3,
                     description: "+3000 money everyday",
                     descriptionActionModal:
                         "+3000 money everyday\n -50 human resources \n -30 materials",
                     cost: 100000,
                     notAddedHumanResources: false,
-                    haveImage: true
-                },
-                {
-                    sidebarOption: "Entertainment",
-                    name: "Stadium",
-                    value: "stadium",
-                    freeHumanResources: 1000,
-                    population: 0,
-                    money: 10000,
-                    materials: 300,
-                    icon: stadium,
-                    desriptionHeader: "Stadium",
-                    finishedBuildDays: 1,
-                    durationBuildDays: 7,
-                    description: "+10000 money everyday",
-                    descriptionActionModal:
-                        "+50000 money everyday\n -1000 human resources \n -200 materials",
-                    cost: 30000000,
-                    notAddedHumanResources: false,
-                    haveImage: true
+                    haveImage: true,
+                    scaleParam: 0.002
                 }
             ]
         };
     }
 
-    handleSetActiveSidebarOption = (name) => {
-        this.setState({ activeSidebarOption: name });
-    };
-
-    handleUpdateItem = (
-        value,
-        freeHumanResources,
-        population,
-        materials,
-        money,
-        desriptionHeader,
-        descriptionContent,
-        finishedBuildDays,
-        durationBuildDays,
-        notAddedHumanResources
-    ) => {
-        this.context.handleUpdateMapConfigItem(
-            value,
-            population,
-            freeHumanResources,
-            materials,
-            money,
-            desriptionHeader,
-            descriptionContent,
-            finishedBuildDays,
-            durationBuildDays,
-            notAddedHumanResources
-        );
-    };
 
     render() {
         const {
-            sidebarOptions,
-            activeSidebarOption,
             optionElements
         } = this.state;
 
@@ -637,17 +533,8 @@ class ActionModal extends Component {
                 >
                     <img src={close} alt="Close" />
                 </div>
-                <Sidebar
-                    options={sidebarOptions}
-                    handleSetActiveSidebarOption={
-                        this.handleSetActiveSidebarOption
-                    }
-                    activeSidebarOption={activeSidebarOption}
-                />
                 <Options
                     optionElements={optionElements}
-                    activeSidebarOption={activeSidebarOption}
-                    handleUpdateItem={this.handleUpdateItem}
                 />
             </div>
         );
