@@ -10,46 +10,38 @@ const BottomPanel = () => {
     return (
         <div className="bottom-panel-game__container">
             <div className="bottom-panel-game__element">
-                <p>{`Date: ${gameContext &&
-                    gameContext.date &&
-                    gameContext.date}`}</p>
-                <p>
-                    {`Finished days:
-                    ${gameContext &&
-                        gameContext.daysPassed &&
-                        gameContext.daysPassed}`}
-                </p>
-                <p>{`Society Hapiness: ${gameContext &&
-                    gameContext.societyHappiness &&
-                    gameContext.societyHappiness} %`}</p>
-            </div>
-            <div className="bottom-panel-game__element">
                 <img
                     className="bottom-panel-game--logo"
                     src={logo}
                     onClick={() => context.handleChangePath("")}
                 />
             </div>
-            <div className="bottom-panel-game__element">
+            <div className="bottom-panel-game__element bottom-panel-game__element--middle">
                 <p>
-                    {`Overal Population: ${gameContext &&
+                    <strong>Overal Population</strong>{" "}{gameContext &&
                         gameContext.population &&
-                        gameContext.population}`}
+                        gameContext.population}
                 </p>
                 <p>
-                    {`Free Human Resources: ${gameContext &&
+                    <strong>Free Human Resources</strong>{" "}{gameContext &&
                         gameContext.freeHumanResources &&
-                        gameContext.freeHumanResources}`}
+                        gameContext.freeHumanResources}
                 </p>
                 <p>
-                    Money:{" "}
+                    <strong>Money</strong>{" "}
                     <span data-cy="money-value">{`${gameContext &&
                         gameContext.money &&
                         gameContext.money}`}</span>
                 </p>
-                <p>{`Materials: ${gameContext &&
-                    gameContext.materials &&
-                    gameContext.materials}`}</p>
+                <p>
+                    <strong>Materials</strong>{" "}{gameContext &&
+                        gameContext.materials &&
+                        gameContext.materials}</p>
+            </div>
+            <div className="bottom-panel-game__element">
+                <button className="bottom-panel__naxt-day--btn" onClick={gameContext.handleDayPassed}>
+                    Go to next day
+                </button>
             </div>
         </div>
     );

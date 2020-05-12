@@ -1,8 +1,8 @@
 const initialMapConfig = [
     {
-        x: 3 + 0.05,
+        x: -3 + 0.05,
         y: -1,
-        z: 3 - 0.05,
+        z: -3 - 0.05,
         value: "bakery",
         initialElement: true,
         population: 0,

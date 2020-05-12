@@ -247,7 +247,7 @@ class Game extends Component {
                 >
                     {!daylight && <DaylightOverlay />}
 
-                    {/* {showMapLoader && <HomeFirstSection loadScreen={true} />} */}
+                    {showMapLoader && <HomeFirstSection loadScreen={true} />}
 
                     <Map />
 

@@ -126893,8 +126893,6 @@ var BottomPanel = function BottomPanel() {
     className: "bottom-panel-game__container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date: ".concat(gameContext && gameContext.date && gameContext.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Finished days:\n                    ".concat(gameContext && gameContext.daysPassed && gameContext.daysPassed)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Society Hapiness: ".concat(gameContext && gameContext.societyHappiness && gameContext.societyHappiness, " %"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bottom-panel-game__element"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "bottom-panel-game--logo",
     src: _assets_images_LOM_white_png__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -126902,10 +126900,15 @@ var BottomPanel = function BottomPanel() {
       return context.handleChangePath("");
     }
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bottom-panel-game__element"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Overal Population: ".concat(gameContext && gameContext.population && gameContext.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Free Human Resources: ".concat(gameContext && gameContext.freeHumanResources && gameContext.freeHumanResources)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Money:", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "bottom-panel-game__element bottom-panel-game__element--middle"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Overal Population"), " ", gameContext && gameContext.population && gameContext.population), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Free Human Resources"), " ", gameContext && gameContext.freeHumanResources && gameContext.freeHumanResources), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Money"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "data-cy": "money-value"
-  }, "".concat(gameContext && gameContext.money && gameContext.money))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Materials: ".concat(gameContext && gameContext.materials && gameContext.materials))));
+  }, "".concat(gameContext && gameContext.money && gameContext.money))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Materials"), " ", gameContext && gameContext.materials && gameContext.materials)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bottom-panel-game__element"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "bottom-panel__naxt-day--btn",
+    onClick: gameContext.handleDayPassed
+  }, "Go to next day")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BottomPanel);
@@ -127245,7 +127248,9 @@ var Game = /*#__PURE__*/function (_Component) {
           handleSetDescriptionModal: this.handleSetDescriptionModal,
           handleSetElementDescription: this.handleSetElementDescription
         }
-      }, !daylight && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_17__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_11__["default"], null)));
+      }, !daylight && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_DaylightOverlay_DaylightOverlay__WEBPACK_IMPORTED_MODULE_17__["default"], null), showMapLoader && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_Home_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_18__["default"], {
+        loadScreen: true
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_Map_Map__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_BottomPanel_BottomPanel__WEBPACK_IMPORTED_MODULE_11__["default"], null)));
     }
   }]);
 
@@ -128062,7 +128067,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import * as THREE from "three";
 
 
 
@@ -128174,14 +128178,14 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadMapInitSettings", function () {
       _this.previousContext = _this.context;
+      var mapShift = _this.state.mapShift;
       var width = _this.mountMap.clientWidth;
-      var height = _this.mountMap.clientHeight; //console.log(["width", width, height])
-
+      var height = _this.mountMap.clientHeight;
       var scene = new three__WEBPACK_IMPORTED_MODULE_10__["Scene"]();
       var camera = new three__WEBPACK_IMPORTED_MODULE_10__["PerspectiveCamera"](20, width / height, 1, 1000);
       camera.position.z = 5;
       camera.position.x = 5;
-      camera.position.y = 5.5;
+      camera.position.y = 5;
       var mapRenderer = new three__WEBPACK_IMPORTED_MODULE_10__["WebGLRenderer"]({
         antialias: true
       });
@@ -128199,29 +128203,22 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
       scene.add(new three__WEBPACK_IMPORTED_MODULE_10__["AmbientLight"](0xffffff, 1)); //cursor control
 
       _this.controls = new three_examples_jsm_controls_OrbitControls__WEBPACK_IMPORTED_MODULE_13__["MapControls"](_this.camera, _this.mountMap);
-      _this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
-
+      _this.controls.enableDamping = true;
       _this.controls.dampingFactor = 0.05;
       _this.controls.minDistance = 5;
       _this.controls.maxDistance = 10;
       _this.controls.enableRotate = false;
       _this.controls.maxPolarAngle = Math.PI / 2; //set fundamental black plate
 
-      var geometryFundament = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](50, 50);
+      var geometryFundament = new three__WEBPACK_IMPORTED_MODULE_10__["PlaneGeometry"](30, 30);
       var materialFundament = new three__WEBPACK_IMPORTED_MODULE_10__["MeshBasicMaterial"]({
         color: "black"
       });
       var fundament = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryFundament, materialFundament);
       fundament.rotateX(-Math.PI * 0.5);
-      fundament.position.set(-7, -1.015, -5);
+      fundament.position.set(5 - mapShift, -1.015, 5 - mapShift);
 
-      _this.scene.add(fundament); //fundamental on mouse over will restart camera position to the initial value - then the user not go further!!!!
-      // fundament.on('mouseover', e => {
-      //     this.camera.position.z = 5
-      //     this.camera.position.x = 5;
-      //     this.camera.position.y = 1;
-      // });
-      //window.addEventListener('resize', this.onWindowResize, false);
+      _this.scene.add(fundament); //window.addEventListener('resize', this.onWindowResize, false);
 
 
       _this.mountMap.appendChild(_this.mapRenderer.domElement);
@@ -128230,16 +128227,17 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     });
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6___default()(_this), "loadRoadAndEmptyMapElements", /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-      var initialObjectScale, i, j, geometryLand, materialLand, land;
+      var _this$state, initialObjectScale, mapShift, i, j, geometryLand, materialLand, land;
+
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              initialObjectScale = _this.state.initialObjectScale;
+              _this$state = _this.state, initialObjectScale = _this$state.initialObjectScale, mapShift = _this$state.mapShift;
               i = 0;
 
             case 2:
-              if (!(i < 30)) {
+              if (!(i < 15)) {
                 _context3.next = 34;
                 break;
               }
@@ -128247,7 +128245,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               j = 0;
 
             case 4:
-              if (!(j < 30)) {
+              if (!(j < 15)) {
                 _context3.next = 31;
                 break;
               }
@@ -128258,7 +128256,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               }
 
               _context3.next = 8;
-              return _this.loadObj(i + 0.05 - 20, -1, j - 0.05 - 20, "roadCross", false, initialObjectScale);
+              return _this.loadObj(i + 0.05 - mapShift, -1, j - 0.05 - mapShift, "roadCross", false, initialObjectScale);
 
             case 8:
               _context3.next = 28;
@@ -128271,7 +128269,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               }
 
               _context3.next = 13;
-              return _this.loadObj(i + 0.09 - 20, -1, j - 0.08 - 20, "roadHorizontal", false, initialObjectScale);
+              return _this.loadObj(i + 0.09 - mapShift, -1, j - 0.08 - mapShift, "roadHorizontal", false, initialObjectScale);
 
             case 13:
               _context3.next = 28;
@@ -128284,7 +128282,7 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               }
 
               _context3.next = 18;
-              return _this.loadObj(i - 0.08 - 20, -1, j - 0.07 - 20, "roadHorizontal", true, initialObjectScale);
+              return _this.loadObj(i - 0.08 - mapShift, -1, j - 0.07 - mapShift, "roadHorizontal", true, initialObjectScale);
 
             case 18:
               _context3.next = 28;
@@ -128297,13 +128295,12 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
               });
               land = new three__WEBPACK_IMPORTED_MODULE_10__["Mesh"](geometryLand, materialLand);
               land.rotateX(-Math.PI * 0.5);
-              land.position.set(i - 20, -1.005, j - 20);
+              land.position.set(i - mapShift, -1.005, j - mapShift);
 
               _this.scene.add(land);
 
               land.cursor = 'pointer';
               land.on('click', function (e) {
-                //console.log("test", e, e.data.target.position)
                 var _e$data$target$positi = e.data.target.position,
                     x = _e$data$target$positi.x,
                     y = _e$data$target$positi.y,
@@ -128395,7 +128392,8 @@ var MapThreeD = /*#__PURE__*/function (_Component) {
     });
 
     _this.state = {
-      initialObjectScale: 0.00128
+      initialObjectScale: 0.00128,
+      mapShift: 10
     };
     _this.previousContext;
     return _this;
@@ -128451,9 +128449,9 @@ __webpack_require__.r(__webpack_exports__);
 var _ref;
 
 var initialMapConfig = [(_ref = {
-  x: 3 + 0.05,
+  x: -3 + 0.05,
   y: -1,
-  z: 3 - 0.05,
+  z: -3 - 0.05,
   value: "bakery",
   initialElement: true,
   population: 0,

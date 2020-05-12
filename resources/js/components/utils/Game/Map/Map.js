@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import * as THREE from "three";
 import {
     Scene,
     PerspectiveCamera,
@@ -25,6 +24,7 @@ class MapThreeD extends Component {
 
         this.state = {
             initialObjectScale: 0.00128,
+            mapShift: 10
         }
 
         this.previousContext;
@@ -101,18 +101,19 @@ class MapThreeD extends Component {
     loadMapInitSettings = () => {
         this.previousContext = this.context;
 
+        const { mapShift } = this.state;
+
         const width = this.mountMap.clientWidth;
         const height = this.mountMap.clientHeight;
 
-        //console.log(["width", width, height])
-
         const scene = new Scene();
+
         const camera = new PerspectiveCamera(
             20, width / height, 1, 1000
         );
         camera.position.z = 5;
         camera.position.x = 5;
-        camera.position.y = 5.5;
+        camera.position.y = 5;
 
         const mapRenderer = new WebGLRenderer({ antialias: true });
 
@@ -134,7 +135,7 @@ class MapThreeD extends Component {
 
         //cursor control
         this.controls = new MapControls(this.camera, this.mountMap);
-        this.controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+        this.controls.enableDamping = true;
         this.controls.dampingFactor = 0.05;
         this.controls.minDistance = 5;
         this.controls.maxDistance = 10;
@@ -142,21 +143,14 @@ class MapThreeD extends Component {
         this.controls.maxPolarAngle = Math.PI / 2;
 
         //set fundamental black plate
-        let geometryFundament = new PlaneGeometry(50, 50);
+        let geometryFundament = new PlaneGeometry(30, 30);
         let materialFundament = new MeshBasicMaterial({
             color: "black"
         });
         let fundament = new Mesh(geometryFundament, materialFundament);
         fundament.rotateX(-Math.PI * 0.5);
-        fundament.position.set(-7, -1.015, -5)
+        fundament.position.set(5 - mapShift, -1.015, 5 - mapShift)
         this.scene.add(fundament);
-
-        //fundamental on mouse over will restart camera position to the initial value - then the user not go further!!!!
-        // fundament.on('mouseover', e => {
-        //     this.camera.position.z = 5
-        //     this.camera.position.x = 5;
-        //     this.camera.position.y = 1;
-        // });
 
         //window.addEventListener('resize', this.onWindowResize, false);
         this.mountMap.appendChild(this.mapRenderer.domElement);
@@ -164,48 +158,40 @@ class MapThreeD extends Component {
     }
 
     loadRoadAndEmptyMapElements = async () => {
-        const { initialObjectScale } = this.state;
-        for (let i = 0; i < 30; i++) {
-            for (let j = 0; j < 30; j++) {
-                //console.log(["i, j", i, j])
+        const { initialObjectScale, mapShift } = this.state;
 
+        for (let i = 0; i < 15; i++) {
+            for (let j = 0; j < 15; j++) {
                 // road cross
                 if (i % 2 === 0 &&
                     j % 2 === 0) {
-                    await this.loadObj(i + 0.05 - 20, -1, j - 0.05 - 20, "roadCross", false, initialObjectScale);
+                    await this.loadObj(i + 0.05 - mapShift, -1, j - 0.05 - mapShift, "roadCross", false, initialObjectScale);
                 }
 
                 //roadHorizontal
                 else if (i % 2 === 0 &&
                     j % 2 !== 0) {
-                    await this.loadObj(i + 0.09 - 20, -1, j - 0.08 - 20, "roadHorizontal", false, initialObjectScale);
+                    await this.loadObj(i + 0.09 - mapShift, -1, j - 0.08 - mapShift, "roadHorizontal", false, initialObjectScale);
                 }
 
                 // //roadVertical
                 else if (j % 2 === 0 &&
                     i % 2) {
-                    await this.loadObj(i - 0.08 - 20, -1, j - 0.07 - 20, "roadHorizontal", true, initialObjectScale);
+                    await this.loadObj(i - 0.08 - mapShift, -1, j - 0.07 - mapShift, "roadHorizontal", true, initialObjectScale);
                 }
 
                 //empty land
                 else {
 
                     let geometryLand = new PlaneGeometry(1, 1);
-                    let materialLand = new MeshBasicMaterial({
-                        color:
-                            "green"
-                    });
+                    let materialLand = new MeshBasicMaterial({ color: "green" });
 
                     let land = new Mesh(geometryLand, materialLand);
                     land.rotateX(-Math.PI * 0.5);
-                    land.position.set(i - 20, -1.005, j - 20)
-
+                    land.position.set(i - mapShift, -1.005, j - mapShift)
                     this.scene.add(land);
-
                     land.cursor = 'pointer';
                     land.on('click', (e) => {
-                        //console.log("test", e, e.data.target.position)
-
                         let { x, y, z } = e.data.target.position;
 
                         this.context.handleSetActionModal(x, y, z)
