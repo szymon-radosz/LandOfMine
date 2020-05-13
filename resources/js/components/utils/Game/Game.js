@@ -133,14 +133,12 @@ class Game extends Component {
 
     handleAssetsEarning = () => {
         let moneySum = 0;
-        let materialsSum = 0;
         let freeHumanResoucesSum = 0;
         let populationSum = 0;
 
         let mapConfigCopy = this.state.mapConfig;
 
         mapConfigCopy.map(async mapConfigObject => {
-            materialsSum += mapConfigObject.materials;
             moneySum += mapConfigObject.money;
             mapConfigObject.notAddedHumanResources = false;
             freeHumanResoucesSum += mapConfigObject.population;
@@ -149,7 +147,7 @@ class Game extends Component {
 
         this.setState(prevState => ({
             money: prevState.money + moneySum,
-            materials: prevState.materials + materialsSum,
+            materials: prevState.materials + 100,
             mapConfig: mapConfigCopy,
             population: prevState.population + populationSum,
             freeHumanResources:

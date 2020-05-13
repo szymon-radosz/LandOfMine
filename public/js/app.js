@@ -127087,7 +127087,6 @@ var Game = /*#__PURE__*/function (_Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this), "handleAssetsEarning", function () {
       var moneySum = 0;
-      var materialsSum = 0;
       var freeHumanResoucesSum = 0;
       var populationSum = 0;
       var mapConfigCopy = _this.state.mapConfig;
@@ -127097,13 +127096,12 @@ var Game = /*#__PURE__*/function (_Component) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
-                  materialsSum += mapConfigObject.materials;
                   moneySum += mapConfigObject.money;
                   mapConfigObject.notAddedHumanResources = false;
                   freeHumanResoucesSum += mapConfigObject.population;
                   populationSum += mapConfigObject.population;
 
-                case 5:
+                case 4:
                 case "end":
                   return _context.stop();
               }
@@ -127119,7 +127117,7 @@ var Game = /*#__PURE__*/function (_Component) {
       _this.setState(function (prevState) {
         return {
           money: prevState.money + moneySum,
-          materials: prevState.materials + materialsSum,
+          materials: prevState.materials + 100,
           mapConfig: mapConfigCopy,
           population: prevState.population + populationSum,
           freeHumanResources: prevState.freeHumanResources + freeHumanResoucesSum
