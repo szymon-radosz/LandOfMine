@@ -55,7 +55,7 @@ class MapThreeD extends Component {
             try {
                 const mtlLoader = new MTLLoader();
                 let materialUrl =
-                    `http://127.0.0.1:8000/objects/${name}.mtl`;
+                    `http://land-of-mine.com/objects/${name}.mtl`;
 
                 mtlLoader.load(materialUrl, materials => {
                     materials.preload();
@@ -63,10 +63,10 @@ class MapThreeD extends Component {
                     const objLoader = new OBJLoader();
                     objLoader.setMaterials(materials);
 
-                    let modelUrl = `http://127.0.0.1:8000/objects/${name}.obj`;
+                    let modelUrl = `http://land-of-mine.com/objects/${name}.obj`;
 
                     objLoader.load(modelUrl, obj => {
-                        let texture = new TextureLoader().load(`http://127.0.0.1:8000/objects/${name}.png`);
+                        let texture = new TextureLoader().load(`http://land-of-mine.com/objects/${name}.png`);
                         obj.traverse(function (child) {   // aka setTexture
                             if (child instanceof Mesh) {
                                 child.material.map = texture;

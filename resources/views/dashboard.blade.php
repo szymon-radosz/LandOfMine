@@ -13,9 +13,9 @@
     <body>
         <div id="app"></div>
 
-        <!-- <script>
+        <script>
             window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function () {}
-        </script> -->
+        </script>
 
         <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
