@@ -1,0 +1,51 @@
+{
+    "overalPopulation": [
+        {
+            "EN": "Overal Population",
+            "GE": "Gesamtbevölkerung",
+            "RU": "Общая численность населения"
+        }
+    ],
+    "freeHumanResources": [
+        {
+            "EN": "Free Human Resources",
+            "GE": "Kostenlose Personalabteilung",
+            "RU": "Бесплатные человеческие ресурсы"
+        }
+    ],
+    "money": [
+        {
+            "EN": "Money",
+            "GE": "Geld",
+            "RU": "Деньги"
+        }
+    ],
+    "materials": [
+        {
+            "EN": "Materials",
+            "GE": "Materialien",
+            "RU": "материалы"
+        }
+    ],
+    "nextDay": [
+        {
+            "EN": "Go to next day",
+            "GE": "Geh zum nächsten Tag",
+            "RU": "Перейти на следующий день"
+        }
+    ],
+    "buyNow": [
+        {
+            "EN": "Buy now",
+            "GE": "Kaufe jetzt",
+            "RU": "Купи сейчас"
+        }
+    ],
+    "everyday": [
+        {
+            "EN": "Buy now",
+            "GE": "jeden Tag",
+            "RU": "ежедневно"
+        }
+    ]
+}

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { GameContext } from "./../../GameContext";
-import Sidebar from "./Sidebar/Sidebar";
 import Options from "./Options/Options";
+
+import translationsGame from "./../../../../translations/translations-game.json"
 
 import close from "./../../../../../../assets/images/close.png";
 
@@ -14,18 +15,12 @@ import residenceGreen from "./../../../../../../assets/images/residence-green.pn
 import residenceRed from "./../../../../../../assets/images/residence-red.png";
 import residenceYellow from "./../../../../../../assets/images/residence-yellow.png";
 
-import skyBuildingGreen from "./../../../../../../assets/images/sky-building-green.png";
-import skyBuildingRed from "./../../../../../../assets/images/sky-building-red.png";
-import skyBuildingYellow from "./../../../../../../assets/images/sky-building-yellow.png";
-
 /* businesses */
-import factory from "./../../../../../../assets/images/factory.png";
 import autoService from "./../../../../../../assets/images/auto-service.png";
 import bakery from "./../../../../../../assets/images/bakery.png";
 import bookShop from "./../../../../../../assets/images/book-shop.png";
 import clothingShop from "./../../../../../../assets/images/clothing-shop.png";
 import drugStore from "./../../../../../../assets/images/drug-store.png";
-import fruitShop from "./../../../../../../assets/images/fruit-shop.png";
 import gasStation from "./../../../../../../assets/images/gas-station.png";
 import giftShop from "./../../../../../../assets/images/gift-shop.png";
 import musicShop from "./../../../../../../assets/images/music-shop.png";
@@ -44,8 +39,13 @@ class ActionModal extends Component {
         super(props);
 
         this.state = {
+            optionElements: []
+        };
+    }
+
+    componentDidMount = () => {
+        this.setState({
             optionElements: [
-                /* buildings */
                 {
                     sidebarOption: "Buildings",
                     name: "House - Blue",
@@ -56,9 +56,31 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseBlue,
                     desriptionHeader: "House - Blue",
-                    description: "+10 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+10 Free Human Resources\n -100 materials",
+                        `+10 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -100 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 500000,
                     notAddedHumanResources: true,
                     haveImage: true,
@@ -74,9 +96,31 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseGreen,
                     desriptionHeader: "House - Green",
-                    description: "+10 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+10 Free Human Resources\n -100 materials",
+                        `+10 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -100 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 500000,
                     notAddedHumanResources: true,
                     haveImage: true,
@@ -92,9 +136,31 @@ class ActionModal extends Component {
                     materials: 100,
                     icon: houseRed,
                     desriptionHeader: "House - Red",
-                    description: "+10 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+10 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+10 Free Human Resources\n -100 materials",
+                        `+10 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -100 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 500000,
                     notAddedHumanResources: true,
                     haveImage: true,
@@ -110,9 +176,31 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceGreen,
                     desriptionHeader: "Residence - Green",
-                    description: "+100 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+100 Free Human Resources\n -200 materials",
+                        `+100 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -200 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 5000000,
                     notAddedHumanResources: true,
                     haveImage: true,
@@ -128,9 +216,31 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceRed,
                     desriptionHeader: "Residence - Red",
-                    description: "+100 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+100 Free Human Resources\n -200 materials",
+                        `+100 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -200 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 5000000,
                     notAddedHumanResources: true,
                     haveImage: true,
@@ -146,84 +256,36 @@ class ActionModal extends Component {
                     materials: 200,
                     icon: residenceYellow,
                     desriptionHeader: "Residence - Yellow",
-                    description: "+100 Free Human Resources",
+                    description:
+                        [
+                            {
+                                "EN": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["EN"]
+                                    }`,
+                                "GE": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["GE"]
+                                    }`,
+                                "RU": `+100 ${translationsGame &&
+                                    translationsGame.freeHumanResources &&
+                                    translationsGame.freeHumanResources[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+100 Free Human Resources\n -200 materials",
+                        `+100 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -200 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 5000000,
                     notAddedHumanResources: true,
                     haveImage: true,
                     scaleParam: 0.001
                 },
-                // {
-                //     sidebarOption: "Buildings",
-                //     name: "Sky Building - Green",
-                //     value: "sky-building-green",
-                //     freeHumanResources: 0,
-                //     population: 1000,
-                //     money: 0,
-                //     materials: 300,
-                //     icon: skyBuildingGreen,
-                //     desriptionHeader: "Sky Building - Green",
-                //     description: "+1000 Free Human Resources",
-                //     descriptionActionModal:
-                //         "+1000 Free Human Resources\n -300 materials",
-                //     cost: 50000000,
-                //     notAddedHumanResources: true,
-                //     haveImage: true
-                // },
-                // {
-                //     sidebarOption: "Buildings",
-                //     name: "Sky Building - Red",
-                //     value: "sky-building-red",
-                //     freeHumanResources: 0,
-                //     population: 1000,
-                //     money: 0,
-                //     materials: 300,
-                //     icon: skyBuildingRed,
-                //     desriptionHeader: "Sky Building - Red",
-                //     description: "+1000 Free Human Resources",
-                //     descriptionActionModal:
-                //         "+1000 Free Human Resources\n -300 materials",
-                //     cost: 50000000,
-                //     notAddedHumanResources: true,
-                //     haveImage: true
-                // },
-                // {
-                //     sidebarOption: "Buildings",
-                //     name: "Sky Building - Yellow",
-                //     value: "sky-building-yellow",
-                //     freeHumanResources: 0,
-                //     population: 1000,
-                //     money: 0,
-                //     materials: 300,
-                //     icon: skyBuildingYellow,
-                //     desriptionHeader: "Sky Building - Yellow",
-                //     description: "+1000 Free Human Resources",
-                //     descriptionActionModal:
-                //         "+1000 Free Human Resources\n -300 materials",
-                //     cost: 50000000,
-                //     notAddedHumanResources: true,
-                //     haveImage: true
-                // },
-
-                /* businesses */
-                // {
-                //     sidebarOption: "Businesses",
-                //     name: "Factory",
-                //     value: "factory",
-                //     freeHumanResources: 1000,
-                //     population: 0,
-                //     money: 10000,
-                //     materials: 300,
-                //     icon: factory,
-                //     desriptionHeader: "Factory",
-                //     description: "+50000 money everyday",
-                //     descriptionActionModal:
-                //         "+50000 money everyday\n -1000 human resources \n -200 materials",
-                //     cost: 30000000,
-                //     notAddedHumanResources: false,
-                //     haveImage: true
-                // },
                 {
                     sidebarOption: "Businesses",
                     name: "Auto Service",
@@ -234,9 +296,46 @@ class ActionModal extends Component {
                     materials: 50,
                     icon: autoService,
                     desriptionHeader: "Auto Service",
-                    description: "+5000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+5000 money everyday\n -100 human resources \n -50 materials",
+                        `+5000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -100 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        } \n -50 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 200000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -252,9 +351,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bakery,
                     desriptionHeader: "Bakery",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        } \n -30 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -270,9 +406,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bookShop,
                     desriptionHeader: "Book Shop",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -288,9 +461,46 @@ class ActionModal extends Component {
                     materials: 40,
                     icon: clothingShop,
                     desriptionHeader: "Clothing Shop",
-                    description: "+5000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+5000 money everyday\n -80 human resources \n -40 materials",
+                        `+5000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -80 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -40 ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 150000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -306,32 +516,51 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: drugStore,
                     desriptionHeader: "Drug Store",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
                     scaleParam: 0.001
                 },
-                // {
-                //     sidebarOption: "Businesses",
-                //     name: "Fruit Shop",
-                //     value: "fruit-shop",
-                //     freeHumanResources: 50,
-                //     population: 0,
-                //     money: 3000,
-                //     materials: 30,
-                //     icon: fruitShop,
-                //     desriptionHeader: "Fruit Shop",
-                //     description: "+3000 money everyday",
-                //     descriptionActionModal:
-                //         "+3000 money everyday\n -50 human resources \n -30 materials",
-                //     cost: 100000,
-                //     notAddedHumanResources: false,
-                //     haveImage: true,
-                //     scaleParam: 0.001
-                // },
                 {
                     sidebarOption: "Businesses",
                     name: "Gas Station",
@@ -342,9 +571,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: gasStation,
                     desriptionHeader: "Gas Station",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -360,9 +626,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: giftShop,
                     desriptionHeader: "Gift Shop",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -378,9 +681,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: musicShop,
                     desriptionHeader: "Music Shop",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -396,9 +736,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: shoesShop,
                     desriptionHeader: "Shoes Shop",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -414,9 +791,46 @@ class ActionModal extends Component {
                     materials: 50,
                     icon: supermarket,
                     desriptionHeader: "Supermarket",
-                    description: "+5000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+5000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+5000 money everyday\n -100 human resources \n -50 materials",
+                        `+5000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -100 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -50  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 200000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -434,9 +848,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: coffeeShop,
                     desriptionHeader: "Coffee Shop",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -452,9 +903,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: bar,
                     desriptionHeader: "Bar",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -470,9 +958,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: fastFood,
                     desriptionHeader: "Fast Food",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -488,9 +1013,46 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: friedChicken,
                     desriptionHeader: "Fried Chicken",
-                    description: "+3000 money everyday",
+                    description:
+                        [
+                            {
+                                "EN": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["EN"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["EN"]
+                                    }`,
+                                "GE": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["GE"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["GE"]
+                                    }`,
+                                "RU": `+3000 ${translationsGame &&
+                                    translationsGame.money &&
+                                    translationsGame.money[0]["RU"]
+                                    } ${translationsGame &&
+                                    translationsGame.everyday &&
+                                    translationsGame.everyday[0]["RU"]
+                                    }`
+                            }
+                        ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
@@ -506,16 +1068,51 @@ class ActionModal extends Component {
                     materials: 30,
                     icon: restaurant,
                     desriptionHeader: "Restaurant",
-                    description: "+3000 money everyday",
+                    description: [
+                        {
+                            "EN": `+3000 ${translationsGame &&
+                                translationsGame.money &&
+                                translationsGame.money[0]["EN"]
+                                } ${translationsGame &&
+                                translationsGame.everyday &&
+                                translationsGame.everyday[0]["EN"]
+                                }`,
+                            "GE": `+3000 ${translationsGame &&
+                                translationsGame.money &&
+                                translationsGame.money[0]["GE"]
+                                } ${translationsGame &&
+                                translationsGame.everyday &&
+                                translationsGame.everyday[0]["GE"]
+                                }`,
+                            "RU": `+3000 ${translationsGame &&
+                                translationsGame.money &&
+                                translationsGame.money[0]["RU"]
+                                } ${translationsGame &&
+                                translationsGame.everyday &&
+                                translationsGame.everyday[0]["RU"]
+                                }`
+                        }
+                    ],
                     descriptionActionModal:
-                        "+3000 money everyday\n -50 human resources \n -30 materials",
+                        `+3000 ${translationsGame &&
+                        translationsGame.money &&
+                        translationsGame.money[0][this.context.activeLanguage]
+                        } ${translationsGame &&
+                        translationsGame.everyday &&
+                        translationsGame.everyday[0][this.context.activeLanguage]
+                        }\n -50 ${translationsGame &&
+                        translationsGame.freeHumanResources &&
+                        translationsGame.freeHumanResources[0][this.context.activeLanguage]
+                        }\n -30  ${translationsGame &&
+                        translationsGame.materials &&
+                        translationsGame.materials[0][this.context.activeLanguage]
+                        }`,
                     cost: 100000,
                     notAddedHumanResources: false,
                     haveImage: true,
                     scaleParam: 0.002
-                }
-            ]
-        };
+                }]
+        })
     }
 
 
@@ -528,7 +1125,7 @@ class ActionModal extends Component {
             <div className="action-modal__container">
                 <div
                     className="action-modal__close"
-                    onClick={() => this.context.handleSetActionModal()}
+                    onClick={this.context.handleSetActionModal}
                     title="Close"
                 >
                     <img src={close} alt="Close" />

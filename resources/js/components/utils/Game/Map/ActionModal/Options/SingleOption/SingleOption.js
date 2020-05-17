@@ -1,10 +1,13 @@
 import React from "react";
 import { GameContext } from "./../../../../GameContext"
+import { MainContext } from "./../../../../../../MainContext"
+import translationsGame from "./../../../../../../translations/translations-game.json"
 
 const SingleOption = ({
     option,
 }) => {
-    const context = React.useContext(GameContext);
+    const gameContext = React.useContext(GameContext);
+    const context = React.useContext(MainContext);
 
     return (
         <div className="options__element">
@@ -14,12 +17,17 @@ const SingleOption = ({
                 {option.descriptionActionModal}
             </p>
             <p className="options__element--cost">
-                Cost: {option.cost}
+                {translationsGame &&
+                    translationsGame.money &&
+                    translationsGame.money[0][context.activeLanguage]
+                }
+                {": "}
+                {option.cost}
             </p>
-            <div
+            <button
                 className="options__element--submit"
                 onClick={() => {
-                    context.handleUpdateMapConfigItem(
+                    gameContext.handleUpdateMapConfigItem(
                         option.value,
                         option.freeHumanResources,
                         option.population,
@@ -32,8 +40,13 @@ const SingleOption = ({
                     );
                 }}
             >
-                <p>Buy now</p>
-            </div>
+                <p>
+                    {translationsGame &&
+                        translationsGame.buyNow &&
+                        translationsGame.buyNow[0][context.activeLanguage]
+                    }
+                </p>
+            </button>
         </div>
 
     );

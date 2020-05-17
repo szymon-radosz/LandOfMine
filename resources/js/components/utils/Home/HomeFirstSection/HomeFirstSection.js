@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MainContext } from "./../../../MainContext";
+import translationsHome from "./../../../translations/translations-home.json"
 
 class HomeFirstSection extends Component {
     constructor(props) {
@@ -38,16 +39,33 @@ class HomeFirstSection extends Component {
                     <div className="page__main-section--content">
                         <div className="page__main-section--top">
                             <h1>Land of mine</h1>
-                            <h2>Build your own city</h2>
+                            <h2>
+                                {translationsHome &&
+                                    translationsHome.subheader &&
+                                    translationsHome.subheader[0][this.context.activeLanguage]
+                                }
+                            </h2>
                             {!loadScreen && <div
                                 className="main-section__top--btn"
                                 onClick={() => this.context.handleChangePath("game")}
                             >
-                                <p>Try now</p>
+                                <p>
+                                    {translationsHome &&
+                                        translationsHome.tryNow &&
+                                        translationsHome.tryNow[0][this.context.activeLanguage]
+                                    }
+                                </p>
                             </div>}
                             {loadScreen && <div className="map-loader__container">
                                 <div className="map-loader__bar" style={{ width: `calc(${currentCount}% - 4px)` }}></div>
-                                <p>{!showProgressPrecentage ? `${currentCount} %` : "GET STARTED"}</p>
+                                <p>
+                                    {!showProgressPrecentage ?
+                                        `${currentCount} %` :
+                                        `${translationsHome &&
+                                        translationsHome.getStarted &&
+                                        translationsHome.getStarted[0][this.context.activeLanguage]}`
+                                    }
+                                </p>
                             </div>}
                         </div>
                         <a

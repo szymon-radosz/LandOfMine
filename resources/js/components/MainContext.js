@@ -13,7 +13,6 @@ export const MainContext = React.createContext({
     showSidebarText: false,
     activeMenuSection: "",
     APP_URL: "",
-    API_URL: "",
     showLoader: false,
     token: "",
     checkAllowedPath: path => { },

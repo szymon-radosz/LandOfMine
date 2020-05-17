@@ -1,19 +1,20 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import Head from "./../../global/Head";
 import Footer from "./../../global/Footer";
-import Menu from "./../../global/Menu";
-import SideOptions from "./../../global/SideOptions";
-import Newsletter from "./../../global/Newsletter";
+import SideOptions from "./SideOptions";
+import Newsletter from "./Newsletter";
 import aboutImg from "./../../../../assets/images/about.jpg?v=1";
 import HomeFirstSection from "./HomeFirstSection/HomeFirstSection"
+import translationsHome from "./../../translations/translations-home.json"
+import { MainContext } from "./../../MainContext"
 
 const Home = () => {
-    const [activeSideOptionNumber, setActiveSideOptionNumber] = useState(1);
+    const [activeSideOptionNumber, setActiveSideOptionNumber] = React.useState(1);
+    const context = React.useContext(MainContext);
+
     return (
         <>
             <Head title="Land of mine - Build your own city" />
-
-            {/* <Menu /> */}
 
             <SideOptions activeSideOptionNumber={activeSideOptionNumber} />
 
@@ -26,21 +27,29 @@ const Home = () => {
                     </div>
 
                     <div className="page__about-section--right">
-                        <h3>About The Game</h3>
+                        <h3>
+                            {translationsHome &&
+                                translationsHome.aboutHeader &&
+                                translationsHome.aboutHeader[0][context.activeLanguage]
+                            }
+                        </h3>
                         <p>
-                            Land of mine is free city simulator working in your
-                            browser to make that accessible from various devices
-                            anytime when you're plugged in.
+                            {translationsHome &&
+                                translationsHome.aboutText1 &&
+                                translationsHome.aboutText1[0][context.activeLanguage]
+                            }
                         </p>
                         <p>
-                            Build the city, manage and take decision to make
-                            every day improvements. Build new necessary building
-                            when you have appropierate amount of materials and
-                            money. After going to the next day you will get new
-                            resources which your city produces.
+                            {translationsHome &&
+                                translationsHome.aboutText2 &&
+                                translationsHome.aboutText2[0][context.activeLanguage]
+                            }
                         </p>
                         <p>
-                            Land of mine is still trial project developed by{" "}
+                            {translationsHome &&
+                                translationsHome.aboutText3 &&
+                                translationsHome.aboutText3[0][context.activeLanguage]
+                            }{" "}
                             <a
                                 href="https://tech-bulb.com/"
                                 title="Visit author website"

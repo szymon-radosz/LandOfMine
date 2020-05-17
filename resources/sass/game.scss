@@ -235,54 +235,28 @@
         }
     }
 
-    .zoom-btns__container {
-        position: fixed;
-        bottom: 205px;
-        right: 20px;
-        background-color: #fff;
+    .bottom-panel__language-list {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        transition: $transition;
+        padding-top: 10px;
 
-        div {
-            padding: 15px;
-            cursor: pointer;
-            text-align: center;
-            transition: $transition;
-
-            p {
-                margin: 0;
-                font-size: 20px;
-                line-height: 12px;
-            }
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
         }
-    }
-    .zoom-btns__container--enable:hover {
-        background-color: rgb(236, 236, 236);
-    }
-    .zoom-btns__container--disable {
-        opacity: 0.5;
-    }
 
-    .map-raad-person__container {
-        position: fixed;
-        bottom: 150px;
-        right: 20px;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s;
-        width: 41px;
-        height: 41px;
-
-        img {
-            height: 25px;
+        a:hover {
+            opacity: 0.6;
         }
-    }
-    .map-raad-person__container:hover {
-        background-color: rgb(236, 236, 236);
+
+        .bottom-panel__language {
+            font-weight: 600;
+        }
+
+        .bottom-panel__language--inactive {
+            opacity: 0.6;
+        }
     }
 
     .three-d__container {
@@ -391,6 +365,7 @@
                 border: 3px solid #012d4a;
                 cursor: pointer;
                 transition: $transition;
+                background-color: #fff;
 
                 p {
                     margin: 0;

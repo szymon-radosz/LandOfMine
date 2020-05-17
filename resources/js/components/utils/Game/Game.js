@@ -4,7 +4,6 @@ import BottomPanel from "./BottomPanel/BottomPanel";
 import Map from "./Map/Map"
 import { GameContext } from "./GameContext";
 import { MainContext } from "./../../MainContext";
-import initialMapConfig from "./mapConfig";
 import moment from "moment";
 import DaylightOverlay from "./DaylightOverlay/DaylightOverlay";
 import HomeFirstSection from "./../Home/HomeFirstSection/HomeFirstSection"
@@ -13,10 +12,7 @@ class Game extends Component {
     constructor(props) {
         super(props);
 
-        //initially we create reactange of recteangles 10x6
         this.state = {
-            zoomX: 16,
-            zoomY: 6,
             date: "",
             money: 1000000,
             population: 3000,
@@ -38,9 +34,7 @@ class Game extends Component {
     }
 
     componentDidMount = () => {
-        //console.log(["initialMapConfig", initialMapConfig])
         this.setState({
-            mapConfig: initialMapConfig,
             date: moment("2000-01-01")
                 .format("DD.MM.YYYY")
                 .toString()
@@ -183,7 +177,7 @@ class Game extends Component {
         this.setState({
             showDescriptionModal: descriptionHeader ? true : false,
             activeDescriptionHeader: descriptionHeader,
-            activeDescriptionContent: descriptionContent
+            activeDescriptionContent: descriptionContent[0] ? descriptionContent[0][this.context.activeLanguage] : ""
         })
     }
 
@@ -240,7 +234,9 @@ class Game extends Component {
                         activeDescriptionContent: activeDescriptionContent,
                         handleSetDescriptionModal: this.handleSetDescriptionModal,
                         handleSetElementDescription: this
-                            .handleSetElementDescription
+                            .handleSetElementDescription,
+                        APP_URL: this.context.APP_URL,
+                        activeLanguage: this.context.activeLanguage
                     }}
                 >
                     {!daylight && <DaylightOverlay />}
@@ -249,7 +245,11 @@ class Game extends Component {
 
                     <Map />
 
-                    <BottomPanel />
+                    <BottomPanel
+                        languages={this.context.languages}
+                        activeLanguage={this.context.activeLanguage}
+                        handleLanguageChange={this.context.handleLanguageChange}
+                    />
                 </GameContext.Provider>
             </div>
         );

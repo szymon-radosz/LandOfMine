@@ -1,0 +1,72 @@
+{
+    "subheader": [
+        {
+            "EN": "Build your own city",
+            "GE": "Baue deine eigene Stadt",
+            "RU": "Построй свой город"
+        }
+    ],
+    "tryNow": [
+        {
+            "EN": "Try Now",
+            "GE": "Versuche es jetzt",
+            "RU": "Попробуй сейчас"
+        }
+    ],
+    "getStarted": [
+        {
+            "EN": "Get started",
+            "GE": "Loslegen",
+            "RU": "Начать"
+        }
+    ],
+    "aboutHeader": [
+        {
+            "EN": "About the game",
+            "GE": "Über das Spiel",
+            "RU": "Об игре"
+        }
+    ],
+    "aboutText1": [
+        {
+            "EN": "Land of mine is free city simulator working in your browser to make that accessible from various devices anytime when you're plugged in.",
+            "GE": "Land of Mine ist ein kostenloser Stadtsimulator, der in Ihrem Browser arbeitet, um ihn jederzeit von verschiedenen Geräten aus zugänglich zu machen, wenn Sie angeschlossen sind.",
+            "RU": "Land of mine - бесплатный городской симулятор, работающий в вашем браузере, чтобы сделать его доступным с различных устройств в любое время, когда вы подключены."
+        }
+    ],
+    "aboutText2": [
+        {
+            "EN": "Build the city, manage and take decision to make every day improvements. Build new necessary building when you have appropierate amount of materials and money. After going to the next day you will get new resources which your city produces.",
+            "GE": "Bauen Sie die Stadt auf, verwalten Sie und treffen Sie Entscheidungen, um jeden Tag Verbesserungen vorzunehmen. Bauen Sie ein neues notwendiges Gebäude, wenn Sie über eine angemessene Menge an Material und Geld verfügen. Nach dem nächsten Tag erhalten Sie neue Ressourcen, die Ihre Stadt produziert.",
+            "RU": "Постройте город, управляйте и принимайте решения, чтобы каждый день вносить улучшения. Постройте новое необходимое здание, когда у вас будет достаточное количество материалов и денег. После перехода на следующий день вы получите новые ресурсы, которые производит ваш город."
+        }
+    ],
+    "aboutText3": [
+        {
+            "EN": "Land of mine is still trial project developed by",
+            "GE": "Land von mir ist immer noch ein von entwickeltes Versuchsprojekt.",
+            "RU": "Земля моя до сих пор является пробным проектом, разработанным"
+        }
+    ],
+    "newsletterHeader": [
+        {
+            "EN": "Get To Know about full version",
+            "GE": "Erfahren Sie mehr über die Vollversion",
+            "RU": "Узнай о полной версии"
+        }
+    ],
+    "newsletterInputPlaceholder": [
+        {
+            "EN": "Leave your email address",
+            "GE": "Hinterlassen Sie Ihre E-Mail-Adresse",
+            "RU": "Оставьте свой адрес электронной почты"
+        }
+    ],
+    "newsletterSubmit": [
+        {
+            "EN": "Submit",
+            "GE": "Einreichen",
+            "RU": "Разместить"
+        }
+    ]
+}

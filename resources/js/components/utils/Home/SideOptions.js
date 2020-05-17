@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { MainContext } from "./../MainContext";
+import { MainContext } from "./../../MainContext";
 
 const SideOptions = ({ activeSideOptionNumber }) => {
     const context = useContext(MainContext);
@@ -41,7 +41,7 @@ const SideOptions = ({ activeSideOptionNumber }) => {
                                     <p
                                         className={`${context.activeLanguage &&
                                             context.activeLanguage ===
-                                                language &&
+                                            language &&
                                             "active-text"}`}
                                         onClick={() =>
                                             context.handleLanguageChange(
