@@ -253,6 +253,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    a {
+        color: #d6d6d6;
+    }
+
     .side-options__divider--short {
         width: 2px;
         height: 15px;

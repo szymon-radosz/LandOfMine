@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,600);@charset "UTF-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff !important;
   font-family: "Montserrat", sans-serif;
@@ -844,6 +848,10 @@ body .pagination > li:last-child > span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.side-options__container a {
+  color: #d6d6d6;
 }
 
 .side-options__container .side-options__divider--short {

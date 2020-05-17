@@ -116081,12 +116081,19 @@ var Home = function Home() {
       setActiveSideOptionNumber = _React$useState2[1];
 
   var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(_MainContext__WEBPACK_IMPORTED_MODULE_9__["MainContext"]);
+
+  var setActiveSidebarOption = function setActiveSidebarOption(number) {
+    setActiveSideOptionNumber(number);
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_global_Head__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Land of mine - Build your own city"
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SideOptions__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    activeSideOptionNumber: activeSideOptionNumber
+    activeSideOptionNumber: activeSideOptionNumber,
+    setActiveSidebarOption: setActiveSidebarOption
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_HomeFirstSection_HomeFirstSection__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "page__about-section--container"
+    className: "page__about-section--container",
+    id: "about"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "page__about-section--wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -116194,7 +116201,8 @@ var HomeFirstSection = /*#__PURE__*/function (_Component) {
           currentCount = _this$state.currentCount;
       var loadScreen = this.props.loadScreen;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "page__main-section--container ".concat(loadScreen && "page__main-section--loading")
+        className: "page__main-section--container ".concat(loadScreen && "page__main-section--loading"),
+        id: "main"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "page__main-section--wrapper"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -116249,7 +116257,8 @@ var _translations_translations_home_json__WEBPACK_IMPORTED_MODULE_2___namespace 
 var Newsletter = function Newsletter() {
   var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_MainContext__WEBPACK_IMPORTED_MODULE_1__["MainContext"]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "newsletter__container"
+    className: "newsletter__container",
+    id: "newsletter"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsletter__wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, _translations_translations_home_json__WEBPACK_IMPORTED_MODULE_2__ && _translations_translations_home_json__WEBPACK_IMPORTED_MODULE_2__.newsletterHeader && _translations_translations_home_json__WEBPACK_IMPORTED_MODULE_2__.newsletterHeader[0][context.activeLanguage]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -116281,23 +116290,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SideOptions = function SideOptions(_ref) {
-  var activeSideOptionNumber = _ref.activeSideOptionNumber;
+  var activeSideOptionNumber = _ref.activeSideOptionNumber,
+      setActiveSidebarOption = _ref.setActiveSidebarOption;
   var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_MainContext__WEBPACK_IMPORTED_MODULE_1__["MainContext"]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__container side-options__container--white-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__container--top"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#main",
+    onClick: function onClick() {
+      return setActiveSidebarOption(1);
+    }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "".concat(activeSideOptionNumber && activeSideOptionNumber === 1 && "active-text")
-  }, "01"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "01")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__divider--short"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#about",
+    onClick: function onClick() {
+      return setActiveSidebarOption(2);
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "".concat(activeSideOptionNumber && activeSideOptionNumber === 2 && "active-text")
-  }, "02"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "02")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__divider--short"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#newsletter",
+    onClick: function onClick() {
+      return setActiveSidebarOption(3);
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "".concat(activeSideOptionNumber && activeSideOptionNumber === 3 && "active-text")
-  }, "03")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__divider--long"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "side-options__container--bottom"

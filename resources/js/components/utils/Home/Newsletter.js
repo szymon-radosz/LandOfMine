@@ -6,7 +6,7 @@ const Newsletter = () => {
     const context = React.useContext(MainContext);
 
     return (
-        <div className="newsletter__container">
+        <div className="newsletter__container" id="newsletter">
             <div className="newsletter__wrapper">
                 <h3>
                     {translationsHome &&

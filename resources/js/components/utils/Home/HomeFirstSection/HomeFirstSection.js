@@ -34,7 +34,7 @@ class HomeFirstSection extends Component {
         const { loadScreen } = this.props;
 
         return (
-            <div className={`page__main-section--container ${loadScreen && "page__main-section--loading"}`}>
+            <div className={`page__main-section--container ${loadScreen && "page__main-section--loading"}`} id="main">
                 <div className="page__main-section--wrapper">
                     <div className="page__main-section--content">
                         <div className="page__main-section--top">

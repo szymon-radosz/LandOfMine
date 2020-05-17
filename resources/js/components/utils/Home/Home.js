@@ -12,15 +12,22 @@ const Home = () => {
     const [activeSideOptionNumber, setActiveSideOptionNumber] = React.useState(1);
     const context = React.useContext(MainContext);
 
+    const setActiveSidebarOption = (number) => {
+        setActiveSideOptionNumber(number)
+    }
+
     return (
         <>
             <Head title="Land of mine - Build your own city" />
 
-            <SideOptions activeSideOptionNumber={activeSideOptionNumber} />
+            <SideOptions
+                activeSideOptionNumber={activeSideOptionNumber}
+                setActiveSidebarOption={setActiveSidebarOption}
+            />
 
             <HomeFirstSection />
 
-            <div className="page__about-section--container">
+            <div className="page__about-section--container" id="about">
                 <div className="page__about-section--wrapper">
                     <div className="page__about-section--left">
                         <img src={aboutImg} />

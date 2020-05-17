@@ -1,35 +1,41 @@
 import React, { useContext } from "react";
 import { MainContext } from "./../../MainContext";
 
-const SideOptions = ({ activeSideOptionNumber }) => {
+const SideOptions = ({ activeSideOptionNumber, setActiveSidebarOption }) => {
     const context = useContext(MainContext);
 
     return (
         <div className="side-options__container side-options__container--white-text">
             <div className="side-options__container--top">
-                <p
-                    className={`${activeSideOptionNumber &&
-                        activeSideOptionNumber === 1 &&
-                        "active-text"}`}
-                >
-                    01
-                </p>
+                <a href="#main" onClick={() => setActiveSidebarOption(1)}>
+                    <p
+                        className={`${activeSideOptionNumber &&
+                            activeSideOptionNumber === 1 &&
+                            "active-text"}`}
+                    >
+                        01
+                    </p>
+                </a>
                 <div className="side-options__divider--short"></div>
-                <p
-                    className={`${activeSideOptionNumber &&
-                        activeSideOptionNumber === 2 &&
-                        "active-text"}`}
-                >
-                    02
-                </p>
+                <a href="#about" onClick={() => setActiveSidebarOption(2)}>
+                    <p
+                        className={`${activeSideOptionNumber &&
+                            activeSideOptionNumber === 2 &&
+                            "active-text"}`}
+                    >
+                        02
+                    </p>
+                </a>
                 <div className="side-options__divider--short"></div>
-                <p
-                    className={`${activeSideOptionNumber &&
-                        activeSideOptionNumber === 3 &&
-                        "active-text"}`}
-                >
-                    03
-                </p>
+                <a href="#newsletter" onClick={() => setActiveSidebarOption(3)}>
+                    <p
+                        className={`${activeSideOptionNumber &&
+                            activeSideOptionNumber === 3 &&
+                            "active-text"}`}
+                    >
+                        03
+                    </p>
+                </a>
             </div>
             <div className="side-options__divider--long"></div>
             <div className="side-options__container--bottom">
