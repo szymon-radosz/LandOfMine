@@ -18,7 +18,7 @@ class Main extends Component {
 
         this.state = {
             // APP_URL: "http://127.0.0.1:8000",
-            APP_URL: "https://www.land-of-mine.com/",
+            APP_URL: "https://www.land-of-mine.com",
             showLoader: false,
             alertMessage: "",
             alertStatus: "",
