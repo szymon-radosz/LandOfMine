@@ -58,7 +58,7 @@ const Home = () => {
                                 translationsHome.aboutText3[0][context.activeLanguage]
                             }{" "}
                             <a
-                                href="https://tech-bulb.com/"
+                                href="https://radosz-net.pl/"
                                 title="Visit author website"
                                 target="_blank"
                             >

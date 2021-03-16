@@ -7,7 +7,7 @@ const Footer = () => {
                 <p>Land Of Mine 2020</p>
                 <p>
                     <a
-                        href="https://tech-bulb.com/"
+                        href="https://radosz-net.pl/"
                         title="Odwiedź mojego bloga"
                         target="_blank"
                     >
